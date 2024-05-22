@@ -1,0 +1,2185 @@
+/*common css start*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body, h1, h2, h3, h4, h5, h6, ul, li, p, a, span{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    font-family: noto-sans-cjk-jp, sans-serif;
+}
+body.no_scroll {
+    overflow: hidden;
+}
+a, button, input[type=submit], select{
+    cursor: pointer;
+}
+a, a:hover, a:focus, 
+button, button:hover, button:focus,
+input, input:hover, input:focus, 
+textarea, textarea:hover, textarea:focus,
+select, select:hover, select:focus{
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.cpc {
+    display: block !important;
+}
+.csp {
+    display: none !important;
+}
+.cpc-1160 {
+    display: block !important;
+}
+.csp-1160 {
+    display: none !important;
+}
+@media (max-width: 1160px){
+    .cpc-1160 {
+        display: none !important;
+    }
+    .csp-1160 {
+        display: block !important;
+    }
+}
+@media (max-width: 900px){
+    .cpc{
+        display: none !important;
+    }
+    .csp{
+        display: block !important;
+    }
+}
+.cpc,
+.cpc6,
+.cpc9
+{
+	display: block !important;
+}
+.csp,
+.csp6,
+.csp9 {
+	display: none !important;
+}
+@media (max-width: 900px) {
+	.cpc {
+		display: none !important;
+	}
+	.csp {
+		display: block !important;
+	}
+	.cpc9 {
+		display: none !important;
+	}
+	.csp9 {
+		display: block !important;
+	}	
+}
+@media (max-width: 575px) {
+	.cpc6 {
+		display: none !important;
+	}
+	.csp6 {
+		display: block !important;
+	}
+}
+/*common css end*/
+
+/*page pre-loader css start*/
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    pointer-events: none;
+    background-color: #fff;
+}
+.loader-wrapper .loader {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid rgba(62, 174, 230, 0.2);
+    border-right: 3px solid rgba(62, 174, 230, 0.2);
+    border-bottom: 3px solid rgba(62, 174, 230, 0.2);
+    border-left: 3px solid rgba(62, 174, 230, 0.8);
+    -webkit-animation: loaderSpin 1.5s infinite linear;
+    animation: loaderSpin 1.5s infinite linear;
+}
+@-webkit-keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*page pre-loader css end*/
+
+/*animations css start*/
+.io {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: opacity, transform;
+}
+.io.move {
+    opacity: 1 !important;
+    -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0deg) !important;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg) !important;
+}
+.io.fade {
+    opacity: 0;
+}
+.io.lr {
+    -webkit-transform: translate3d(-80px, 0, 0);
+    transform: translate3d(-80px, 0, 0);
+}
+.io.rl {
+    -webkit-transform: translate3d(80px, 0, 0);
+    transform: translate3d(80px, 0, 0); 
+}
+.io.upL {
+    -webkit-transform: translate3d(0, 80px, 0);
+    transform: translate3d(0, 80px, 0);
+}
+.io.upS {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+.io.downL {
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
+}
+.io.downS {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+.io.scaleUp {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+.io.scaleDown {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.io.rotateL {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+.io.rotateR {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+.io.delay.delay1 {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+}
+.io.delay.delay2 {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.23s, -webkit-transform 1.0s ease 0.23s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.23s, transform 1.0s ease 0.23s;
+}
+.io.delay.delay3 {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.46s, -webkit-transform 1.0s ease 0.46s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.46s, transform 1.0s ease 0.46s;
+}
+.io.delay.delay4 {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.69s, -webkit-transform 1.0s ease 0.69s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.69s, transform 1.0s ease 0.69s;
+}
+.io.delay a {
+    -webkit-transition: none;
+    transition: none;
+}
+.io.delay .delay_child {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: opacity, transform;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+.io.delay.delay1 .delay_child {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+}
+.io.delay.delay2 .delay_child {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.73s, -webkit-transform 1.0s ease 0.73s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.73s, transform 1.0s ease 0.73s;
+}
+.io.delay.delay3 .delay_child {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.96s, -webkit-transform 1.0s ease 0.96s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.96s, transform 1.0s ease 0.96s;
+}
+.io.delay.delay4 .delay_child {
+    -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 1.19s, -webkit-transform 1.0s ease 1.19s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 1.19s, transform 1.0s ease 1.19s;
+}
+.io.delay.move .delay_child {
+    opacity: 1 !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+@media (max-width: 900px) {
+    .io.delay.delay1 {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+    }
+    .io.delay.delay2 {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+    }
+    .io.delay.delay3 {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+    }
+    .io.delay.delay4 {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+    }
+    .io.delay .delay_child {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    }
+    .io.delay.delay1 .delay_child {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    }
+    .io.delay.delay2 .delay_child {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    }
+    .io.delay.delay3 .delay_child {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    }
+    .io.delay.delay4 .delay_child {
+        -webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+        transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+    }
+}
+/*animations css end*/
+
+
+/*header css start*/
+header.site_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 18px 85px;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.site_header.inner_page_header {
+    background-color: rgba(255, 255, 255,0.7);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+}
+header.site_header.inner_page_header.fixed_header,
+header.site_header.fixed_header {
+    top: -100px;
+    background-color: #fff;
+    position: fixed;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+    padding: 10px 85px;
+}
+header.site_header.inner_page_header.fixed_header.header_animate,
+header.site_header.fixed_header.header_animate {
+    transition: all 0.4s;
+    top: 0;
+}
+nav.custom_navbar ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+}
+nav.custom_navbar ul li {
+    margin-left: 44px;
+}
+nav.custom_navbar ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    position: relative;
+    transition: all 0.4s;
+}
+nav.custom_navbar ul li a:hover {
+    color: #6DCA9F;
+}
+nav.custom_navbar .find_salons_box {
+    background-color: #fff;
+    border: 1px solid #6DCA9F;
+    padding: 10px 34px;
+    border-radius: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    color: #6DCA9F;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.4s;
+}
+nav.custom_navbar .find_salons_box:hover {
+    background-color: #6DCA9F;
+    color: #fff;
+}
+nav.custom_navbar .find_salons_box svg {
+    max-width: 10px;
+    margin-right: 5px;
+}
+nav.custom_navbar .find_salons_box svg path {
+    fill: #69cb9e;
+    transition: all 0.4s;
+}
+nav.custom_navbar .find_salons_box:hover svg path {
+    fill: #fff;
+}
+.therapist_btn {
+    width: 83px;
+    position: absolute;
+    right: 100%;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 25px;
+    transition: background-color 0.4s;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15px;
+}
+.paralysis_btn {
+    top: 0;
+    background-color: #FFCF2F;
+    color: #1A1311;
+}
+.paralysis_btn:hover {
+    background-color: #EDBA11;
+}
+.interested_btn {
+    top: 126px;
+    background-color: #F7921C;
+    color: #ffffff;
+}
+.interested_btn:hover {
+    background-color: #ED6A24;
+}
+.therapist_btn span {
+    width: 20px;
+    text-align: center;
+}
+.therapist_popup_section {
+    height: auto;
+    min-height: 300px;
+    width: 320px;
+    position: fixed;
+    top: 93px;
+    right: -320px;
+    transition: right 0.4s;
+    background-color: #ffffff;
+}
+.therapist_popup_section.open_side_box {
+    right: 0px;
+}
+.therapist_content {
+    padding: 20px;
+}
+.paralysis_content {
+    background-color: #FFCF2F;
+    color: #1A1311;
+}
+.interested_content {
+    background-color: #F7921C;
+    color: #ffffff;
+}
+/*header css end*/
+
+/*footer css start*/
+.site_footer {
+    background-color: #41574D;
+}
+.site_footer .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    margin: auto;
+    padding: 0 15px;
+}
+.site_footer .footer_about {
+    padding: 20px 0;
+}
+.site_footer .footer_about ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -10px;
+}
+.site_footer .footer_about li {
+    padding: 0 10px;
+}
+.site_footer .footer_about li a {
+    font-size: 16px;
+    color: #fff;
+}
+.site_footer .footer_content {
+    border-top: 1px solid #7A8881;
+    padding: 20px 0 95px;
+}
+.site_footer .footer_content li p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+}
+.site_footer .footer_content li p span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 26px;
+    margin-right: 15px;
+}
+/*footer css end*/
+
+/*banner section css start*/
+.banner_section {
+    position: relative;
+    z-index: 2;
+}
+.banner_image {
+    position: relative;
+    padding-top: 44%;
+    overflow: hidden;
+}
+.banner_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.banner_section h1 {
+    position: absolute;
+    top: 160px;
+    right: 250px;
+    font-size: 64px;
+    line-height: 74px;
+    color: #fff;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+}
+.banner_section h1 span {
+    font-size: 33px;
+    margin-left: 10px;
+}
+/*banner section css end*/
+
+/*notification section css start*/
+.notification_section {
+    background-color: #F5F5F5;
+    padding: 38px 0 48px;
+}
+.notification_section .custom_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+.notification_section .custom_container {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.notification_table_sec {
+    padding-bottom: 45px;
+}
+.notification_table {
+    display: table;
+    max-width: 100%;
+    margin: auto;
+}
+.notification_table_row {
+    display: table-row;
+}
+.notification_table_td {
+    display: table-cell;
+    border-bottom: 1px solid #F0F0F0;
+    padding: 20px 0;
+    vertical-align: middle;
+}
+.notification_section .common_heading {
+    padding: 38px 0 6px;
+}
+.common_heading h2 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    color: #036665;
+    font-weight: 600;
+}
+.notification_table_td span {
+    display: block;
+    border: 1px solid #F7A21C;
+    color: #F7A21C;
+    font-size: 10px;
+    padding: 4px 16px;
+    font-weight: 900;
+}
+.notification_table_td p {
+    font-size: 14px;
+    color: #000000;
+}
+.notification_table_td p.notification_date {
+    padding: 0 50px 0 32px;
+}
+/*notification section css end*/
+
+/*experienced section css start*/
+.experienced_section {
+    padding: 80px 0 20px;
+    background-image: url('../images/experienced_bg_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.experienced_section .custom_container {
+    width: 100%;
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 30px;
+}
+.experienced_therapyround {
+    max-width: 410px;
+    margin: 54px auto 40px;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+.experienced_green {
+    width: 215px;
+    height: 215px;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../images/experienced_image_green.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: -24px;
+}
+.experienced_blue {
+    width: 215px;
+    height: 215px;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../images/experienced_image_blue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.experienced_green img {
+    margin-bottom: 10px;
+}
+.experienced_green p {
+    margin-bottom: 10px;
+}
+.experienced_therapyround p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+.experienced_section .custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+}
+.experienced_section .custom_col_4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 30px;
+    margin-top: 45px;
+}
+.experienced_section .experienced_content_spacing {
+    margin-top: 123px;
+}
+.experienced_content_image_box {
+    position: relative;
+}
+.experienced_content_case {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #A5E2D6;
+    position: absolute;
+    top: -48px;
+    left: 0;
+    z-index: 1;
+    color: #fff;
+}
+.experienced_content_case p {
+    font-size: 15px;
+}
+.experienced_content_case h5 {
+    font-size: 24px;
+}
+.experienced_content_image {
+    position: relative;
+    padding-top: 72.3%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.experienced_content_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.experienced_content_text_box {
+    text-align: center;
+    padding-top: 32px;
+}
+.experienced_content_text_box h3 {
+    font-size: 28px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.experienced_content_text_box p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+/*experienced section css end*/
+
+/*problem section css start*/
+.problem_section {
+    background-color: #F2FFF7;
+    padding: 90px 0 100px;
+}
+.problem_section .custom_container {
+    width: 100%;
+    max-width: 996px;
+    padding: 0 15px;
+    margin: auto;
+}
+.problem_heading {
+    background-color: #69CB9E;
+    text-align: center;
+    padding: 15px;
+}
+.problem_heading h4 {
+    font-size: 28px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    color: #fff;
+}
+.problem_content {
+    background-color: #fff;
+}
+.problem_content ul {
+    max-width: 772px;
+    margin: auto;
+    padding: 41px 15px 92px;
+}
+.problem_content ul li {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0;
+    border-bottom: 1px dashed #B8C9AF;
+}
+.problem_content ul li img {
+    max-width: 36px;
+    margin-right: 30px;
+    margin-top: 6px;
+}
+.problem_content ul li p {
+    font-size: 24px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    color: #036665;
+}
+/*problem section css end*/
+
+/*therapy btn section css start*/
+.therapy_btn_section {
+    background-color: #F5F5F5;
+    padding: 80px 0 85px;
+}
+.therapy_btn_section .custom_container {
+    width: 100%;
+    max-width: 1246px;
+    margin: auto;
+    padding: 0 23px;
+}
+.therapy_btn_section .custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -23px;
+}
+.therapy_btn_section .custom_col_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 23px;
+}
+.therapy_btn_section .therapy_btn {
+    text-align: center;
+    padding: 52px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.therapy_btn_section .exercise_therapy_btn {
+    background-image: url('../images/exercise_btn_image.png');
+}
+.therapy_btn_section .neuro_therapy_btn {
+    background-image: url('../images/neuro_btn_image.png');
+}
+.problem_content ul li p {
+    font-size: 24px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    color: #036665;
+}
+.therapy_btn_heading h3 {
+    display: table;
+    margin: auto;
+    font-size: 28px;
+    color: #333333;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    padding: 10px 44px 36px;
+}
+.therapy_btn_heading h3:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/therapy_btn_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+}
+.therapy_btn p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 30px;
+}
+/*therapy btn section css end*/
+
+/*paralyzed therapist section css start*/
+.paralyzed_therapist_section {
+    padding: 85px 0 225px;
+    position: relative;
+}
+.paralyzed_therapist_section:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 126px;
+    background-image: url('../images/Paralysis_image_shap.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.paralyzed_therapist_section .float_image_1 {
+    position: absolute;
+    top: 144px;
+    right: 0;
+    max-width: 43px;
+}
+.paralyzed_therapist_section .float_image_2 {
+    position: absolute;
+    bottom: 95px;
+    right: 0;
+    max-width: 79px;
+    z-index: 1;
+}
+.paralyzed_therapist_section .float_image_3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 37px;
+    z-index: 1;
+}
+.paralyzed_therapist_section .custom_container {
+    width: 100%;
+    max-width: 1274px;
+    margin: auto;
+    padding: 0 37px;
+}
+.paralyzed_therapist_section .paralyzed_therapist_content {
+    margin-top: 90px;
+}
+.paralyzed_therapist_section .custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -37px;
+    flex-direction: row-reverse
+}
+.paralyzed_therapist_section .custom_col_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 37px;
+}
+.paralyzed_therapist_section .paralyzed_therapist_image {
+    position: relative;
+    padding-top: 63.8%;
+    overflow: hidden;
+}
+.paralyzed_therapist_section .paralyzed_therapist_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.paralyzed_therapist_section .paralyzed_therapist_text p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.paralyzed_therapist_section .paralyzed_therapist_text p:last-child {
+    margin-bottom: 0;
+}
+/*paralyzed therapist section css end*/
+
+/*paralysis treatment section css start*/
+.paralysis_treatment_section {
+    padding: 33px 0 70px;
+    background-color: #F2FFF7;
+    position: relative;
+    z-index: 1;
+}
+.paralysis_treatment_section .float_image_4 {
+    position: absolute;
+    top: 303px;
+    right: 0;
+    max-width: 109px;
+}
+.paralysis_treatment_section .float_image_5 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    max-width: 51px;
+}
+.paralysis_treatment_section .float_image_6 {
+    position: absolute;
+    bottom: 201px;
+    right: 96px;
+    max-width: 40px;
+}
+.paralysis_treatment_section .float_image_2 {
+    position: absolute;
+    bottom: 62px;
+    left: 0;
+    max-width: 89px;
+}
+.paralysis_treatment_section .custom_container {
+    width: 100%;
+    max-width: 910px;
+    margin: auto;
+    padding: 0 15px;
+}
+.paralysis_treatment_section .paralysis_treatment_profile_box {
+    padding: 48px 0;
+    text-align: center;
+}
+.paralysis_treatment_profile_box .paralysis_treatment_profile_box_image {
+    position: relative;
+    padding-top: 21.4%;
+    overflow: hidden;
+    border-radius: 50%;
+    max-width: 188px;
+    width: 100%;
+    margin: 0 auto 28px;
+}
+.paralysis_treatment_profile_box .paralysis_treatment_profile_box_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.paralysis_treatment_profile_box .paralysis_treatment_profile_box_text p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.paralysis_treatment_profile_box .paralysis_treatment_profile_box_text .paralysis_treatment_btn {
+    display: block;
+    width: 100%;
+    max-width: 188px;
+    margin: auto;
+    background-color: #FFCF2F;
+    border-radius: 30px;
+    padding: 6px 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 30px;
+    margin-top: 35px;
+    transition: all 0.4s;
+}
+.paralysis_treatment_section .paralysis_treatment_content_box {
+    border: 4px solid #69CB9E;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.paralysis_treatment_content_box .paralysis_treatment_heading_box {
+    background-color: #69CB9E;
+    position: relative;
+    padding: 4px 15px;
+    text-align: center;
+}
+.paralysis_treatment_content_box .paralysis_treatment_heading_box h4 {
+    font-size: 20px;
+    line-height: 40px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    color: #fff;
+}
+.paralysis_treatment_heading_box .paralysis_treatment_point_box {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border: 4px solid;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: -35px;
+    left: 15px;
+    background-color: #fff;
+    color: #69CB9E;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+}
+.paralysis_treatment_heading_box .paralysis_treatment_point_box p {
+    font-size: 13px;
+    line-height: 22px;
+}
+.paralysis_treatment_heading_box .paralysis_treatment_point_box h5 {
+    font-size: 20px;
+    line-height: 22px;
+}
+.paralysis_treatment_content_box .paralysis_treatment_text_box {
+    padding: 30px;
+    text-align: center;
+}
+.paralysis_treatment_content_box .paralysis_treatment_text_box p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 28px;
+}
+.paralysis_treatment_content_box .paralysis_treatment_text_box p span {
+    color: #E50000;
+}
+.paralysis_treatment_section .paralysis_treatment_required_box {
+    margin-top: 70px;
+    padding-bottom: 65px;
+}
+.paralysis_treatment_section .paralysis_treatment_acupuncture_box_sec {
+    padding: 15px 0;
+}
+.paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box {
+    min-width: 160px;
+    text-align: center;
+    background-color: #FFD472;
+    display: table;
+    margin: auto;
+    padding: 6px 46px;
+    border-radius: 5px;
+    margin-bottom: 46px;
+    position: relative;
+}
+.paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box:after {
+    content: '';
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10px;
+    height: 27px;
+    background-image: url('../images/down_arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box:last-child:after {
+    display: none;
+}
+.paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box p {
+    font-size: 20px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    color: #333333;
+}
+.paralysis_treatment_content_box p.paralysis_treatment_box_text {
+    line-height: 28px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    padding: 0 15px;
+}
+.paralysis_treatment_blue_box_sec_inner {
+    max-width: 746px;
+    width: 100%;
+    background-color: #EAF8FF;
+    padding: 35px 40px;
+    margin: 30px auto;
+}
+.paralysis_treatment_blue_box_sec_inner ul li {
+    position: relative;
+    padding-left: 16px;
+}
+.paralysis_treatment_blue_box_sec_inner ul li:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #355A96;
+}
+.paralysis_treatment_blue_box_sec_inner ul li p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #355A96;
+    font-weight: 700;
+}
+/*paralysis treatment section css end*/
+
+/*participate_section css start*/
+.participate_section {
+    background-image: url('../images/participate_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 186px 0 110px;
+    margin: 68px 0;
+}
+.participate_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    margin: auto;
+    padding: 0 15px;
+}
+.participate_content_box {
+    max-width: 610px;
+    padding: 48px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.participate_content_box ul {
+    margin-bottom: 35px;
+}
+.participate_content_box ul li {
+    position: relative;
+    padding-left: 32px;
+}
+.participate_content_box ul li:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 18px;
+    height: 15px;
+    background-image: url(../images/checkmark.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.participate_content_box ul li p {
+    font-size: 18px;
+}
+.participate_content_box p {
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    font-size: 26px;
+    color: #036665;
+}
+/*participate_section css end*/
+
+/*inner page banner section css start*/
+.inner_page_banner {
+    padding: 90px 20px 20px;
+    background-image: url(../images/inner_page_banner_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+.inner_page_banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.20);
+    z-index: -1;
+}
+.inner_page_banner h2 {
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 108px 0px 115px;
+}
+/*inner page banner section css end*/
+
+/*breadcrumb section css start*/
+.breadcrumb_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0px 15px;
+    margin: auto;
+}
+.breadcrumb_section ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    padding-top: 15px;
+}
+.breadcrumb_section ul li:not(:last-child) {
+    padding-right: 40px;
+    position: relative;
+}
+.breadcrumb_section ul li:not(:last-child):after {
+    content: ">";
+    position: absolute;
+    right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.breadcrumb_section ul li a, .breadcrumb_section ul li span {
+    color: #333333;
+    font-size: 14px;
+    line-height: 28px;
+}
+/*breadcrumb section css end*/
+
+/*search details section css start*/
+.search_details_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0px 15px;
+    margin: auto;
+}
+.search_details_card {
+    border: 1px solid #707070;
+    border-top: 5px solid #69CB9E;
+}
+.search_details_card .search_details_card_header {
+    background-color: #F5F5F5;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 33px 50px;
+}
+.search_details_card .search_details_card_header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #036665;
+    line-height: 28px;
+    padding-right: 20px;
+}
+.search_details_card .search_details_card_header span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #036665;
+    line-height: 28px;
+}
+.search_details_card_body .inner_custom_container {
+    padding: 60px 100px 85px;
+}
+.search_details_card_body .inner_custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -17px;
+    align-items: center;
+}
+.search_details_card_body .custom_col_image {
+    padding: 0px 17px;
+    flex: 0 0 calc(100% - 440px);
+    max-width: calc(100% - 440px);
+}
+.search_details_card_body .custom_col_image img {
+    width: 100%;
+}
+.search_details_card_body .custom_col_text {
+    padding: 0px 17px;
+    flex: 0 0 440px;
+    max-width: 440px;
+}
+.search_details_card_body .custom_col_text h4 {
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 35px;
+}
+.search_details_card_body .custom_col_text p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #333333;
+}
+.shop_details_table {
+    display: table;
+    width: 100%;
+    border: 1px solid #707070;
+    border-bottom: none;
+    margin-top: 48px;
+}
+.shop_details_table .shop_details_row {
+    display: table-row;
+}
+.shop_details_table .shop_details_row .shop_details_head,
+.shop_details_table .shop_details_row .shop_details_data {
+    display: table-cell;
+    padding: 18px 60px;
+    border-bottom: 1px solid #707070;
+}
+.shop_details_table .shop_details_row .shop_details_head {
+    background-color: #F5F5F5;
+    border-right: 1px solid #707070;
+    width: 240px;
+}
+.shop_details_table .shop_details_row .shop_details_head p,
+.shop_details_table .shop_details_row .shop_details_data p {
+    font-size: 16px;
+    color: #333333;
+}
+.search_details_section a.return_to_search_page {
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    margin: 100px auto;
+    display: table;
+    padding: 18px 94px;
+    border: 1px solid #707070;
+    color: #333333;
+    border-radius: 50px;
+    transition: all 0.4s;
+    font-weight: 600;
+    font-size: 16px;
+}
+.search_details_section a.return_to_search_page:hover {
+    background-color: #41574d;
+    color: #ffffff;
+    border-color: #41574d;
+}
+/*search details section css end*/
+
+/*search result section css start*/
+.search_result_section {
+    padding-bottom: 170px;
+}
+.common_section_title h2 {
+    display: table;
+    margin: 0px auto 75px;
+    color: #036665;
+    font-size: 28px;
+    line-height: 40px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-weight: 600;
+    position: relative;
+    padding: 0px 120px;
+    text-align: center;
+}
+.common_section_title h2:after, .common_section_title h2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 10px;
+    width: 86px;
+    margin: auto;
+    background-image: url(../images/header_pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.common_section_title h2:after {
+    left: 0;
+}
+.common_section_title h2:before {
+    right: 0;
+}
+.search_result_card {
+    border: 1px solid #707070;
+    border-top: 5px solid #69CB9E;
+    margin-bottom: 70px;
+}
+.search_result_card .search_result_card_header {
+    background-color: #F5F5F5;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 33px 50px;
+}
+.search_result_card .search_result_card_header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #036665;
+    line-height: 28px;
+    padding-right: 20px;
+}
+.search_result_card .search_result_card_header h3 i {
+    margin-right: 7px;
+}
+.search_result_card .search_result_card_header span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #036665;
+    line-height: 28px;
+}
+.search_result_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0px 15px;
+    margin: auto;
+}
+.search_result_card_body .card_custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.search_result_card_body .card_custom_col_details {
+    flex: 0 0 calc(100% - 275px);
+    max-width: calc(100% - 275px);
+    padding: 27px 40px 35px 26px;
+}
+.search_result_card_body .inner_custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    align-items: center;
+}
+.search_result_card_body .custom_col_image {
+    flex: 0 0 371px;
+    max-width: 371px;
+    padding: 0px 15px;
+}
+.search_result_card_body .custom_col_image img {
+    width: 100%;
+}
+.search_result_card_body .custom_col_text {
+    flex: 0 0 calc(100% - 371px);
+    max-width: calc(100% - 371px);
+    padding: 0px 15px;
+}
+.search_result_card_body .card_custom_col_details .custom_col_text p {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #333333;
+}
+.search_result_card_body .card_custom_col_details .custom_col_text ul {
+    margin-top: 25px;
+    border-top: 1px solid #D5D5D5;
+}
+.search_result_card_body .card_custom_col_details .custom_col_text ul li {
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    padding-left: 90px;
+    position: relative;
+    margin-top: 15px;
+}
+.search_result_card_body .card_custom_col_details .custom_col_text ul li span {
+    font-size: 12px;
+    color: #727272;
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    background-color: #F5F5F5;
+    line-height: 30px;
+    font-weight: 700;
+}
+.search_result_card_body .card_custom_col_btn {
+    flex: 275px;
+    max-width: 275px;
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF9F2;
+}
+.see_more_btn {
+    background-color: #ffcf2f;
+    padding: 4px 54px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+.paralysis_treatment_profile_box .paralysis_treatment_profile_box_text .paralysis_treatment_btn:hover,
+.see_more_btn:hover {
+    background-color: #EDBA11;
+}
+.custom_col_text .see_more_btn {
+    margin-top: 10px;
+    float: right;
+}
+.custom_pagination{
+    display: table;
+    margin: auto;
+}
+.custom_pagination ul {
+    margin: 0px;
+    padding: 0px;
+}
+.custom_pagination ul li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+.custom_pagination ul li a {
+    color: #333333;
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid #D5D5D5;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    text-align: center;
+    transition: all 0.4s;
+}
+.custom_pagination ul li.active a, .custom_pagination ul li a:hover {
+    background-color: #D5D5D5;
+}
+.custom_pagination ul li.active a {
+    pointer-events: none;
+}
+/*search result section css end*/
+
+/*map and form search section css start*/
+.map_and_form_search_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0px 15px;
+    margin: auto;
+}
+.national_search_border_container {
+    border: 1px solid #707070;
+}
+.search_box_title {
+    background-color: #F5F5F5;
+    padding: 16px 32px;
+}
+.search_box_title h6 {
+    color: #727272;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-left: 35px;
+    position: relative;
+}
+.search_box_title h6 img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 24px;
+}
+.search_form {
+    padding: 33px;
+    display: table;
+    width: 100%;
+}
+.search_form label {
+    font-size: 14px;
+    line-height: 28px;
+    display: block;
+    margin: 0px;
+}
+.search_form input[type="text"] {
+    border: 1px solid #707070;
+    padding: 0px 15px;
+    height: 48px;
+    width: calc(100% - 270px);
+    float: left;
+    background-color: #F7F7F7;
+    font-size: 16px;
+    font-weight: 700;
+}
+.search_form button {
+    border: none;
+    background-color: #036665;
+    color: #fff;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 188px;
+    border-radius: 30px;
+    height: 42px;
+    margin: 3px 0px 3px 45px;
+    border:  1px solid #036665;
+    transition: all 0.4s;
+}
+.search_form button:hover {
+    background-color: #fff;
+    color: #036665;
+}
+.search_form button svg {
+    width: 15px;
+    height: auto;
+    margin: -2px 6px -2px 0px;
+    fill: #fff;
+    transition: all 0.4s;
+}
+.search_form button:hover svg {
+    fill: #036665;
+}
+.map_container {
+    background-color: #E8F9FF;
+    display: table;
+    position: relative;
+    z-index: 1;
+    padding: 0px 0px 80px;
+    margin-top: 44px;
+}
+.map_container img {
+    position: absolute;
+    top: 78px;
+    left: 110px;
+    z-index: -1;
+    max-width: 900px;
+}
+.location_list_container {
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+ul.location_list.location_list_1 {
+    float: right;
+    padding-top: 80px;
+    padding-right: 72px;
+}
+ul.location_list.location_list_2 {
+    float: left;
+    padding-top: 312px;
+    padding-left: 44px;
+}
+ul.location_list.location_list_3 {
+    float: left;
+    padding-top: 200px;
+    padding-left: 14px;
+}
+ul.location_list.location_list_4 {
+    float: left;
+    padding-top: 218px;
+    padding-left: 82px;
+}
+ul.location_list.location_list_5 {
+    float: left;
+    padding-top: 218px;
+    padding-left: 20px;
+}
+ul.location_list.location_list_6 {
+    float: left;
+    padding-top: 68px;
+    padding-left: 285px;
+}
+ul.location_list.location_list_7 {
+    float: left;
+    padding-top: 68px;
+    padding-left: 8px;
+}
+ul.location_list.location_list_8 {
+    float: left;
+    padding-top: 14px;
+    padding-left: 440px;
+}
+ul.location_list.location_list_9 {
+    float: left;
+    padding-top: 14px;
+    padding-left: 8px;
+}
+ul.location_list.location_list_10 {
+    float: left;
+    padding-top: 14px;
+    padding-left: 8px;
+}
+ul.location_list.location_list_11 {
+    float: left;
+    padding-top: 42px;
+    padding-left: 58px;
+}
+ul.location_list.location_list_12 {
+    float: left;
+    margin-top: -4px;
+    padding-top: 0px;
+    padding-left: 78px;
+}
+ul.location_list.location_list_13 {
+    float: left;
+    margin-top: -4px;
+    padding-top: 0px;
+    padding-left: 8px;
+}
+ul.location_list.location_list_14 {
+    float: left;
+    margin-top: -64px;
+    padding-top: 0px;
+    padding-left: 16px;
+}
+ul.location_list.location_list_15 {
+    float: left;
+    margin-top: -64px;
+    padding-top: 0px;
+    padding-left: 8px;
+}
+ul.location_list.location_list_16 {
+    float: left;
+    margin-top: -120px;
+    padding-top: 0px;
+    padding-left: 28px;
+}
+ul.location_list li:not(:last-child) {
+    margin-bottom: 8px;
+}
+ul.location_list li a {
+    background-color: #46B9C7;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    width: 121px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    padding: 7px;
+    transition: all 0.4s;
+}
+ul.location_list li a:hover {
+    background-color: #41574D;
+}
+/*map and form search section css end*/
+
+/*prefecture search section css start*/
+.prefecture_search_section {
+    padding: 30px 0px 170px;
+}
+.prefecture_search_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0px 15px;
+    margin: auto;
+}
+.prefecture_table {
+    display: table;
+    padding: 32px 32px 50px;
+    width: 100%;
+}
+.prefecture_table .prefecture_row {
+    display: table-row;
+}
+.prefecture_table .prefecture_row .prefecture_head,
+.prefecture_table .prefecture_row .prefecture_data {
+    display: table-cell;
+    padding: 18px 60px;
+    border-bottom: 1px solid #D5D5D5;
+}
+.prefecture_table .prefecture_row .prefecture_head {
+    width: 260px;
+}
+.prefecture_table .prefecture_row .prefecture_head p {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 700;
+}
+.prefecture_table .prefecture_row .prefecture_data a {
+    font-size: 18px;
+    color: #69CB9E;
+    font-weight: 700;
+    transition: all 0.4s;
+}
+.prefecture_table .prefecture_row .prefecture_data a:hover {
+    color: #41574D;
+}
+.prefecture_table .prefecture_row .prefecture_data a:not(:last-child) {
+    margin-right: 30px;
+}
+/*prefecture search section css end*/
+
+/*nerve paralysis section css start*/
+.treatment_text_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    margin: auto;
+    padding: 0 15px;
+}
+.treatment_text_sec .common_section_title {
+    text-align: center;
+}
+.treatment_text_sec .common_section_title h2 {
+    margin: 0px auto 30px;
+}
+.treatment_text_sec .common_section_title p {
+    margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+}
+.treatment_text_green_box_sec {
+    background-color: #F2FFF7;
+    border-radius: 10px;
+    padding: 36px 77px 90px;
+    margin-bottom: 130px;
+}
+.wrist__drop_section .treatment_text_green_box_sec {
+    margin-bottom: 0;
+}
+.treatment_text_green_box_sec .common_heading h2 {
+    margin-bottom: 40px;
+}
+.treatment_text_green_box_sec p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+}
+.treatment_text_green_box_sec p.treatment_text_spacing {
+    margin-top: 40px;
+    display: block;
+}
+.treatment_text_green_box_sec .treatment_text_white_box {
+    margin: 65px auto 0;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 74px 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #69CB9E;
+}
+.treatment_text_green_box_sec .treatment_text_white_box h4 {
+    text-align: center;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #036665;
+    margin-bottom: 35px;
+}
+/*nerve paralysis section css end*/
+
+/*nerve alsy section css start*/
+.nerve_alsy_section {
+    padding: 119px 0;
+    position: relative;
+}
+.nerve_alsy_section .float_image_7 {
+    position: absolute;
+    top: 57px;
+    left: 0;
+    max-width: 67px;
+}
+.nerve_alsy_section .float_image_1 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    max-width: 34px;
+}
+.nerve_alsy_section .float_image_2 {
+    position: absolute;
+    bottom: 77px;
+    right: 0;
+    max-width: 79px;
+}
+.nerve_alsy_section .custom_container {
+    width: 100%;
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 30px;
+}
+.nerve_alsy_section .custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    padding: 63px 0;
+}
+.nerve_alsy_section .custom_col_image {
+    flex: 0 0 700px;
+    max-width: 700px;
+    padding: 0 30px;
+}
+.nerve_alsy_section .custom_col_text {
+    flex: 0 0 calc(100% - 700px);
+    max-width: calc(100% - 700px);
+    padding: 0 30px;
+}
+.nerve_alsy_section .acupuncture_needles_box .custom_row {
+    flex-direction: row-reverse;
+}
+.nerve_alsy_section .nerve_alsy_image {
+    position: relative;
+    padding-top: 66.8%;
+    overflow: hidden;
+}
+.nerve_alsy_section .nerve_alsy_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.nerve_alsy_section .nerve_alsy_text h4 {
+    font-size: 28px;
+    line-height: 40px;
+    color: #036665;
+    font-weight: 600;
+    margin: 0 0 25px 20px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+}
+.nerve_alsy_section .nerve_alsy_text p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+}
+.nerve_alsy_section .nerve_alsy_text p.nerve_alsy_text_spacing {
+    margin-top: 27px;
+}
+/*nerve alsy section css end*/
+
+/*like to paralyzed therapist section css start*/
+.like_to_paralyzed_therapist_section {
+    position: relative;
+    padding: 80px 0 160px;
+    background-image: url(../images/like_to_bg_imaje.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.like_to_paralyzed_therapist_section .custom_container {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 40px;
+}
+.like_to_paralyzed_therapist_section .common_heading h2 {
+    margin-bottom: 75px;
+    font-size: 40px;
+    line-height: 59px;
+}
+.like_to_paralyzed_therapist_section .custom_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*align-items: center;*/
+    padding: 75px 0;
+    margin: 0 -35px;
+}
+.like_to_paralyzed_therapist_section .never_forget_sec .custom_row {
+    flex-direction: row-reverse;
+}
+.like_to_paralyzed_therapist_section .custom_col_image {
+    flex: 0 0 565px;
+    max-width: 565px;
+    padding: 0 35px;
+}
+.like_to_paralyzed_therapist_section .custom_col_text {
+    flex: 0 0 calc(100% - 565px);
+    max-width: calc(100% - 565px);
+    padding: 0 35px;
+    /*position: relative;*/
+    display: flex;
+    align-items: center;
+}
+.like_to_paralyzed_therapist_section .palsy_therapis_image {
+    position: relative;
+    padding-top: 103.7%;
+    overflow: hidden;
+    z-index: 1;
+}
+.like_to_paralyzed_therapist_section .never_forget_image_big img,
+.like_to_paralyzed_therapist_section .never_forget_image_small img,
+.like_to_paralyzed_therapist_section .palsy_therapis_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.like_to_paralyzed_therapist_section .never_forget_image_big {
+    position: relative;
+    padding-top: 68.9%;
+    overflow: hidden;
+    z-index: 1;
+    max-width: 341px;
+    margin-bottom: 56px;
+}
+.like_to_paralyzed_therapist_section .never_forget_image_small {
+    position: relative;
+    padding-top: 45.8%;
+    overflow: hidden;
+    z-index: 1;
+    max-width: 238px;
+    margin-left: auto;
+}
+.like_to_paralyzed_therapist_section p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+    position: relative;
+    z-index: 1;
+}
+.like_to_paralyzed_therapist_section p.paralyzed_therapist_text_spacing {
+    margin-top: 40px;
+}
+.never_forget_sec,
+.palsy_therapist_sec {
+    position: relative;
+}
+.like_to_paralyzed_therapist_section .palsy_therapist_sec:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 166px;
+    right: 0;
+    bottom: 10px;
+    background-color: rgba(255,255, 255, 0.5);
+}
+.like_to_paralyzed_therapist_section .never_forget_sec:before {
+    content: '';
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 166px;
+    bottom: 30px;
+    background-color: rgba(255,255, 255, 0.5);
+}
+.like_to_paralyzed_therapist_section .never_forget_sec .custom_col_text {
+    padding-top: 70px;
+}
+/*like to paralyzed therapist section css end*/
+
+/*paralysis course section css start*/
+.paralysis_course_section {
+    padding: 70px 0 100px;
+    background-color: #F5F5F5;
+}
+.paralysis_course_section .custom_container {
+    width: 100%;
+    max-width: 1230px;
+    margin: auto;
+    padding: 0 15px;
+}
+.paralysis_course_white_box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 70px 80px;
+    margin-bottom: 50px;
+}
+.paralysis_course_white_box:last-child {
+    margin-bottom: 60px;
+}
+.paralysis_course_white_box .common_heading h2 {
+    margin-bottom: 55px;
+}
+.paralysis_course_white_box p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #333333;
+    position: relative;
+}
+.paralysis_course_white_box p.paralysis_course_white_box_text_spacing {
+    margin-top: 40px;
+}
+.paralysis_course_white_box p.paralysis_course_white_box_text_round {
+    padding-left: 17px;
+}
+.paralysis_course_white_box p.paralysis_course_white_box_text_round:before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333333;
+}
+.particular_sec {
+    text-align: center;
+}
+.particular_sec p {
+    margin-bottom: 55px;
+    font-size: 20px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    line-height: 40px;
+    color: #333333;
+}
+.particular_btn_sec {
+    max-width: 980px;
+    margin: auto;
+    padding: 40px 15px;
+    background-image: url(../images/particular_bg_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.particular_btn_sec h4 {
+    font-size: 27px;
+    line-height: 40px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.particular_btn_sec a {
+    max-width: 404px;
+    width: 100%;
+    margin: auto;
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 31px;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    border:  1px solid #fff;
+    border-radius: 30px;
+    position: relative;
+    display: block;
+    transition: all 0.4s;
+}
+.particular_btn_sec a:hover {
+    background-color: #fff;
+    color: #333333;
+}
+.particular_btn_sec a svg {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    bottom: 4px;
+    margin: auto;
+    stroke: #fff;
+    transition: all 0.4s;
+}
+.particular_btn_sec a:hover svg {
+    stroke: #333333;
+}
+.particular_btn_sec a i {
+    margin-right: 10px;
+}
+/*paralysis course section css end*/

@@ -1,0 +1,3723 @@
+@font-face {
+    font-family: 'DIN2014Bold';
+    src: url('../fonts/DIN2014Bold.eot');
+    src: url('../fonts/DIN2014Bold.eot') format('embedded-opentype'),
+    url('../fonts/DIN2014Bold.woff2') format('woff2'),
+    url('../fonts/DIN2014Bold.woff') format('woff'),
+    url('../fonts/DIN2014Bold.ttf') format('truetype'),
+    url('../fonts/DIN2014Bold.svg#DIN2014Bold') format('svg');
+}
+@font-face {
+    font-family: 'Futura2NormalRegular';
+    src: url('../fonts/Futura2NormalRegular.eot');
+    src: url('../fonts/Futura2NormalRegular.eot') format('embedded-opentype'),
+    url('../fonts/Futura2NormalRegular.woff2') format('woff2'),
+    url('../fonts/Futura2NormalRegular.woff') format('woff'),
+    url('../fonts/Futura2NormalRegular.ttf') format('truetype'),
+    url('../fonts/Futura2NormalRegular.svg#Futura2NormalRegular') format('svg');
+}
+@font-face {
+    font-family: 'corporate_logo_ver2bold';
+    src: url('../fonts/corporate-logo-bold-ver2.eot');
+    src: url('../fonts/corporate-logo-bold-ver2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/corporate-logo-bold-ver2.woff2') format('woff2'),
+    url('../fonts/corporate-logo-bold-ver2.woff') format('woff'),
+    url('../fonts/corporate-logo-bold-ver2.ttf') format('truetype'),
+    url('../fonts/corporate-logo-bold-ver2.svg#corporate_logo_ver2bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'corporate_logo_ver2medium';
+    src: url('../fonts/corporate-logo-medium-ver2.eot');
+    src: url('../fonts/corporate-logo-medium-ver2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/corporate-logo-medium-ver2.woff2') format('woff2'),
+    url('../fonts/corporate-logo-medium-ver2.woff') format('woff'),
+    url('../fonts/corporate-logo-medium-ver2.ttf') format('truetype'),
+    url('../fonts/corporate-logo-medium-ver2.svg#corporate_logo_ver2medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*common css start*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+}
+body, h1, h2, h3, h4, h5, h6, ul, li, p, a, span{
+    margin: 0px;
+    padding: 0px;
+}
+body.no_scroll {
+    overflow: hidden;
+}
+a, button, input[type=submit], select{
+    cursor: pointer;
+}
+a, a:hover, a:focus, 
+button, button:hover, button:focus,
+input, input:hover, input:focus, 
+textarea, textarea:hover, textarea:focus,
+select, select:hover, select:focus{
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+select::-ms-expand {
+    display: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.cpc {
+    display: block !important;
+}
+.csp {
+    display: none !important;
+}
+.cpc-1024 {
+    display: block !important;
+}
+.csp-1024 {
+    display: none !important;
+}
+@media (max-width: 1024px){
+    .cpc-1024 {
+        display: none !important;
+    }
+    .csp-1024 {
+        display: block !important;
+    }
+}
+@media (max-width: 900px){
+    .cpc{
+        display: none !important;
+    }
+    .csp {
+        display: block !important;
+    }
+}
+
+/*page pre-loader css start*/
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    pointer-events: none;
+    background-color: #fff;
+}
+.loader-wrapper .loader {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid rgba(62, 174, 230, 0.2);
+    border-right: 3px solid rgba(62, 174, 230, 0.2);
+    border-bottom: 3px solid rgba(62, 174, 230, 0.2);
+    border-left: 3px solid rgba(62, 174, 230, 0.8);
+    -webkit-animation: loaderSpin 1.5s infinite linear;
+    animation: loaderSpin 1.5s infinite linear;
+}
+@-webkit-keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*page pre-loader css end*/
+
+/*header section css start*/
+header.site_header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.4s;
+}
+header.site_header a.header_logo {
+    position: relative;
+    z-index: 9999;
+    margin: 20px 35px;
+}
+header.site_header a.header_logo .logo {
+    max-width: 242px;
+}
+nav .sidebar_logo img {
+    max-width: 198px;
+}
+nav.custom_navbar {
+    width: 100%;
+    max-width: 570px;
+    background-color: rgba(255,255,255,0.95);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -570px;
+    padding: 80px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: all 0.4s;
+}
+nav.custom_navbar.navbar_animate {
+    right: 0;
+}
+nav.custom_navbar .custom_navbar_links {
+    padding-top: 70px;
+}
+nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links,
+nav.custom_navbar .custom_navbar_links p {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 35px;
+    position: relative;
+    font-family: 'corporate_logo_ver2medium';
+    display: table;
+}
+nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links:after,
+nav.custom_navbar .custom_navbar_links p:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 1px;
+    background-color: #000000;
+}
+nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links {
+    margin-top: 40px;
+    margin-bottom: 0 !important;
+}
+nav ul.custom_navbar_inner_links {
+    padding-left: 40px;
+}
+nav ul.custom_navbar_inner_links li {
+    padding-left: 18px;
+    position: relative;
+}
+ul.custom_navbar_inner_links li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 13px;
+    height: 1px;
+    background-color: #707070;
+}
+nav ul.custom_navbar_inner_links li a {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    display: block;
+    font-family: 'corporate_logo_ver2medium';
+}
+.navbar_toggler {
+    position: fixed;
+    top: 0;
+    right: -100px;
+    padding: 0;
+    width: 100px;
+    height: 77px;
+    border: none;
+    outline: none !important;
+    background-color: #222222;
+    margin: auto 0px auto auto;
+    z-index: 99999;
+    transition: all 0.4s;
+}
+.navbar_toggler .navbar_toggler_inner,
+.navbar_toggler .navbar_toggler_inner:after,
+.navbar_toggler .navbar_toggler_inner:before {
+    width: 40px;
+    height: 1px;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    border-radius: 0;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+header.site_header.home_page_nav .navbar_toggler .navbar_toggler_inner,
+header.site_header.home_page_nav .navbar_toggler .navbar_toggler_inner:after,
+header.site_header.home_page_nav .navbar_toggler .navbar_toggler_inner:before {
+    background-color: #ffffff;
+}
+header.site_header.home_page_nav .navbar_toggler.open_menu .navbar_toggler_inner,
+header.site_header.home_page_nav .navbar_toggler.open_menu .navbar_toggler_inner:after,
+header.site_header.home_page_nav .navbar_toggler.open_menu .navbar_toggler_inner:before,
+header.site_header.home_page_nav.fixed_header .navbar_toggler .navbar_toggler_inner,
+header.site_header.home_page_nav.fixed_header .navbar_toggler .navbar_toggler_inner:after,
+header.site_header.home_page_nav.fixed_header .navbar_toggler .navbar_toggler_inner:before {
+    background-color: #fff;
+}
+.navbar_toggler .navbar_toggler_inner{
+    transition: top 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.navbar_toggler .navbar_toggler_inner:after,
+.navbar_toggler .navbar_toggler_inner:before {
+    display: block;
+    content: "";
+}
+.navbar_toggler .navbar_toggler_inner:before {
+    transition: top 75ms ease 0.12s,opacity 75ms ease;
+    top: -10px;
+}
+.navbar_toggler .navbar_toggler_inner:after {
+    transition: bottom 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+    bottom: -10px;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner {
+    transition: top 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
+    transform: rotate(45deg);
+    top: 0;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner:before {
+    top: 0;
+    transition: top 75ms ease,opacity 75ms ease 0.12s;
+    opacity: 0;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner:after {
+    bottom: 0;
+    transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
+    transform: rotate(-90deg);
+}
+/*header section css end*/
+
+/*footer section css start*/
+footer.site_footer {
+    background-image: url(../images/footer_image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 35px 0 8px;
+}
+footer.site_footer .custom_container {
+    width: 100%;
+}
+footer.site_footer .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer.site_footer .custom_col_image {
+    padding: 0 75px;
+    flex: 0 0 348px;
+    max-width: 348px;
+}
+footer.site_footer .custom_col_text {
+    padding: 5px 75px 0;
+    flex: 0 0 calc(100% - 348px);
+    max-width: calc(100% - 348px);
+}
+footer .footer_links .footer_links_text {
+    font-size: 18px;
+    color: #4AE6FF;
+    margin-bottom: 25px;
+    font-family: 'corporate_logo_ver2medium';
+    display: block;
+}
+footer .footer_links .footer_links_text:last-child {
+    margin-top: 15px;
+    margin-bottom: 0 !important;
+}
+footer .footer_inner_links {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 88px;
+}
+footer .footer_inner_links li {
+    margin: 0 60px 25px 0;
+    padding-left: 18px;
+    position: relative;
+}
+footer .footer_inner_links li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 13px;
+    height: 1px;
+    background-color: #fff;
+}
+footer .footer_inner_links a {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    font-family: 'corporate_logo_ver2medium';
+}
+.footer_copyright {
+    padding-top: 70px;
+    text-align: center;
+}
+.footer_copyright p {
+    font-size: 10px;
+    color: #fff;
+    font-family: 'corporate_logo_ver2medium';
+}
+/*footer section css end*/
+
+/* PAGETOP css start*/
+.pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+    width: 62px;
+    height: 62px;
+    background-color: #4AE6FF;
+    border-radius: 50%;
+    text-align: center;
+}
+.pagetop img {
+    max-width: 34px;
+    display: block;
+    margin: auto;
+}
+.pagetop a {
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #222222;
+    font-family: 'Futura2NormalRegular';
+    text-transform: uppercase;
+}
+/* PAGETOP css end*/
+
+/*home banenr section css start*/
+.home_banner_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/home_banner_image.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.5, 0.05, 0.5, 0.95);
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    transform: scale(0.5) translate(47.7%, -200%) matrix3d(0.999848, 0.0174524, 0, 0, -0.0174524, 0.999848, 0, 0, 0, 0, 1, 0, 0, 0, -200, 1);
+}
+.home_banner_section.animate {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.home_banner_section .custom_container {
+    max-width: 1210px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+.loader_bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #222222;
+    z-index: 99999;
+}
+.banner_content ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.banner_content ul li {
+    margin: 0px 7px 0px 0px;
+}
+.banner_content ul li a {
+    height: 157px;
+    width: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #005664;
+    font-family: 'corporate_logo_ver2medium';
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+}
+.banner_content ul li a:before {
+    content: "";
+    background-image: url(../images/circle_pattern_bg_white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.banner_content ul li a:hover:before {
+    transform: rotate(15deg);
+}
+.banner_logo {
+    display: table;
+    width: 630px;
+    min-height: calc((230px * 100) / 360);
+    max-width: 100%;
+    position: relative;
+    z-index: 99999;
+    margin-bottom: 60px;
+}
+.banner_logo img {
+  position: relative;
+  width: 100%;
+}
+.loader_with_banner_logo_animation .banner_logo img {
+    position: fixed;
+    margin: auto;
+    transform-origin: center;
+    max-width: 175px;
+    animation: blink 1s linear infinite;
+    -webkit-animation: blink 1s linear infinite;
+    visibility: hidden;
+    z-index: 99999;
+}
+@keyframes blink {  
+  0% {
+    opacity: 1;
+}
+50% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+}
+50% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+.banner_content p {
+    font-family: 'corporate_logo_ver2medium';
+    display: table;
+    color: #FFF500;
+    font-size: 30px;
+    letter-spacing: -3.2px;
+    text-align: center;
+    width: 630px;
+    max-width: 100%;
+    line-height: 78px;
+    padding: 0px 60px;
+    position: relative;
+    margin: 45px 0px 15px;
+}
+.banner_content p:before,
+.banner_content p:after {
+    content: "";
+    background-image: url(../images/banner_title_side_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 63px;
+    height: 78px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.banner_content p:after {
+    left: auto;
+    right: 0;
+    transform: rotateY(180deg);
+}
+a.move_down {
+    height: 50px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1111;
+}
+a.move_down span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #FFF500;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+a.move_down span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #FFF500;
+  border-radius: 100%;
+  -webkit-animation: scrollTB 2s infinite;
+  animation: scrollTB 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes scrollTB {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+}
+40% {
+    opacity: 1;
+}
+80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+@keyframes scrollTB {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+}
+40% {
+    opacity: 1;
+}
+80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+/*home banenr section css end*/
+
+/*about the study group section css start*/
+.about_the_study_group_section {
+    background-image: url(../images/about_the_study_group_image.png);
+    background-position: center right -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 60px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: all 0.6s cubic-bezier(0.5, 0.05, 0.5, 0.95);
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    transform: scale(0.5) translate(-47.7%, 200%) matrix3d(0.999848, 0.0174524, 0, 0, -0.0174524, 0.999848, 0, 0, 0, 0, 1, 0, 0, 0, -200, 1);
+}
+.about_the_study_group_section.animate {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.about_the_study_group_section > .custom_container {
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.about_the_study_group_section .common_section_title {
+    margin-bottom: 70px;
+}
+.about_the_study_group_section .common_section_title h2.title {
+    font-size: 35px;
+    margin: unset;
+}
+.about_the_study_group_sec {
+    width: 63%;
+}
+.about_the_study_group_section .about_the_study_group_list li {
+    position: relative;
+    padding-left: 19px;
+    margin-bottom: 55px;
+}
+.about_the_study_group_section .about_the_study_group_list li:last-child {
+    margin-bottom: 0;
+}
+.about_the_study_group_section .about_the_study_group_list li .about_the_list_lable {
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+.about_the_study_group_content p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+.about_the_study_group_section .common_btn_section {
+    margin-top: 60px;
+}
+/*about the study group section css end*/
+
+/*contact us if you like section css start*/
+.contact_us_if_you_like_section {
+    position: relative;
+}
+.contact_us_if_you_like_section .bg_black_heading .heading_title {
+    display: table;
+    margin: auto;
+    font-size: 35px;
+    position: relative;
+    padding: 0px 60px;
+    text-align: center;
+}
+.contact_us_if_you_like_section .bg_black_heading .heading_title:before, .contact_us_if_you_like_section .bg_black_heading .heading_title:after {
+    content: "";
+    height: 80px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-image: url(../images/banner_title_side_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact_us_if_you_like_section .bg_black_heading .heading_title:before {
+    left: 0px;
+}
+.contact_us_if_you_like_section .bg_black_heading .heading_title:after {
+    right: 0px;
+    transform: rotateY(180deg);
+}
+.contact_us_if_you_like_section .custom_container {
+    max-width: 1036px;
+    width: 100%;
+    margin: auto;
+    padding: 0 18px;
+    position: relative;
+    z-index: 1;
+}
+.contact_us_if_you_like_content {
+    padding: 80px 0px 0;
+}
+.contact_us_if_you_like_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.contact_us_if_you_like_section .custom_col_2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 18px;
+    margin-bottom: 55px;
+}
+.contact_us_if_you_like_section .custom_col_2:nth-child(n+6) {
+    margin-bottom: 0;
+}
+.contact_us_if_you_like_box {
+    text-align: center;
+}
+.contact_us_if_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+    border-radius: 50%;
+}
+.contact_us_if_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.contact_us_if_you_like_box p {
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 30px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+.contact_us_if_you_like_image_box {
+    padding: 176px 0px 95px;
+    text-align: center;
+    background-image: url('../images/contact_image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.contact_us_if_you_like_image_box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: calc(100vw / 18) solid #fff;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    z-index: 1;
+}
+.contact_us_if_you_like_image_box p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'corporate_logo_ver2medium';
+}
+/*contact us if you like section css end*/
+
+
+/*chronic pain section css start*/
+.chronic_pain_section {
+    padding: 65px 0 135px;
+    background-image: url(../images/chronic_pain_image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.chronic_pain_section:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid #fff;
+    border-right: 50vw solid #fff;
+    border-top: calc(100vw / 18) solid transparent;
+}
+.chronic_pain_section .custom_container {
+    max-width: 1026px;
+    width: 100%;
+    margin: auto;
+    padding: 0 13px;
+    position: relative;
+    z-index: 1;
+}
+.chronic_pain_section .common_section_title {
+    margin-bottom: 30px;
+}
+.chronic_pain_section .common_section_title {
+    margin-bottom: 30px;
+}
+.chronic_pain_gray_box {
+    padding: 44px 15px;
+    background-color: #DDDDDD;
+    text-align: center;
+}
+.chronic_pain_gray_box p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+.chronic_pain_gray_box p.chronic_pain_text_spacing {
+    margin-top: 48px;
+}
+.possible_causes_sec {
+    padding-top: 55px;
+}
+.possible_causes_sec h4 {
+    text-align: center;
+    font-size: 25px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+.possible_causes_sec .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -13px;
+    justify-content: center;
+}
+.possible_causes_sec .custom_col_4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 13px;
+}
+.possible_causes_sec .possible_causes_box {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 344px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 28px;
+}
+.possible_causes_sec .custom_col_4:nth-child(1) .possible_causes_box {
+    background-image: url(../images/possible_1.png);
+}
+.possible_causes_sec .custom_col_4:nth-child(2) .possible_causes_box {
+    background-image: url(../images/possible_2.png);
+}
+.possible_causes_sec .custom_col_4:nth-child(3) .possible_causes_box {
+    background-image: url(../images/possible_3.png);
+}
+.possible_causes_sec .custom_col_4:nth-child(4) .possible_causes_box {
+    background-image: url(../images/possible_4.png);
+}
+.possible_causes_sec .custom_col_4:nth-child(5) .possible_causes_box {
+    background-image: url(../images/possible_5.png);
+}
+.possible_causes_box h5 {
+    font-size: 20px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.possible_causes_box p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+.chronic_pain_yellow_box {
+    text-align: center;
+    background-color: #FFF500;
+    padding: 18px 15px;
+    margin-top: 35px;
+}
+.chronic_pain_yellow_box p {
+    font-size: 23px;
+    line-height: 32px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+/*chronic pain section css end*/
+
+/*approach to pain section css start*/
+.approach_to_pain_section {
+    padding: 75px 0;
+    background-image: url(../images/Mask_Group_12.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.approach_to_pain_section .custom_container {
+    max-width: 1088px;
+    width: 100%;
+    margin: auto;
+    padding: 0 4px;
+}
+.approach_to_pain_section .common_section_title {
+    margin-bottom: 65px;
+}
+.home_page .common_section_title h2.title {
+    font-size: 30px;
+}
+.approach_to_pain_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+}
+.approach_to_pain_section .custom_col_2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+.approach_to_pain_box {
+    text-align: center;
+    padding: 20px 11px;
+    background: rgba(80,79,79,1);
+    background: -moz-linear-gradient(top, rgba(80,79,79,1) 0%, rgba(34,34,34,1) 34%, rgba(34,34,34,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(80,79,79,1)), color-stop(34%, rgba(34,34,34,1)), color-stop(100%, rgba(34,34,34,1)));
+    background: -webkit-linear-gradient(top, rgba(80,79,79,1) 0%, rgba(34,34,34,1) 34%, rgba(34,34,34,1) 100%);
+    background: -o-linear-gradient(top, rgba(80,79,79,1) 0%, rgba(34,34,34,1) 34%, rgba(34,34,34,1) 100%);
+    background: -ms-linear-gradient(top, rgba(80,79,79,1) 0%, rgba(34,34,34,1) 34%, rgba(34,34,34,1) 100%);
+    background: linear-gradient(to bottom, rgba(80,79,79,1) 0%, rgba(34,34,34,1) 34%, rgba(34,34,34,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#504f4f', endColorstr='#222222', GradientType=0 );
+    border-radius: 18px;
+    overflow: hidden;
+    min-height: 368px;
+}
+.approach_to_pain_content_spacing {
+    margin-top: 105px;
+}
+.approach_to_pain_box h5 {
+    font-size: 20px;
+    color: #4AE6FF;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    text-align: center;
+}
+.approach_to_pain_box_image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #4AE6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto;
+}
+.approach_to_pain_box_image img {
+    display: block;
+    margin: auto;
+    max-width: 60px;
+    max-height: 60px;
+}
+.approach_to_pain_box p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'corporate_logo_ver2medium';
+}
+
+/*approach to pain section css end*/
+
+/*operating company section css start*/
+.operating_company_section {
+    padding: 75px 0 80px;
+}
+.operating_company_section .heading_title h3 {
+    margin-bottom: 60px;
+    font-size: 25px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    text-align: center;
+}
+.operating_company_section .custom_container {
+    max-width: 766px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.operating_company_table {
+    /*display: table;*/
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.operating_company_table_box .custom_row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.operating_company_table_box .custom_col_text_small {
+    flex: 0 0 46%;
+    max-width: 46%;
+}
+.operating_company_table_box .custom_col_text_big {
+    flex: 0 0 54%;
+    max-width: 54%;
+}
+.operating_company_table_box li:first-child {
+    border-top: 1px solid #707070;
+}
+.operating_company_table_box li {
+    padding: 14px 10px;
+    border-bottom: 1px solid #707070;
+}
+.operating_company_table_box p {
+    font-size: 16px;
+    color: #222222;
+    font-family: 'corporate_logo_ver2medium';
+}
+
+/*operating company section css end*/
+
+/*common btn section css start*/
+.common_btn_section.home_page {
+    padding-bottom: 90px;
+}
+/*common btn section css end*/
+
+/*breadcrumb section css start*/
+.breadcrumb_section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 170px 0 40px;
+}
+.breadcrumb_section.fibromyalgia_page {
+    background-image: url(../images/breadcrumb_image_fibromyalgia.png);
+}
+.breadcrumb_section .custom_container {
+    max-width: 1196px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.breadcrumb_section h1 {
+    font-size: 49px;
+    color: #000000;
+    margin-bottom: 0;
+    font-family: 'corporate_logo_ver2medium';
+}
+/*breadcrumb section css end*/
+
+/*various places section css start*/
+.various_places_section {
+    padding: 60px 0 0;
+}
+.various_places_section .custom_container {
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.various_places_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.various_places_section .custom_col_image {
+    flex: 0 0 431px;
+    max-width: 431px;
+}
+.various_places_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 119%;
+}
+.various_places_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.various_places_section .custom_col_text {
+    flex: 0 0 calc(100% - 431px);
+    max-width: calc(100% - 431px);
+    padding: 45px;
+    background-color: #222222;
+    color: #fff;
+}
+.osteopathic_clinic_section .osteopathic_clinic_text p,
+.various_places_section .various_places_text p {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 0;
+    font-family: 'corporate_logo_ver2medium';
+}
+.president_message_section p.president_content_space,
+.osteopathic_clinic_section .osteopathic_clinic_text p.various_places_text_spacing,
+.various_places_section .various_places_text p.various_places_text_spacing {
+    margin-top: 50px;
+}
+/*various places section css end*/
+/*fibromyalgia section css start*/
+.fibromyalgia_section {
+    background-image: url(../images/fibromyalgia_section.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    min-height: 406px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chronic_pain_section:before,
+.fibromyalgia_section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(241,111,92,0)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f16f5c', GradientType=0 );
+    z-index: 0;
+    pointer-events: none;
+}
+.fibromyalgia_section .custom_container {
+    max-width: 1196px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.fibromyalgia_section .fibromyalgia_text p {
+    font-size: 18px;
+    line-height: 35px;
+    color: #222222;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-family: 'corporate_logo_ver2medium';
+    position: relative;
+    z-index: 1;
+}
+.fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_underline {
+    display: table;
+    margin: auto;
+}
+.fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_underline:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 12px;
+    background-color: #4AE6FF;
+    z-index: -1;
+}
+.fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_spacing {
+    padding-top: 35px;
+}
+/*fibromyalgia section css end*/
+
+/*fibromyalgia improvement section css start*/
+.fibromyalgia_improvement_section {
+    background-position: center right 19%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 65px;
+}
+.fibromyalgia_improvement_section.fibromyalgia_page {
+    background-image: url(../images/fibromyalgia_improvement_image.png);
+}
+.fibromyalgia_improvement_section .custom_container {
+    max-width: 1196px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.fibromyalgia_improvement_section .fibromyalgia_improvement_text h3 {
+    font-size: 38px;
+    color: #222222;
+    margin-bottom: 40px;
+    font-family: 'corporate_logo_ver2bold';
+}
+.fibromyalgia_improvement_section .fibromyalgia_improvement_text p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #222222;
+    margin-bottom: 0;
+    font-weight: 500;
+    max-width: 52%;
+    font-family: 'corporate_logo_ver2medium';
+}
+.fibromyalgia_improvement_section .fibromyalgia_improvement_text p.fibromyalgia_improvement_text_spacing {
+    padding-top: 45px;
+}
+/*fibromyalgia improvement section css end*/
+
+/*study group section css start*/
+.study_group_section {
+    padding-top: 75px;
+}
+.study_group_section .custom_container {
+    max-width: 1216px;
+    width: 100%;
+    margin: auto;
+    padding: 0 25px;
+}
+.study_group_section .common_section_title {
+    margin-bottom: 55px;
+}
+.common_section_title h2.title {
+    display: table;
+    margin: auto;
+    font-size: 25px;
+    color: #222222;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'corporate_logo_ver2bold';
+    position: relative;
+    padding: 0px 60px;
+    text-align: center;
+}
+.common_section_title h2.title:before, .common_section_title h2.title:after {
+    content: "";
+    height: 80px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-image: url(../images/title_side_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.common_section_title h2.title:before {
+    left: 0px;
+}
+.common_section_title h2.title:after {
+    right: 0px;
+    transform: rotateY(180deg);
+}
+.study_group_section .study_group_text_box {
+    /* background-color: #222222; */
+    /* padding: 40px 0 50px; */
+}
+.study_group_text_box .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+    background-color: #222222;
+    padding: 40px 0px 50px;
+}
+.study_group_text_box .custom_col_4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 25px;
+}
+.study_group_text_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6px;
+}
+
+.study_group_text_image img {
+    margin: 0 30px;
+}
+.study_group_text_box .study_group_text h3 {
+    display: table;
+    margin: auto;
+    font-size: 25px;
+    color: #FFF500;
+    font-weight: 600;
+    margin-bottom: 45px;
+    font-family: 'corporate_logo_ver2bold';
+    position: relative;
+    text-align: center;
+}
+.study_group_text_box .study_group_text p {
+    font-size: 16px;
+    line-height: 34px;
+    color: #fff;
+    font-family: 'corporate_logo_ver2medium';
+}
+/*study group section css end*/
+
+/*improvement program section css start*/
+.improvement_program_section {
+    padding-top: 60px;
+}
+.improvement_program_section .custom_container {
+    max-width: 1196px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.improvement_program_section .improvement_program_content_box {
+    background-color: #4AE6FF;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 50px 40px;
+}
+.improvement_program_content_box .improvement_program_image_big {
+    position: absolute;
+    right: -18px;
+    bottom: 0;
+    max-width: 356px;
+}
+.improvement_program_heading h2 {
+    display: table;
+    margin: auto;
+    font-size: 30px;
+    color: #222222;
+    margin-bottom: 40px;
+    font-family: 'corporate_logo_ver2bold';
+    position: relative;
+    padding: 0 12px;
+    text-align: center;
+}
+.improvement_program_heading h2:before,
+.improvement_program_heading h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #222222;
+    height: 7px;
+}
+.improvement_program_heading h2:before{
+    bottom: -8px;
+}
+.improvement_program_heading h2:after{
+    top: -8px;
+}
+.improvement_program_content .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.improvement_program_content .custom_col_image {
+    flex: 0 0 332px;
+    max-width: 332px;
+    padding: 0 25px;
+}
+.improvement_program_content .custom_col_text {
+    flex: 0 0 calc(100% - 332px);
+    max-width: calc(100% - 332px);
+    padding: 0 25px;
+    display: flex;
+}
+.improvement_program_content .improvement_program_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.improvement_program_content .improvement_program_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+    border-radius: 50%;
+}
+.improvement_program_content .improvement_program_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.improvement_program_text p.improvement_program_text_big {
+    font-size: 21px;
+    color: #222222;
+    line-height: 30px;
+    font-family: 'corporate_logo_ver2medium';
+}
+.improvement_program_text p.improvement_program_text_big span.improvement_program_text_big {
+    font-size: 30px;
+    color: #222222;
+    line-height: 30px;
+    font-weight: 600;
+    font-family: 'corporate_logo_ver2bold';
+    margin-right: 40px;
+}
+.improvement_program_text p span.improvement_program_text_bold:last-child,
+.improvement_program_text p.improvement_program_text_big span.improvement_program_text_big:last-child {
+    margin-right: 0;
+}
+.improvement_program_text ul.improvement_program_text_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    justify-content: center;
+}
+.improvement_program_text ul.improvement_program_text_list li {
+    position: relative;
+    padding-left: 18px;
+    margin-right: 10px;
+}
+.improvement_program_text ul.improvement_program_text_list li:last-child {
+    margin-right: 0;
+}
+.improvement_program_text ul.improvement_program_text_list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #222222;
+}
+.improvement_program_text p {
+    font-size: 16px;
+    color: #222222;
+    line-height: 30px;
+    font-family: 'corporate_logo_ver2medium';
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.improvement_program_text p span.improvement_program_text_bold {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'corporate_logo_ver2bold';
+    margin-right: 20px;
+}
+.improvement_program_text p.improvement_program_text_spacing {
+    margin-top: 40px;
+}
+/*improvement program section css end*/
+
+/*common btn section css start*/
+.common_btn_section.fibromyalgia_page {
+    padding: 90px 0 95px;
+}
+.common_btn_section .custom_container {
+    max-width: 986px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.common_btn_section .search_btn,
+.common_btn_section .download_btn {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #222222;
+    min-width: 450px;
+}
+.common_btn_section .search_btn {
+    background-image: url(../images/search_btn_image.png);
+    border: 5px solid #FFF500;
+    padding: 25px 25px 15px;
+}
+.common_btn_section .btn_content {
+    display: table;
+    margin-left: auto;
+    text-align: center;
+}
+.common_btn_section .btn_content p {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'corporate_logo_ver2medium';
+}
+.common_btn_section .btn_content h5{
+    font-size: 27px;
+    color: #FFF500;
+    font-weight: 600;
+    font-family: 'corporate_logo_ver2bold';
+}
+.common_btn_section .btn_content a{
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'Futura2NormalRegular';
+    position: relative;
+    display: table;
+    margin: auto;
+}
+.common_btn_section .btn_content a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+.common_btn_section .download_btn {
+    background-image: url(../images/download_btn_image.png);
+    border: 5px solid #4AE6FF;
+    padding: 25px 10px 15px;
+}
+.common_btn_section .download_btn .btn_content p {
+    font-size: 16px;
+    line-height: 23px;
+}
+.common_btn_section .download_btn .btn_content h5 {
+    color: #4AE6FF;
+    font-size: 25px;
+    line-height: 48px;
+}
+/*common btn section css end*/
+
+/*temporomandibular page css*/
+/*breadcrumb section css start*/
+.breadcrumb_section.temporomandibular_page {
+    background-image: url(../images/breadcrumb_image_temporomandibular.png);
+}
+/*breadcrumb section css end*/
+
+/*fibromyalgia improvement section css start*/
+.fibromyalgia_improvement_section.temporomandibular_page {
+    background-image: url(../images/fibromyalgia_improvement_image_second.png);
+}
+/*fibromyalgia improvement section css end*/
+
+/*about page css*/
+/*breadcrumb section css start*/
+.breadcrumb_section.about_page {
+    background-image: url(../images/breadcrumb_image_about.png);
+}
+/*breadcrumb section css end*/
+
+/*fibromyalgia improvement section css start*/
+.fibromyalgia_improvement_section.about_page {
+    background-image: url(../images/fibromyalgia_improvement_image_third.png);
+}
+/*fibromyalgia improvement section css end*/
+
+/*study group section css start*/
+.study_group_section.about_page .study_group_text_image h3 {
+    margin: 0 !important;
+}
+.study_group_section.about_page .study_group_text_image img {
+    margin: 0 20px;
+}
+.study_group_section.about_page .study_group_about_content {
+    padding: 70px 0 25px;
+    text-align: center;
+}
+.study_group_section.about_page .study_group_about_content p {
+    font-size: 16px;
+    color: #222222;
+    line-height: 36px;
+    font-family: 'corporate_logo_ver2medium';
+}
+.study_group_section.about_page .study_group_about_content p.heading_text{
+    margin-bottom: 45px;
+    line-height: 30px;
+}
+.study_group_section.about_page .study_group_about_content p.heading_text span{
+    font-size: 30px;
+    color: #222222;
+    font-weight: 600;
+    font-family: 'corporate_logo_ver2bold';
+}
+/*study group section css end*/
+
+/*explore page css*/
+/*breadcrumb section css start*/
+.breadcrumb_section.explore_page {
+    background-image: url(../images/breadcrumb_image_explore.jpg);
+}
+/*breadcrumb section css end*/
+
+/*hokkaido area section css start*/
+.hokkaido_area_section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+.area_section {
+    position: relative;
+    overflow-x: hidden;
+}
+.area_section:after {
+    content: '';
+    position: absolute;
+    top: 190px;
+    right: -32px;
+    background-image: url(../images/no_pain_image_blue.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 339px;
+    height: 302px;
+}
+.tohoku_area_section > .custom_container,
+.hokkaido_area_section > .custom_container {
+    max-width: 1076px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.area_table {
+    display: table;
+    width: 100%;
+    text-align: left;
+}
+.area_table_row {
+    display: table-row;
+}
+.area_table_th, .area_table_td {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 14px 10px;
+    border-bottom: 1px solid #E3E3E3;
+}
+.area_content .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.area_content_label {
+    width: 36px;
+    padding: 16px 10px;
+    background-color: #222222;
+}
+
+.area_content_label p {
+    color: #FFF500;
+    font-size: 16px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    line-height: 26px;
+}
+.custom_col_label {
+    flex: 0 0 55px;
+    max-width: 55px;
+}
+.custom_col_table {
+    flex: 0 0 calc(100% - 55px);
+    max-width: calc(100% - 55px);
+    border-left: 1px solid #222222;
+    padding-left: 30px;
+}
+.area_content .custom_container {
+    padding: 0;
+    width: 100%;
+}
+.area_table_link {
+    width: 50px;
+    height: 50px;
+    line-height: 51px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #222222;
+    margin-left: auto;
+    margin-right: 45px;
+}
+
+.area_table_link a {
+    font-size: 15px;
+    color: #4AE6FF !important;
+    display: block;
+    font-weight: 500;
+    font-family: 'DIN2014Bold';
+}
+.area_section .area_content_icon path {
+    fill: #4ae6ff;
+}
+.area_accordion_heading {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.area_accordion_heading.ui-accordion-header {
+    background-color: transparent !important;
+    padding: 15px 30px !important;
+    margin: 0 !important;
+    border: none;
+    border-bottom: 1px solid #222222;
+    border-radius: 0;
+    outline: none;
+}
+.area_accordion_heading.ui-accordion-header h3 {
+    color: #222222;
+    font-size: 25px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    margin-left: 10px;
+}
+.area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon {
+    position: relative !important;
+    width: 21px;
+    height: 21px;
+    margin: auto 0 auto auto;
+    order: 3;
+}
+.area_accordion_heading.ui-state-active span.ui-accordion-header-icon:after,
+.area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon:after,
+.area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #000000;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.area_accordion_heading.ui-state-active span.ui-accordion-header-icon:after,
+.area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon:after {
+    width: 100%;
+    height: 3px;
+}
+.area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon:before {
+    height: 100%;
+    width: 3px;
+    left: 0;
+}
+.area_accordion_heading.ui-state-active span.ui-accordion-header-icon:after {
+    z-index: 2;
+}
+.area_accordion_heading.ui-state-active span.ui-accordion-header-icon:before {
+    transform: rotate(90deg);
+    z-index: 1;
+    width: 2px;
+}
+.hokkaido_area_section .area_accordion_heading.ui-accordion-header {
+    pointer-events: none;
+}
+.area_section .area_content_box .ui-accordion-content {
+    border: none;
+    padding: 20px 0 40px;
+    background-color: transparent;
+}
+.area_table_th p {
+    font-size: 16px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    color: #222222;
+}
+.area_table_td p {
+    font-size: 14px;
+    font-family: 'corporate_logo_ver2medium';
+    color: #222222;
+}
+/*hokkaido area section css end*/
+
+/*tohoku area section css start*/
+.tohoku_area_section {
+    position: relative;
+    z-index: 1;
+}
+.tohoku_area_section .area_content {
+    padding-bottom: 30px;
+}
+.tohoku_area_section .area_content:first-child {
+    padding-top: 20px;
+}
+.tohoku_area_section .area_content:last-child {
+    padding-bottom: 0;
+}
+.tohoku_area_section .area_accordion_heading.ui-state-active .area_content_icon path {
+    fill: #222222;
+    transition: all 0.3s;
+}
+/*tohoku area section css end*/
+
+/*interest page css*/
+/*breadcrumb section css start*/
+.breadcrumb_section.interest_page {
+    background-image: url(../images/breadcrumb_image_interest.png);
+}
+/*breadcrumb section css end*/
+
+/*osteopathic clinic section css start*/
+.osteopathic_clinic_section {
+    padding: 60px 0 0;
+}
+.osteopathic_clinic_section .custom_container {
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.osteopathic_clinic_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.osteopathic_clinic_section .custom_col_image {
+    flex: 0 0 323px;
+    max-width: 323px;
+    display: flex;
+}
+.osteopathic_clinic_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 119%;
+    width: 100%;
+}
+.osteopathic_clinic_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.osteopathic_clinic_section .custom_col_text {
+    flex: 0 0 calc(100% - 323px);
+    max-width: calc(100% - 323px);
+    padding: 45px 30px;
+    background-color: #222222;
+    color: #fff;
+}
+/*osteopathic clinic section css end*/
+
+/*intractable pain section css start*/
+.intractable_pain_section {
+    padding: 110px 0 80px;
+
+    position: relative;
+}
+.intractable_pain_section:before {
+    content: '';
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 406px;
+    background-image: url(../images/fibromyalgia_section.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intractable_pain_section:after {
+    content: '';
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 406px;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(241,111,92,0)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(241,111,92,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f16f5c', GradientType=0 );
+}
+.intractable_pain_section .custom_container {
+    max-width: 1197px;
+    width: 100%;
+    margin: auto;
+    padding: 0 16px;
+}
+.intractable_pain_section .common_section_title {
+    margin-bottom: 50px;
+}
+.intractable_pain_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+.intractable_pain_section .custom_col_2 {
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+    padding: 0 16px;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
+}
+.intractable_pain_box {
+    position: relative;
+}
+.intractable_pain_box_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+    border-radius: 50%;
+}
+.intractable_pain_box_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.intractable_pain_box_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intractable_pain_box_text p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'corporate_logo_ver2medium';
+    position: relative;
+    z-index: 1;
+    padding: 0 5px;
+}
+.intractable_pain_content {
+    padding-top: 60px;
+}
+.intractable_pain_content p {
+    font-size: 23px;
+    color: #222222;
+    text-align: center;
+    font-family: 'corporate_logo_ver2medium';
+    position: relative;
+    z-index: 1;
+}
+.intractable_pain_content p .intractable_pain_content_underline {
+    position: relative;
+    z-index: 1;
+} 
+.intractable_pain_content p .intractable_pain_content_underline {
+    color: #222222;
+    font-size: 28px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+}
+.intractable_pain_content p .intractable_pain_content_underline:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 16px;
+    background-color: #4AE6FF;
+    z-index: -1;
+}
+/*intractable pain section css end*/
+
+/*specialized course section css start*/
+.specialized_course_section {}
+.specialized_course_section .custom_container {
+    max-width: 1110px;
+    width: 100%;
+    margin: auto;
+    padding: 0 55px;
+}
+.bg_black_heading {
+    background-color: #222222;
+    text-align: center;
+    position: relative;
+    padding: 24px 15px;
+}
+.bg_black_heading .heading_title {
+    font-size: 29px;
+    color: #FFF500;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+}
+.specialized_course_contont_sec {
+    background-image: url(../images/specialized_image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 75px 0 10px;
+}
+.specialized_course_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -55px;
+}
+.specialized_course_section .custom_col_4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 55px;
+    margin-bottom: 35px;
+}
+.specialized_course_box {
+    border: 8px solid #FFF500;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.8);
+    max-width: 260px;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+}
+.specialized_course_box p {
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    text-align: center;
+}
+.bg_black_heading:after {
+    content: '';
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 28px solid #222222;
+    z-index: 1;
+}
+/*specialized course section css end*/
+
+/*download materials section css start*/
+.download_materials_section {
+    padding: 65px 0 95px;
+}
+.download_materials_section .custom_container {
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.common_section_title.line_image {
+    margin-bottom: 25px;
+}
+.common_section_title.line_image h2.title {
+    font-size: 30px;
+    padding: 0px 85px;
+}
+.common_section_title.line_image h2.title:before, .common_section_title.line_image h2.title:after {
+    background-image: url(../images/title_side_image_line.png);
+    height: 80px;
+    width: 70px;
+}
+.common_btn {
+    background-position: left -26px;
+    background-repeat: no-repeat;
+    background-size: auto 157%;
+    background-color: #222222;
+    max-width: 100%;
+    padding: 18px;
+}
+.download_materials_btn {
+    background-image: url(../images/download_btn_image_second.png);
+    border: 5px solid #4AE6FF;
+}
+.common_btn_content_inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn_content {
+    text-align: center;
+}
+.btn_content p {
+   font-size: 22px;
+   color: #fff;
+   font-family: 'corporate_logo_ver2medium';
+}
+.btn_content h5 {
+    font-size: 38px;
+    color: #4AE6FF;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+}
+.btn_link a {
+    width: 92px;
+    height: 92px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 89px;
+    font-family: 'Futura2NormalRegular';
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+/*download materials section css end*/
+
+/*president message section css start*/
+.president_message_section .custom_container {
+    max-width: 1196px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.president_message_section .heading_text {
+    margin-bottom: 35px;
+}
+.president_message_section .heading_text h3 {
+    font-size: 30px;
+    font-family: 'corporate_logo_ver2bold';
+    font-weight: 600;
+    color: #222222;
+    text-align: center;
+}
+.president_message_content_box_sec {
+    position: relative;
+    overflow: hidden;
+    background-color: #4AE6FF;
+}
+.president_message_content_box_sec:after {
+    content: '';
+    position: absolute;
+    right: -32px;
+    bottom: 0;
+    background-image: url(../images/no_pain_image_white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 339px;
+    height: 302px;
+}
+.president_message_section .custom_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.president_message_section .custom_col_image {
+    flex: 0 0 358px;
+    max-width: 358px;
+}
+.president_message_section .custom_col_text {
+    flex: 0 0 calc(100% - 358px);
+    max-width: calc(100% - 358px);
+    padding: 65px 35px 0 55px;
+}
+.president_message_section .president_message_image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 150%;
+}
+.president_message_section .president_message_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.president_message_section .president_message_content_box_sec p {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 0;
+    font-family: 'corporate_logo_ver2medium';
+}
+.president_message_content_box {
+    max-width: 1030px;
+    padding: 80px 15px 65px;
+    margin: auto;
+}
+/*president message section css end*/
+
+/*register section css start*/
+.register_section {
+    padding: 95px 0;
+}
+.register_section .custom_container {
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.register_section .common_section_title h2.title:before, .register_section .common_section_title h2.title:after {
+    top: 10px;
+}
+.register_section .btn_content h5 {
+    color: #FFF500;
+}
+.register_section .common_section_title.line_image h2.title {
+    font-size: 24px;
+}
+.register_btn {
+    background-image: url(../images/search_btn_image_second.png);
+    border: 5px solid #FFF500;
+}
+.register_btn .btn_link {
+    margin-left: 5px;
+}
+.register_btn .btn_link a {
+    font-size: 27px;
+}
+/*register section css end*/
+
+
+
+/*responsive css start*/
+@media (max-width: 1249px) {
+    .home_banner_section .custom_container,
+    .intractable_pain_section .custom_container,
+    .president_message_section .custom_container,
+    .fibromyalgia_section .custom_container,
+    .fibromyalgia_improvement_section .custom_container,
+    .study_group_section .custom_container,
+    .improvement_program_section .custom_container {
+        max-width: 1030px !important;
+    }
+    .study_group_section .custom_container {
+        padding: 0 15px ;
+    }
+    .study_group_text_box .custom_row {
+        margin: 0 -15px;
+    }
+    .study_group_text_box .custom_col_4 {
+        padding: 0 15px;
+    }
+    .study_group_text_box .study_group_text h3 {
+        font-size: 22px !important;
+        margin-bottom: 30px !important;
+    }
+    .intractable_pain_section .custom_container {
+        padding: 0 12px;
+    }
+    .intractable_pain_section .custom_row {
+        margin: 0 -12px;
+    }
+    .intractable_pain_section .custom_col_2 {
+        padding: 0 12px;
+    }
+    .intractable_pain_section {
+        padding: 100px 0 80px;
+    }
+    .specialized_course_contont_sec {
+        padding: 70px 0 10px;
+    }
+    .download_materials_section {
+        padding: 60px 0 90px;
+    }
+    .president_message_content_box {
+        padding: 80px 15px 60px;
+    }
+    .register_section {
+        padding: 90px 0;
+    }
+    .about_the_study_group_section .common_section_title h2.title {
+        font-size: 30px;
+    }
+    .about_the_study_group_sec {
+        width: 58%;
+    }
+}
+@media (max-width: 1160px) {
+    header.site_header a.header_logo {
+        margin: 20px;
+    }
+    header.site_header a.header_logo .logo {
+        max-width: 220px;
+    }
+    nav.custom_navbar .custom_navbar_links {
+        padding-top: 60px;
+    }
+    nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links,
+    nav.custom_navbar .custom_navbar_links p {
+        margin-bottom: 30px;
+    }
+    nav ul.custom_navbar_inner_links li a {
+        margin-bottom: 25px;
+    }
+    nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links {
+        margin-top: 35px;
+    }
+    .breadcrumb_section {
+        padding: 150px 0 30px;
+    }
+    .approach_to_pain_section .custom_container,
+    .chronic_pain_section .custom_container,
+    .about_the_study_group_section > .custom_container,
+    .contact_us_if_you_like_section .custom_container,
+    .osteopathic_clinic_section .custom_container,
+    .intractable_pain_section .custom_container,
+    .specialized_course_section .custom_container,
+    .download_materials_section .custom_container,
+    .president_message_section .custom_container,
+    .register_section .custom_container,
+    .tohoku_area_section > .custom_container,
+    .hokkaido_area_section > .custom_container,
+    .improvement_program_section .custom_container,
+    .study_group_section .custom_container,
+    .fibromyalgia_improvement_section .custom_container,
+    .fibromyalgia_section .custom_container,
+    .various_places_section .custom_container,
+    .breadcrumb_section .custom_container {
+        max-width: 900px;
+    }
+    .breadcrumb_section h1 {
+        font-size: 42px;
+    }
+    .various_places_section .custom_col_image {
+        flex: 0 0 350px;
+        max-width: 350px;
+    }
+    .various_places_image {
+        padding-top: 140.7%;
+    }
+    .various_places_section .custom_col_text {
+        flex: 0 0 calc(100% - 350px);
+        max-width: calc(100% - 350px);
+        padding: 35px;
+    }
+    .president_message_section p.president_content_space,
+    .osteopathic_clinic_section .osteopathic_clinic_text p.various_places_text_spacing,
+    .various_places_section .various_places_text p.various_places_text_spacing {
+        margin-top: 35px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p {
+        line-height: 30px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_spacing {
+        padding-top: 30px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_underline:after {
+        bottom: 3px;
+    }
+    .approach_to_pain_section,
+    .operating_company_section,
+    .hokkaido_area_section,
+    .fibromyalgia_improvement_section {
+        padding: 60px 0;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text h3 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text p.fibromyalgia_improvement_text_spacing {
+        padding-top: 30px;
+    }
+    .study_group_section {
+        padding-top: 60px;
+    }
+    .common_section_title h2.title:before, .common_section_title h2.title:after {
+        height: 62px;
+        background-size: contain;
+    }
+    .study_group_section .common_section_title {
+        margin-bottom: 50px;
+    }
+    .study_group_text_box .custom_row {
+        padding: 40px 5px;
+    }
+    .study_group_text_box .custom_col_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .study_group_text_box .custom_col_4:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .study_group_text_image img {
+        margin: 0 20px;
+        max-width: 18px;
+    }
+    .improvement_program_section .improvement_program_content_box {
+        padding: 50px 30px;
+    }
+    .improvement_program_heading h2 {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+    .improvement_program_content .custom_col_image {
+        flex: 0 0 270px;
+        max-width: 270px;
+        padding: 0 15px;
+    }
+    .improvement_program_content .custom_col_text {
+        flex: 0 0 calc(100% - 270px);
+        max-width: calc(100% - 270px);
+        padding: 0 15px;
+    }
+    .improvement_program_text p.improvement_program_text_big {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .improvement_program_text p.improvement_program_text_big span.improvement_program_text_big {
+        font-size: 26px;
+        margin-right: 30px;
+    }
+    .improvement_program_text ul.improvement_program_text_list {
+        margin: 25px 0;
+    }
+    .improvement_program_text p.improvement_program_text_spacing {
+        margin-top: 25px;
+    }
+    .improvement_program_content_box .improvement_program_image_big {
+        max-width: 330px;
+    }
+    .common_btn_section.fibromyalgia_page {
+        padding: 70px 0;
+    }
+    .common_btn_section .search_btn,
+    .common_btn_section .download_btn {
+        min-width: 400px;
+        padding: 22px 10px !important;
+    }
+    .common_btn_section .btn_content p {
+        font-size: 16px !important;
+        line-height: normal !important;
+    }
+    .common_btn_section .btn_content h5{
+        font-size: 22px !important;
+        line-height: normal !important;
+    }
+    .common_btn_section .custom_container {
+        max-width: 855px;
+    }
+    footer.site_footer {
+        padding: 30px 0 8px;
+    }
+    footer.site_footer .custom_col_image {
+        padding: 0 20px;
+        flex: 0 0 240px;
+        max-width: 240px;
+    }
+    footer.site_footer .custom_col_text {
+        padding: 5px 20px 0;
+        flex: 0 0 calc(100% - 240px);
+        max-width: calc(100% - 240px);
+    }
+    footer .footer_links .footer_links_text {
+        margin-bottom: 20px;
+    }
+    footer.site_footer .footer_inner_links {
+        padding-left: 50px;
+    }
+    footer.site_footer .footer_inner_links li {
+        margin: 0 32px 20px 0;
+    }
+    .footer_copyright {
+        padding-top: 55px;
+    }
+    .fibromyalgia_section {
+        min-height: 320px;
+    }
+    .study_group_text_box .study_group_text h3 br.cpc {
+        display: none !important;
+    }
+    .study_group_section.about_page .study_group_about_content p.heading_text span {
+        font-size: 26px;
+    }
+    .study_group_section.about_page .study_group_about_content p.heading_text {
+        margin-bottom: 30px;
+    }
+    .study_group_section.about_page .study_group_about_content {
+        padding: 60px 0 20px;
+    }
+    .tohoku_area_section .area_content:first-child {
+        padding-top: 10px;
+    }
+    .area_section .area_content_box .ui-accordion-content {
+        padding: 20px 0 30px;
+    }
+    .area_table_link {
+        margin-right: 25px;
+    }
+    .custom_col_table {
+        padding-left: 20px;
+    }
+    .area_accordion_heading.ui-accordion-header {
+        padding: 15px 20px !important;
+    }
+    .area_accordion_heading.ui-accordion-header h3 {
+        font-size: 22px;
+    }
+    .area_section .area_content_icon {
+        max-width: 16px;
+    }
+    .area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .osteopathic_clinic_section .custom_col_text {
+        padding: 30px;
+    }
+    .intractable_pain_section {
+        padding: 80px 0;
+    }
+    .intractable_pain_section .custom_container {
+        padding: 0 15px;
+    }
+    .intractable_pain_section .custom_row {
+        margin: 0 -15px;
+    }
+    .intractable_pain_section .custom_col_2 {
+        padding: 0 15px;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .intractable_pain_content p {
+        font-size: 20px;
+    }
+    .intractable_pain_content p .intractable_pain_content_underline {
+        font-size: 26px;
+    }
+    .intractable_pain_content {
+        padding-top: 45px;
+    }
+    .specialized_course_section .custom_container {
+        padding: 0 25px;
+    }
+    .specialized_course_section .custom_row {
+        margin: 0 -25px;
+    }
+    .specialized_course_section .custom_col_4 {
+        padding: 0 25px;
+    }
+    .specialized_course_box {
+        height: 250px;
+        padding: 10px 25px;
+    }
+    .specialized_course_box p {
+        font-size: 22px;
+    }
+    .common_section_title.line_image h2.title {
+        font-size: 26px;
+        padding: 0px 53px;
+    }
+    .common_section_title.line_image h2.title:before, .common_section_title.line_image h2.title:after {
+        height: 60px;
+        width: 53px;
+    }
+    .btn_content p {
+        font-size: 20px;
+    }
+    .btn_content h5 {
+        font-size: 30px;
+    }
+    .btn_link a {
+        width: 90px;
+        height: 90px;
+    }
+    .download_materials_section {
+        padding: 60px 0 70px;
+    }
+    .president_message_section .custom_col_image {
+        flex: 0 0 330px;
+        max-width: 330px;
+    }
+    .president_message_section .custom_col_text {
+        flex: 0 0 calc(100% - 330px);
+        max-width: calc(100% - 330px);
+        padding: 40px 30px 0 40px;
+    }
+    .president_message_section .president_message_image {
+        padding-top: 170%;
+    }
+    .president_message_section .president_message_image img {
+        object-position: left;
+    }
+    .president_message_content_box {
+        padding: 50px 15px;
+    }
+    .register_section .common_section_title.line_image h2.title {
+        font-size: 23px;
+    }
+    .register_section {
+        padding: 70px 0;
+    }
+    .register_btn .btn_link a {
+        font-size: 24px;
+    }
+    .register_section .common_section_title h2.title:before, .register_section .common_section_title h2.title:after {
+        top: 5px;
+    }
+    .bg_black_heading {
+        padding: 20px 15px;
+    }
+    .president_message_section .heading_text h3,
+    .bg_black_heading .heading_title {
+        font-size: 26px;
+    }
+    .intractable_pain_box_text p {
+        font-size: 18px;
+    }
+    .specialized_course_box p {
+        font-size: 20px;
+    }
+    .about_the_study_group_section {
+        padding: 80px 0 40px;
+    }
+    .about_the_study_group_section .common_section_title {
+        margin-bottom: 50px;
+    }
+    .about_the_study_group_section .common_section_title h2.title {
+        font-size: 25px;
+    }
+    .banner_content p:before, .banner_content p:after {
+        display: none;
+    }
+    .banner_content p {
+        padding: 0;
+        width: auto;
+        font-size: 25px;
+        line-height: 60px;
+        margin: 35px 0px 15px;
+    }
+    .banner_content ul li a {
+        font-size: 16px;
+        height: 137px;
+        width: 135px;
+    }
+    .banner_logo {
+        width: 420px;
+    }
+    .about_the_study_group_section .common_btn_section {
+        margin-top: 40px;
+    }
+    .about_the_study_group_section .about_the_study_group_list li {
+        margin-bottom: 40px;
+    }
+    .contact_us_if_you_like_section .bg_black_heading .heading_title {
+        font-size: 30px;
+        padding: 0px 44px;
+    }
+    .contact_us_if_you_like_section .bg_black_heading .heading_title:before, .contact_us_if_you_like_section .bg_black_heading .heading_title:after {
+        height: 60px;
+        width: 38px;
+    }
+    .contact_us_if_you_like_section .custom_container {
+        padding: 0 15px;
+    }
+    .contact_us_if_you_like_content {
+        padding-top: 60px;
+    }
+    .contact_us_if_you_like_section .custom_row {
+        margin: 0 -15px;
+    }
+    .contact_us_if_you_like_section .custom_col_2 {
+        padding: 0 15px;
+        margin-bottom: 35px;
+    }
+    .contact_us_if_you_like_box p {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .contact_us_if_you_like_image_box {
+        padding: 120px 0px 60px;
+    }
+    .home_page .common_section_title h2.title {
+        font-size: 25px;
+        padding: 0px 50px;
+    }
+    .chronic_pain_section {
+        padding: 60px 0 100px;
+    }
+    .chronic_pain_gray_box {
+        padding: 30px 15px;
+    }
+    .chronic_pain_gray_box p.chronic_pain_text_spacing {
+        margin-top: 35px;
+    }
+    .possible_causes_sec h4 {
+        font-size: 22px;
+        margin-bottom: 45px;
+    }
+    .chronic_pain_section .custom_container {
+        padding: 0 10px;
+    }
+    .possible_causes_sec .custom_row {
+        margin: 0 -10px;
+    }
+    .possible_causes_sec .custom_col_4 {
+        padding: 0 10px;
+    }
+    .possible_causes_box h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .possible_causes_sec .possible_causes_box {
+        height: 294px;
+        padding: 0px 30px;
+    }
+    .possible_causes_box p .cpc {
+        display: none !important;
+    }
+    .chronic_pain_yellow_box p {
+        font-size: 20px;
+    }
+    .approach_to_pain_section {
+        padding: 60px 0;
+    }
+    .approach_to_pain_section .custom_container {
+        padding: 0 15px;
+    }
+    .approach_to_pain_section .common_section_title {
+        margin-bottom: 40px;
+    }
+    .approach_to_pain_section .custom_row {
+        margin: 0 -15px;
+        justify-content: center;
+    }
+    .approach_to_pain_section .custom_col_2 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 10px 15px;
+    }
+    .approach_to_pain_box {
+        min-height: 100%;
+    }
+    .approach_to_pain_content_spacing {
+        margin-top: 0;
+    }
+    .approach_to_pain_box h5 {
+        font-size: 18px;
+    }
+    .approach_to_pain_box_image {
+        width: 125px;
+        height: 125px;
+        margin: 20px auto;
+    }
+    .operating_company_section .heading_title h3 {
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+    .operating_company_table_box li {
+        padding: 12px 10px;
+    }
+    .common_btn_section.home_page {
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 900px) {
+    header.site_header a.header_logo {
+        margin: 15px;
+    }
+    header.site_header a.header_logo .logo {
+        max-width: 200px;
+    }
+    .navbar_toggler {
+        width: 95px;
+        height: 70px;
+    }
+    .breadcrumb_section {
+        padding: 130px 0 20px;
+    }
+    .breadcrumb_section h1 {
+        font-size: 36px;
+    }
+    .possible_causes_sec,
+    .contact_us_if_you_like_content,
+    .improvement_program_section,
+    .study_group_section,
+    .various_places_section {
+        padding: 40px 0 0;
+    }
+    .osteopathic_clinic_section .custom_col_image,
+    .various_places_section .custom_col_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .president_message_section .president_message_image,
+    .osteopathic_clinic_image,
+    .various_places_image {
+        padding-top: 100%;
+    }
+    .various_places_section,
+    .osteopathic_clinic_section {
+        padding: 0;
+    }
+    .osteopathic_clinic_section .custom_col_text,
+    .various_places_section .custom_col_text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+    .president_message_section p.president_content_space,
+    .osteopathic_clinic_section .osteopathic_clinic_text p.various_places_text_spacing,
+    .various_places_section .various_places_text p.various_places_text_spacing {
+        margin-top: 20px;
+    }
+    .approach_to_pain_section,
+    .operating_company_section,
+    .download_materials_section,
+    .hokkaido_area_section, 
+    .fibromyalgia_improvement_section,
+    .fibromyalgia_section {
+        padding: 40px 0;
+    }
+    .osteopathic_clinic_section .osteopathic_clinic_text p, .various_places_section .various_places_text p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p {
+        font-size: 16px;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text p {
+        max-width: 70%;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text p.fibromyalgia_improvement_text_spacing {
+        padding-top: 20px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_spacing {
+        padding-top: 25px;
+    }
+    .study_group_section .common_section_title {
+        margin-bottom: 40px;
+    }
+    .common_section_title h2.title:before, .common_section_title h2.title:after {
+        height: 48px;
+        width: 39px;
+    }
+    .common_section_title h2.title {
+        font-size: 22px;
+        padding: 0px 45px;
+    }
+    .study_group_text_box .custom_row {
+        padding: 30px 0px;
+    }
+    .study_group_text_box .custom_col_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    .study_group_text_box .custom_col_4:last-child {
+        margin: 0;
+    }
+    .study_group_text_box .study_group_text h3 {
+        margin-bottom: 20px !important;
+    }
+    .improvement_program_section .improvement_program_content_box {
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .improvement_program_heading h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .improvement_program_heading h2:before,
+    .improvement_program_heading h2:after {
+        height: 4px;
+    }
+    .improvement_program_heading h2:before{
+        bottom: -6px;
+    }
+    .improvement_program_heading h2:after{
+        top: -6px;
+    }
+    .improvement_program_content .custom_col_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .improvement_program_content .custom_col_text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 20px 0 0;
+    }
+    .improvement_program_content .improvement_program_image {
+        padding-top: 0;
+        max-width: 282px;
+        height: 282px;
+        margin: auto;
+    }
+    .improvement_program_text ul.improvement_program_text_list {
+        margin: 20px 0;
+    }
+    .improvement_program_text p.improvement_program_text_spacing {
+        margin-top: 20px;
+    }
+    .improvement_program_content_box .improvement_program_image_big {
+        max-width: 300px;
+    }
+    .common_btn_section.fibromyalgia_page {
+        padding: 50px 0;
+    }
+    .common_btn_section .custom_container {
+        max-width: 600px;
+        flex-direction: column;
+    }
+    .common_btn_section .search_btn,
+    .common_btn_section .download_btn {
+        min-width: 100%;
+        margin: 8px 0;
+    }
+    footer.site_footer .footer_logo img {
+        max-width: 165px;
+    }
+    footer.site_footer .custom_col_image {
+        padding: 0 60px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    footer.site_footer .custom_col_text {
+        padding: 30px 60px 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    footer .footer_links .footer_links_text {
+        font-size: 16px;
+    }
+    footer.site_footer .footer_inner_links li {
+        margin: 0 30px 18px 0;
+    }
+    footer .footer_links .footer_links_text:last-child {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .footer_copyright {
+        padding-top: 50px;
+    }
+    nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links, nav.custom_navbar .custom_navbar_links p {
+        font-size: 18px;
+    }
+    nav.custom_navbar .custom_navbar_links {
+        padding-top: 50px;
+    }
+    nav.custom_navbar .custom_navbar_links p {
+        margin-bottom: 25px;
+    }
+    nav ul.custom_navbar_inner_links li a {
+        margin-bottom: 20px;
+    }
+    .study_group_section.about_page .study_group_about_content p.heading_text span {
+        margin-bottom: 24px;
+    }
+    .study_group_section.about_page .study_group_about_content p.heading_text {
+        margin-bottom: 20px;
+    }
+    .study_group_section.about_page .study_group_about_content {
+        padding: 40px 0 0px;
+    }
+    .study_group_text_image img {
+        max-width: 18px;
+    }
+    .study_group_section.about_page .study_group_text_image img {
+        margin: 0 16px;
+    }
+    nav .sidebar_logo img {
+        max-width: 170px;
+    }
+    .fibromyalgia_section {
+        min-height: 280px;
+    }
+    .area_section:after {
+        top: 100px;
+        width: 320px;
+        height: 280px;
+    }
+    .area_table_link {
+        margin-right: 15px;
+        width: 45px;
+        height: 44px;
+    }
+    .custom_col_table {
+        padding-left: 15px;
+    }
+    .intractable_pain_section {
+        padding: 60px 0;
+    }
+    .intractable_pain_section .common_section_title {
+        margin-bottom: 30px;
+    }
+    .intractable_pain_section .custom_col_2 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        margin-bottom: 20px;
+    }
+    .president_message_section .custom_col_image {
+        flex: 0 0 100%;
+        max-width: 320px;
+        margin: auto;
+    }
+    .intractable_pain_content p {
+        font-size: 18px;
+    }
+    .intractable_pain_content p .intractable_pain_content_underline {
+        font-size: 24px;
+    }
+    .intractable_pain_content {
+        padding-top: 30px;
+    }
+    .president_message_section .heading_text h3,
+    .bg_black_heading .heading_title {
+        font-size: 22px;
+    }
+    .bg_black_heading:after {
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 22px solid #222222;
+    }
+    .specialized_course_contont_sec {
+        padding: 50px 0 10px;
+    }
+    .specialized_course_section .custom_container {
+        padding: 0 15px;
+    }
+    .specialized_course_section .custom_row {
+        margin: 0 -15px;
+    }
+    .specialized_course_section .custom_col_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    .specialized_course_box {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        min-height: 100%;
+        padding: 15px;
+        border-width: 5px;
+    }
+    .common_section_title.line_image h2.title {
+        font-size: 22px !important;
+    }
+    .btn_content p {
+        font-size: 16px;
+    }
+    .btn_content h5 {
+        font-size: 26px;
+    }
+    .btn_link a {
+        width: 85px;
+        height: 85px;
+        font-size: 16px;
+    }
+    .president_message_section .heading_text {
+        margin-bottom: 25px;
+    }
+    .president_message_section .custom_col_text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 30px 0 0;
+    }
+    .president_message_content_box_sec {
+        padding: 40px 30px 0;
+    }
+    .president_message_content_box {
+        padding: 40px 0;
+    }
+    .common_btn {
+        padding: 15px;
+    }
+    .register_section {
+        padding: 50px 0;
+    }
+    .cpc {
+        display: block !important;
+    }
+    .president_message_section .president_message_content_box_sec p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .president_message_content_box_sec:after {
+        width: 320px;
+        height: 280px;
+    }
+    .about_the_study_group_section .common_section_title {
+        margin-bottom: 30px;
+    }
+    .about_the_study_group_section .common_section_title h2.title {
+        font-size: 22px;
+        margin: auto;
+    }
+    .about_the_study_group_content p {
+        font-size: 16px;
+    }
+    .about_the_study_group_section .common_btn_section {
+        margin-top: 25px;
+    }
+    .about_the_study_group_section .common_btn_section {
+        margin-top: 30px;
+    }
+    .about_the_study_group_section .about_the_study_group_list li {
+        margin-bottom: 25px;
+    }
+    .about_the_study_group_sec {
+        width: 100%;
+    }
+    .contact_us_if_you_like_section .bg_black_heading .heading_title {
+        font-size: 25px;
+        padding: 0px 40px;
+    }
+    .contact_us_if_you_like_section .bg_black_heading .heading_title:before, .contact_us_if_you_like_section .bg_black_heading .heading_title:after {
+        height: 50px;
+        width: 30px;
+    }
+    .contact_us_if_you_like_section .custom_row {
+        justify-content: center;
+    }
+    .contact_us_if_you_like_section .custom_col_2 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        margin-bottom: 30px;
+    }
+    .contact_us_if_you_like_box p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .contact_us_if_you_like_image_box {
+        padding: 80px 0px 40px;
+    }
+    .contact_us_if_you_like_image_box p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .possible_causes_sec .possible_causes_box {
+        height: 310px;
+        padding: 0px 50px;
+        margin-bottom: 15px;
+    }
+    .possible_causes_sec .custom_col_4:last-child .possible_causes_box {
+        margin-bottom: 0;
+    }
+    .chronic_pain_section .custom_container {
+        padding: 0 15px;
+    }
+    .possible_causes_sec .custom_row {
+        margin: 0 -15px;
+    }
+    .possible_causes_sec .custom_col_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+        padding: 0 15px;
+    }
+    .possible_causes_sec h4 {
+        margin-bottom: 30px;
+    }
+    .possible_causes_sec .possible_causes_box {
+        height: auto;
+        padding: 15px;
+        margin-bottom: 15px;
+        min-width: 100%;
+        background-color: #4AE6FF;
+        background-image: none !important;
+        border-radius: 15px;
+    }
+    .chronic_pain_yellow_box {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .chronic_pain_yellow_box p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .chronic_pain_section {
+        padding: 40px 0 70px;
+    }
+    .chronic_pain_gray_box p.chronic_pain_text_spacing {
+        margin-top: 20px;
+    }
+    .operating_company_section .heading_title h3,
+    .approach_to_pain_section .common_section_title {
+        margin-bottom: 30px;
+    }
+    .approach_to_pain_section .custom_col_2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 10px 15px;
+    }
+    .operating_company_table_box .custom_col_text_small, .operating_company_table_box .custom_col_text_big {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .common_btn_section.home_page {
+        padding-bottom: 40px;
+    }
+    .banner_content ul {
+        max-width: 500px;
+        margin: auto;
+        margin: 0 -15px;
+    }
+    .banner_content ul li {
+        padding: 0 15px;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin: 0 0 20px;
+    }
+    .banner_content ul li a {
+        height: auto;
+        width: auto;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+    .banner_content ul li a:before {
+        display: none;
+    }
+    .banner_content ul li a br {
+        display: none;
+    }
+    .banner_content p {
+        font-size: 20px;
+        line-height: 40px;
+        margin: 0px 0 15px;
+    }
+    .banner_logo {
+        width: 350px;
+        margin: 0 0 90px;
+    }
+    a.move_down {
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .osteopathic_clinic_section .custom_container, 
+    .various_places_section .custom_container {
+        padding: 0;
+    }
+    .fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_underline:after {
+        bottom: 0;
+        height: 100%;
+    }
+}
+@media (max-width: 675px) {
+    header.site_header a.header_logo .logo {
+        max-width: 160px;
+    }
+    .breadcrumb_section {
+        padding: 110px 0 20px;
+    }
+    .breadcrumb_section h1 {
+        font-size: 24px;
+    }
+    .navbar_toggler {
+        width: 65px;
+        height: 45px;
+    }
+    .navbar_toggler .navbar_toggler_inner, .navbar_toggler .navbar_toggler_inner:after, .navbar_toggler .navbar_toggler_inner:before {
+        width: 32px;
+    }
+    .navbar_toggler .navbar_toggler_inner:before {
+        top: -8px;
+    }
+    .navbar_toggler .navbar_toggler_inner:after {
+        bottom: -8px;
+    }
+    .osteopathic_clinic_section .custom_col_text,
+    .various_places_section .custom_col_text {
+        padding: 15px;
+    }
+    .fibromyalgia_section .fibromyalgia_text p.fibromyalgia_text_spacing {
+        padding-top: 20px;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .fibromyalgia_improvement_section .fibromyalgia_improvement_text p {
+        max-width: 100%;
+    }
+    .contact_us_if_you_like_section .bg_black_heading .heading_title:before, .contact_us_if_you_like_section .bg_black_heading .heading_title:after,
+    .common_section_title h2.title:before, .common_section_title h2.title:after {
+        display: none;
+    }
+    .common_section_title h2.title {
+        font-size: 20px;
+        padding: 0 !important;
+    }
+    .study_group_section .common_section_title {
+        margin-bottom: 25px;
+    }
+    .study_group_text_box .custom_row {
+        padding: 25px 0px;
+    }
+    .study_group_text_box .study_group_text h3 {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+    .improvement_program_heading h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    .improvement_program_heading h2:before,
+    .improvement_program_heading h2:after {
+        height: 2px;
+    }
+    .improvement_program_heading h2:before{
+        bottom: -4px;
+    }
+    .improvement_program_heading h2:after{
+        top: -4px;
+    }
+    .improvement_program_section .improvement_program_content_box {
+        padding: 30px 15px;
+    }
+    .improvement_program_content .custom_col_image {
+        padding: 0;
+    }
+    .improvement_program_content .improvement_program_image {
+        max-width: 260px;
+        height: 260px;
+        margin: auto;
+    }
+    .improvement_program_content_box .improvement_program_image_big {
+        max-width: 220px;
+    }
+    .improvement_program_text ul.improvement_program_text_list li:after {
+        top: 10px;
+        bottom: auto;
+    }
+    .improvement_program_content ul.improvement_program_text_list p {
+        text-align: left;
+    }
+    .improvement_program_text p.improvement_program_text_big {
+        font-size: 16px;
+        word-break: keep-all;
+        line-height: 24px;
+    }
+    .improvement_program_text p.improvement_program_text_big span.improvement_program_text_big {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .improvement_program_text p.improvement_program_text_spacing {
+        word-break: keep-all;
+    }
+    footer.site_footer {
+        padding: 20px 0 8px;
+    }
+    footer.site_footer .footer_logo img {
+        max-width: 150px;
+    }
+    footer.site_footer .custom_col_image {
+        padding: 0 20px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    footer.site_footer .custom_col_text {
+        padding: 20px 20px 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .footer_copyright {
+        padding-top: 40px;
+    }
+    footer .footer_inner_links li:after {
+        top: 12px;
+        bottom: auto;
+    }
+    footer.site_footer .footer_inner_links {
+        padding-left: 15px;
+    }
+    .common_btn_section .search_btn, .common_btn_section .download_btn {
+        padding: 15px 5px !important;
+        margin: 5px 0;
+        border-width: 3px;
+    }
+    .common_btn_section .btn_content h5 {
+        font-size: 18px !important;
+    }
+    .pagetop {
+        width: 55px;
+        height: 55px;
+    }
+    .pagetop img {
+        max-width: 28px;
+    }
+    .pagetop a {
+        font-size: 14px;
+    }
+    .study_group_section.about_page .study_group_about_content p.heading_text span {
+        margin-bottom: 22px;
+    }
+    .area_accordion_heading.ui-accordion-header {
+        padding: 12px 15px !important;
+    }
+    .area_accordion_heading.ui-accordion-header h3 {
+        font-size: 20px;
+    }
+    .area_content_label {
+        width: 32px;
+        padding: 12px 8px;
+        text-align: center;
+    }
+    .custom_col_label {
+        flex: 0 0 38px;
+        max-width: 38px;
+    }
+    .custom_col_table {
+        flex: 0 0 calc(100% - 38px);
+        max-width: calc(100% - 38px);
+        padding-left: 10px;
+    }
+    .area_table_link {
+        margin-right: 0px;
+    }
+    .area_section .area_content_box .ui-accordion-content {
+        padding: 20px 0;
+    }
+    .tohoku_area_section .area_content:first-child {
+        padding-top: 0;
+    }
+    .tohoku_area_section .area_content {
+        padding-bottom: 20px;
+    }
+    .area_accordion_heading.ui-accordion-header span.ui-accordion-header-icon {
+        width: 16px;
+        height: 16px;
+    }
+    .intractable_pain_section {
+        padding: 40px 0;
+    }
+    .intractable_pain_section .common_section_title {
+        margin-bottom: 20px;
+    }
+    .intractable_pain_section .custom_col_2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
+    .intractable_pain_box_text p {
+        font-size: 16px;
+    }
+    .intractable_pain_content p {
+        font-size: 16px;
+    }
+    .intractable_pain_content p .intractable_pain_content_underline {
+        font-size: 20px;
+        display: inline-block;
+        margin: auto;
+    }
+    .president_message_section .heading_text h3,
+    .bg_black_heading .heading_title {
+        font-size: 20px;
+    }
+    .specialized_course_contont_sec {
+        padding: 40px 0 10px;
+    }
+    .specialized_course_section .custom_col_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    .specialized_course_box p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .common_section_title.line_image h2.title {
+        font-size: 20px !important;
+    }
+    .common_section_title.line_image {
+        margin-bottom: 15px;
+    }
+    .common_btn {
+        padding: 10px;
+    }
+    .btn_content h5 {
+        font-size: 20px;
+    }
+    .btn_link a {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0 0 !important;
+    }
+    .common_btn_content_inner {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .register_btn .btn_link a {
+        font-size: 20px;
+    }
+    .president_message_content_box_sec {
+        padding: 15px 15px 0;
+    }
+    .bg_black_heading:after {
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 20px solid #222222;
+    }
+    .common_btn {
+        background-position: left center;
+        background-size: auto 100%;
+    }
+    .area_section:after,
+    .president_message_content_box_sec:after {
+        width: 270px;
+        height: 230px;
+    }
+    .banner_content ul {
+        max-width: 280px;
+    }
+    .banner_content ul li {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+    }
+    .banner_content p {
+        font-size: 18px !important;
+    }
+    .about_the_study_group_section {
+        padding: 50px 0;
+        background-position: center right -180px;
+    }
+    .about_the_study_group_section .about_the_study_group_list li {
+        margin-bottom: 25px;
+    }
+    .contact_us_if_you_like_section .custom_col_2:nth-child(n+6),
+    .contact_us_if_you_like_section .custom_col_2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+    .contact_us_if_you_like_box p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .chronic_pain_section:after,
+    .contact_us_if_you_like_image_box:after {
+        display: none;
+    }
+    .chronic_pain_section,
+    .contact_us_if_you_like_image_box {
+        padding: 40px 0px;
+    }
+    .operating_company_section .heading_title h3,
+    .possible_causes_sec h4,
+    .about_the_study_group_section .common_section_title h2.title,
+    .home_page .common_section_title h2.title,
+    .contact_us_if_you_like_section .bg_black_heading .heading_title {
+        font-size: 20px;
+        padding: 0px;
+    }
+    .operating_company_section .heading_title h3, 
+    .approach_to_pain_section .common_section_title,
+    .possible_causes_sec h4,
+    .chronic_pain_section .common_section_title,
+    .about_the_study_group_section .common_section_title {
+        margin-bottom: 25px;
+    }
+    .chronic_pain_gray_box {
+        padding: 15px;
+    }
+    .approach_to_pain_section .custom_col_2,
+    .possible_causes_sec .custom_col_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .approach_to_pain_box_image {
+        width: 100px;
+        height: 100px;
+        margin: 15px auto;
+    }
+    .approach_to_pain_box_image img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .operating_company_table_box li {
+        padding: 10px;
+    }
+}
+@media (max-width: 570px) {
+    nav.custom_navbar {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 40px 20px;
+    }
+    nav .sidebar_logo img {
+        max-width: 150px;
+    }
+    nav.custom_navbar .custom_navbar_links {
+        padding-top: 25px;
+    }
+    nav.custom_navbar .custom_navbar_links p {
+        margin-bottom: 16px;
+    }
+    nav.custom_navbar .custom_navbar_links a.custom_navbar_last_links {
+        margin-top: 25px;
+    }
+    ul.custom_navbar_inner_links li:after {
+        top: 12px;
+        bottom: auto;
+    }
+    nav ul.custom_navbar_inner_links {
+        padding-left: 15px;
+    }
+    nav ul.custom_navbar_inner_links li a {
+        margin-bottom: 15px;
+    }
+    .common_btn_section .btn_content {
+        margin: auto;
+    }
+    footer.site_footer .footer_inner_links li {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+    .footer_copyright {
+        padding-top: 30px;
+    }
+    .area_table_row {
+        display: block;
+        border-bottom: 1px solid #E3E3E3;
+    }
+    .area_table_th, .area_table_td {
+        display: block;
+        padding: 10px 0;
+        border: none;
+    }
+    .area_accordion_heading.ui-accordion-header {
+        padding: 10px !important;
+    }
+    .cpc {
+        display: none !important;
+    }
+}
+/*responsive css end*/

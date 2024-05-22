@@ -1,0 +1,179 @@
+@media(min-width:0px) and (max-width:575px){
+.container{ max-width:100%;}
+
+/*--------------- CONTAIN_START --------------*/
+#contain{ margin:0px; padding:0px 0 0 0;}
+.consult_btn_hp { padding: 16px 0; }
+.consult_btn_hp a{ padding:6px 25px; font-size:14px; }
+.banner_logo_hp{ width: 345px; height: 345px; background-size: 100% 100%; margin:107px auto 125px auto; }
+.banner_logo_img_hp img{ max-width:70px; }
+.banner_text_hp{ font-size: 30px; line-height: 42px; padding: 15px 0 0 0; }
+.reform_text_hp { font-size: 30px; line-height: 36px; padding: 10px 0 0 0; }
+
+.renovation_block_hp{ padding:50px 0; }
+.renovation_info_hp h3{ font-size: 20px; line-height: 25px; }
+.renovation_info_hp p{ padding: 30px 0 0 0; font-size: 14px; line-height: 30px; }
+.renovation_block_hp:before{ height:350px; top:0; }
+.renovation_block_hp:after{ height:350px; top:0; }
+
+.trouble_block_hp{ padding:50px 0; }
+.trouble_info_hp h3{ font-size: 22px; line-height: 34px; padding-bottom:15px; }
+
+.solved_block_hp{ padding:50px 0 20px 0; }
+.solved_info_hp h3 { font-size: 19px; line-height: 32px; padding:0 45px; }
+
+.solved_box_hp {  margin-bottom: 30px; padding: 20px 20px 20px 20px; }
+.solved_box_title_hp{ font-size: 16px; line-height: 24px; margin: 0 -30px; }
+.solved_box_desc_hp { font-size: 14px; line-height: 30px;  padding: 25px 0 0 0; }
+.solved_box_img_hp { right: 0; bottom: -22px; position:relative; text-align: right; }
+.solved_box_img_hp  img{ max-width:100%; }
+
+.clues_title_hp h3{ font-size: 40px; line-height: 87px; padding:0 40px; }
+.clues_title_hp p{ font-size:14px; }
+.clues_title_2_hp{ width:100%; max-width:556px; background-size:100% 100%; font-size:16px; }
+.clues_desc_hp { font-size: 13px; line-height: 25px; }
+.clues_block_hp{ background-size:auto 100% !important; }
+
+.kitchen_block_hp{ padding:35px 0 50px 0; }
+.kitchen_logo_title_hp{ display:block; }
+.kitchen_title_hp h2 { font-size: 47px; line-height: 56px; }
+.kitchen_top_hp { margin-top: 10px; }
+.kitchen_row_hp{ display:block; }
+.kitchen_grid_hp{ width:100%; padding-bottom:30px; }
+.kitchen_img_hp{ padding:0 0 0 0; }
+.kitchen_img_2_hp img{ max-width:300px; }
+
+.kitchen_block_hp:before{ height:350px; }
+.kitchen_block_hp:after{ height:350px; }
+.kitchen_subtitle_hp{ margin-top:0; }
+.kitchen_subtitle_hp h3 { font-size: 20px;  line-height: 38px; }
+.kitchen_btn_hp { margin-top: 40px; }
+.kitchen_info_hp p { padding: 0px 0 20px 0; font-size: 12px;  line-height: 25px; }
+
+.clues_block_2_hp { padding-top: 20px; padding-bottom: 60px; }
+.article_block_hp { padding: 30px 0 30px 0; }
+.article_rectangle_hp{ width:100%; margin:0 0 20px 0; }
+.article_info_hp p { font-size: 14px; line-height: 20px; }
+
+.accept_block_hp{ padding-bottom:0; }
+.accept_title_hp h2{ font-size: 18px; line-height: 24px; width: 336px; height: 110px; padding-top: 30px; background-size: 100% 100%; }
+.accept_top_hp{ display:block; }
+.accept_grid_hp{ width:100%; margin-bottom:50px; padding:46px 16px 30px 16px; }
+.accept_title_2_hp { font-size: 20px; line-height: 30px; }
+.accept_grid_hp ul { padding: 30px 0 0 0; }
+.accept_grid_hp ul li{ font-size: 14px; line-height: 20px; margin-bottom:16px; }
+
+.contact_boxes_hp{ flex-wrap:wrap; }
+.contact_boxes_in_hp{ padding:0; }
+.contact_btn_hp a{ padding:23px 80px 23px 20px; font-size: 19px; line-height: 22px; }
+.contact_btn_hp a img{ top: -25px; width: 70px; }
+/*--------------- CONTAIN_END --------------*/
+}
+
+@media(min-width:576px) and (max-width:767px){
+.container{ max-width:100%;}
+
+/*--------------- CONTAIN_START --------------*/
+#contain{ margin:0px; padding:0px 0 0 0;}
+.consult_btn_hp { padding: 16px 0; }
+.consult_btn_hp a{ padding:6px 25px; font-size:14px; }
+.banner_logo_hp{ width: 345px; height: 345px; background-size: 100% 100%; margin:107px auto 125px auto; }
+.banner_logo_img_hp img{ max-width:70px; }
+.banner_text_hp{ font-size: 30px; line-height: 42px; padding: 15px 0 0 0; }
+.reform_text_hp { font-size: 30px; line-height: 36px; padding: 10px 0 0 0; }
+
+.renovation_block_hp{ padding:50px 0; }
+.renovation_info_hp h3{ font-size: 20px; line-height: 25px; }
+.renovation_info_hp p{ padding: 30px 0 0 0; font-size: 14px; line-height: 30px; }
+.renovation_block_hp:before{ height:350px; top:-50px; }
+.renovation_block_hp:after{ height:350px; top:-50px; }
+
+.trouble_block_hp{ padding:50px 0; }
+.trouble_info_hp h3{ font-size: 22px; line-height: 34px; padding-bottom:15px; }
+
+.solved_block_hp{ padding:50px 0 20px 0; }
+.solved_info_hp h3 { font-size: 19px; line-height: 32px; padding:0 45px; }
+
+.solved_box_hp {  margin-bottom: 30px; padding: 20px 20px 20px 20px; }
+.solved_box_title_hp{ font-size: 16px; line-height: 24px; margin: 0 -30px; }
+.solved_box_desc_hp { font-size: 14px; line-height: 30px;  padding: 25px 0 0 0; }
+.solved_box_img_hp { right: 0; bottom: -22px; position:relative; text-align: right; }
+.solved_box_img_hp  img{ max-width:100%; }
+
+.clues_title_hp h3{ font-size: 40px; line-height: 87px; padding:0 40px; }
+.clues_title_hp p{ font-size:14px; }
+.clues_title_2_hp{ width:100%; max-width:556px; background-size:100% 100%; font-size:16px; }
+.clues_desc_hp { font-size: 13px; line-height: 25px; }
+.clues_block_hp{ background-size:auto 100% !important; }
+
+.kitchen_block_hp{ padding:35px 0 50px 0; }
+.kitchen_logo_title_hp{ display:block; }
+.kitchen_title_hp h2 { font-size: 47px; line-height: 56px; }
+.kitchen_top_hp { margin-top: 10px; }
+.kitchen_row_hp{ display:block; }
+.kitchen_grid_hp{ width:100%; padding-bottom:30px; }
+.kitchen_img_hp{ padding:0 0 0 0; }
+.kitchen_img_2_hp img{ max-width:300px; }
+
+.kitchen_block_hp:before{ height:350px; }
+.kitchen_block_hp:after{ height:350px; }
+.kitchen_subtitle_hp{ margin-top:0; }
+.kitchen_subtitle_hp h3 { font-size: 20px;  line-height: 38px; }
+.kitchen_btn_hp { margin-top: 40px; }
+.kitchen_info_hp p { padding: 0px 0 20px 0; font-size: 12px;  line-height: 25px; }
+
+.clues_block_2_hp { padding-top: 20px; padding-bottom: 60px; }
+.article_block_hp { padding: 30px 0 30px 0; }
+.article_rectangle_hp{ width:100%; margin:0 0 20px 0; }
+.article_info_hp p { font-size: 14px; line-height: 20px; }
+
+.accept_block_hp{ padding-bottom:0; }
+.accept_title_hp h2{ font-size: 18px; line-height: 24px; width: 336px; height: 110px; padding-top: 30px; background-size: 100% 100%; }
+.accept_top_hp{ display:block; }
+.accept_grid_hp{ width:100%; margin-bottom:50px; padding:46px 16px 30px 16px; }
+.accept_title_2_hp { font-size: 20px; line-height: 30px; }
+.accept_grid_hp ul { padding: 30px 0 0 0; }
+.accept_grid_hp ul li{ font-size: 14px; line-height: 20px; margin-bottom:16px; }
+
+.contact_btn_hp a{ padding:23px 80px 23px 20px; font-size: 24px; line-height: 22px; }
+.contact_btn_hp a img{ top: -25px; width: 70px; }
+/*--------------- CONTAIN_END --------------*/
+}
+
+@media(min-width:768px) and (max-width:991px){
+.container{ max-width:768px;}
+
+/*--------------- CONTAIN_START --------------*/
+#contain{ margin:0px; padding:0px 0 0 0;}
+
+.trouble_info_hp h3{ font-size:30px; }
+
+.solved_box_hp {  margin-bottom: 30px; padding: 20px 20px 20px 20px; }
+.solved_box_title_hp{ font-size: 16px; line-height: 24px; margin: 0 -30px; }
+.solved_box_desc_hp { font-size: 14px; line-height: 30px;  padding: 25px 0 0 0; }
+.solved_box_img_hp { right: 0; bottom: -22px; position:relative; text-align: right; }
+.solved_box_img_hp  img{ max-width:100%; }
+
+.clues_block_hp{ background-size:100% 100% !important; }
+
+.clues_block_2_hp { padding-top: 20px; padding-bottom: 60px; }
+.article_block_hp { padding: 30px 0 60px 0; }
+.article_info_hp p { font-size: 14px; line-height: 20px; }
+
+.accept_grid_hp{ padding:46px 16px 30px 16px; width:calc(50% - 20px); }
+.accept_title_2_hp { font-size: 20px; line-height: 30px; }
+.accept_grid_hp ul { padding: 30px 0 0 0; }
+.accept_grid_hp ul li{ font-size: 14px; line-height: 20px; margin-bottom:16px; }
+
+.contact_btn_hp a{ padding: 23px 100px 23px 60px; font-size: 26px; line-height: 32px; }
+.contact_btn_hp a img{ top: -25px; width: 70px; }
+/*--------------- CONTAIN_END --------------*/
+}
+
+@media(min-width:992px) and (max-width:1130px){
+.container{ width:992px;}
+
+/*--------------- CONTAIN_START --------------*/
+.clues_block_2_hp{ padding-bottom:80px; }
+/*--------------- CONTAIN_END --------------*/
+}

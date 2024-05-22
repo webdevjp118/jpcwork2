@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:m="http://mayaa.seasar.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HANDA Watch World</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="stylesheet" href="./css/hww_style.css">
+        <link rel="stylesheet" type="text/css" href="css/fawesome/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/kmcustom.css" />
+        <link rel="stylesheet" type="text/css" href="css/kmresponsive.css" />
+	<script src="./js/ebisu_lib.js"></script>
+	<script src="./js/ebisu.js"></script>
+</head>
+<body>
+<!--  -->
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml"></iframe>
+
+<main>
+<section class="main-content-section" id="main-content-section">
+
+<!-- BANNER -->
+<section class="banner-sec">
+    <div class="banner-slide">
+        <div class="banner-slide-itm">
+            <div class="img">
+                <img src="./images/slide01.jpg" />
+            </div>
+        </div>
+        <div class="banner-slide-itm">
+            <div class="img">
+                <img src="./images/slide02.jpg" />
+            </div>
+        </div>
+        <div class="banner-slide-itm">
+            <div class="img">
+                <img src="./images/slide03.jpg" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="top-lineup" m:id='common.IF_RANKING'>
+		<div class="l-container">
+			<h2 class="top-section-title">LINE UP</h2>
+			<div class="top-lineup-list c-product-list -slider" id="js-top-lineup-slider">
+				<div class="js-top-lineup-slider">
+					<article class="top-lineup-item c-product-item" m:id='common.LOOP_RANKING'>
+						<a href="./" class="c-product-item-link" m:id='common.RANKING_LINK_TAG'>
+							<div class="c-product-item-icons">
+								<div class="c-product-item-icons-inner">
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='3'>
+                                      <span class="c-product-icon -recommend">オススメ</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='4'>
+                                      <span class="c-product-icon -limited">限定品</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='5'>
+                                      <span class="c-product-icon -xxxx">自由項目5</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='6'>
+                                      <span class="c-product-icon -xxxx">自由項目6</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='7'>
+                                      <span class="c-product-icon -xxxx">自由項目7</span>
+                                  </span>
+                                          <span m:id='common.IF_RANKING_ITEM_SOLDOUT'>
+                                      <span class="c-product-icon -soldout">入荷待ち</span>
+                                  </span>
+								</div>
+							</div>
+							<div class="top-lineup-image c-product-item-image">
+								<img src="./images/dummy/img_item_thumbnail_01.png" alt="" m:id='common.RANKING_IMAGE_TAG'>
+							</div>
+							<h3 class="top-lineup-item-title c-product-item-title"><span m:id='common.RANKING_ITEM_NAME_HERE' max_size="60">ランキング1位の商品名</span></h3>
+							<div class="c-product-item-price item_price_box" m:id="common.IF_RANKING_FREE" m:free_item_no='1' m:NOT=''>
+								<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                <div m:id="common.IF_UCHIZEI" class="item_price item_teika">
+                  税込 <span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span>
+                </div>
+                <div m:id='common.IF_SOTOZEI' class="item_price item_teika">
+                  <span class="tax_bold">税込 <span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></span><br>（<span m:id='common.RANKING_TEIKA_HONTAI_HERE'>21,000円</span>+税）
+                </div>
+								<!--// 非ログインの場合 -->
+								<!-- ログイン中の場合 -->
+								<div m:id='common.IF_MEMBER'>
+									<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+									<span m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+										<span m:id="common.IF_UCHIZEI">税込 <span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE'>21,000円</span></span>
+										<span m:id="common.IF_SOTOZEI"><span class="tax_bold">税込 <span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="hontai">21,000円</span>+税）</span>
+									</span>
+
+									<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+									<span m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+										<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+										<span m:id='common.IF_RANKING_DISCOUNT'>
+											<span m:id="common.IF_UCHIZEI" class="item_price">
+												税込 <span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span>
+											</span>
+											<span m:id='common.IF_SOTOZEI' class="item_price">
+                        <span class="tax_bold">税込 <span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></span><br>（<span m:id='common.RANKING_DISCOUNT_KAKAKU_HONTAI_HERE'>21,000円</span>+税）
+												<!--<span m:id='common.RANKING_DISCOUNT_KAKAKU_HONTAI_HERE'>21,000円</span>（税抜）-->
+											</span>
+										</span>
+									</span>
+								</div>
+								<!--//ログイン中の場合-->
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+<section class="ranking-sec custom-grid-sec">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Ranking</h2>
+            <p>人気ランキング</p>
+        </div>
+        <div class="custom_row custom-grid-row slide">
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img src="./images/rank-icon01.png" />
+                        </div>
+                        <h3>1位</h3>
+                    </div>
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img src="./images/rank-icon01.png" />
+                        </div>
+                        <h3>1位</h3>
+                    </div>
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img src="./images/rank-icon01.png" />
+                        </div>
+                        <h3>1位</h3>
+                    </div>
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img src="./images/rank-icon01.png" />
+                        </div>
+                        <h3>1位</h3>
+                    </div>
+                    <div class="img product-img">
+                        <img src="img/product04.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img src="./images/rank-icon01.png" />
+                        </div>
+                        <h3>1位</h3>
+                    </div>
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pickup_grid_section custom-grid-sec black">
+
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Pick up</h2>
+            <p>ピックアップ</p>
+        </div>
+        <div class="custom_row">
+            <div class="pickup_big_grid">
+                <div class="grid_big">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img01.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img02.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img03.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="pickup_small_grid">
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img04.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img05.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img06.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="pickup_big_grid">
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img07.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_small">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img08.jpg" alt="image">
+                    </a>
+                </div>
+                <div class="grid_big">
+                    <a href="#" class="pickup_grid_image">
+                        <img src="./images/pickup-img09.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="new-item-sec custom-grid-sec">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>new item</h2>
+            <p>新着商品</p>
+        </div>
+        <div class="custom_row custom-grid-row custom-justify-center">
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="brand-sec custom-grid-sec light">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>brands</h2>
+            <p>ブランド一覧</p>
+        </div>
+        <div class="custom_row custom-grid-row">
+            <div class="custom_col custom-grid-col brand-pic-col">
+                <a href="#" class="custom-grid-bx bg-white">
+                    <div class="img">
+                        <img src="./images/testbrand-pic.jpg" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-pic-col">
+                <a href="#" class="custom-grid-bx bg-white">
+                    <div class="img">
+                        <img src="./images/testbrand-pic.jpg" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-pic-col">
+                <a href="#" class="custom-grid-bx bg-white">
+                    <div class="img">
+                        <img src="./images/testbrand-pic.jpg" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-pic-col">
+                <a href="#" class="custom-grid-bx bg-white">
+                    <div class="img">
+                        <img src="./images/testbrand-pic.jpg" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="custom_row custom-grid-row custom_align-center custom-justify-center">
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col brand-icon-col">
+                <a href="#" class="custom-grid-bx bg-trans">
+                    <div class="img">
+                        <img src="./images/testbrand.png" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="topic-sec custom-grid-sec" m:id='common.IF_INFORMATION' m:info_category_cd='NEWS'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Topics</h2>
+            <p>お知らせ</p>
+        </div>
+        <div class="custom_row custom-grid-row one-third">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_INFORMATION' m:max_count='3'>
+                <div class="custom-grid-bx topic-bx">
+                    <div class="cont">
+                        <p class="date"><span m:id='common.INFORMATION_DATE_HERE'>2025/03/02</span></p>
+                        <a href="./" m:id='common.INFORMATION_LINK_TAG'>
+                            <span m:id="common.IF_INFORMATION_TITLE"><span m:id='common.INFORMATION_TITLE_HERE' m:max_size='88'>ここにトピックスのタイトルが入ります。</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="custom_col custom-grid-col custom-grid-col-btn">
+                <div class="custom-grid-bx">
+                    <a href="#" class="btn-view-more">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recommended-sec custom-grid-sec light">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Recommended Items</h2>
+            <p>おすすめ商品</p>
+        </div>
+        <div class="custom_row custom-grid-row slide">
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recent-sec custom-grid-sec">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Recently Viewed Items</h2>
+            <p>最近チェックした商品</p>
+        </div>
+        <div class="custom_row custom-grid-row slide">
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <a href="#" class="custom-grid-bx">
+                    <div class="img product-img">
+                        <img src="./images/testproduct.png" />
+                    </div>
+                    <div class="cont">
+                        <p>パネライ</p>
+                        <h3>ルミノール マリーナ スペッチ…</h3>
+                        <p>¥1,078,000 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="user-guide-sec custom-grid-sec theme-light">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>User Guide</h2>
+            <p>ご利用案内</p>
+        </div>
+        <div class="custom_row custom-grid-row">
+            <div class="custom_col custom-grid-col">
+                <div class="custom-grid-bx user-guide-bx">
+                    <div class="img">
+                        <img src="./images/user-guide01.png" />
+                    </div>
+                    <div class="cont">
+                        <h3>送料・お届け日数について</h3>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <div class="custom-grid-bx user-guide-bx">
+                    <div class="img">
+                        <img src="./images/user-guide02.png" />
+                    </div>
+                    <div class="cont">
+                        <h3>お支払い方法について</h3>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <div class="custom-grid-bx user-guide-bx">
+                    <div class="img">
+                        <img src="./images/user-guide03.png" />
+                    </div>
+                    <div class="cont">
+                        <h3>キャンセル・返品・交換について</h3>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom_col custom-grid-col">
+                <div class="custom-grid-bx user-guide-bx">
+                    <div class="img">
+                        <img src="./images/user-guide04.png" />
+                    </div>
+                    <div class="cont">
+                        <h3>ベルト調整について</h3>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+</main>
+
+
+
+<main>
+	<div class="top-visual" m:id='common.IF_INFORMATION' m:info_category_cd='MAIN'>
+		<div class="top-visual-slider" id="js-top-visual-slider">
+			<div class="top-visual-item" m:id='common.LOOP_INFORMATION' m:max_count='4'>
+				<a href="./" m:id='common.INFORMATION_LINK_TAG'>
+					<img src="./images/top/img_visual_01.jpg" alt="" m:id='common.INFORMATION_TITLE_IMAGE_HERE'>
+				</a>
+			</div>
+		</div>
+	</div>
+
+  <section class="top-sub-bnr" m:id='common.IF_INFORMATION' m:info_category_cd='SUB'>
+    <ul class="top-sub-bnr-ul l-container">
+      <li m:id='common.LOOP_INFORMATION' m:max_count='4' class="top-sub-bnr-list">
+        <a href="#" m:id='common.INFORMATION_LINK_TAG'>
+          <img m:id='common.INFORMATION_TITLE_IMAGE_HERE'>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  </ul>
+	<section class="top-brand">
+		<div class="l-container">
+			<h2 class="top-section-title">BRAND</h2>
+			<ul class="top-brand-list">
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/HYSEK/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_hysek_white.png" alt=""></span></a>
+							<a href="./category/HYSEK_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/HYSEK_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/HYSEK/" class="top-brand-item-link"><img src="./images/top/img_brand_hysek.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/UH/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_uh_white.png" alt=""></span></a>
+							<a href="./category/UH_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/UH_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/UH/" class="top-brand-item-link"><img src="./images/top/img_brand_uh.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/JAERMANN/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_jaermann_white.png" alt=""></span></a>
+							<a href="./category/JAERMANN_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/JAERMANN_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/JAERMANN/" class="top-brand-item-link"><img src="./images/top/img_brand_jaermann.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/CATOREX/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_catorex_white.png" alt=""></span></a>
+							<a href="./category/CATOREX_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/CATOREX_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/CATOREX/" class="top-brand-item-link"><img src="./images/top/img_brand_catorex.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/RCBYFM/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_roberto_white.png" alt=""></span></a>
+							<a href="./category/RCBYFM_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/RCBYFM_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/RCBYFM/" class="top-brand-item-link"><img src="./images/top/img_brand_roberto.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/OJ/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_oj_white.png" alt=""></span></a>
+							<a href="./category/OJ_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/OJ_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/OJ/" class="top-brand-item-link"><img src="./images/top/img_brand_oj.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/ROCHAS/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_rochas_white.png" alt=""></span></a>
+							<a href="./category/ROCHAS_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/ROCHAS_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/ROCHAS/" class="top-brand-item-link"><img src="./images/top/img_brand_rochas.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/DICI/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_dici_white.png" alt=""></span></a>
+							<a href="./category/DICI_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/DICI_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/DICI/" class="top-brand-item-link"><img src="./images/top/img_brand_dici.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/MADISON/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_madison_white.png" alt=""></span></a>
+							<a href="./category/MADISON_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/MADISON_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/MADISON/" class="top-brand-item-link"><img src="./images/top/img_brand_madison.jpg" alt=""></a>
+					</span>
+				</li>
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/JC/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_just_white.png" alt=""></span></a>
+							<a href="./category/JC_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/JC_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/JC/" class="top-brand-item-link"><img src="./images/top/img_brand_just.jpg" alt=""></a>
+					</span>
+				</li>                
+                <li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/JC_ACCE/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_just_ac_white.png" alt=""></span></a>
+
+						</span>
+						<a href="./category/JC_ACCE/" class="top-brand-item-link"><img src="./images/top/img_brand_just_ac.jpg" alt=""></a>
+					</span>
+				</li>
+                
+				<li class="top-brand-item">
+					<span class="top-brand-item-inner">
+						<span class="top-brand-item-detail">
+							<a href="./category/ESPRIT/"><span class="top-brand-item-detail-logo"><img src="./images/common/img_logo_esprit_white.png" alt=""></span></a>
+							<a href="./category/ESPRIT_M/" class="top-brand-item-detail-link -mens">MENS</a>
+							<a href="./category/ESPRIT_L/" class="top-brand-item-detail-link -ladies">LADIES</a>
+						</span>
+						<a href="./category/ESPRIT/" class="top-brand-item-link"><img src="./images/top/img_brand_esprit.jpg" alt=""></a>
+					</span>
+				</li>
+
+			</ul>
+			<div class="top-section-more">
+				<a href="./category/BRAND/" class="top-section-more-button c-button -blue">商品一覧を見る</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="top-lineup" m:id='common.IF_RANKING'>
+		<div class="l-container">
+			<h2 class="top-section-title">LINE UP</h2>
+			<div class="top-lineup-list c-product-list -slider" id="js-top-lineup-slider">
+				<div class="js-top-lineup-slider">
+					<article class="top-lineup-item c-product-item" m:id='common.LOOP_RANKING'>
+						<a href="./" class="c-product-item-link" m:id='common.RANKING_LINK_TAG'>
+							<div class="c-product-item-icons">
+								<div class="c-product-item-icons-inner">
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='3'>
+                                      <span class="c-product-icon -recommend">オススメ</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='4'>
+                                      <span class="c-product-icon -limited">限定品</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='5'>
+                                      <span class="c-product-icon -xxxx">自由項目5</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='6'>
+                                      <span class="c-product-icon -xxxx">自由項目6</span>
+                                  </span>
+                                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='7'>
+                                      <span class="c-product-icon -xxxx">自由項目7</span>
+                                  </span>
+                                          <span m:id='common.IF_RANKING_ITEM_SOLDOUT'>
+                                      <span class="c-product-icon -soldout">入荷待ち</span>
+                                  </span>
+								</div>
+							</div>
+							<div class="top-lineup-image c-product-item-image">
+								<img src="./images/dummy/img_item_thumbnail_01.png" alt="" m:id='common.RANKING_IMAGE_TAG'>
+							</div>
+							<h3 class="top-lineup-item-title c-product-item-title"><span m:id='common.RANKING_ITEM_NAME_HERE' max_size="60">ランキング1位の商品名</span></h3>
+							<div class="c-product-item-price item_price_box" m:id="common.IF_RANKING_FREE" m:free_item_no='1' m:NOT=''>
+								<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                <div m:id="common.IF_UCHIZEI" class="item_price item_teika">
+                  税込 <span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span>
+                </div>
+                <div m:id='common.IF_SOTOZEI' class="item_price item_teika">
+                  <span class="tax_bold">税込 <span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></span><br>（<span m:id='common.RANKING_TEIKA_HONTAI_HERE'>21,000円</span>+税）
+                </div>
+								<!--// 非ログインの場合 -->
+								<!-- ログイン中の場合 -->
+								<div m:id='common.IF_MEMBER'>
+									<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+									<span m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+										<span m:id="common.IF_UCHIZEI">税込 <span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE'>21,000円</span></span>
+										<span m:id="common.IF_SOTOZEI"><span class="tax_bold">税込 <span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="hontai">21,000円</span>+税）</span>
+									</span>
+
+									<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+									<span m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+										<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+										<span m:id='common.IF_RANKING_DISCOUNT'>
+											<span m:id="common.IF_UCHIZEI" class="item_price">
+												税込 <span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span>
+											</span>
+											<span m:id='common.IF_SOTOZEI' class="item_price">
+                        <span class="tax_bold">税込 <span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></span><br>（<span m:id='common.RANKING_DISCOUNT_KAKAKU_HONTAI_HERE'>21,000円</span>+税）
+												<!--<span m:id='common.RANKING_DISCOUNT_KAKAKU_HONTAI_HERE'>21,000円</span>（税抜）-->
+											</span>
+										</span>
+									</span>
+								</div>
+								<!--//ログイン中の場合-->
+							</div>
+						</a>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="top-news" m:id='common.IF_INFORMATION' m:info_category_cd='NEWS'>
+		<div class="l-container">
+			<h2 class="top-section-title">NEWS</h2>
+			<div class="top-news-list">
+				<div id="js-top-news-slider">
+					<article class="top-news-item" m:id='common.LOOP_INFORMATION' m:max_count='4'>
+                    	<div class="top-news-item-link">
+                            <a href="./" m:id='common.INFORMATION_LINK_TAG'>
+                                <div class="top-news-item-image">
+                                    <img src="./images/dummy/img_news_01.jpg" alt="" m:id='common.INFORMATION_TITLE_IMAGE_HERE'>
+                                </div>
+                                <div class="top-news-item-text">
+                                    <time class="top-news-item-date"><span m:id='common.INFORMATION_DATE_HERE'>2025/03/02</span></time>
+                                    <p><span m:id="common.IF_INFORMATION_TITLE"><span m:id='common.INFORMATION_TITLE_HERE' m:max_size='88'>ここにトピックスのタイトルが入ります。</span></p>
+                                </div>
+                            </a>
+                        </div>
+					</article>
+				</div>
+			</div>
+			<div class="top-section-more">
+				<a href="./topics_list.html?info_category=1" class="top-section-button c-button -blue">ニュース一覧を見る</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="top-support">
+		<div class="l-container">
+			<h2 class="top-section-title">SUPPORT</h2>
+			<div class="top-support-list">
+				<article class="top-support-item">
+					<a href="https://hww.misuzu.com/wp-content/uploads/2019/01/watch_manual.pdf" target="_blank" class="top-support-item-link">
+						<div class="top-support-item-image"><img src="./images/top/img_support_01.png" alt=""></div>
+						<div class="top-support-item-text">
+							<h3 class="top-support-item-title">時計のお取り扱いについて</h3>
+							<p>「時計のお取り扱いについて知って得すること」を分かりやすくイラスト付きで解説します。</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-support-item">
+					<span class="top-support-item-link">
+						<div class="top-support-item-image"><img src="./images/top/img_support_02.png" alt=""></div>
+						<div class="top-support-item-text">
+							<h3 class="top-support-item-title">修理について</h3>
+							<p>修理の必要な時計の症状をメモして、保証書とともに時計をミスズサービスセンターまでお送りください。<br><br>
+                            [ミスズサービスセンター]　〒167-0053　東京都杉並区西荻南2-17-5</p>
+						</div>
+					</span>
+				</article>
+
+			</div>
+            <!--
+			<div class="top-section-more">
+				<a href="./" class="top-section-button c-button -blue">サポート一覧を見る</a>
+			</div>
+             -->
+		</div>
+	</section>
+
+	<section class="top-shop">
+		<div class="l-container">
+			<h2 class="top-section-title">SHOP</h2>
+			<div class="top-shop-list">
+                <article class="top-shop-item">
+					<a href="./ext/store.html#sapporo" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_09c.jpg" alt="HANDA Watch World　札幌 アンドロメダ時計店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World</p>
+							<p>札幌 アンドロメダ時計店 <span class="new-store01">＜12/25 OPEN！＞</span></p>
+						</div>
+					</a>
+				</article>
+                <article class="top-shop-item">
+					<a href="./ext/store.html#ginza" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_08c.jpg" alt="HANDA Watch World　銀座ギンザGINZA店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World</p>
+							<p>銀座ギンザGINZA店</p>
+						</div>
+					</a>
+				</article>
+                <article class="top-shop-item">
+					<a href="./ext/store.html#okayama" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_07c.jpg" alt="HANDA Watch World　岡山 ブドウと桃時計店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World</p>
+							<p>岡山 ブドウと桃時計店</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-shop-item">
+					<a href="./ext/store.html#sendai" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_01c.jpg" alt="HANDA Watch World・ 仙台・たなばた時計店！"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World・</p>
+							<p>仙台・たなばた時計店！</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-shop-item">
+					<a href="./ext/store.html#nishiogimoto" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_02c.jpg" alt="HANDA Watch World 時計の恋人 キッスは手にして・西萩本店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World</p>
+							<p>時計の恋人 キッスは手にして・西萩本店</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-shop-item">
+					<a href="./ext/store.html#kichijoji" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_03.jpg" alt="HANDA Watch World 吉祥寺・宇宙時計店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World</p>
+							<p>吉祥寺・宇宙時計店</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-shop-item">
+					<a href="./ext/store.html#nagoya" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_04.jpg" alt="HANDA Watch World・ 名古屋・バナナ時計店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World・</p>
+							<p>名古屋・バナナ時計店</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-shop-item">
+					<a href="./ext/store.html#shinsaibashi" class="top-shop-item-link">
+						<div class="top-shop-item-image"><img src="./images/top/img_shop_05.jpg" alt="HANDA Watch World・ 心斎橋・つかみどり時計店"></div>
+						<div class="top-shop-item-text">
+							<p>HANDA Watch World・</p>
+							<p>心斎橋・つかみどり時計店</p>
+						</div>
+					</a>
+				</article>
+			</div>
+			<div class="top-section-more">
+				<a href="./ext/store.html" class="top-section-button c-button -blue">ショップ一覧を見る</a>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+<script src="js/item_price.js"></script>
+
+<span m:id='common.CRITEO_TOP_PAGE_TRACKER_HERE'></span>
+
+</body>
+</html>

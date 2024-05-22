@@ -1,0 +1,575 @@
+@media(max-width: 1819px) {
+	.custom_home_section .custom_col_image {
+		z-index: 0;
+	}
+	.custom_home_heading .heading_text {
+		margin-right: auto;
+		text-align: center;
+	}
+	.custom_home_heading .heading_text_inner {
+		text-align: center;
+		margin: 0px auto 10px;
+	}
+}
+@media(max-width: 1549px) {
+	.customer_example_sec_contnet {
+        min-height: 420px;
+        padding: 15px 37px;
+        margin-top: 87px;
+    }
+    .customer_example_sec_slider_small.customer_example_sec_slider_small_first {
+        bottom: -192px;
+        max-width: 330px;
+    }
+	.trouble_section .custom_col_text {
+		-ms-flex: 0 0 35%;
+		flex: 0 0 35%;
+		max-width: 35%;
+	}
+	.trouble_section_text .trouble_text,
+	.trouble_section .custom_col_text .trouble_text {
+		padding: 30px 15px;
+	}
+	.trouble_section_text .trouble_text li:not(:last-child),
+	.trouble_section .custom_col_text .trouble_text li:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	.custom_home_section .custom_home_content_inner .custom_home_heading {
+		padding-right: 190px;
+		max-width: 50%;
+	}
+	.land_search_section .custom_col_text {
+		-ms-flex: 0 0 700px;
+		flex: 0 0 700px;
+		max-width: 700px;
+	}
+	.land_search_section .custom_col_image {
+		-ms-flex: 0 0 calc(100% - 700px);
+		flex: 0 0 calc(100% - 700px);
+		max-width: calc(100% - 700px);
+	}
+	.land_search_section .land_search_text {
+		padding: 40px 70px;
+	}
+}
+@media(max-width: 1366px) {
+	.new_year_content {
+        width: 100%;
+        padding: 0 50px 50px;
+        margin-left: auto;
+    }
+    .customer_example_sec:before,
+    .new_year_section:before {
+        width: 100%;
+    }
+    .new_year_content_box .new_year_content_box_image_overlay {
+        padding: 30px 50px;
+    }
+    .new_year_content_box .new_year_content_box_image_inner ul {
+        margin: 10px 0;
+    }
+    .new_year_content_box .new_year_content_box_image_inner ul li {
+        padding: 15px 0 15px 30px;
+    }
+    .customer_example_sec .custom_col_content,
+    .customer_example_sec .custom_col_image {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .customer_example_sec_slider_small.customer_example_sec_slider_small_first {
+        bottom: -142px;
+        right: 0;
+        max-width: 24vw;
+        z-index: 2;
+    }
+    .customer_example_sec_contnet {
+        min-height: 320px;
+        padding: 15px 30px;
+        margin-top: 80px;
+    }
+    .customer_example_image_slider_box .customer_example_image {
+        padding-top: 54%;
+    }
+    .customer_example_image_slider_box .pagingInfo {
+        right: 105px;
+    }
+    .customer_example_sec ul.slick-dots {
+        right: 132px;
+    }
+	.heading_text {
+		font-size: 32px;
+		font-weight: 900;
+		letter-spacing: 4px;
+		line-height: 48px;
+	}
+	.heading_text .small_heading_text {
+		font-size: 24px;
+	}
+	.grant_freedom_section .grant_freedom_image {
+		padding-top: 590px;
+	}
+	.visiting_section {
+		padding: 45px 0 100px;
+	}
+	.grant_freedom_text_box {
+		width: 900px;
+		min-height: 495px;
+		padding: 20px;
+	}
+	.grant_freedom_text_box_inner p {
+		font-size: 24px;
+	}
+	.biggest_challenge_section .custom_col_image {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.biggest_challenge_section .custom_col_text {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.biggest_challenge_section .biggest_challenge_text {
+		width: 900px;
+		min-height: 415px;
+	}
+	.trouble_section {
+		padding: 50px 30px;
+	}
+	.trouble_section .custom_col_text {
+		-ms-flex: 0 0 35%;
+		flex: 0 0 35%;
+		max-width: 35%;
+	}
+	.street_corner_section .custom_col_image {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.street_corner_section .custom_col_text {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.street_corner_section .street_corner_text {
+		width: 900px;
+		min-height: 415px;
+		padding: 40px;
+	}
+	.land_search_section .land_search_text {
+		padding: 15px 20px;
+	}
+	.land_search_section .land_search_text li {
+		padding: 5px 0 5px 25px;
+	}
+	.land_search_section .land_search_text li:before {
+		top: 13px;
+	}
+	.footer_about {
+		padding: 80px 0px;
+	}
+	.footer_copyright {
+		padding: 40px 0px;
+	}
+	.land_search_section .custom_col_text {
+		-ms-flex: 0 0 42%;
+		flex: 0 0 42%;
+		max-width: 42%;
+	}
+	.land_search_section .custom_col_image {
+		-ms-flex: 0 0 58%;
+		flex: 0 0 58%;
+		max-width: 58%;
+	}
+	.custom_home_section .custom_col_image {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.custom_home_section .custom_col_text {
+		-ms-flex: 0 0 900px;
+		flex: 0 0 900px;
+		max-width: 900px;
+	}
+	.custom_home_section .custom_home_content_inner {
+		width: 900px;
+	}
+	.custom_home_section .custom_home_content {
+		min-height: auto;
+		padding: 40px;
+	}
+	.custom_home_section .custom_home_content_inner .custom_home_heading {
+		padding-right: 190px;
+	}
+}
+@media(max-width: 1149px) {
+	.custom_home_section .custom_home_content_inner .custom_home_heading {
+		max-width: 100%;
+		padding: 0px;
+	}
+	.custom_home_section .custom_col_image {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.custom_home_section .custom_col_text {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.custom_home_section .custom_home_content_inner {
+		width: 100%;
+		position: relative;
+		bottom: auto;
+		left: auto;
+	}
+	.custom_home_section .custom_home_content {
+		padding: 30px;
+	}
+	.custom_home_section {
+		padding: 40px 0px;
+		margin-bottom: 60px;
+	}
+}
+@media(max-width: 1024px) {
+	.customer_example_image_slider_box .pagingInfo,
+    .customer_example_sec ul.slick-dots {
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .customer_example_sec_slider_small.customer_example_sec_slider_small_first {
+        bottom: -126px;
+        max-width: 245px;
+    }
+    .customer_example_sec_contnet {
+    min-height: auto;
+    padding: 30px;
+}
+    .customer_example_sec_contnet p {
+        margin-bottom: 35px;
+        margin-top: 20px;
+    }
+    .new_year_section {
+        padding: 40px 0;
+    }
+    .new_year_content {
+        padding: 0 40px 40px;
+    }
+    .new_year_content_box .custom_col_6 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .custom_home_section,
+    .customer_example_sec,
+    .new_year_section,
+    .street_corner_section,
+    .trouble_section,
+    .biggest_challenge_section,
+    .grant_freedom_section,
+    .model_house_section {
+        margin-bottom: 60px;
+    }
+    .customer_example_sec {
+        padding: 80px 0;
+    }
+	.heading_text {
+		font-size: 28px;
+		letter-spacing: 4px;
+		line-height: 40px;
+	}
+	.grant_freedom_section .grant_freedom_image {
+		padding-top: 510px;
+	}
+	.grant_freedom_text_box {
+		width: 800px;
+		min-height: 435px;
+	}
+	.grant_freedom_text_box_inner p {
+		font-size: 20px;
+	}
+	.grant_freedom_text_box_content {
+		margin: 25px 0;
+	}
+	.grant_freedom_text_box_content p:not(:first-child) {
+		margin-top: 15px;
+	}
+	.grant_freedom_text_box_inner a {
+		margin: 25px auto 0;
+		padding: 18px 12px;
+	}
+	.model_house_section {
+		padding: 60px 20px 100px;
+	}
+	.model_house_slider .slick-list {
+		overflow-x: hidden;
+	}
+	.model_house_section:before {
+		width: 100%;
+	}
+	.model_house_section .model_house_slider_btn {
+		max-width: 100%;
+	}
+	.model_house_slider_inner ul.slick-dots {
+		max-width: calc(100% - 120px);
+		left: 60px;
+	}
+	.model_house_slider_sec .heading_text {
+		text-align: center;
+		margin: 0px auto 30px;
+	}
+	.biggest_challenge_section .custom_col_image {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.biggest_challenge_section .custom_col_text {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.biggest_challenge_image,
+	.street_corner_section .street_corner_image {
+		padding-top: 0px;
+		margin: 0px;
+	}
+	.biggest_challenge_image img,
+	.street_corner_section .street_corner_image img {
+		position: relative;
+	}
+	.biggest_challenge_section .biggest_challenge_text {
+		width: 100%;
+		min-height: auto;
+		position: relative;
+		padding: 30px 20px;
+	}
+	.street_corner_section .custom_col_image {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.street_corner_section .custom_col_text {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.street_corner_section .street_corner_text {
+		width: 100%;
+		min-height: auto;
+		position: relative;
+		padding: 30px 20px;
+	}
+	.street_corner_section .heading_text {
+		text-align: center;
+		margin: auto;
+	}
+	.biggest_challenge_section .biggest_challenge_text p,
+	.street_corner_section .street_corner_text p {
+		margin-top: 20px;
+		text-align: center;
+	}
+	.biggest_challenge_section, .trouble_section_text .trouble_text {
+		margin-bottom: 60px;
+	}
+	.trouble_section {
+		padding: 30px 30px 40%;
+		margin-bottom: 0;
+	}
+	.trouble_section h3.heading_text {
+		margin: 0px auto;
+		text-align: center;
+	}
+	.trouble_section .custom_col_text {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-top: 30px;
+	}
+	.trouble_section .custom_col_text .trouble_text {
+		width: 100%;
+	}
+	.land_search_section .custom_col_image {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.land_search_section .custom_col_text {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.land_search_section .land_search_map_box img {
+		position: relative;
+	}
+	.land_search_section .land_search_heading {
+		padding: 0 20px 10px;
+	}
+	.footer_about {
+		padding: 40px 0px;
+	}
+	.footer_about h2 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.footer_about p {
+		margin: 35px 0px 0px;
+	}
+	.footer_links a {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.footer_links a i {
+		margin-right: 10px;
+		font-size: 36px;
+	}
+	.footer_links_sec .custom_col_6 {
+		margin-top: 25px;
+	}
+	.land_search_section .heading_text {
+		margin: auto;
+		text-align: center;
+	}
+	.land_search_section .heading_text_inner {
+		margin: auto;
+		text-align: center;
+	}
+}
+@media(max-width: 900px) {
+	.customer_example_sec .heading_text {
+        width: 40px;
+        line-height: 30px;
+    }
+    .customer_example_sec_slider_small.customer_example_sec_slider_small_first {
+        display: none;
+    }
+    .customer_example_sec_slider_small.customer_example_sec_slider_small_second {
+    	display: block;
+    	width: 100%;
+    	max-width: 360px;
+    	margin: 70px auto 20px;
+    }
+    .new_year_content .custom_row {
+        margin: 10px -15px 0;
+    }
+    .new_year_content .custom_col_3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 10px 15px;
+    }
+    .new_year_content {
+        padding: 0 15px 30px;
+    }
+    .new_year_content_box .new_year_content_box_image_overlay {
+        padding: 30px;
+    }
+    .customer_example_sec {
+        padding: 40px 0;
+    }
+	.heading_text {
+		font-size: 22px;
+		letter-spacing: 0px;
+		line-height: normal;
+	}
+	.heading_text .small_heading_text {
+		font-size: 18px;
+	}
+	.site_header {
+		padding: 15px;
+	}
+	.visiting_section {
+		padding: 45px 0;
+	}
+	.grant_freedom_section {
+		margin-bottom: 0px;
+	}
+	.grant_freedom_section .custom_col_text,
+	.grant_freedom_section .custom_col_image {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.grant_freedom_text_box {
+		width: 100%;
+		min-height: auto;
+		padding: 30px 20px;
+		position: relative;
+	}
+	.grant_freedom_section .grant_freedom_image {
+		padding: 0;
+	}
+	.grant_freedom_section .grant_freedom_image img {
+		position: relative;
+	}
+	.grant_freedom_section .grant_freedom_text {
+		min-height: auto;
+		padding: 20px 20px;
+	}
+	.grant_freedom_section .grant_freedom_text .heading_text {
+		text-align: center;
+	}
+	.footer_links_sec .custom_col_6 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.footer_copyright {
+		padding: 20px 0px;
+	}
+	.customer_example_sec_contnet {
+		margin-top: 0;
+	}
+}
+@media(max-width: 675px) {
+	.new_year_content_box .new_year_content_box_image_overlay {
+        padding: 20px 15px;
+    }
+    .customer_example_sec_inner .customer_example_image_2 {
+        display: block;
+        width: 100%;
+        margin: 70px auto 0;
+    }
+    .customer_example_image_slider_box .customer_example_image {
+        padding-top: 60%;
+    }
+    .customer_example_sec_contnet a {
+        min-width: 310px;
+    }
+    .customer_example_sec_contnet a:before {
+        height: 10px;
+        width: 10px;
+        line-height: 10px;
+        font-size: 17px;
+        right: 13px;
+    }
+    .customer_example_sec_contnet p {
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .customer_example_sec_heading {
+        -ms-flex: 0 0 40px;
+        flex: 0 0 40px;
+        max-width: 40px;
+    }
+    .customer_example_image_slider_box {
+        -ms-flex: 0 0 calc(100% - 40px);
+        flex: 0 0 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
+	.banner_image img {
+		max-width: 100%;
+	}
+	.visiting_text_inner {
+		display: table;
+		margin: auto;
+		padding-right: 70px;
+	}
+	.visiting_text_inner img {
+		max-width: 189px;
+	}
+	.trouble_section {
+		padding: 20px 15px 80%;
+	}
+}

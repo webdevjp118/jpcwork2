@@ -1,0 +1,1430 @@
+/*responsive css start*/
+@media (max-width: 1250px) {
+    header.site_header {
+        padding: 14px 50px;
+    }
+    header.site_header.inner_page_header.fixed_header, 
+    header.site_header.fixed_header {
+        padding: 10px 50px;
+    }
+    .paralysis_course_section .custom_container,
+    .like_to_paralyzed_therapist_section .custom_container,
+    .nerve_alsy_section .custom_container,
+    .treatment_text_section .custom_container,
+    .search_details_section .custom_container,
+    .breadcrumb_section .custom_container,
+    .search_result_section .custom_container,
+    .site_footer .custom_container,
+    .participate_section .custom_container,
+    .paralyzed_therapist_section .custom_container,
+    .therapy_btn_section .custom_container,
+    .experienced_section .custom_container,
+    .notification_section .custom_container,
+    .map_and_form_search_section .custom_container,
+    .prefecture_search_section .custom_container {
+        max-width: 1160px;
+    }
+    .banner_section h1 {
+        top: 170px;
+        right: 260px;
+        font-size: 56px;
+        line-height: 68px;
+    }
+    .banner_section h1 span {
+        font-size: 30px;
+    }
+    .therapist_btn {
+        width: 70px;
+        padding: 15px;
+    }
+    .interested_btn {
+        top: 136px;
+    }
+    .notification_section {
+        background-color: #F5F5F5;
+        padding: 38px 15px;
+    }
+    .notification_table_sec {
+        padding-bottom: 38px;
+    }
+    .experienced_therapyround {
+        margin: 40px auto;
+    }
+    .problem_section {
+        padding: 90px 0;
+    }
+    .experienced_content_text_box {
+        padding-top: 25px;
+    }
+    .experienced_content_text_box h3 {
+        margin-bottom: 10px;
+    }
+    .problem_content ul {
+        padding: 40px 15px 65px;
+    }
+    .problem_content ul li {
+        padding: 20px 0;
+    }
+    .problem_content ul li img {
+        margin-right: 20px;
+    }
+    .therapy_btn_section {
+        background-color: #F5F5F5;
+        padding: 80px 0;
+    }
+    .therapy_btn_section .therapy_btn {
+        padding: 40px 15px;
+    }
+    .paralyzed_therapist_section {
+        padding: 80px 0 220px;
+    }
+    .participate_content_box {
+        padding: 40px 0;
+    }
+    .paralyzed_therapist_section:after {
+        height: 118px;
+    }
+    .paralyzed_therapist_section .paralyzed_therapist_content {
+        margin-top: 60px;
+    }
+    .inner_page_banner h2 {
+        padding: 80px 0px 60px;
+    }
+    .breadcrumb_section ul {
+        padding-bottom: 60px;
+    }
+    .common_section_title h2 {
+        margin: 0px auto 65px;
+    }
+    .search_result_section {
+        padding-bottom: 140px;
+    }
+    .search_details_card_body .inner_custom_container {
+        padding: 60px 80px 85px;
+    }
+    ul.location_list.location_list_1 {
+        padding-top: 30px;
+        padding-right: 90px;
+    }
+    ul.location_list.location_list_2 {
+        padding-top: 180px;
+        padding-left: 20px;
+    }
+    ul.location_list.location_list_3 {
+        padding-top: 68px;
+        padding-left: 8px;
+    }
+    ul.location_list.location_list_4 {
+        padding-top: 180px;
+        padding-left: 70px;
+    }
+    ul.location_list.location_list_5 {
+        padding-top: 180px;
+        padding-left: 8px;
+    }
+    ul.location_list.location_list_6 {
+        padding-top: 135px;
+        padding-left: 270px;
+    }
+    ul.location_list.location_list_7 {
+        padding-top: 135px;
+    }
+    ul.location_list.location_list_8 {
+        padding-top: 70px;
+        padding-left: 590px;
+    }
+    ul.location_list.location_list_9 {
+        padding-top: 70px;
+    }
+    ul.location_list.location_list_10 {
+        padding-top: 70px;
+    }
+    ul.location_list.location_list_11 {
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+    ul.location_list.location_list_12 {
+        margin-top: 0;
+        padding-top: 166px;
+        padding-left: 70px;
+    }
+    ul.location_list.location_list_13 {
+        margin-top: 0;
+        padding-top: 166px;
+    }
+    ul.location_list.location_list_14 {
+        margin-top: 0;
+        padding-top: 110px;
+        padding-left: 40px;
+    }
+    ul.location_list.location_list_15 {
+        margin-top: 0;
+        padding-top: 110px;
+    }
+    ul.location_list.location_list_16 {
+        margin-top: 0;
+        padding-top: 54px;
+        padding-left: 8px;
+    }
+    .prefecture_search_section {
+        padding: 30px 0px 120px;
+    }
+    .nerve_alsy_section .custom_container {
+        padding: 0 20px;
+    }
+    .nerve_alsy_section .custom_row {
+        margin: 0 -20px;
+    }
+    .nerve_alsy_section .custom_col_image {
+        flex: 0 0 600px;
+        max-width: 600px;
+        padding: 0 20px;
+    }
+    .nerve_alsy_section .custom_col_text {
+        flex: 0 0 calc(100% - 600px);
+        max-width: calc(100% - 600px);
+        padding: 0 20px;
+    }
+    .nerve_alsy_section .nerve_alsy_text p.nerve_alsy_text_spacing {
+        margin-top: 20px;
+    }
+    .nerve_alsy_section .nerve_alsy_text h4 {
+        margin: 0 0 20px 15px;
+    }
+    .paralysis_course_white_box {
+        padding: 65px;
+    }
+    .like_to_paralyzed_therapist_section .custom_row {
+        margin: 0 -20px;
+    }
+    .like_to_paralyzed_therapist_section .custom_container,
+    .like_to_paralyzed_therapist_section .custom_col_text,
+    .like_to_paralyzed_therapist_section .custom_col_image {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 1160px) {
+    .paralysis_course_section .custom_container,
+    .like_to_paralyzed_therapist_section .custom_container,
+    .nerve_alsy_section .custom_container,
+    .treatment_text_section .custom_container,
+    .search_details_section .custom_container,
+    .breadcrumb_section .custom_container,
+    .problem_section .custom_container,
+    .site_footer .custom_container,
+    .participate_section .custom_container,
+    .paralyzed_therapist_section .custom_container,
+    .therapy_btn_section .custom_container,
+    .experienced_section .custom_container,
+    .notification_section .custom_container,
+    .map_and_form_search_section .custom_container,
+    .prefecture_search_section .custom_container {
+        max-width: 900px;
+    }
+    nav.custom_navbar ul li {
+        margin-left: 34px;
+    }
+    nav.custom_navbar .find_salons_box {
+        padding: 10px 22px;
+    }
+    .banner_section h1 {
+        top: 124px;
+        right: 180px;
+        font-size: 46px;
+        line-height: 52px;
+    }
+    .banner_section h1 span {
+        font-size: 24px;
+    }
+    .notification_section .common_heading {
+        padding: 24px 0 2px;
+    }
+    .notification_table_td p.notification_date {
+        padding: 0 35px 0 25px;
+    }
+    .common_section_title h2,
+    .therapy_btn_heading h3,
+    .problem_heading h4,
+    .experienced_content_text_box h3,
+    .particular_btn_sec h4,
+    .nerve_alsy_section .nerve_alsy_text h4,
+    .common_heading h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .experienced_section {
+        padding: 60px 0 20px;
+    }
+    .experienced_therapyround {
+        margin: 35px auto;
+    }
+    .experienced_content_case {
+        width: 74px;
+        height: 74px;
+        top: -40px;
+    }
+    .experienced_content_case h5 {
+        font-size: 20px;
+    }
+    .experienced_content_text_box {
+        padding-top: 20px;
+    }
+    .paralyzed_therapist_section .custom_container,
+    .therapy_btn_section .custom_container,
+    .experienced_section .custom_container {
+        padding: 0 15px;
+    }
+    .paralyzed_therapist_section .custom_row,
+    .therapy_btn_section .custom_row,
+    .experienced_section .custom_row {
+        margin: 0 -15px;
+    }
+    .paralyzed_therapist_section .custom_col_6,
+    .therapy_btn_section .custom_col_6,
+    .experienced_section .custom_col_4 {
+        padding: 0 15px;
+    }
+    .experienced_content_text_box h3 {
+        margin-bottom: 6px;
+    }
+    .therapy_btn_section,
+    .problem_section {
+        padding: 70px 0;
+    }
+    .problem_heading {
+        padding: 12px 15px;
+    }
+    .problem_content ul {
+        padding: 30px 15px 55px;
+    }
+    .problem_content ul li img {
+        max-width: 27px;
+        margin-right: 16px;
+        margin-top: 8px;
+    }
+    .problem_content ul li p {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .therapy_btn_heading h3 {
+        padding: 10px 30px 20px;
+    }
+    .therapy_btn_section .therapy_btn {
+        padding: 30px 15px;
+    }
+    .paralyzed_therapist_section:after {
+        background-position: bottom center;
+    }
+    .paralyzed_therapist_section {
+        padding: 70px 0 160px;
+    }
+    .paralyzed_therapist_section .paralyzed_therapist_content {
+        margin-top: 45px;
+    }
+    .paralyzed_therapist_section .custom_row {
+        align-items: center;
+    }
+    .paralyzed_therapist_section .paralyzed_therapist_text p {
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_profile_box {
+        padding: 38px 0;
+    }
+    .paralysis_treatment_profile_box .paralysis_treatment_profile_box_image {
+        margin: 0 auto 20px;
+    }
+    .paralysis_treatment_profile_box .paralysis_treatment_profile_box_text .paralysis_treatment_btn {
+        margin-top: 26px;
+    }
+    .paralysis_treatment_heading_box .paralysis_treatment_point_box {
+        width: 72px;
+        height: 72px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_acupuncture_box_sec {
+        padding: 10px 0;
+    }
+    .paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box {
+        margin-bottom: 38px;
+    }
+    .paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box p {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box:after {
+        content: '';
+        position: absolute;
+        bottom: -31px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_required_box {
+        margin-top: 55px;
+        padding-bottom: 50px;
+    }
+    .paralysis_treatment_section .float_image_6 {
+        right: 30px;
+    }
+    .participate_section {
+        padding: 140px 0 80px;
+        margin: 55px 0;
+    }
+    .participate_content_box {
+        max-width: 550px;
+        padding: 30px 0;
+    }
+    .participate_content_box p {
+        line-height: 34px;
+        font-size: 20px;
+    }
+    .site_footer .footer_about {
+        padding: 16px 0;
+    }
+    .site_footer .footer_content {
+        padding: 15px 0 70px;
+    }
+    .inner_page_banner {
+        padding: 82px 20px 20px;
+    }
+    .inner_page_banner h2 {
+        font-size: 24px;
+        padding: 70px 0px 50px;
+    }
+    .common_section_title h2 {
+        padding: 0px 100px;
+        margin: 0px auto 50px;
+    }
+    .common_section_title h2:after, .common_section_title h2:before {
+        height: 8px;
+        width: 69px;
+    }
+    .breadcrumb_section ul {
+        padding-bottom: 45px;
+    }
+    .search_details_card .search_details_card_header,
+    .search_result_card .search_result_card_header {
+        padding: 26px 35px;
+    }
+    .search_result_card_body .card_custom_col_details {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 25px;
+    }
+    .search_result_card_body .custom_col_image {
+        flex: 0 0 420px;
+        max-width: 420px;
+    }
+    .search_result_card_body .custom_col_text {
+        flex: 0 0 calc(100% - 420px);
+        max-width: calc(100% - 420px);
+    }
+    .search_result_card_body .card_custom_col_btn.cpc-1160 {
+        display: none !important;
+    }
+    .search_result_card {
+        margin-bottom: 65px;
+        border-top: 4px solid #69CB9E;
+    }
+    .search_result_section {
+        padding-bottom: 120px;
+    }
+    .see_more_btn {
+        padding: 4px 42px;
+        line-height: 30px;
+    }
+    .search_details_card_body .inner_custom_container {
+        padding: 50px 50px 60px;
+    }
+    .search_details_card_body .inner_custom_row {
+        margin: 0px -15px;
+    }
+    .search_details_card_body .custom_col_image {
+        padding: 0px 15px;
+        flex: 0 0 calc(100% - 390px);
+        max-width: calc(100% - 390px);
+    }
+    .search_details_card_body .custom_col_text {
+        padding: 0px 15px;
+        flex: 0 0 390px;
+        max-width: 390px;
+    }
+    .shop_details_table {
+        margin-top: 40px;
+    }
+    .shop_details_table .shop_details_row .shop_details_head, 
+    .shop_details_table .shop_details_row .shop_details_data {
+        padding: 15px 40px;
+    }
+    .search_details_section a.return_to_search_page {
+        margin: 80px auto;
+        padding: 15px 75px;
+    }
+    .search_details_card {
+        border-top: 4px solid #69CB9E;
+    }
+    .search_details_card_body .custom_col_text h4 {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .search_box_title {
+        padding: 12px 20px;
+    }
+    .prefecture_table,
+    .search_form {
+        padding: 20px;
+    }
+    .search_form input[type="text"] {
+        width: calc(100% - 220px);
+    }
+    .search_form button {
+        margin: 3px 0px 3px 32px;
+    }
+    .map_container {
+        padding: 10px;
+    }
+    .map_container img {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        padding: 0px 0px 20px;
+    }
+    ul.location_list {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        float: none !important;
+    }
+    ul.location_list li {
+        margin: 0 !important;
+        flex: 1 0 auto;
+        padding: 5px;
+        min-width: 10%;
+        width: 10%;
+    }
+    ul.location_list li a {
+        padding: 5px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head,
+    .prefecture_table .prefecture_row .prefecture_data {
+        padding: 15px 40px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head {
+        width: 210px;
+    }
+    .prefecture_table .prefecture_row .prefecture_data a:not(:last-child) {
+        margin-right: 15px;
+    }
+    .prefecture_search_section {
+        padding: 30px 0px 90px;
+    }
+    .treatment_text_sec .common_section_title h2 {
+        margin: 0px auto 20px;
+    }
+    .treatment_text_sec .common_section_title p {
+        margin-bottom: 40px;
+    }
+    .treatment_text_green_box_sec {
+        padding: 30px 50px 70px;
+        margin-bottom: 90px;
+    }
+    .treatment_text_green_box_sec .common_heading h2 {
+        margin-bottom: 25px;
+    }
+    .like_to_paralyzed_therapist_section p.paralyzed_therapist_text_spacing,
+    .paralysis_course_white_box p.paralysis_course_white_box_text_spacing,
+    .treatment_text_green_box_sec p.treatment_text_spacing {
+        margin-top: 30px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box {
+        margin: 50px auto 0;
+        padding: 30px 50px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box h4 {
+        margin-bottom: 20px;
+    }
+    .nerve_alsy_section {
+        padding: 90px 0;
+    }
+    .nerve_alsy_section .custom_row {
+        padding: 40px 0;
+        align-items: center;
+    }
+    .nerve_alsy_section .custom_col_image {
+        flex: 0 0 470px;
+        max-width: 470px;
+    }
+    .nerve_alsy_section .custom_col_text {
+        flex: 0 0 calc(100% - 470px);
+        max-width: calc(100% - 470px);
+    }
+    .like_to_paralyzed_therapist_section .common_heading h2 {
+        margin-bottom: 50px;
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .like_to_paralyzed_therapist_section {
+        padding: 60px 0 80px;
+    }
+    .like_to_paralyzed_therapist_section .custom_row {
+        padding: 50px 0;
+        align-items: center;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_image {
+        flex: 0 0 400px;
+        max-width: 400px;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_text {
+        flex: 0 0 calc(100% - 400px);
+        max-width: calc(100% - 400px);
+    }
+    .like_to_paralyzed_therapist_section .never_forget_sec:before,
+    .like_to_paralyzed_therapist_section .palsy_therapist_sec:before {
+        top: 25px;
+        bottom: 25px;
+    }
+    .like_to_paralyzed_therapist_section .palsy_therapist_sec:before {
+        left: 18%;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_sec:before {
+        right: 18%;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_sec .custom_col_text {
+        padding-top: 0;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_big {
+        max-width: 248px;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_small {
+        max-width: 164px;
+    }
+    .paralysis_course_white_box {
+        padding: 40px;
+        margin-bottom: 40px;
+    }
+    .paralysis_course_white_box .common_heading h2 {
+        margin-bottom: 30px;
+    }
+    .particular_sec p {
+        margin-bottom: 40px;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .paralysis_course_section {
+        padding: 60px 0 80px;
+    }
+    .particular_btn_sec {
+        padding: 35px 15px;
+    }
+    .particular_btn_sec a {
+        max-width: 360px;
+    }
+}
+@media (max-width: 900px) {
+    header.site_header {
+        padding: 12px 20px;
+    }
+    header.site_header.inner_page_header.fixed_header, 
+    header.site_header.fixed_header {
+        padding: 10px 20px;
+    }
+    header.site_header .header_logo img {
+        max-width: 150px;
+    }
+    nav.custom_navbar ul li {
+        margin-left: 25px;
+    }
+    nav.custom_navbar .find_salons_box {
+        padding: 8px 15px;
+    }
+    .therapist_btn {
+        width: auto;
+        padding: 15px 12px;
+    }
+    .banner_image {
+        padding-top: 52%;
+    }
+    .banner_section h1 {
+        top: 118px;
+        right: 117px;
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .banner_section h1 span {
+        font-size: 22px;
+    }
+    .notification_table_td span {
+        padding: 4px 10px;
+        min-width: 62px;
+    }
+    .notification_table_td {
+        padding: 15px 0;
+    }
+    .notification_table_td p.notification_date {
+        padding: 0 20px;
+    }
+    .notification_table_sec {
+        padding-bottom: 30px;
+    }
+    .experienced_section {
+        padding: 40px 0;
+    }
+    .common_section_title h2,
+    .therapy_btn_heading h3, 
+    .problem_heading h4, 
+    .experienced_content_text_box h3, 
+    .particular_btn_sec h4,
+    .nerve_alsy_section .nerve_alsy_text h4,
+    .common_heading h2 {
+        font-size: 20px;
+        line-height: 31px;
+    }
+    .experienced_blue,
+    .experienced_green {
+        width: 180px;
+        height: 180px;
+    }
+    .experienced_green {
+        margin-right: -15px;
+    }
+    .experienced_green img {
+        margin-bottom: 4px;
+        max-width: 34px;
+    }
+    .experienced_therapyround p {
+        font-size: 20px;
+    }
+    .experienced_therapyround {
+        margin: 20px auto;
+    }
+    .experienced_section .custom_row {
+        justify-content: center;
+    }
+    .experienced_section .custom_col_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 40px !important;
+    }
+    .experienced_content_case h5 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .experienced_content_case {
+        width: 66px;
+        height: 66px;
+        top: -30px;
+    }
+    .paralysis_treatment_section,
+    .paralyzed_therapist_section,
+    .therapy_btn_section,
+    .problem_section {
+        padding: 50px 0;
+    }
+    .problem_heading {
+        padding: 10px 15px;
+    }
+    .problem_content ul {
+        padding: 20px 15px 40px;
+    }
+    .problem_content ul li {
+        padding: 15px 0;
+    }
+    .problem_content ul li img {
+        max-width: 24px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .problem_content ul li p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .search_details_card_body .custom_col_image,
+    .search_details_card_body .custom_col_text,
+    .paralyzed_therapist_section .custom_col_6,
+    .therapy_btn_section .custom_col_6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .therapy_btn_section .custom_col_6 {
+        margin: 8px 0;
+    }
+    .therapy_btn_section .therapy_btn {
+        max-width: 75%;
+        margin: auto;
+    }
+    .therapy_btn_heading h3 {
+        padding: 6px 25px 17px;
+    }
+    .paralyzed_therapist_section .paralyzed_therapist_text {
+        padding-top: 30px;
+    }
+    .paralyzed_therapist_section .paralyzed_therapist_content {
+        margin-top: 30px;
+    }
+    .paralyzed_therapist_section .float_image_1 {
+        max-width: 25px;
+    }
+    .paralyzed_therapist_section .float_image_2 {
+        max-width: 40px;
+    }
+    .paralyzed_therapist_section .float_image_3 {
+        max-width: 22px;
+    }
+    .nerve_alsy_section .float_image,
+    .paralysis_treatment_section .float_image,
+    .paralyzed_therapist_section .float_image {
+        z-index: -1;
+    }
+    .paralyzed_therapist_section:after {
+        display: none;
+    }
+    .paralysis_treatment_profile_box .paralysis_treatment_profile_box_image {
+        padding-top: 0;
+        height: 188px;
+        margin: 0 auto 20px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_profile_box {
+        padding: 30px 0;
+    }
+    .paralysis_treatment_profile_box .paralysis_treatment_profile_box_text .paralysis_treatment_btn {
+        margin-top: 20px;
+        max-width: 170px;
+        padding: 6px 20px;
+        line-height: 25px;
+    }
+    .paralysis_treatment_heading_box .paralysis_treatment_point_box {
+        width: 62px;
+        height: 62px;
+        top: -30px;
+        border: 3px solid;
+    }
+    .paralysis_treatment_section .paralysis_treatment_content_box {
+        border: 3px solid #69CB9E;
+    }
+    .paralysis_treatment_content_box .paralysis_treatment_heading_box h4 {
+        font-size: 18px;
+        line-height: 36px;
+    }
+    .paralysis_treatment_content_box .paralysis_treatment_text_box {
+        padding: 20px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_required_box {
+        margin-top: 45px;
+        padding-bottom: 45px;
+    }
+    .paralysis_treatment_heading_box .paralysis_treatment_point_box h5 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_acupuncture_box_sec {
+        padding: 10px 0 0;
+    }
+    .paralysis_treatment_blue_box_sec {
+        padding: 0 15px;
+    }
+    .paralysis_treatment_blue_box_sec_inner {
+        padding: 20px 25px;
+        margin: 20px auto;
+    }
+    .participate_section {
+        padding: 100px 0 60px;
+        margin: 40px 0;
+        background-position: center right -60px;
+    }
+    .participate_content_box {
+        max-width: 420px;
+        padding: 25px 0;
+    }
+    .participate_content_box ul li:after {
+        top: 7px;
+    }
+    .participate_content_box ul {
+        margin-bottom: 20px;
+    }
+    .participate_content_box ul li p {
+        font-size: 16px;
+    }
+    .participate_content_box p {
+        line-height: 28px;
+        font-size: 18px;
+    }
+    .site_footer .footer_about img {
+        max-width: 160px;
+    }
+    .site_footer .footer_about {
+        padding: 12px 0;
+    }
+    .site_footer .footer_content {
+        padding: 12px 0 90px;
+    }
+    .inner_page_banner {
+        padding: 67px 20px 20px;
+    }
+    .inner_page_banner h2 {
+        font-size: 22px;
+        padding: 60px 0px 40px;
+    }
+    .breadcrumb_section ul {
+        padding-bottom: 35px;
+    }
+    .common_section_title h2 {
+        margin: 0px auto 40px;
+        padding: 0px 50px;
+    }
+    .common_section_title h2:after, .common_section_title h2:before {
+        width: 30px;
+    }
+    .search_result_card_body .custom_col_text,
+    .search_result_card_body .custom_col_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .search_details_card_body .custom_col_text,
+    .search_result_card_body .custom_col_text {
+        padding-top: 30px;
+    }
+    .custom_col_text .see_more_btn {
+        margin-top: 15px;
+    }
+    .search_details_card .search_details_card_header,
+    .search_result_card .search_result_card_header {
+        padding: 20px 25px;
+    }
+    .search_details_card .search_details_card_header h3,
+    .search_result_card .search_result_card_header h3 {
+        font-size: 20px;
+        flex: 0 0 100%;
+        padding-right: 12px;
+    }
+    .search_details_card .search_details_card_header span,
+    .search_result_card .search_result_card_header span {
+        margin-top: 8px;
+    }
+    .search_result_card {
+        margin-bottom: 55px;
+    }
+    .search_result_card_body .card_custom_col_details .custom_col_text ul {
+        margin-top: 20px;
+    }
+    .search_result_card_body .card_custom_col_details .custom_col_text ul li {
+        padding-left: 80px;
+    }
+    .search_result_card_body .card_custom_col_details .custom_col_text ul li span {
+        width: 64px;
+    }
+    .custom_pagination ul li a {
+        height: 40px;
+        width: 40px;
+        line-height: 39px;
+    }
+    .see_more_btn {
+        padding: 4px 30px;
+        line-height: 26px;
+    }
+    .search_result_section {
+        padding-bottom: 100px;
+    }
+    .search_details_card_body .custom_col_text h4 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .search_details_card_body .inner_custom_container {
+        padding: 30px;
+    }
+    .shop_details_table {
+        margin-top: 30px;
+    }
+    .shop_details_table .shop_details_row .shop_details_head, 
+    .shop_details_table .shop_details_row .shop_details_data {
+        padding: 15px 30px;
+    }
+    .shop_details_table .shop_details_row .shop_details_head {
+        width: 190px;
+    }
+    .search_details_section a.return_to_search_page {
+        margin: 70px auto;
+        padding: 10px 60px;
+    }
+    .search_details_card {
+        border-top: 3px solid #69CB9E;
+    }
+    .search_form input[type="text"] {
+        width: 100%;
+    }
+    .search_form button {
+        margin: 10px 0px 0px;
+        float: right;
+    }
+    ul.location_list li {
+        min-width: 25%;
+        width: 25%;
+    }
+    .prefecture_table, .search_form {
+        padding: 15px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head,
+    .prefecture_table .prefecture_row .prefecture_data {
+        padding: 15px 30px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head {
+        width: 170px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head p,
+    .prefecture_table .prefecture_row .prefecture_data a {
+        font-size: 16px;
+        padding: 5px 0px;
+        display: inline-block;
+    }
+    .prefecture_table .prefecture_row .prefecture_data a:not(:last-child) {
+        margin-right: 5px;
+    }
+    .prefecture_search_section {
+        padding: 30px 0px 60px;
+    }
+    .therapist_btn {
+        position: fixed;
+        top: auto !important;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        width: 50vw;
+        padding: 12px 15px;
+        flex-direction: column-reverse;
+       
+        z-index: 9;
+    }
+    .paralysis_btn {
+        left: 0;
+    }
+    .therapist_btn span {
+        width: auto;
+        display: block;
+        line-height: 18px;
+    }
+    .particular_btn_sec {
+        padding: 25px 15px;
+    }
+    .particular_btn_sec a {
+        max-width: 300px;
+        padding: 6px 16px;
+        line-height: 30px;
+    }
+    .therapist_popup_section {
+        min-height: auto;
+        width: 100%;
+        top: auto;
+        left: 0;
+        right: auto;
+        bottom: -100%;
+        transition: bottom 0.4s;
+    }
+    .therapist_popup_section.open_side_box {
+        bottom: 60px;
+        right: auto;
+    }
+    .paralysis_content, .interested_content {
+        border-radius: 10px 10px 0px 0px;
+    }
+    .treatment_text_sec .common_section_title p {
+        margin-bottom: 30px;
+    }
+    .treatment_text_green_box_sec {
+        padding: 20px 30px 50px;
+        margin-bottom: 65px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box {
+        margin: 35px auto 0;
+        padding: 25px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box h4 {
+        margin-bottom: 15px;
+    }
+    .nerve_alsy_section {
+        padding: 50px 0;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_text,
+    .like_to_paralyzed_therapist_section .custom_col_image,
+    .nerve_alsy_section .custom_col_text,
+    .nerve_alsy_section .custom_col_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_text,
+    .nerve_alsy_section .custom_col_text {
+        padding-top: 30px !important;
+    }
+    .nerve_alsy_section .custom_row {
+        padding: 20px 0;
+    }
+    .nerve_alsy_section .nerve_alsy_text h4 {
+        margin: 0 0 20px;
+    }
+    .like_to_paralyzed_therapist_section {
+        padding: 50px 0;
+    }
+    .like_to_paralyzed_therapist_section .common_heading h2 {
+        margin-bottom: 35px;
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .like_to_paralyzed_therapist_section .custom_row {
+        padding: 30px 0;
+        margin: 0 -15px;
+    }
+    .like_to_paralyzed_therapist_section .custom_container  {
+        padding: 0 15px;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_text,
+    .like_to_paralyzed_therapist_section .custom_col_image {
+        padding: 0 15px;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_sec:before, 
+    .like_to_paralyzed_therapist_section .palsy_therapist_sec:before {
+        top: 15px;
+        bottom: 15px;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    .never_forget_image {
+        max-width: 500px;
+        margin: auto;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_big {
+        max-width: 350px;
+        height: 350px;
+        padding-top: 0%;
+        margin-bottom: 40px;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_small {
+        max-width: 260px;
+        height: 260px;
+        padding-top: 0%;
+    }
+    .like_to_paralyzed_therapist_section p.paralyzed_therapist_text_spacing, 
+    .paralysis_course_white_box p.paralysis_course_white_box_text_spacing, 
+    .treatment_text_green_box_sec p.treatment_text_spacing {
+        margin-top: 20px;
+    }
+    .paralysis_course_section {
+        padding: 50px 0;
+    }
+    .paralysis_course_white_box {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .particular_sec p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .particular_btn_sec {
+        padding: 30px 15px;
+    }
+
+}
+@media (max-width: 675px) {
+    header.site_header {
+        padding: 10px 15px !important;
+    }
+    header.site_header .header_logo img {
+        max-width: 120px;
+    }
+    nav.custom_navbar ul {
+        align-items: flex-start;
+    }
+    nav.custom_navbar ul li {
+        margin-left: 15px;
+    }
+    nav.custom_navbar .find_salons_box {
+        padding: 8px;
+        font-size: 0;
+    }
+    nav.custom_navbar .find_salons_box svg {
+        margin-right: 0;
+    }
+    .banner_section h1 {
+        top: 64px;
+        right: 70px;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .banner_section h1 span {
+        font-size: 16px;
+        margin-left: 6px;
+    }
+    .notification_table_row {
+        display: inline-block;
+        border-bottom: 1px solid #F0F0F0;
+        width: 100%;
+    }
+    .notification_table_td {
+        display: block;
+        border-bottom: none;
+        padding: 6px 0;
+    }
+    .notification_table_td span {
+        display: inline-block;
+    }
+    .notification_table_td p.notification_date {
+        padding: 0;
+    }
+    .experienced_section .custom_col_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 40px !important;
+    }
+    .experienced_blue, .experienced_green {
+        width: 160px;
+        height: 160px;
+    }
+    .experienced_green img {
+        margin-bottom: 4px;
+        max-width: 28px;
+    }
+    .experienced_therapyround p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .experienced_green p {
+        margin-bottom: 13px;
+    }
+    .experienced_therapyround {
+        margin: 15px auto;
+    }
+    .experienced_content_case {
+        width: 60px;
+        height: 60px;
+    }
+    .experienced_section .custom_col_4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 35px !important;
+    }
+    .problem_content ul li {
+        padding: 10px 0;
+    }
+    .problem_content ul li img {
+        max-width: 21px;
+    }
+    .problem_content ul li p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .therapy_btn_section .therapy_btn {
+        max-width: 100%;
+    }
+    .paralysis_treatment_blue_box_sec_inner,
+    .paralysis_treatment_content_box .paralysis_treatment_text_box {
+        padding: 15px;
+    }
+    .paralysis_treatment_profile_box .paralysis_treatment_profile_box_text .paralysis_treatment_btn {
+        max-width: 150px;
+    }
+    .paralysis_treatment_content_box .paralysis_treatment_heading_box {
+        padding: 4px 50px;
+    }
+    .paralysis_treatment_heading_box .paralysis_treatment_point_box {
+        left: 0;
+    }
+    .paralysis_treatment_acupuncture_box_sec .paralysis_treatment_acupuncture_box {
+        padding: 6px 20px;
+    }
+    .paralysis_treatment_blue_box_sec_inner ul li {
+        padding-left: 17px;
+    }
+    .paralysis_treatment_section .paralysis_treatment_acupuncture_box_sec {
+        padding: 10px 15px 0;
+    }
+    .paralysis_treatment_section .paralysis_treatment_required_box {
+        padding-bottom: 30px;
+    }
+    .participate_section {
+        padding: 60px 0;
+        margin: 30px 0;
+    }
+    .participate_content_box {
+        padding: 15px;
+    }
+    .participate_content_box ul li {
+        padding-left: 25px;
+    }
+    .site_footer .footer_about img {
+        max-width: 140px;
+    }
+    .site_footer .footer_about {
+        padding: 10px 0;
+    }
+    .site_footer .footer_content {
+        padding: 10px 0 86px;
+    }
+    .site_footer .footer_content li p span {
+        margin-right: 10px;
+    }
+    .inner_page_banner {
+        padding: 55px 15px 15px;
+    }
+    .inner_page_banner h2 {
+        font-size: 20px;
+        padding: 45px 0px 30px;
+    }
+    .breadcrumb_section .custom_container {
+        padding: 0px 15px;
+    }
+    .breadcrumb_section ul {
+        padding-bottom: 25px;
+    }
+    .common_section_title h2 {
+        margin: 0px auto 35px;
+    }
+    .search_result_card {
+        margin-bottom: 40px;
+        border-top: 3px solid #69CB9E;
+    }
+    .search_details_card .search_details_card_header,
+    .search_result_card .search_result_card_header {
+        padding: 15px 20px;
+    }
+    .search_result_card_body .card_custom_col_details {
+        padding: 15px;
+    }
+    .search_details_card_body .custom_col_text,
+    .search_result_card_body .custom_col_text {
+        padding-top: 20px;
+    }
+    .search_result_card_body .card_custom_col_details .custom_col_text ul {
+        margin-top: 15px;
+    }
+    .custom_pagination ul li a {
+        height: 36px;
+        width: 36px;
+        line-height: 33px;
+    }
+    .search_result_section {
+        padding-bottom: 70px;
+    }
+    .search_details_card .search_details_card_header h3,
+    .search_result_card .search_result_card_header h3 {
+        font-size: 18px;
+    }
+    .search_details_card_body .custom_col_text h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .search_details_card_body .inner_custom_container {
+        padding: 15px;
+    }
+    .shop_details_table {
+        margin-top: 20px;
+    }
+    .shop_details_table .shop_details_row .shop_details_head {
+        width: 120px;
+    }
+    .shop_details_table .shop_details_row .shop_details_head, .shop_details_table .shop_details_row .shop_details_data {
+        padding: 10px;
+    }
+    .search_details_section a.return_to_search_page {
+        margin: 50px auto;
+        padding: 6px 40px;
+    }
+    ul.location_list li {
+        min-width: 33.33%;
+        width: 33.33%;
+    }
+    ul.location_list li a {
+        font-size: 16px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head,
+    .prefecture_table .prefecture_row .prefecture_data {
+        padding: 10px;
+    }
+    .prefecture_table .prefecture_row .prefecture_head {
+        width: 130px;
+    }
+    .prefecture_search_section {
+        padding: 30px 0px;
+    }
+    .treatment_text_sec .common_section_title h2 {
+        margin: 0px auto 15px;
+    }
+    .treatment_text_sec .common_section_title p {
+        margin-bottom: 25px;
+    }
+    .treatment_text_green_box_sec {
+        padding: 20px 15px;
+        margin-bottom: 50px;
+    }
+    .treatment_text_green_box_sec .common_heading h2 {
+        margin-bottom: 15px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box {
+        margin: 30px auto 0;
+        padding: 15px;
+    }
+    .nerve_alsy_section {
+        padding: 30px 0;
+    }
+    .like_to_paralyzed_therapist_section .custom_col_text, 
+    .nerve_alsy_section .custom_col_text {
+        padding-top: 20px !important;
+    }
+    .nerve_alsy_section .nerve_alsy_text h4 {
+        margin: 0 0 15px;
+    }
+    .treatment_text_green_box_sec .treatment_text_white_box h4 {
+        line-height: 34px;
+    }
+    .like_to_paralyzed_therapist_section .common_heading h2 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 20px;
+    }
+    .like_to_paralyzed_therapist_section {
+        padding: 40px 0;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_big {
+        max-width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    .like_to_paralyzed_therapist_section .never_forget_image_small {
+        max-width: 200px;
+        height: 200px;
+    }
+    .paralysis_course_section {
+        padding: 40px 0;
+    }
+    .paralysis_course_white_box {
+        padding: 15px;
+    }
+    .paralysis_course_white_box .common_heading h2 {
+        margin-bottom: 15px;
+    }
+    .particular_btn_sec h4 {
+        margin-bottom: 15px;
+    }
+    .notification_table_td:nth-child(1) {
+        width: 120px;
+        padding-right: 10px;
+        float: left;
+        margin: 0;
+    }
+    .notification_table_td:nth-child(2) {
+        width: calc(100% - 120px);
+        float: left;
+        padding-left: 10px;
+        text-align: right;
+        line-height: 25px;
+        margin: 0;
+    }
+    .notification_table_td:nth-child(3) {
+        display: inline-block;
+        width: 100%;
+    }
+}
+/*responsive css end*/

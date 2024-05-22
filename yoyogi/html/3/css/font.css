@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'UD Digi Kyokasho NP-B';
+    src: url('../fonts/UDDigiKyokashoN-B.ttc') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-B';
+    src: url('../fonts/UDDigiKyokashoN-B.ttc') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-R';
+    src: url('../fonts/UDDigiKyokashoN-R.ttc') format('truetype');
+    font-weight: bold;
+}

@@ -1,0 +1,788 @@
+/* RESPONSIVE */
+
+@media screen and (max-width: 767px){
+    /* HEADER */
+    .header-rgt-top{
+        max-width: 343px;
+        margin-left: auto;
+    }
+    .header-rgt-top .text h3, .header-rgt-btm h2{
+        font-size: 23px;
+    }
+    .header-btm p{
+        font-size: 12px;
+    }
+
+    /* BANNER */
+    .banner-itm .banner-vid{
+        width: 150px;
+        height: 150px;
+        left: 30px;
+    }
+    .banner-itm .top-cont > p, .banner-itm .lft-cont p{
+        font-size: 36px;
+    }
+    .banner-itm .top-cont > h1{
+        font-size: 64px;
+    }
+    .banner-itm .rgt-cont{
+        right: auto;
+        left: 100%;
+        padding: 0;
+    }
+    .banner-itm .rgt-cont p{
+        font-size: 46px;
+    }
+    .banner-itm .btm-cont .btm-cont-row{
+        align-items: center;
+    }
+    .banner-itm .btm-cont .list{
+        margin: 15px 0px 20px;
+    }
+    .banner-itm .btm-cont .placenta p, .banner-itm .btm-cont .essence p, .banner-itm .btm-cont .placerge p{
+        font-size: 16px;
+    }
+    .banner-itm .btm-cont .essence h4{
+        font-size: 28px;
+    }
+    .banner-itm .btm-cont .placerge h4{
+        font-size: 30px;
+    }
+    /* AGE-SEC */
+    .age-head p{
+        font-size: 28px;
+    }
+    .age-head p span{
+        font-size: 46px;
+    }
+    .age-head h2{
+        font-size: 46px;
+    }
+    .age-glry-bx .cont p{
+        font-size: 16px;
+    }
+    .age-glry-bx .cont p span{
+        font-size: 30px;
+    }
+    .age-glry-lbx .cont{
+        width: 120px;
+        height: 120px;
+    }
+    .age-glry-bx.three .cont{
+        bottom: -60px;
+    }
+    .age-glry-lbx .cont p{
+        font-size: 16px;
+    }
+    .age-glry-lbx .cont p span{
+        font-size: 36px;
+    }
+    
+    /* INSTA */
+    .insta-head .other-text p{
+        font-size: 30px;
+    }
+    .insta-head .other-text h2{
+        font-size: 46px;
+    }
+    /* WONDER */
+    .wonder-head-text h2{
+        font-size: 46px;
+    }
+    .wonder-head-text h2 span{
+        font-size: 62px;
+    }
+    /* COMPARE */
+    .compare-btm-col.placerge-text h4{
+        font-size: 46px;
+    }
+    .compare-btm-col.placerge-text p{
+        font-size: 18px;
+        left: 0;
+    }
+    .compare-btm-col:not(.placerge-text) p{
+        font-size: 24px;
+    }
+    /* FAVRITE */
+    .favrite-glry-list-bx .text p{
+        font-size: 18px;
+    }
+    .favrite-glry-list-bx .text h3{
+        font-size: 30px;
+    }
+    .favrite-glry-list-bx .number p{
+        font-size: 30px;
+    }
+    .favrite-glry-list-bx .number h2{
+        font-size: 60px;
+    }
+    .favrite-glry-list-bx .img-text h3{
+        font-size: 28px;
+    }
+    .favrite-glry-list-bx .img-text p{
+        font-size: 16px;
+    }
+    /* TABLE */
+    .table-graph-top h2{
+        font-size: 30px;
+    }
+    .table-banner-bx h2{
+        font-size: 28px;
+    }
+    /* FACTORY-SEC */
+    .factory-gallery .top-cont h2{
+        font-size: 60px;
+    }
+    .factory-gallery .btm-cont h3{
+        font-size: 24px;
+    }
+    /* Safety-trust sec */
+    .sft-trt-head-text p{
+        font-size: 30px;
+        margin: 30px 0px;
+    }
+    .sft-trt-head-text h2{
+        font-size: 48px;
+    }
+    .sft-trt-mask-col.cont{
+        width: 70%;
+    }
+    .sft-trt-mask-col.img{
+        width: 30%;
+    }
+    .sft-trt-dis-dtl .first-time-flex .off h2{
+        font-size: 30px;
+    }
+    .sft-trt-dis-dtl .first-time-flex .limit-text p{
+        font-size: 16px;
+    }
+    .sft-trt-dis-dtl .first-time-flex .limit-text h2{
+        font-size: 48px;
+    }
+    .sft-trt-dis-dtl .first-time-flex .limit-text i{
+        font-size: 30px;
+    }
+    .sft-trt-dis-dtl .first-time-flex .limit-text h2 span{
+        font-size: 14px;
+        top: 0;
+        right: 3px;
+    }
+    /* SKIN */
+    .skin-head h2{
+        font-size: 46px;
+    }
+    .skin-banner .abs-cont p{
+        font-size: 18px;
+    }
+    .skin-banner .abs-cont h2{
+        font-size: 60px;
+    }
+    .skin-banner .cont{
+        margin-top: -10px;
+    }
+    .skin-banner .cont p{
+        font-size: 30px;
+    }
+    /* Q&A SEC */
+    .qa-list li.ques{
+        font-size: 24px;
+    }
+    .qa-list li.ans{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .qa-list li span{
+        font-size: 28px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 576px){
+    /* AGE-SEC */
+    .age-gallery{
+        padding: 30px 0px 60px;
+    }
+}
+@media screen and (max-width: 575px){
+    /* HEADER */
+    .header-top{
+        padding: 5px 0px;
+    }
+    .header-logo img{
+        position: relative;
+        max-width: 80px;
+    }
+    .header-rgt-top{
+        max-width: 220px;
+        margin-left: auto;
+    }
+    .header-rgt-top .text h3, .header-rgt-btm h2{
+        font-size: 14px;
+    }
+    .header-rgt-top .img img{
+        max-width: 50px;
+    }
+    .header-rgt-btm{
+        padding: 0px 10px 0px 0px;
+    }
+    .header-btm{
+        padding: 5px 10px;
+    }
+    .header-btm p{
+        font-size: 8px;
+        padding: 0;
+    }
+    /* BANNER */
+    .banner-itm .banner-vid {
+        width: 120px;
+        height: 120px;
+        left: 15px;
+    }
+    .banner-itm .top-cont{
+        top: 30px;
+    }
+    .banner-itm .top-cont > p, .banner-itm .lft-cont p{
+        font-size: 24px;
+    }
+    .banner-itm .top-cont > h1 {
+        font-size: 56px;
+    }
+    .banner-itm .top-cont > p, .banner-itm .lft-cont p {
+        font-size: 24px;
+    }
+    .banner-itm .rgt-cont{
+        left: auto;
+        right: 0;
+    }
+    .banner-itm .btm-cont .btm-cont-row{
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .banner-itm .btm-cont{
+        padding: 15px 0px;
+    }
+    .banner-itm .btm-cont-col{
+        padding: 0px 5px;
+    }
+    .banner-itm .btm-cont .placenta p, 
+    .banner-itm .btm-cont .essence p, 
+    .banner-itm .btm-cont .placerge p{
+        font-size: 10px;
+    }
+    .banner-itm .btm-cont .essence h4, 
+    .banner-itm .btm-cont .placerge h4{
+        font-size: 22px;
+    }
+    .banner-itm .btm-cont .list{
+        display: none;
+    }
+    
+    .banner-itm .rgt-cont p{
+        font-size: 36px;
+    }
+    /* AGE-SEC */
+    .age-head p{
+        font-size: 16px;
+    }
+    .age-head p span{
+        font-size: 30px;
+    }
+    .age-head h2{
+        font-size: 18px;
+    }
+    .age-glry-row{
+        padding: 0px;
+    }
+    .age-glry-lcol, .age-glry-scol{
+        width: 100%;
+        padding: 0px;
+    }
+    .age-glry-scol .age-glry-bx{
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .age-glry-bx.one, .age-glry-bx.two, .age-glry-bx.three{
+        transform: rotate(0deg);
+        padding: 0px;
+    }
+    .age-glry-bx.one .cont, .age-glry-bx.two .cont, .age-glry-bx.three .cont{
+        transform: rotate(0deg);
+        top: auto;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        width: 120px;
+        height: 120px;
+    }
+    .age-glry-bx .cont p, .age-glry-lbx .cont p{
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    .age-glry-bx .cont p span, .age-glry-lbx .cont p span{
+        font-size: 30px;
+    }
+    /* INSTA-SEC */
+    .insta-head .other-text p{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .insta-head .other-text h2{
+        font-size: 24px;
+    }
+    /* SKIN-SEC */
+    .skin-head p{
+        font-size: 24px;
+    }
+    .skin-head h2{
+        font-size: 24px;
+    }
+    .skin-banner .abs-cont p{
+        font-size: 14px;
+    }
+    .skin-banner .abs-cont h2{
+        font-size: 34px;
+    }
+    .skin-banner .cont{
+        margin-top: 0px;
+    }
+    .skin-banner .cont p{
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+    .skin-banner .cont img{
+        max-width: 50px;
+        margin-right: 15px;
+    }
+    /* WONDER-SEC */
+    .wonder-head-text h2{
+        font-size: 22px;
+    }
+    .wonder-head-text h2 span{
+        font-size: 36px;
+    }
+    .wonder-glry-col:not(:first-child){
+        margin-top: 0px;
+    }
+    .wonder-glry-bx .cont p{
+        font-size: 14px;
+    }
+    /* Compare-sec */
+    .compare-head h2{
+        font-size: 16px;
+    }
+    .compare-btm-cont-bx .abs-cont p{
+        font-size: 14px;
+    }
+    .compare-btm-col.placerge-text h4{
+        font-size: 36px;
+    }
+    .compare-btm-col.placerge-text p{
+        font-size: 14px;
+    }
+    .compare-btm-col:not(.placerge-text) p{
+        font-size: 14px;
+    }
+    .compare-banner .img-text-col .bttn-bx{
+        padding: 8px 30px;
+    }
+    .compare-banner .img-text-col .bttn-bx h4{
+        font-size: 16px;
+    }
+    .compare-banner .img-text-col .bttn-bx:after{
+        border-width: 10px 10px 0px 10px;
+    }
+    /* INSTA */
+    .insta-glry-bx.comment{
+        padding-bottom: 30px;
+    }
+    .insta-glry-bx.comment p{
+        padding-top: 0;
+        font-size: 12px;
+    }
+    .insta-glry-bx.text{
+        padding-top: 15px;
+    }
+    .insta-glry-bx.text p{
+        font-size: 12px;
+    }
+    /* Favrite-Sec */
+    .favrite-head-text .placerge-text p{
+        left: 0;
+    }
+    .favrite-head-text > p{
+        font-size: 18px;
+    }
+    .favrite-head-text .placerge-text h4{
+        font-size: 36px;
+    }
+    .favrite-head-text .placerge-text p{
+        font-size: 14px;
+    }
+    .favrite-head-text > h1{
+        font-size: 36px;
+    }
+    .favrite-head-text > h1 span{
+        font-size: 80px;
+    }
+    .favrite-glry-list-bx .cont-flex{
+        margin-bottom: 30px;
+    }
+    .favrite-glry-list-bx .number{
+        padding: 15px;
+        max-width: 75px;
+        margin-right: 15px;
+    }
+    .favrite-glry-list-bx .number p{
+        font-size: 18px;
+    }
+    .favrite-glry-list-bx .number h2{
+        font-size: 36px;
+    }
+    .favrite-glry-list-bx .text{
+        width: calc(100% - 90px);
+    }
+    .favrite-glry-list-bx .text p{
+        font-size: 14px;
+    }
+    .favrite-glry-list-bx .text h3{
+        font-size: 18px;
+    }
+    .favrite-glry-list-bx .img-text{
+        width: 100%;
+    }
+    .favrite-glry-list-bx .img-text-cross{
+        width: 100%;
+        max-width: 100px;
+        padding: 35px 0px;
+    }
+    .favrite-glry-list-bx .img-text-cross:before,
+    .favrite-glry-list-bx .img-text-cross:after{
+        top: 35px;
+    }
+    .favrite-glry-list-bx .img-text h3{
+        font-size: 24px;
+    }
+    .favrite-glry-list-bx .img-text p{
+        font-size: 16px;
+    }
+    .favrite-glry-list-bx .img img{
+        margin-bottom: 15px;
+    }
+    .favrite-glry-list-bx .img p{
+        font-size: 16px;
+    }
+    /*Free-sec*/
+    .free-head{
+        margin-bottom: 30px;
+    }
+    .free-head h2{
+        font-size: 100px;
+    }
+    .free-head p{
+        font-size: 28px;
+    }
+    .free-list ul li{
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .free-list ul.c-both-space{
+        padding: 0px 30px;
+    }
+    /* TABLE-SEC */
+    .table-head-text p{
+        font-size: 18px;
+    }
+    .table-head-text h2{
+        font-size: 24px;
+    }
+    .table-graph{
+        padding: 60px 15px 30px;
+    }
+    .table-graph-top h2{
+        font-size: 24px;
+    }
+    .table-graph-bx .cont{
+        min-height: 50px;
+    }
+    .table-graph-bx .cont h3{
+        font-size: 16px;
+        padding: 15px 0px;
+    }
+    .table-graph-bx .cont h4{
+        font-size: 36px;
+    }
+    .table-graph-bx .cont p{
+        font-size: 14px;
+    }
+    .table-graph-btm h2{
+        font-size: 18px;
+    }
+    .table-banner-bx .bg-img{
+        max-width: 50px;
+    }
+    .table-banner-bx h2{
+        font-size: 14px;
+    }
+    .table-banner-bx .flex-bx > p{
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .table-banner-bx .flex-bx > p:last-child{
+        margin-bottom: 0px;
+    }
+    .table-banner-bx .placerge-text{
+        margin-bottom: 15px;
+    }
+    /* USER-VOICE */
+    .user-voice-glry-bx{
+        padding: 50px 15px 15px;
+    }
+    .user-voice-glry-bx .abs-cont h2{
+        font-size: 18px;
+    }
+    .user-voice-glry-bx .head h2{
+        font-size: 18px;
+    }
+    .user-voice-glry-bx .cont, 
+    .user-voice-glry-bx .img{
+        width: 100%;
+    }
+    .user-voice-glry-bx .cont{
+        margin-bottom: 15px;
+    }
+    .user-voice-glry-bx .cont h3{
+        font-size: 24px;
+    }
+    .user-voice-glry-bx .cont h3 img{
+        max-width: 60px;
+    }
+    .user-voice-glry-bx .cont p, .user-voice-glry-bx .btm-cont p{
+        font-size: 14px;
+    }
+    .user-voice-gallery,
+    .user-voice-notice{
+        padding: 0px;
+    }
+    .user-voice-notice-bx{
+        padding: 30px 15px;
+    }
+    .user-voice-notice-bx h3{
+        font-size: 18px;
+    }
+    .user-voice-notice-bx p{
+        font-size: 14px;
+    }
+    /* FACTORY-SEC */
+    .factory-head-text p{
+        font-size: 22px;
+    }
+    .factory-head-text h2{
+        font-size: 36px;
+    }
+    .factory-gallery .top-cont h2{
+        font-size: 36px;
+    }
+    .factory-glry-layer .cont{
+        padding: 30px 15px;
+    }
+    .factory-glry-layer .cont p{
+        font-size: 18px;
+    }
+    .factory-gallery .btm-cont h3{
+        font-size: 16px;
+    }
+    /* SAFETY-TRUST SEC */
+    .sft-trt-head-text p{
+        font-size: 18px;
+        margin: 15px 0px;
+    }
+    .sft-trt-head-text h2{
+        font-size: 36px;
+    }
+    .sft-trt-head-text:before, .sft-trt-head-text:after{
+        display: none;
+    }
+    .sft-trt-guarante-cont p, 
+    .sft-trt-guarante-cont ul li{
+        font-size: 14px;
+    }
+    .sft-trt-limit-head h2{
+        font-size: 24px;
+    }
+    .sft-trt-mask-head p{
+        font-size: 12px;
+    }
+    .sft-trt-mask-head h2{
+        font-size: 18px;
+    }
+    .sft-trt-mask-dtl{
+        padding: 30px 0px;
+    }
+    .sft-trt-mask-col.cont{
+        width: 100%;
+    }
+    .sft-trt-mask-cont{
+        padding: 0px 15px;
+        margin-bottom: 30px;
+    }
+    .sft-trt-mask-cont p{
+        font-size: 18px;
+    }
+    .sft-trt-mask-col.img{
+        width: 100%;
+    }
+    .sft-trt-mask-img{
+        width: 100%;
+        text-align: center;
+    }
+    .sft-trt-benefit-head h2{
+        font-size: 16px;
+    }
+    .sft-trt-benefit-list li{
+        padding: 50px 15px 30px;
+    }
+    .sft-trt-benefit-list li > span{
+        font-size: 24px;
+    }
+    .sft-trt-benefit-list li p{
+        font-size: 16px;
+    }
+    .sft-trt-benefit-list li p span.bt{
+        font-size: 24px;
+    }
+    .sft-trt-benefit-list li:not(:nth-child(4)) p span{
+        margin-left: 10px;
+    }
+    .sft-trt-benefit-list{
+        padding: 30px 10px 15px;
+    }
+    .sft-trt-delivery{
+        padding: 30px 15px;
+    }
+    .sft-trt-dis-img{
+        width: 100%;
+    }
+    .sft-trt-dis-dtl{
+        width: 100%;
+    }
+    .sft-trt-dis-dtl .spf p{
+        text-align: right;
+    }
+    .sft-trt-dis-dtl .first-time-flex .circle-text{
+        margin: 15px;
+        margin-left: auto;
+    }
+    .sft-trt-dis-dtl .return-badge h3{
+        font-size: 18px;
+    }
+    .sft-trt-dis-dtl .c30ml .placerge-text h4{
+        font-size: 28px;
+    }
+    .sft-trt-dis-dtl .c30ml .placerge-text p{
+        font-size: 12px;
+    }
+    .sft-trt-dis-dtl .price p{
+        font-size: 16px;
+        margin-right: 12px;
+    }
+    .sft-trt-dis-dtl .price h2{
+        font-size: 28px;
+    }
+    .sft-trt-dis-dtl .price h2 span{
+        font-size: 12px;
+        right: 0;
+    }
+    .sft-trt-dis-dtl .price h3{
+        font-size: 18px;
+    }
+    .sft-trt-dis-dtl .first-time-flex .off{
+        margin-right: 15px;
+    }
+    .sft-trt-dis-dtl ul li{
+        font-size: 14px;
+    }
+
+    /* Q&A SEC */
+    .qa-head h2{
+        font-size: 36px;
+    }
+    .qa-list{
+        padding: 30px 15px;
+    }
+    .qa-list li.ques{
+        font-size: 18px;
+    }
+    .qa-list li.ans{
+        font-size: 14px;
+    }
+    .qa-list li span{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 479px){
+    /* BANNER */
+    .banner-itm .banner-vid {
+        width: 90px;
+        height: 90px;
+        left: 10px;
+    }
+    .banner-itm .top-cont > p, .banner-itm .lft-cont p{
+        font-size: 16px;
+    }
+    .banner-itm .top-cont > h1{
+        font-size: 36px;
+    }
+    /* AGE SEC */
+    .age-glry-row{
+        padding: 0px;
+    }
+    .age-glry-lcol, .age-glry-scol{
+        width: 100%;
+        padding: 0px;
+    }
+    .age-glry-scol .age-glry-bx{
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .age-glry-bx.one, .age-glry-bx.two, .age-glry-bx.three{
+        transform: rotate(0deg);
+        padding: 0px;
+    }
+    .age-glry-bx.one .cont, .age-glry-bx.two .cont, .age-glry-bx.three .cont{
+        transform: rotate(0deg);
+        top: auto;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        width: 90px;
+        height: 90px;
+    }
+    .age-glry-bx .cont p, .age-glry-lbx .cont p{
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    .age-glry-bx .cont p span, .age-glry-lbx .cont p span{
+        font-size: 18px;
+    }
+    /*Safety & Trust Sec*/
+    .sft-trt-dis-dtl .first-time-flex .off{
+        margin-right: 7px;
+    }
+    /* COMPARE */
+    .compare-banner .img-text-col .bttn-bx h4{
+        font-size: 12px;
+    }
+    /* FACTORY-SEC */
+    .factory-glry-layer{
+        margin-bottom: 0px;
+    }
+    .factory-glry-layer .img{
+        width: 100%;
+    }
+    .factory-glry-layer .cont{
+        position: relative;
+    }
+}

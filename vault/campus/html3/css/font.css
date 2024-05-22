@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Aglet Mono Trial Semibold';
+    src: url('../fonts/AgletMonoTrial-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans  JP Medium';
+    src: url('../fonts/NotoSansJP-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Light.eot');
+    src: url('../fonts/YuGothic-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Light.woff2') format('woff2'), url('../fonts/YuGothic-Light.woff') format('woff'), url('../fonts/YuGothic-Light.ttf') format('truetype'), url('../fonts/YuGothic-Light.svg#YuGothic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Medium.woff2') format('woff2'), url('../fonts/YuGothic-Medium.woff') format('woff'), url('../fonts/YuGothic-Medium.ttf') format('truetype'), url('../fonts/YuGothic-Medium.svg#YuGothic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Bold.woff2') format('woff2'), url('../fonts/YuGothic-Bold.woff') format('woff'), url('../fonts/YuGothic-Bold.ttf') format('truetype'), url('../fonts/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

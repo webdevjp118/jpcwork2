@@ -1,0 +1,158 @@
+<?php
+// 設定ファイル読み込み
+require_once("./config.php");
+// 共通ファイル読み込み
+require_once("./include/const.php");
+require_once("./include/func.php");
+require_once("./include/init.php");
+
+// POST が無い場合は遷移
+if (empty($_POST)) {
+	header("Location: ./"); 
+	exit(); 
+}
+
+// POST 前処理しない
+// 表示時にエンティティ変換
+$_LOCAL["post"] = $_POST;
+
+// 入力値チェック
+require_once("./check.php");
+
+// エラーがある場合は入力フォームへ
+if (!empty($_SESSION["error"])) {
+	header("Location: ./"); 
+	exit(); 
+}
+
+	/* ==================== data ==================== */
+
+	//初期設定
+	require('./common/include/define.php');
+
+	//ページ設定
+	$bodyClass = "transition contents contact";
+	$pagename = "ご予約";
+	$pagekeywords = "";
+	$pageDescription = "";
+	$pageOgpImg = "";
+
+	/* ==================== /data ==================== */
+?>
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<?php require('./common/include/meta.php'); ?>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body id="PAGETOP" class="<?php echo $bodyClass;?>">
+<div class="scrollup"><span> <i class="fas fa-chevron-up"></i></span></div>
+<header>
+	<div class="header_bar">
+		<h1><a href="/"><img src="../images/header-logo.png" alt="<?php echo $sitename;?>"></a></h1>
+	</div><!-- /header_bar -->
+</header>
+<main>
+	<section class="contents_ttl">
+		<h2><?php echo $pagename;?></h2>
+	</section>
+	<section class="inner">
+		<div class="contactCotainer">
+			<div class="form_flow">
+				<p class="complete">入力</p>
+				<p class="active">内容確認</p>
+				<p>送信完了</p>
+			</div>
+			<form id="application" action="./complete.php" method="post">
+				<p class="message">以下の内容でよろしければ、送信してください。</p>
+				<div class="form_area">
+					<dl> 
+						<dt>お名前<span>必須</span></dt>
+						<dd class="name"><?php print_post_session("お名前", 1, 1); ?> <?php print_post_session("お名前・名", 1, 1); ?></dd>
+						<dt>フリガナ<span>必須</span></dt>
+						<dd class="name"><?php print_post_session("フリガナ", 1, 1); ?> <?php print_post_session("フリガナ・名", 1, 1); ?></dd>
+						<dt>性別<span>必須</span></dt>
+						<dd><?php print_post_session("性別", 1, 1); ?></dd>
+						<dt>年齢<span>必須</span></dt>
+						<dd><?php print_post_session("年齢", 1, 1); ?><?php if (!empty($_SESSION["post"]["年齢"])) { ?>歳<?php } ?></dd>
+						<dt>電話番号<span>必須</span></dt>
+						<dd><?php print_post_session_num(array("電話番号", "電話番号2", "電話番号3"), 1, 1); ?></dd>
+						<dt>お電話可能な時間帯<span>必須</span></dt>
+						<dd><?php print_post_session("お電話可能な時間帯", 1, 1); ?></dd>
+						<dt>メールアドレス<span>必須</span></dt>
+						<dd><?php print_post_session("メールアドレス", 1, 1); ?></dd>
+						<dt>住所</dt>
+						<dd><?php print_post_session("住所", 1, 1); ?></dd>
+						<dt>ご希望の診察日<span>必須</span></dt>
+						<dd>
+							<strong>第一希望</strong>
+							<p>・<?php print_post_session("第一希望日", 1, 1); ?>　<?php print_post_session("第一希望時間", 1, 1); ?></p>
+							<strong>第二希望</strong>
+							<p>・<?php print_post_session("第二希望日", 1, 1); ?>　<?php print_post_session("第二希望時間", 1, 1); ?></p>
+						</dd>
+						<dt>その他</dt>
+						<dd><?php echo nl2br(_hr(print_post_session("その他", 0, 1))); ?></dd>
+					</dl>
+				</div>
+				<div class="btn_wrap">
+					<div class="backBtn"><a href="./">&laquo;&nbsp;戻る</a></div>
+					<div class="submitBtn"><input type="submit" id="submit_go" value="送信する"></div>
+				</div>
+<?php
+// hidden の作成
+foreach ($_SESSION["post"] as $key => $val) {
+	if (is_array($val)) {
+		foreach ($val as $key2 => $val2) {
+?>
+<input type="hidden" name="<?php _h($key); ?>[]" value="<?php _h($val2); ?>">
+<?php
+		}
+	} else {
+?>
+<input type="hidden" name="<?php _h($key); ?>" value="<?php _h($val); ?>">
+<?php
+	}
+}
+// hidden の作成（ここまで）
+?>
+                <input type="hidden" name="token" value="<?php _h($_SESSION["token"]); ?>">
+			</form>
+		</div><!-- /contactCotainer -->
+	</section><!-- /inner -->
+</main>
+<footer>
+	<div class="inner-container">
+		<p>
+			© 医療法人社団わかと会<br class="sp"> リバーシティクリニック東京
+		</p>
+	</div>
+</footer>
+<script src="./common/js/smooth-scroll.polyfills.js"></script>
+<script>
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 400,
+	easing:'easeOutQuint'
+});
+$(function() {
+	// Scroll_top_top
+	jQuery(window).on("scroll", function() {
+		console.log("hihih");
+		if (jQuery(this).scrollTop() > 100) {
+			jQuery(".scrollup").addClass("active");
+		} else {
+			jQuery(".scrollup").removeClass("active");
+		}
+	});
+
+	jQuery(".scrollup").on("click", function() {
+		jQuery("html, body").animate({
+			scrollTop: 0
+		}, 600);
+		return false;
+	});
+});
+</script>
+</body>
+</html>

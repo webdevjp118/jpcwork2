@@ -1,0 +1,974 @@
+    <!DOCTYPE html>
+    <html lang="ja" xmlns:m="http://mayaa.seasar.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <title>HANDA Watch World</title>
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+        <link rel="stylesheet" href="./css/hww_style.css">
+        <script src="./js/ebisu_lib.js"></script>
+        <script src="./js/ebisu.js"></script>
+        <script type="text/javascript">
+            eb$(function() {
+                eb$('#itemDetail .box .wishlistSubmitButton').each(function(){
+                    var self = eb$(this);
+                    if(self.find(".wishStatus").hasClass("wished")) {
+                        self.find(".wishlistinserttag").hide();
+                        self.find(".wishlistdeletetag").show();
+                    } else {
+                        self.find(".wishlistinserttag").show();
+                        self.find(".wishlistdeletetag").hide();
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+    
+    <iframe m:id='common.IMPORT_HERE' src="common/header.xhtml"></iframe>
+    
+    <main>
+        <div class="l-container">
+            <div class="c-breadcrumbs">
+                <a href="/" class="c-breadcrumbs-link">ホーム</a>
+                <span m:id='common.IF_BREADCRUMBS'>
+                    <span m:id='common.LOOP_BREADCRUMBS'>
+                        <a href="#" class="c-breadcrumbs-link" m:id='common.BREADCRUMBS_LINK_TAG'><span m:id='common.BREADCRUMBS_NAME_HERE'>カテゴリ</span></a>
+                    </span>
+                </span>
+                <span class="c-breadcrumbs-current"><span m:id='ITEM_NAME_HERE'>商品名</span></span>
+            </div>
+    
+            <article class="itemDetail-article">
+                <form m:id='FORM_TAG'>
+                    <div class="itemDetail-hiddenParams">
+                        <div id="js-itemDetail-code"><span m:id='ITEM_CODE_HERE'>ABC-123</span></div>
+                        <div id="js-itemDetail-name"><span m:id='ITEM_NAME_HERE'>商品名</span></div>
+                        <div id="js-itemDetail-stock-num"><span m:id='ZAIKO_HERE'>100</span></div>
+                        <div id="js-itemDetail-stock-alert"><span m:id='FREE_VALUE_HERE' m:free_item_no='31'>31</span></div>
+                    </div>
+                    <div class="itemDetail-content -columnWrapper">
+                        <div class="itemDetail-content-column">
+                            <div class="itemDetail-image-list -large">
+                                <div id="js-itemDetail-slider">
+                                    <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE1'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='ITEM_IMAGE1_LINK_TAG'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE1_TAG'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE2'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='ITEM_IMAGE2_LINK_TAG'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE2_TAG'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE3'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='ITEM_IMAGE3_LINK_TAG'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE3_TAG'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE4'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='ITEM_IMAGE4_LINK_TAG'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE4_TAG'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='23'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='23'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='23'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='24'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='24'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='24'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='25'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='25'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='25'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='26'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='26'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='26'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='27'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='27'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='27'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='28'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='28'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='28'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='29'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='29'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='29'>
+                                        </a>
+                                    </div>
+                                    <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='30'>
+                                        <a href="/images/dummy/img_item_thumbnail_01.png" data-lightbox="product-images" m:id='FREE_LINK_TAG' m:free_item_no='30'>
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='30'>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itemDetail-image-list -thumbnail" id="js-itemDetail-slider-thumbnails">
+                                <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE1'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE1_TAG'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE2'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE2_TAG'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE3'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE3_TAG'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_ITEM_IMAGE4'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE4_TAG'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='23'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='23'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='24'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='24'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='25'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='25'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='26'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='26'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='27'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='27'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='28'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='28'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='29'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='29'>
+                                    </a>
+                                </div>
+                                <div class="itemDetail-image-item" m:id='IF_FREE' m:free_item_no='30'>
+                                    <a>
+                                        <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='FREE_IMAGE_TAG' m:free_item_no='30'>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="itemDetail-about -laptop" m:id='IF_ITEM_INFO1'>
+                                <span m:id='ITEM_INFO1_HERE'>商品コメント1が入ります。</span>
+                            </div>
+                        </div>
+                        <div class="itemDetail-content-column">
+                            <div class="itemDetail-icons">
+                                <span m:id="IF_FREE" m:free_item_no='3'>
+                                    <span class="c-product-icon -recommend">オススメ</span>
+                                </span>
+                                <span m:id="IF_FREE" m:free_item_no='4'>
+                                    <span class="c-product-icon -limited">限定品</span>
+                                </span>
+                                <span m:id="IF_FREE" m:free_item_no='5'>
+                                    <span class="c-product-icon -xxxx">自由項目5</span>
+                                </span>
+                                <span m:id="IF_FREE" m:free_item_no='6'>
+                                    <span class="c-product-icon -xxxx">自由項目6</span>
+                                </span>
+                                <span m:id="IF_FREE" m:free_item_no='7'>
+                                    <span class="c-product-icon -xxxx">自由項目7</span>
+                                </span>
+                                <span m:id='IF_SOLDOUT'>
+                                    <span class="c-product-icon -soldout">入荷待ち</span>
+                                </span>
+                            </div>
+                            <p class="itemDetail-catchcopy" m:id='IF_ITEM_APPEAL_MESSAGE'>
+                                <span m:id='ITEM_APPEAL_HERE'>キャッチコピーが入ります。</span>
+                            </p>
+                            <p class="itemDetail-brand">
+                                <span m:id='CATEGORY_NAME_HERE'>ブランド名</span>
+                            </p>
+                            <h2 class="itemDetail-name">
+                                <span m:id='ITEM_NAME_HERE'>商品名</span>
+                            </h2>
+                            <p class="itemDetail-price" m:id='IF_NOT_FREE_VALUE' m:free_item_no='1'>
+                                <span m:id='IF_ITEM_MEMBER_RANK_TEIKA_HIGHEST'>
+                                    <span m:id='ITEM_MEMBER_RANK_TEIKA_HIGHEST_HERE' m:tax='hontai'>&yen;50,000</span><span class="itemDetail-price-tax">（税抜）</span>
+                                </span>
+                                <span m:id='IF_ITEM_MEMBER_RANK_TEIKA_HIGHEST' m:NOT=''>
+                                    <span m:id='TEIKA_PRICE_HERE' m:tax='hontai'>&yen;50,000</span><span class="itemDetail-price-tax">（税抜）</span>
+                                </span>
+                            </p>
+                            <div class="itemDetail-about -mobile" m:id='IF_ITEM_INFO1'>
+                                <span m:id='ITEM_INFO1_HERE'>商品コメント1が入ります。</span>
+                            </div>
+                            <table class="itemDetail-spec -laptop">
+                                <tr m:id='IF_FREE' m:free_item_no='8'>
+                                    <th>型番</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='8'>自由項目8の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='9'>
+                                    <th>タイプ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='9'>自由項目9の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='10'>
+                                    <th>素材（ケース）</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='10'>自由項目10の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='11'>
+                                    <th>素材（ベルト）</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='11'>自由項目11の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='12'>
+                                    <th>ケースサイズ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='12'>自由項目12の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='13'>
+                                    <th>ブレスサイズ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='13'>自由項目13の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='14'>
+                                    <th>ムーブメント</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='14'>自由項目14の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='15'>
+                                    <th>防水</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='15'>自由項目15の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='16'>
+                                    <th>文字盤色</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='16'>自由項目16の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='17'>
+                                    <th>付属品</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='17'>自由項目17の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='18'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='18'>自由項目18の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='19'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='19'>自由項目19の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='20'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='20'>自由項目20の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='21'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='21'>自由項目21の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='22'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='22'>自由項目22の値が入ります</span></td>
+                                </tr>
+                            </table>
+    
+                            <!-- ======================商品属性系====================== / -->
+                            <p m:id='IF_ITEM_PROPERTY_TEIKA'>
+                                選択する<span m:id='ITEM_ALL_PROPERTY_NAME_HERE'>サイズ,色</span>によっては金額が変化します。<br />
+                                金額はカートの中身で確認してください。
+                            </p>
+    
+                            <!-- ======================商品属性が一つの場合====================== / -->
+                            <table m:id='IF_ONE_ITEM_PROPERTY'>
+                                <tr>
+                                    <th><span m:id="ITEM_PROPERTY_MATRIX_ROW_NAME_HERE">サイズ</span></th>
+                                    <th m:id='IF_ITEM_PROPERTY_TEIKA'>価格</th>
+                                    <th><br /></th>
+                                </tr>
+                                <tr m:id="LOOP_ITEM_PROPERTY_MATRIX_ROWS">
+                                    <th>
+                                        <label m:id="ITEM_PROPERTY_MATRIX_LABEL_TAG">
+                                            <span m:id="ITEM_PROPERTY_MATRIX_ROW_TITLE_HERE">S</span>
+                                        </label>
+                                        <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU" class="item_icon item_yoyaku">予約商品</span>
+                                    </th>
+                                    <th m:id='IF_ITEM_PROPERTY_TEIKA'>
+                                        <label m:id="ITEM_PROPERTY_MATRIX_LABEL_TAG">
+                                <span m:id="IF_ITEM_PROPERTY_MATRIX_TEIKA">
+                                    <span m:id="ITEM_PROPERTY_MATRIX_KAKAKU_HERE" m:tax='zeikomi'>1,000円</span>
+                                </span>
+                                            <span m:id="IF_ITEM_PROPERTY_MATRIX_TEIKA" m:NOT="">
+                                    <span m:id='ORIGINAL_TEIKA_ZEIKOMI_HERE'>9,980円</span>
+                                </span>
+                                        </label>
+                                    </th>
+                                    <td>
+                            <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU">
+                                <input m:id="ITEM_PROPERTY_MATRIX_RADIO_TAG" type="radio" />
+                            </span>
+                                        <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU" m:NOT="">
+                                <span m:id="IF_ITEM_PROPERTY_MATRIX_ZAIKO">
+                                    <input m:id="ITEM_PROPERTY_MATRIX_RADIO_TAG" type="radio" />
+                                    <!--
+                                    商品属性ごとにカートに入れるボタンを表示します
+                                    <input m:id='PUT_TO_CART_BUTTON_TAG_ONE_PROPERTY' type="submit" value="カートに入れる" class="button positive small" />
+                                    -->
+    
+                                    <!--
+                                    カート画面遷移せずポップアップを使用する場合(1属性)
+                                    <div class="cartSubmitButton">
+                                        <input m:id='PUT_TO_CART_AFTER_AJAX_CHECK_BUTTON_TAG_ONE_PROPERTY' type="submit" value="カートに入れる" class="button positive small" />
+                                        <div class="cartMessage">
+                                            <p class="title">カートに追加されました。</p>
+                                            <p class="link">
+                                                <a href="cart_index.html" class="button positive small">カートを見る</a>
+                                            </p>
+                                            <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                            <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                        </div>
+                                    </div>
+                                    -->
+    
+                                </span>
+                                <span m:id="IF_ZAIKO_MANAGE">
+                                    <span m:id="IF_ITEM_PROPERTY_MATRIX_ZAIKO" m:NOT="">×
+                                        <!-- 在庫切れの場合 -->
+                                        <span m:id="IF_USE_NYUKA_NOTICE">
+                                            <span m:id="IF_ITEM_PROPERTY_MATRIX_NYUKA_NOTICE_FLG">
+                                                <br />
+                                                <a m:id='NYUKA_NOTICE_ITEM_PROPERTY_MATRIX_BUTTON_TAG' href="#" class="button positive small">入荷お知らせを受け取る</a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span m:id="IF_ZAIKO_TANI_FLG_ITEMPROPERTY">
+                                        あと<span m:id="ITEM_PROPERTY_MATRIX_ZAIKO_HERE">10</span>個
+                                    </span>
+                                </span>
+                            </span>
+                                        <span m:id='common.IF_USE_WISHLIST'>
+                                <!-- 商品属性ごとにウィシュリストに入れるボタンを表示します -->
+                                            <span m:id="IF_ALREADY_REGISTERED_WISHLIST_ONE" m:NOT="">
+                                    <input m:id='PUT_TO_WISHLIST_BUTTON_ONE_TAG' type="submit" value="お気に入りに追加" class="button normal small" />
+                                </span>
+                                <span m:id="IF_ALREADY_REGISTERED_WISHLIST_ONE">お気に入リストに追加済みです。</span>
+                                            <!-- お気に入りリスト画面に遷移せずポップアップを使用する場合(1属性)
+                                            <div class="wishlistSubmitButton">
+                                                <span m:id="IF_ALREADY_REGISTERED_WISHLIST_ONE" m:NOT=""><span class="wishStatus"></span></span>
+                                                <span m:id="IF_ALREADY_REGISTERED_WISHLIST_ONE"><span class="wishStatus wished"></span></span>
+                                                <div class="wishlistinserttag"><a m:id='PUT_TO_WISHLIST_AFTER_AJAX_CHECK_BUTTON_ONE_TAG' href="javascript:void(0);" class="button normal small">お気に入りに追加</a></div>
+                                                <div class="wishlistdeletetag"><a m:id='DELETE_WISHLIST_AFTER_AJAX_CHECK_BUTTON_ONE_TAG' href="javascript:void(0);" class="button normal small">お気に入りから削除</a></div>
+                                                <div class="wishlistMessage">
+                                                    <p class="title">お気に入りに登録しました。</p>
+                                                    <p class="link">
+                                                        <a href="wishlist.html">お気に入りリストをみる</a>
+                                                    </p>
+                                                    <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                    <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                </div>
+                                                <div class="wishlistDelMessage">
+                                                    <p class="title">お気に入りから削除しました。</p>
+                                                    <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                    <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                </div>
+                                            </div>
+                                             -->
+                                            <span m:id='WISHLIST_ONE_COUNT_HERE'>100</span>人がお気に入りに登録しています。
+                            </span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- / ======================商品属性が一つの場合====================== -->
+    
+                            <!-- ======================商品属性が二つの場合====================== / -->
+                            <table m:id='IF_TWO_ITEM_PROPERTIES'>
+                                <tr>
+                                    <th><span m:id="ITEM_PROPERTY_MATRIX_ROW_NAME_HERE">色</span>＼<span m:id="ITEM_PROPERTY_MATRIX_COL_NAME_HERE">サイズ</span></th>
+                                    <th m:id="LOOP_ITEM_PROPERTY_MATRIX_COLS"><span m:id="ITEM_PROPERTY_COL_TITLE_HERE">S</span></th>
+                                    <th m:id="DUMMY">M</th>
+                                </tr>
+                                <tr m:id="LOOP_ITEM_PROPERTY_MATRIX_ROWS">
+                                    <th><span m:id="ITEM_PROPERTY_MATRIX_ROW_TITLE_HERE">赤</span></th>
+                                    <td m:id="LOOP_ITEM_PROPERTY_MATRIX_COLS">
+                            <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU">
+                                <span class="item_icon item_yoyaku">予約商品</span>
+                                <input m:id="ITEM_PROPERTY_MATRIX_RADIO_TAG" type="radio" />
+                            </span>
+                                        <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU" m:NOT="">
+                                <span m:id="IF_ITEM_PROPERTY_MATRIX_ZAIKO">
+                                    <input m:id="ITEM_PROPERTY_MATRIX_RADIO_TAG" type="radio" />
+                                </span>
+                            </span>
+                                        <label m:id="ITEM_PROPERTY_MATRIX_LABEL_TAG">
+                                <span m:id="IF_ITEM_PROPERTY_MATRIX_YOYAKU" m:NOT="">
+                                    <span m:id="IF_ITEM_PROPERTY_MATRIX_ZAIKO" m:NOT="">×</span>
+                                    <span m:id="IF_ZAIKO_MANAGE">
+                                        <span m:id="IF_ITEM_PROPERTY_MATRIX_ZAIKO" m:NOT="">
+                                            <!-- 在庫切れの場合 -->
+                                            <span m:id="IF_USE_NYUKA_NOTICE">
+                                                <span m:id="IF_ITEM_PROPERTY_MATRIX_NYUKA_NOTICE_FLG">
+                                                    <br />
+                                                    <a m:id='NYUKA_NOTICE_ITEM_PROPERTY_MATRIX_BUTTON_TAG' href="#" class="button positive small">入荷お知らせを受け取る</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span m:id="IF_ZAIKO_TANI_FLG_ITEMPROPERTY">あと<span m:id="ITEM_PROPERTY_MATRIX_ZAIKO_HERE">10</span>個<br /></span>
+                                    </span>
+                                </span>
+                                            <span m:id="IF_ITEM_PROPERTY_TEIKA">
+                                    <span m:id="IF_ITEM_PROPERTY_MATRIX_TEIKA">
+                                        <span m:id="ITEM_PROPERTY_MATRIX_KAKAKU_HERE" m:tax='zeikomi'>1,000円</span>
+                                    </span>
+                                    <span m:id="IF_ITEM_PROPERTY_MATRIX_TEIKA" m:NOT="">
+                                        <span m:id='ORIGINAL_TEIKA_ZEIKOMI_HERE'>9,980円</span>
+                                    </span>
+                                </span>
+                                        </label>
+                                        <!--
+                                        カート画面遷移せずポップアップを使用する場合(2属性)
+                                        <div class="cartSubmitButton">
+                                            <input m:id='PUT_TO_CART_AFTER_AJAX_CHECK_BUTTON_TAG_TWO_PROPERTY' type="submit" value="カートに入れる" class="button positive small" />
+                                            <div class="cartMessage">
+                                                <p class="title">カートに追加されました。</p>
+                                                <p class="link"><a href="cart_index.html" class="button positive small">カートを見る</a></p>
+                                                <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                            </div>
+                                        </div>
+                                        -->
+                                        <div m:id='common.IF_USE_WISHLIST'>
+                                            <!-- 商品属性ごとにウィシュリストに入れるボタンを表示します -->
+                                            <div m:id='IF_ALREADY_REGISTERED_WISHLIST_TWO' m:NOT=''>
+                                                <input m:id='PUT_TO_WISHLIST_BUTTON_TWO_TAG' type="submit" value="お気に入りに追加" class="button normal small" />
+                                            </div>
+                                            <div m:id='IF_ALREADY_REGISTERED_WISHLIST_TWO'>お気に入リストに追加済みです。</div>
+                                            <!-- お気に入りリスト画面に遷移せずポップアップを使用する場合(2属性)
+                                            <div class="wishlistSubmitButton">
+                                                <span m:id="IF_ALREADY_REGISTERED_WISHLIST_TWO" m:NOT=""><span class="wishStatus"></span></span>
+                                                <span m:id="IF_ALREADY_REGISTERED_WISHLIST_TWO"><span class="wishStatus wished"></span></span>
+                                                <div class="wishlistinserttag"><a m:id='PUT_TO_WISHLIST_AFTER_AJAX_CHECK_BUTTON_TWO_TAG' href="javascript:void(0);" class="button normal small">お気に入りに追加</a></div>
+                                                <div class="wishlistdeletetag"><a m:id='DELETE_WISHLIST_AFTER_AJAX_CHECK_BUTTON_TWO_TAG' href="javascript:void(0);"  class="button normal small">お気に入りから削除</a></div>
+                                                <div class="wishlistMessage">
+                                                    <p class="title">お気に入りに登録しました。</p>
+                                                    <p class="link"><a href="wishlist.html">お気に入りリストをみる</a></p>
+                                                    <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                    <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                </div>
+                                                <div class="wishlistDelMessage">
+                                                    <p class="title">お気に入りから削除しました。</p>
+                                                    <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                    <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                </div>
+                                            </div>
+                                             -->
+                                            <span m:id='WISHLIST_TWO_COUNT_HERE'>100</span>人がお気に入りに登録しています。
+                                        </div>
+                                    </td>
+                                    <td m:id="DUMMY"><input type="radio" /><br />あと10個<br />943円</td>
+                                </tr>
+                                <tr m:id="DUMMY">
+                                    <th>青</th>
+                                    <td><input type="radio" /><br />あと10個<br />943円</td>
+                                    <td>×<br />あと0個<br />943円</td>
+                                </tr>
+                            </table>
+                            <!-- / ======================商品属性が二つの場合====================== -->
+    
+                            <!-- ======================商品属性が三つ以上の場合====================== / -->
+                            <div m:id='IF_ITEM_PROPERTIES_OVER_THREE'>
+                                <div m:id='LOOP_ITEM_PROPERTY'>
+                                    <p>
+                                        <span m:id='ITEM_PROPERTY_NAME_HERE'>色</span>：
+                                        <!-- 商品属性をセレクトボックスで表示する場合 -->
+                                        <select m:id='ITEM_PROPERTY_INPUT_HERE'>
+                                            <option>赤</option>
+                                            <option>青</option>
+                                        </select>
+                                        <!-- ${/* 商品属性をラジオボタンで表示する場合
+                                                        <span m:id='ITEM_PROPERTY_INPUT_RADIO_HERE'>
+                                            <input type="radio" /> 青
+                                             <input type="radio" /> 赤
+                                             <input type="radio" /> 白
+                                             <input type="radio" /> 黒
+                                        </span>
+                                        */} -->
+                                    </p>
+                                    <!-- ${/* 商品属性の自由項目
+                                    <div m:id='IF_ITEM_PROPERTY_FREE_VALUE'>
+                                        <span m:id='ITEM_PROPERTY_FREE_TITLE_HERE'>属性の自由項目タイトル</span>：
+                                        <span m:id='ITEM_PROPERTY_FREE_VALUE_HERE'>属性の自由項目値</span>
+                                        <span m:id='ITEM_PROPERTY_FREE_VALUE_HTML_HERE'>属性の自由項目HTML</span>
+                                    </div>
+                                    */} -->
+                                </div>
+                                <div m:id='DUMMY'>
+                                    <span>サイズ</span>：
+                                    <select>
+                                        <option>S</option>
+                                        <option>M</option>
+                                    </select>
+                                </div>
+    
+                                <table>
+                                    <tr>
+                                        <th class="zaiko">商品属性名</th>
+                                        <th class="zaiko">商品属性コード</th>
+                                        <th class="zaiko" m:id='IF_ITEM_PROPERTY_TEIKA'>価格</th>
+                                        <th m:id="IF_ZAIKO_TANI_FLG_ITEMPROPERTY" class="zaiko">在庫<span m:id='IF_ZAIKO_DISP'>数</span></th>
+                                        <!-- ${/* 商品・商品属性自由項目を出力したい場合以下のように記載してください。
+                                        <th class="zaiko"><span m:id="common.ITEM_ITEMPROPERTY_FREE_TITLE_HERE" m:free_item_no="1">自由項目1</span></th>
+                                        */} -->
+                                    </tr>
+                                    <tr m:id="LOOP_ITEM_ITEMPROPERTY">
+                                        <td>
+                                            <span m:id="IF_ITEM_PROPERTY_YOYAKU"><span class="item_icon item_yoyaku">予約商品</span><br /></span>
+                                            <span m:id='ITEM_ITEMPROPERTY_NAME_HERE'>赤,M</span>
+                                        </td>
+                                        <td><span m:id='ITEM_ITEMPROPERTY_CD_HERE'>ITEM01-RED-M</span>
+                                            <!-- 商品属性ごとにカートに入れるボタンを表示します -->
+                                            <input m:id='PUT_TO_CART_BUTTON_TAG_OVER_THREE_PROPERTY' type="submit" value="カートに入れる" class="button positive small" />
+                                            <!--
+                                            カート画面遷移せずポップアップを使用する場合(3属性)
+                                            <div class="cartSubmitButton">
+                                                <input m:id='PUT_TO_CART_AFTER_AJAX_CHECK_BUTTON_TAG_OVER_THREE_PROPERTY' type="submit" value="カートに入れる" class="button positive small" />
+                                                <div class="cartMessage">
+                                                    <p class="title">カートに追加されました。</p>
+                                                    <p class="link"><a href="cart_index.html" class="button positive small">カートを見る</a></p>
+                                                    <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                    <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                </div>
+                                            </div>
+                                            -->
+                                            <div m:id='common.IF_USE_WISHLIST'>
+                                                <!-- 商品属性ごとにウィシュリストに入れるボタンを表示します -->
+                                                <div m:id='IF_ALREADY_REGISTERED_WISHLIST_OVER_THREE' m:NOT=''>
+                                                    <input m:id='PUT_TO_WISHLIST_BUTTON_OVER_THREE_TAG' type="submit" value="お気に入りに追加" class="button normal small" />
+                                                </div>
+                                                <div m:id='IF_ALREADY_REGISTERED_WISHLIST_OVER_THREE'>お気に入リストに追加済みです。</div>
+                                                <!-- お気に入りリスト画面に遷移せずポップアップを使用する場合(3属性)
+                                                <div class="wishlistSubmitButton">
+                                                    <span m:id="IF_ALREADY_REGISTERED_WISHLIST_OVER_THREE" m:NOT=""><span class="wishStatus"></span></span>
+                                                    <span m:id="IF_ALREADY_REGISTERED_WISHLIST_OVER_THREE"><span class="wishStatus wished"></span></span>
+                                                    <div class="wishlistinserttag"><a m:id='PUT_TO_WISHLIST_AFTER_AJAX_CHECK_BUTTON_OVER_THREE_TAG' href="javascript:void(0);" class="button normal small">お気に入りに追加</a></div>
+                                                    <div class="wishlistdeletetag"><a m:id='DELETE_WISHLIST_AFTER_AJAX_CHECK_BUTTON_OVER_THREE_TAG' href="javascript:void(0);" class="button normal small">お気に入りから削除</a></div>
+                                                        <div class="wishlistMessage">
+                                                            <p class="title">お気に入りに登録しました。</p>
+                                                            <p class="link">
+                                                                <a href="wishlist.html">お気に入りリストをみる</a>
+                                                            </p>
+                                                            <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                            <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                        </div>
+                                                        <div class="wishlistDelMessage">
+                                                            <p class="title">お気に入りから削除しました。</p>
+                                                            <p class="mainclose" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();">閉じる</p>
+                                                            <p class="close" onclick="eb$(this).parent().stop();eb$(this).parent().fadeOut();"><img src="images/button_close_mark.png" width="16" height="16" alt="閉じる" /></p>
+                                                        </div>
+                                                </div>
+                                                 -->
+                                                <span m:id='WISHLIST_OVER_THREE_COUNT_HERE'>100</span>人がお気に入りに登録しています。
+                                            </div>
+                                        </td>
+                                        <td class="number" m:id='IF_ITEM_PROPERTY_TEIKA'>
+                                <span m:id="IF_ITEM_ITEMPROPERTY_TEIKA">
+                                    <span m:id='ITEM_ITEMPROPERTY_TEIKA_PRICE_HERE' m:tax="zeikomi">1,175円</span>
+                                </span>
+                                            <span m:id="IF_ITEM_ITEMPROPERTY_TEIKA" m:NOT="">
+                                    <span m:id="BASE_TEIKA_PRICE_HERE" m:tax="zeikomi">1,175円</span>
+                                </span>
+                                        </td>
+                                        <td m:id="IF_ZAIKO_TANI_FLG_ITEMPROPERTY" class="number">
+                                <span m:id="IF_ZAIKO_DISP">
+                                    <span m:id='ITEM_ITEMPROPERTY_ZAIKO_HERE'>10</span>
+                                    <span m:id="IF_ZAIKO_MANAGE">
+                                        <span m:id="IF_ITEM_ITEMPROPERTY_ZAIKO" m:NOT="">
+                                            <!-- 在庫切れの場合 -->
+                                            <span m:id="IF_USE_NYUKA_NOTICE">
+                                                <span m:id="IF_ITEM_ITEMPROPERTY_NYUKA_NOTICE_FLG">
+                                                    <a m:id='NYUKA_NOTICE_ITEM_PROPERTY_BUTTON_TAG' href="#" class="button positive small">入荷お知らせを受け取る</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                            <span m:id="IF_ZAIKO_DISP" m:NOT="">
+                                    <span m:id="IF_ITEM_ITEMPROPERTY_ZAIKO">○</span>
+                                    <span m:id="IF_ITEM_ITEMPROPERTY_ZAIKO" m:NOT="">×</span>
+                                    <span m:id="IF_ZAIKO_MANAGE">
+                                        <span m:id="IF_ITEM_ITEMPROPERTY_ZAIKO" m:NOT="">
+                                            <!-- 在庫切れの場合 -->
+                                            <span m:id="IF_USE_NYUKA_NOTICE">
+                                                <span m:id="IF_ITEM_ITEMPROPERTY_NYUKA_NOTICE_FLG">
+                                                    <a m:id='NYUKA_NOTICE_ITEM_PROPERTY_BUTTON_TAG' href="#" class="button positive small">入荷お知らせを受け取る</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                        </td>
+                                        <!-- ${/* 商品・商品属性自由項目を出力したい場合以下のように記載してください。
+                                        <td><span m:id="ITEM_ITEMPROPERTY_FREE_VALUE_HERE" m:free_item_no="1">自由項目1値</span></td>
+                                        */} -->
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- / ======================商品属性が三つ以上の場合====================== -->
+                            <!-- / ======================商品属性系====================== -->
+    
+                            <div class="itemDetail-purchase">
+                                <div class="itemDetail-purchase-stock-amount">
+                                    <div class="itemDetail-purchase-stock">
+                                        <p>在庫状況：<span id="js-itemDetail-stock"></span></p>
+                                    </div>
+                                    <div class="itemDetail-purchase-amount" m:id='IF_NOT_FREE_VALUE' m:free_item_no='1'>
+                                        <p>数量：</p>
+                                        <select m:id='AMOUNT_INPUT_HERE'>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="itemDetail-purchase-button-list">
+                                    <div m:id='IF_NOT_FREE_VALUE' m:free_item_no='1'>
+                                        <div class="itemDetail-purchase-button-item" m:id='IF_PUT_TO_CART'>
+                                            <input type="submit" value="カートに入れる" class="c-button -red -radius" m:id='PUT_TO_CART_BUTTON_TAG'>
+                                        </div>
+                                        <div class="itemDetail-purchase-button-item" m:id='IF_NYUKA_NOTICE'>
+                                            <a href="/" class="c-button -blue -radius" m:id='NYUKA_NOTICE_BUTTON_TAG'>入荷のお知らせ</a>
+                                        </div>
+                                    </div>
+                                    <div m:id='IF_FREE_VALUE' m:free_item_no='1'>
+                                        <div class="itemDetail-purchase-button-item">
+                                            <a href="/" class="c-button -darkCyan -radius">資料請求</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemDetail-purchase-button-list -sub">
+                                    <div class="itemDetail-purchase-button-item" m:id="common.IF_APPLY_AVAILABLE" apply_no='APPLY2'>
+                                        <a href="./apply.html?id=APPLY2" id="js-reservation-link" class="c-button -blue -radius">ご来店予約</a>
+                                    </div>
+                                    <div class="itemDetail-purchase-button-item" m:id="common.IF_APPLY_AVAILABLE" apply_no='APPLY2'>
+                                        <a href="./apply.html?id=APPLY2" id="js-contact-link" class="c-button -blue -radius">商品お問い合わせ</a>
+                                    </div>
+                                    <div class="itemDetail-purchase-button-item">
+                                        <span m:id="IF_ALREADY_REGISTERED_WISHLIST" m:NOT=''>
+                                            <span class="wishStatus"></span>
+                                        </span>
+                                        <span m:id="IF_ALREADY_REGISTERED_WISHLIST">
+                                            <span class="wishStatus wished"></span>
+                                        </span>
+                                        <span m:id="IF_ALREADY_REGISTERED_WISHLIST" m:NOT=''>
+                                            <a href="/" class="c-button -blue -radius"m:id='PUT_TO_WISHLIST_AFTER_AJAX_CHECK_BUTTON_OVER_THREE_TAG'>&hearts;お気に入り追加</a>
+                                        </span>
+                                        <span m:id="IF_ALREADY_REGISTERED_WISHLIST">
+                                            <a href="/" class="c-button -blue -radius"m:id='DELETE_WISHLIST_AFTER_AJAX_CHECK_BUTTON_OVER_THREE_TAG'>&hearts;お気に入り削除</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="itemDetail-spec -mobile">
+                                <tr m:id='IF_FREE' m:free_item_no='8'>
+                                    <th>型番</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='8'>自由項目8の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='9'>
+                                    <th>タイプ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='9'>自由項目9の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='10'>
+                                    <th>素材（ケース）</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='10'>自由項目10の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='11'>
+                                    <th>素材（ベルト）</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='11'>自由項目11の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='12'>
+                                    <th>ケースサイズ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='12'>自由項目12の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='13'>
+                                    <th>ブレスサイズ</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='13'>自由項目13の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='14'>
+                                    <th>ムーブメント</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='14'>自由項目14の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='15'>
+                                    <th>防水</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='15'>自由項目15の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='16'>
+                                    <th>文字盤色</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='16'>自由項目16の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='17'>
+                                    <th>付属品</th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='17'>自由項目17の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='18'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='18'>自由項目18の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='19'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='19'>自由項目19の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='20'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='20'>自由項目20の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='21'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='21'>自由項目21の値が入ります</span></td>
+                                </tr>
+                                <tr m:id='IF_FREE' m:free_item_no='22'>
+                                    <th></th>
+                                    <td><span m:id='FREE_VALUE_HERE' m:free_item_no='22'>自由項目22の値が入ります</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="itemDetail-content u-mt40" m:id='IF_ITEM_INFO2'>
+                        <span m:id='ITEM_INFO2_HERE'>商品コメント2が入ります。</span>
+                    </div>
+                    <div class="itemDetail-content u-mt40" m:id='IF_ITEM_INFO3'>
+                        <span m:id='ITEM_INFO3_HERE'>商品コメント3が入ります。</span>
+                    </div>
+                    <div class="itemDetail-relation u-mt100" m:id='IF_RECOMMEND'>
+                        <h3 class="itemDetail-relation-title">おすすめ商品</h3>
+                        <div class="c-product-list -slider">
+                            <div class="js-product-carousel">
+                                <article class="c-product-item" m:id='LOOP_RECOMMEND'>
+                                    <a href="/" class="c-product-item-link" m:id='RECOMMEND_LINK_TAG'>
+                                        <div class="c-product-item-icons">
+                                            <div class="c-product-item-icons-inner">
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='3'>
+                                                    <span class="c-product-icon -recommend">オススメ</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='4'>
+                                                    <span class="c-product-icon -limited">限定品</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='5'>
+                                                    <span class="c-product-icon -xxxx">自由項目5</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='6'>
+                                                    <span class="c-product-icon -xxxx">自由項目6</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='7'>
+                                                    <span class="c-product-icon -xxxx">自由項目7</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="c-product-item-image">
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='RECOMMEND_IMAGE_TAG'>
+                                        </div>
+                                        <p class="c-product-item-number"><span m:id='RECOMMEND_ITEM_CODE_HERE'>ABC-123</span></p>
+                                        <h3 class="c-product-item-title"><span m:id='RECOMMEND_ITEM_NAME_HERE' m:max_size="60">商品名</span></h3>
+                                        <p class="c-product-item-price" m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='1' m:NOT=''>
+                                            <!--<span m:id='IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE'>
+                                                <span m:id='RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE_HERE' m:tax='hontai'>&yen;50,000</span>（税抜）
+                                            </span>
+                                            <span m:id='IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE' m:NOT=''>
+                                                <span m:id='RECOMMEND_TEIKA_PRICE_HERE' m:tax='hontai'>&yen;50,000</span>（税抜）
+                                            </span>-->
+                                            
+    <!--会員別ランク別商品単価を使用する-->
+    <span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA'>
+                            <span m:id="common.IF_UCHIZEI">
+                              <span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax='zeikomi'>9,980円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+                            </span>
+                            <span m:id="common.IF_SOTOZEI">
+                              <span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax='hontai'>9,980円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+                            </span>
+    </span>
+    
+    
+    <!--会員別ランク別商品単価を使用しない-->
+     <span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT="">
+                            <span m:id="common.IF_UCHIZEI">
+                                  <span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+                                </span>
+                                <span m:id='common.IF_SOTOZEI'>
+                                  <span m:id='common.ITEMACCESSLOG_TEIKA_HONTAI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+                                </span>
+    
+                                        </p>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemDetail-relation u-mt80" m:id='IF_BASKET_RECOMMEND'>
+                        <h3 class="itemDetail-relation-title">こちらを購入した方はこの商品も購入しています</h3>
+                        <div class="c-product-list -slider">
+                            <div class="js-product-carousel">
+                                <article class="c-product-item" m:id='LOOP_BASKET_RECOMMEND'>
+                                    <a href="/" class="c-product-item-link" m:id='RECOMMEND_LINK_TAG'>
+                                        <div class="c-product-item-icons">
+                                            <div class="c-product-item-icons-inner">
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='3'>
+                                                    <span class="c-product-icon -recommend">オススメ</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='4'>
+                                                    <span class="c-product-icon -limited">限定品</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='5'>
+                                                    <span class="c-product-icon -xxxx">自由項目5</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='6'>
+                                                    <span class="c-product-icon -xxxx">自由項目6</span>
+                                                </span>
+                                                <span m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='7'>
+                                                    <span class="c-product-icon -xxxx">自由項目7</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="c-product-item-image">
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='RECOMMEND_IMAGE_TAG'>
+                                        </div>
+                                        <p class="c-product-item-number"><span m:id='RECOMMEND_ITEM_CODE_HERE'>ABC-123</span></p>
+                                        <h3 class="c-product-item-title"><span m:id='RECOMMEND_ITEM_NAME_HERE' m:max_size="60">商品名</span></h3>
+                                        <p class="c-product-item-price" m:id="IF_RECOMMEND_FREE_VALUE" m:free_item_no='1' m:NOT=''>
+                                            <span m:id='IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE'>
+                                                <span m:id='RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE_HERE' m:tax='hontai'>&yen;50,000</span>（税抜）
+                                            </span>
+                                            <span m:id='IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_PRICE' m:NOT=''>
+                                                <span m:id='RECOMMEND_TEIKA_PRICE_HERE' m:tax='hontai'>&yen;50,000</span>（税抜）
+                                            </span>
+                                        </p>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemDetail-relation u-mt80" m:id='common.IF_ITEMACCESSLOG'>
+                        <h3 class="itemDetail-relation-title">最近チェックした商品</h3>
+                        <div class="c-product-list -slider">
+                            <div class="js-product-carousel">
+                                <article class="c-product-item" m:id='common.LOOP_ITEMACCESSLOG' m:max_count='12'>
+                                    <a href="/" class="c-product-item-link" m:id='common.ITEMACCESSLOG_LINK_TAG'>
+                                        <div class="c-product-item-icons">
+                                            <div class="c-product-item-icons-inner">
+                                                <span m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='3'>
+                                                    <span class="c-product-icon -recommend">オススメ</span>
+                                                </span>
+                                                <span m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='4'>
+                                                    <span class="c-product-icon -limited">限定品</span>
+                                                </span>
+                                                <span m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='5'>
+                                                    <span class="c-product-icon -xxxx">自由項目5</span>
+                                                </span>
+                                                <span m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='6'>
+                                                    <span class="c-product-icon -xxxx">自由項目6</span>
+                                                </span>
+                                                <span m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='7'>
+                                                    <span class="c-product-icon -xxxx">自由項目7</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="c-product-item-image">
+                                            <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='common.ITEMACCESSLOG_IMAGE_TAG'>
+                                        </div>
+                                        <p class="c-product-item-number"><span m:id='common.ITEMACCESSLOG_ITEM_CODE_HERE'>ABC-123</span></p>
+                                        <h3 class="c-product-item-title"><span m:id='common.ITEMACCESSLOG_ITEM_NAME_HERE' m:max_size="60">商品名</span></h3>
+                                        <p class="c-product-item-price" m:id="common.IF_ITEMACCESSLOG_FREE_VALUE" m:free_item_no='1' m:NOT=''>
+                                            <!--<span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA'>
+                                                <span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE'>&yen;50,000</span>（税抜）
+                                            </span>
+                                            <span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                                <span m:id='common.ITEMACCESSLOG_TEIKA_HONTAI_HERE' m:tax='hontai'>&yen;50,000</span>（税抜）
+                                            </span>-->
+                                            
+                                            <!--ログイン中の場合-->
+    <div m:id='common.IF_MEMBER'>
+    <!--会員別ランク別商品単価を使用する-->
+    <span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA'>
+                            <span m:id="common.IF_UCHIZEI">
+                              <span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax='zeikomi'>9,980円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+                            </span>
+                            <span m:id="common.IF_SOTOZEI">
+                              <span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax='hontai'>9,980円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+                            </span>
+    </span>
+    
+    
+    <!--会員別ランク別商品単価を使用しない-->
+     <span m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT="">
+     						<!--会員割引を使用する-->
+                            <span m:id='common.IF_ITEMACCESSLOG_DISCOUNT'>
+                            <span m:id="common.IF_UCHIZEI">
+                              <span m:id='common.ITEMACCESSLOG_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+                            </span>
+                            <span m:id='common.IF_SOTOZEI'>
+                              <span m:id='common.ITEMACCESSLOG_DISCOUNT_KAKAKU_HONTAI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+                            </span>
+                            </span>
+                            
+                            <!--会員割引を使用しない-->
+                            <span m:id='common.IF_NOT_ITEMACCESSLOG_DISCOUNT'>
+                            <span m:id="common.IF_UCHIZEI">
+                              <span m:id='common.ITEMACCESSLOG_MEMBER_TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+                            </span>
+                            <span m:id='common.IF_SOTOZEI'>
+                              <span m:id='common.ITEMACCESSLOG_MEMBER_TEIKA_PRICE_HERE' m:tax="hontai">21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+                            </span>
+                          </span>
+    </span>
+    </div><!--//ログイン中の場合-->
+    
+    <div m:id='common.IF_NOT_MEMBER' >
+    <span m:id="common.IF_UCHIZEI">
+    <span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税込）</span>
+    </span>
+    
+    <span m:id='common.IF_SOTOZEI'>
+    <span m:id='common.ITEMACCESSLOG_TEIKA_HONTAI_HERE'>21,000円</span><span class="AE_sku_price_disp"></span><span class="tax">（税抜）</span>
+    </span>
+    
+    </div>
+                                            
+                                            
+                                        </p>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </main>
+    
+    <iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml"></iframe>
+    
+    <iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+    
+    <span m:id='CRITEO_ITEM_DETAIL_TRACKER_HERE'></span>
+    
+    </body>
+    </html>

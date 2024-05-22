@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://mayaa.seasar.org" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>標準テンプレート（PC）</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/hww_style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" charset="utf-8" src="js/ebisu_lib.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ebisu.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.tile.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/heightLine.js"></script>
+</head>
+<body>
+<!-- このテンプレートのURLは右記になります。 ドメイン/wishlist.html -->
+<script type="text/javascript" charset="utf-8" src="js/iframe.js" m:id='DUMMY'></script>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<main>
+
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ ================================================== -->
+<!-- =============================================================================== -->
+  <div class="l-container">
+    <div class="c-breadcrumbs">
+        <a href="/" class="c-breadcrumbs-link">ホーム</a><span class="c-breadcrumbs-current">お気に入りリスト</span>
+    </div>
+
+<!-- wishlist -->
+<div id="wishList">
+	<h2 class="c-pageTitle">お気に入りリスト</h2>
+	<p class="mB30">登録の新しい順に表示しています。</p>
+	
+	<iframe m:id='common.IMPORT_HERE' src="common/messages.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+	
+	<p m:id="IF_GO_BACK_TO_ITEM" class="back_to_detail"><a m:id="GO_BACK_TO_ITEM_LINK_TAG" href="#">商品詳細に戻る</a></p>
+	
+	<div m:id='IF_ITEM_EXIST' class="mB30">
+		<div class="itemList-listMenu">
+			<div class="itemList-listMenu-column-01">
+				<div class="itemList-listMenu-result -laptop">
+					<p><span m:id='PAGEGUIDE_HERE'>30件検索されました。1件目から5件目を表示しています。</span></p>
+				</div>
+			</div>
+			<div class="itemList-listMenu-column-02">
+				<div class="itemList-listMenu-column-02-02">
+					<div class="itemList-listMenu-result -mobile">
+						<p><span m:id='PAGEGUIDE_HERE'>30件検索されました。1件目から5件目を表示しています。</span></p>
+					</div>
+					<div class="itemList-listMenu-pager c-pager">
+						<span m:id='IF_PREV_PAGE'>
+							<a href="/" class="c-pager-link -prev" m:id='PREV_PAGE_LINK_TAG'>&lt;</a>
+						</span>
+						<span m:id='LOOP_PAGE_LINK' m:max_link_count='5'>
+							<span m:id='IF_PAGE_LINK_CURRENT'><a href="#" class="c-pager-link -current" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+							<span m:id='IF_PAGE_LINK_CURRENT' m:NOT=''><a href="#" class="c-pager-link" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+						</span>
+						<span m:id='IF_NEXT_PAGE'>
+							<a href="/" class="c-pager-link -next" m:id='NEXT_PAGE_LINK_TAG'>&gt;</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <form m:id='FORM_TAG'>
+    <div class="c-product-list u-mt100 u-mb80">
+        <article class="c-product-item" m:id='LOOP_WISHLIST'>
+            <a href="/" class="c-product-item-link" m:id='ITEM_DETAIL_LINK_TAG'>
+                <div class="c-product-item-icons heightLine-1">
+                    <div class="c-product-item-icons-inner">
+                        <span m:id="IF_ITEM_FREE" m:free_item_no='3'>
+                            <span class="c-product-icon -recommend">オススメ</span>
+                        </span>
+                        <span m:id="IF_ITEM_FREE" m:free_item_no='4'>
+                            <span class="c-product-icon -limited">限定品</span>
+                        </span>
+                        <span m:id="IF_ITEM_FREE" m:free_item_no='5'>
+                            <span class="c-product-icon -xxxx">自由項目5</span>
+                        </span>
+                        <span m:id="IF_ITEM_FREE" m:free_item_no='6'>
+                            <span class="c-product-icon -xxxx">自由項目6</span>
+                        </span>
+                        <span m:id="IF_ITEM_FREE" m:free_item_no='7'>
+                            <span class="c-product-icon -xxxx">自由項目7</span>
+                        </span>
+                        <span m:id='IF_SOLDOUT'>
+                            <span class="c-product-icon -soldout">入荷待ち</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="c-product-item-image heightLine-2">
+                    <img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE_TAG'>
+                </div>
+                <p class="c-product-item-number heightLine-3"><span m:id='ITEM_CODE_HERE'>ABC-123</span></p>
+                <h3 class="c-product-item-title heightLine-4"><span m:id='ITEM_NAME_HERE' m:max_size="60">商品名</span></h3>
+                <div class="c-product-item-price heightLine-5 item_price_box" m:id="IF_ITEM_FREE" m:free_item_no='1' m:NOT=''>
+                    <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                    <div m:id="common.IF_UCHIZEI" class="item_price item_teika">
+                      税込 <span m:id='TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span>
+                    </div>
+                    <div m:id='common.IF_SOTOZEI' class="item_price item_teika">
+                      税込 <span m:id='TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円<br>（<span m:id='TEIKA_PRICE_HERE' m:tax="hontai">21,000円</span>+税）</span>
+                    </div>
+                    <!--// 非ログインの場合 -->
+                    <!-- 商品に会員別価格が設定されている場合 -->
+                    <div m:id='IF_MEMBER_TEIKA' class="item_price">
+                        <span m:id="common.IF_UCHIZEI">税込 <span m:id='MEMBER_TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span></span>
+                        <span m:id="common.IF_SOTOZEI"><span class="tax_bold">税込 <span m:id='MEMBER_TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='MEMBER_TEIKA_PRICE_HERE' m:tax="hontai">21,000円</span>+税）</span>
+                    </div>
+                    <div m:id='IF_DISCOUNT' class="item_price">
+                    	<span class="tax_bold">税込 <span m:id='DISCOUNT_ZEIKOMI_HERE'>9,980円</span></span><br>（<span m:id='DISCOUNT_HONTAI_HERE'>21,000円</span>+税）
+                    </div>
+                </div>
+            </a>
+            <div class="buttonarea sp_no_columns">
+                <span m:id='IF_ITEM_PROPERTY' m:NOT="" class="item_price">
+                    <span m:id='IF_CART_PUTTABLE_ITEM'><a m:id='PUT_TO_CART_LINK_TAG' href="javascript:void(0);" class="button positive small">カートに入れる</a></span>
+                    <span m:id='IF_CART_PUTTABLE_ITEM' m:NOT="" class="button not_click small">カートに入れる</span>
+                </span>
+                <a href="javascript:void(0);" m:id="DELETE_WISHLIST_BUTTON_TAG" class="button negative small">削除</a>
+            </div>
+        </article>
+    </div>
+    </form>
+    
+	<div m:id='IF_ITEM_EXIST' class="mB30">
+		<div class="itemList-listMenu">
+			<div class="itemList-listMenu-column-01">
+				<div class="itemList-listMenu-result -laptop">
+					<p><span m:id='PAGEGUIDE_HERE'>30件検索されました。1件目から5件目を表示しています。</span></p>
+				</div>
+			</div>
+			<div class="itemList-listMenu-column-02">
+				<div class="itemList-listMenu-column-02-02">
+					<div class="itemList-listMenu-result -mobile">
+						<p><span m:id='PAGEGUIDE_HERE'>30件検索されました。1件目から5件目を表示しています。</span></p>
+					</div>
+					<div class="itemList-listMenu-pager c-pager">
+						<span m:id='IF_PREV_PAGE'>
+							<a href="/" class="c-pager-link -prev" m:id='PREV_PAGE_LINK_TAG'>&lt;</a>
+						</span>
+						<span m:id='LOOP_PAGE_LINK' m:max_link_count='5'>
+							<span m:id='IF_PAGE_LINK_CURRENT'><a href="#" class="c-pager-link -current" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+							<span m:id='IF_PAGE_LINK_CURRENT' m:NOT=''><a href="#" class="c-pager-link" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+						</span>
+						<span m:id='IF_NEXT_PAGE'>
+							<a href="/" class="c-pager-link -next" m:id='NEXT_PAGE_LINK_TAG'>&gt;</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    
+  <div class="buttonarea l_inner">
+    <a href="member_mypage.html" class="button normal medium">マイページへ戻る</a>
+  </div>
+	
+</div>
+<!-- / wishlist -->
+
+</div>
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ END=============================================== -->
+<!-- =============================================================================== -->
+
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+<script src="js/item_price.js"></script>
+
+</body>
+</html>

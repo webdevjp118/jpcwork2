@@ -1,0 +1,1139 @@
+/*Concept Page CSS*/
+.concept_inner_page_section {
+	margin: 98px 0 0;
+	position: relative;
+	padding: 15px 0 198px;
+}
+.voluntary_sale_inner_page_section {
+	padding: 169px 0 140px;
+}
+.voluntary_sale_inner_page_section .voluntary_sale_inner {
+	padding: 6px 10px 40px;
+}
+.voluntary_sale_inner_page_section .heading_text img {
+	margin: 0;
+	top: -40px;
+}
+.voluntary_sale_inner_page_section.voluntary_sale_section:after {
+	top: 103px;
+}
+.voluntary_sale_inner_page_section.voluntary_sale_section:before {
+	top: 113px;
+}
+/*until_voluntary_sale_section*/
+.until_voluntary_sale_section {
+	background-color: #fef5e5;
+	padding: 54px 0 55px;
+	position: relative;
+	overflow: unset;
+	z-index: 1;
+}
+.until_voluntary_sale_section:after {
+	content: '';
+	position: absolute;
+	top: -54px;
+	left: calc(50% - 250px);
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: #fef5e5;
+	z-index: -1;
+}
+.until_voluntary_sale_section .heading_text img {
+	margin: 0;
+	position: absolute;
+	top: -6px;
+}
+.until_voluntary_sale_section .heading_text h2 {
+	font-size: 36px;
+	margin: 16px 0 0;
+}
+.until_voluntary_sale_inner_first.until_voluntary_sale_inner {
+	margin: 81px 0 0;
+}
+.until_voluntary_sale_inner_first_text h4 img {
+	margin-right: 10px;
+}
+.until_voluntary_sale_inner_first_text h4 {
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	color: #5c4c2c;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+}
+.until_voluntary_sale_inner_first_text p {
+	font-size: 18px;
+	color: #5c4c2c;
+	margin: 24px 0 0;
+}
+.until_voluntary_sale_inner_first_box_sec .custom_row {
+	margin-left: -12.5px;
+	margin-right: -12.5px;
+}
+.until_voluntary_sale_inner_first_box_sec .custom_col_3 {
+	padding-left: 12.5px;
+	padding-right: 12.5px;
+}
+.until_voluntary_sale_inner_first_box_text_heading {
+	text-align: center;
+	position: relative;
+	padding: 34px 0 34px;
+}
+.until_voluntary_sale_inner_first_box_text_heading:after {
+	content: '';
+	position: absolute;
+	top: 23px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 220px;
+	width: 100%;
+	height: 59px;
+	background-image: url(images/concept-shape-1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 0;
+	pointer-events: none;
+}
+.until_voluntary_sale_inner_first_box_text_heading h3 {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+	z-index: 2;
+	position: relative;
+}
+.until_voluntary_sale_inner_first_box_text_heading h3 span {
+	font-family: 'Montserrat', sans-serif;
+}
+.until_voluntary_sale_inner_second_text_btn_inner p {
+	font-size: 14px;
+	line-height: 22px;
+}
+.until_voluntary_sale_inner_second_text_btn_inner {
+    display: inline-block;
+    background-color: #8c6c47;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 35px;
+    max-width: 491px;
+    width: 100%;
+}	
+.until_voluntary_sale_inner_second_text_btn {
+	text-align: center;
+}
+.until_voluntary_sale_inner_first_box_image {
+	position: relative;
+	padding-top: 97%;
+	overflow: hidden;
+}
+.until_voluntary_sale_inner_second_image_inner {
+	padding: 0 90px 0 0;
+}
+.until_voluntary_sale_inner_first_box_image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
+	object-position: bottom;
+}
+.until_voluntary_sale_inner_first_box_text {
+	padding: 34px 0 0;
+}
+.until_voluntary_sale_inner_first_box_text p {
+	font-size: 18px;
+	color: #5c4c2c;
+	line-height: 30px;
+}
+.concept_image_fifth {
+	margin: 24px auto 0;
+	max-width: 397px;
+	width: 100%;
+	display: block;
+}
+.until_voluntary_sale_inner_second.until_voluntary_sale_inner {
+	margin: 60px 0 0;
+}
+.until_voluntary_sale_inner_second.until_voluntary_sale_inner .until_voluntary_sale_inner_first_text p {
+	margin: 65px 116px 71px 40px;
+}
+.until_voluntary_sale_inner_third.until_voluntary_sale_inner {
+	margin: 19px 0 0;
+}
+.until_voluntary_sale_inner_third.until_voluntary_sale_inner .until_voluntary_sale_inner_first_text p {
+	margin: 14px 0 0 70px;
+}
+.repayment_section {
+	background-color: #ffe9cc;
+	padding: 39px 31px 29px;
+	position: relative;
+	border-radius: 10px;
+	margin-top: 23px;
+}
+.repayment_section:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	right: 6px;
+	bottom: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+	z-index: 0;
+}	
+.repayment_section h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	margin: 0 0 17px;
+	position: relative;
+	z-index: 1;
+}
+.repayment_section p {
+	font-size: 18px;
+	color: #5c4c2c;
+	margin: 0 0 0;
+	position: relative;
+	z-index: 1;
+}
+.auction_section {
+	background-color: #ffe9cc;
+	padding: 34px 24px 29px;
+	position: relative;
+	border-radius: 10px;
+	margin-top: 48px;
+}
+.auction_section:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	right: 6px;
+	bottom: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+	z-index: 0;
+}
+.auction_inner {
+	position: relative;
+	z-index: 2;
+}
+.auction_inner_heading h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	margin: 0 0 17px 11px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	letter-spacing: 5.7px;
+}
+.auction_inner_heading h4:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2px;
+	height: 8px;
+	background-color: #ffe9c3;
+	z-index: -1;
+	border-radius: 0;
+}
+.auction_inner_heading p {
+	font-size: 18px;
+	margin: 58px 0 40px;
+	color: #5c4c2c;
+}
+.auction_inner_box_sec {
+	padding: 0 20px;
+}
+.auction_inner_box_sec_inner .custom_row {
+	margin: 0 -52px;
+}
+.auction_inner_box_sec_inner .custom_col_6 {
+	padding: 0 52px;
+}
+.auction_inner_box_heading {
+	text-align: center;
+}
+.auction_inner_box_heading_text {
+	padding: 31px 0 27px;
+}
+.auction_inner_box_heading h4 {
+	font-size: 30px;
+	color: #5c4c2c;	
+}
+.auction_inner_box_heading_text h4 {
+	font-size: 18px;
+	color: #5c4c2c;	
+	margin: 0 0 0 0; 
+}
+.auction_inner_box_image {
+	position: relative;
+	padding-top: 42.6%;
+	overflow: hidden;
+}
+.auction_inner_box_image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
+}
+.auction_inner_box_text {
+	padding: 45px 0 0;
+}
+.auction_inner_box_text p {
+	font-size: 18px;
+	color: #5c4c2c;
+	line-height: 30px;
+	padding: 0 0 0 47px;
+	position: relative;
+}
+.auction_inner_box_text p:after {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 21px;
+	width: 15px;
+	height: 15px;
+	background-image: url(images/concept-shape-2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 0;
+	/* pointer-events: none; */
+}
+.auction_inner_text {
+	padding: 41px 10px 6px 17px;
+}
+.auction_inner_text p {
+	font-size: 14px;
+	line-height: 30px;
+	color: #ac916b;
+}
+.definitely_recommended_section {
+	padding: 95px 0 0 0;
+}
+.definitely_recommended_heading_text h3 {
+	font-size: 30px;
+	color: #5c4c2c;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+	text-align: center;
+}
+.definitely_recommended_box_sec {
+	padding: 64px 35px 0;
+}
+.definitely_recommended_box_sec .custom_row {
+	margin: 0 -28px;
+	flex-direction: row-reverse;
+}
+.definitely_recommended_box_sec .definitely_recommended_box_images {
+	flex: 0 0 54%;
+	max-width: 54%;
+	padding: 0 28px;
+}
+.definitely_recommended_box_images_inner {
+	position: relative;
+	padding-top: 71.6%;
+	overflow: hidden;
+}
+.definitely_recommended_box_images_inner img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+.definitely_recommended_box_sec .definitely_recommended_box_text {
+	flex: 0 0 46%;
+	max-width: 46%;
+	padding: 0 28px;
+}
+.definitely_recommended_box_text_inner p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #ac916b;
+	letter-spacing: 2.3px;
+}
+.real_estate_sale_option_section {
+	background-color: #ffe9cc;
+	padding: 69px 36px 44px;
+	position: relative;
+	border-radius: 20px;
+	margin-top: 75px;
+}
+.real_estate_sale_option_section:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	right: 6px;
+	bottom: 6px;
+	background-color: #fff;
+	border-radius: 20px;
+	z-index: 0;
+}
+.real_estate_sale_option_section_inner {
+	position: relative;
+	z-index: 2;
+}
+.real_estate_sale_option_section_inner h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+	margin: 0 0 25px;
+}
+.real_estate_sale_option_section_inner p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #5c4c2c;
+}
+.real_estate_sale_option_section_inner img {
+	max-width: 745px;
+	width: 100%;
+	margin: 67px 0 0 103px;
+}
+/*benefits_of_voluntary_sale_section*/
+.benefits_of_voluntary_sale_section {
+	padding: 79px 0 123px;
+}
+.benefits_of_voluntary_sale_section .heading_text img {
+	margin: 0 0 33px;
+}
+.benefits_of_voluntary_sale_section .heading_text h2:before, .benefits_of_voluntary_sale_section .heading_text h2:after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	bottom: 0;
+	width: 190px;
+	height: 1px;
+	border-bottom: 1px dashed;
+	margin: auto;
+}
+.benefits_of_voluntary_sale_section .heading_text h2:before {
+	right: 437px;
+}
+.benefits_of_voluntary_sale_section .heading_text h2:after {
+	left: 437px;
+}
+.cost_box_sec {margin-top: 107px;}
+.cost_box_image_text_box {
+	flex: 0 0 270px;
+	max-width: 270px;
+}
+.cost_box_image_text_image {
+	position: relative;
+	padding-top: 95.6%;
+	overflow: hidden;
+}
+.cost_box_image_text_image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
+}
+.cost_box_image_text_inner {
+	text-align: center;
+	padding: 10px 0 0;
+}
+.cost_box_image_text_inner p {
+	color: #5c4c2c;
+	font-size: 18px;
+}
+.cost_box_text_box {
+	flex: 0 0 calc(100% - 310px);
+	max-width: calc(100% - 310px);
+	padding: 41px 17px 0;
+}
+.cost_box_text_inner h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	margin: 0 0 0;
+}
+.cost_box_text_inner p {
+	font-size: 18px;
+	color: #5c4c2c;
+	margin: 30px 0 0;
+	line-height: 30px;
+}
+.benefits_of_voluntary_sale_box_sec {
+	margin-top: 118px;
+	position: relative;
+}
+.benefits_of_voluntary_sale_box_sec h2 {
+	position: absolute;
+	top: 49.4%;
+	left: 0;
+	right: 0;
+	font-size: 24px;
+	color: #ac916b;
+	text-align: center;
+	letter-spacing: 3px;
+}
+.benefits_of_voluntary_sale_box_sec .custom_row {
+	margin: 0 -23px;
+}
+.benefits_of_voluntary_sale_box_sec .custom_col_4 {
+	padding: 0 23px;
+	margin-bottom: 203px;
+}
+.benefits_of_voluntary_sale_box_image {
+	position: relative;
+	padding-top: 81.3%;
+	overflow: hidden;
+}
+.benefits_of_voluntary_sale_box_image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
+}
+.benefits_of_voluntary_sale_box_text {
+	text-align: center;
+	padding: 25px 0 0;
+}
+.benefits_of_voluntary_sale_box_text h6 {
+	color: #5c4c2c;
+	font-size: 18px;
+}
+.benefits_of_voluntary_sale_box_text p {
+	font-size: 18px;
+	color: #5c4c2c;
+	line-height: 30px;
+	margin: 24px 0 0;
+}
+.benefits_of_voluntary_sale_box_second {margin-bottom: 0px !important;}
+/*disadvantages_to_voluntary_sales_section*/
+.disadvantages_to_voluntary_sales_section {
+	background-color: #fef5e5;
+	padding: 76px 0 55px;
+	position: relative;
+	overflow: unset;
+	z-index: 1;
+}
+.disadvantages_to_voluntary_sales_section:after {
+	content: '';
+	position: absolute;
+	top: -54px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: #fef5e5;
+	z-index: -1;
+}
+.disadvantages_to_voluntary_sales_section .heading_text img {
+	margin: 0;
+	position: absolute;
+}
+.disadvantages_to_voluntary_sales_section .heading_text h2 {
+	font-size: 24px;
+}
+.disadvantages_to_voluntary_sales_section .heading_text h2:before, .disadvantages_to_voluntary_sales_section .heading_text h2:after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	bottom: 0;
+	width: 190px;
+	height: 1px;
+	border-bottom: 1px dashed;
+	margin: auto;
+}
+.disadvantages_to_voluntary_sales_section .heading_text h2:before {
+	right: 385px;
+}
+.disadvantages_to_voluntary_sales_section .heading_text h2:after {
+	left: 385px;
+}
+.disadvantages_to_voluntary_sales_box_sec {
+	margin-top: 41px;
+}
+.disadvantages_to_voluntary_sales_box {
+	background-color: #ffe9cc;
+	padding: 51px 38px 41px;
+	position: relative;
+	border-radius: 10px;
+}
+.disadvantages_to_voluntary_sales_box:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	z-index: 0;
+	border: 1px dashed #c5a06b;
+}
+.disadvantages_to_voluntary_sales_box_sec .custom_col_6 {
+	display: flex;
+}
+.disadvantages_to_voluntary_sales_box_inner {
+	position: relative;
+	z-index: 2;
+}
+.disadvantages_to_voluntary_sales_box_inner h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	margin: 0 0 34px;
+	text-align: center;
+}
+.disadvantages_to_voluntary_sales_box_inner p {
+	letter-spacing: 2px;
+	color: #5c4c2c;
+	line-height: 30px;
+}
+.disadvantages_to_voluntary_sales_box.disadvantages_to_voluntary_sales_box_second {
+	padding-bottom: 31px;
+}
+.disadvantages_to_voluntary_sales_box.disadvantages_to_voluntary_sales_box_second .disadvantages_to_voluntary_sales_box_inner h4 {
+	margin: 0 0 14px;
+}
+.consultation_destination_secton {
+	background-color: #ffe9cc;
+	padding: 51px 38px 34px;
+	position: relative;
+	border-radius: 10px;
+	margin-top: 40px;
+}
+.consultation_destination_secton:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	z-index: 0;
+	border: 1px dashed #c5a06b;
+}
+.consultation_destination__inner {
+	position: relative;
+	z-index: 2;
+}
+.consultation_destination__inner h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	text-align: center;
+}
+.consultation_destination_secton p {
+	font-size: 18px;
+	color: #5c4c2c;
+}
+.consultation_destination_box_sec {
+	margin: 24px 0 0;
+}
+.consultation_destination_box_sec .custom_row {
+	margin: 0;
+}
+.consultation_destination_box_text_first {
+	flex: 0 0 290px;
+	max-width: 290px;
+}
+.consultation_destination_box_text_second {
+	flex: 0 0 calc(100% - 290px);
+	max-width: calc(100% - 290px);
+}
+.consultation_destination_second_inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+.consultation_destination_second_inner_first {
+	flex: 0 0 59%;
+	max-width: 59%;
+	padding: 0 24px;
+}
+.consultation_destination_second_inner_second {
+	flex: 0 0 41%;
+	max-width: 41%;
+	padding: 0 0px 0 12px;
+}
+.consultation_destination_box_text_first_inner p {
+	line-height: 30px;
+}
+.consultation_destination_second_inner_first p {
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+.consultation_destination_box_text_second_inner_text {
+	border-radius: 10px;
+	background-color: #fef5e5;
+	margin: 18px 0 0;
+	padding: 7px 15px;
+}
+/*various_solutions_text_box*/
+.various_solutions_text_box {
+	background-color: #a6d7df;
+	padding: 59px 73px 54px;
+	position: relative;
+	border-radius: 10px;
+	margin-top: 52px;
+}
+.various_solutions_text_box:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	z-index: 0;
+	border: 1px dashed #c5a06b;
+	background-image: url(images/concept-shape-3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.various_solutions_text_box_inner {
+	position: relative;
+	z-index: 2;
+}
+.various_solutions_section {
+	padding: 94px 0;
+}
+.various_solutions_section .heading_text img {
+	margin: 0 auto 44px !important;
+}
+.various_solutions_section .heading_text h2 {
+	font-size: 24px;
+	color: #18555e;
+}
+.various_solutions_section .heading_text h2:after {
+	left: 572px;
+}
+.various_solutions_section .heading_text h2:before {
+	right: 572px;
+}
+.various_solutions_section .heading_text h2:before, .various_solutions_section .heading_text h2:after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	bottom: 0;
+	width: 151px;
+	height: 1px;
+	border-bottom: 1px dashed #18555e;
+	background-color: transparent !important;
+	margin: auto;
+}
+.various_solutions_text_box_inner p {
+	font-size: 24px;
+	color: #18555e;
+}
+.various_solutions_text_box_inner p span {
+	font-size: 30px;
+	color: #18555e;
+	font-weight: 600;
+	position: relative;
+}
+.various_solutions_text_box_inner p span:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 3px;
+	height: 9px;
+	background-color: #a6d7df;
+	z-index: -1;
+	border-radius: 5px;
+}
+.various_solutions_text_box_second {
+	text-align: center;
+}
+.various_solutions_text_box_second p {
+	color: #006c67;
+	line-height: 30px;	
+}
+.various_solutions_text_box_second {
+	text-align: center;
+	padding: 49px 0 0;
+}
+.various_solutions_image_box_sec {
+	margin-top: 58px;
+}
+.various_solutions_image {
+	padding: 13px 0 0;
+	text-align: center;
+}
+.various_solutions_image img {
+	max-width: 189px;
+	width: 100%;
+}
+.various_solutions_btn {
+	display: block;
+	margin: 35px auto 0;
+	text-align: center;
+	max-width: 375px;
+	width: 100%;
+	height: auto;
+	font-size: 18px;
+	border: solid #18555e;
+	background-color: #18555e;
+	color: #fff !important;
+	border-radius: 30px;
+	padding: 10px 10px;
+	position: relative;
+	transition: all 0.3s;
+}
+.various_solutions_btn {
+	display: block;
+	margin: 35px auto 0;
+	text-align: center;
+	max-width: 375px;
+	width: 100%;
+	height: auto;
+	font-size: 18px;
+	border: solid #18555e;
+	background-color: #18555e;
+	color: #fff !important;
+	border-radius: 30px;
+	padding: 10px 10px;
+	position: relative;
+	transition: all 0.3s;
+}
+.various_solutions_btn:hover {
+	background-color: #fff;
+	color: #18555e !important;
+}
+.various_solutions_btn i {
+	position: absolute;
+	top: 0;
+	right: 30px;
+	bottom: 0;
+	height: 14px;
+	margin: auto;
+}
+
+
+/*Responsive*/
+@media (max-width: 1449px){
+	.concept_inner_page_section {
+		margin: 70px 0 0;
+	}
+	.definitely_recommended_box_sec .custom_row {
+		margin: 0 -20px;
+	}
+	.definitely_recommended_box_sec .definitely_recommended_box_images ,
+	.definitely_recommended_box_sec .definitely_recommended_box_text {
+		padding: 0 20px;
+	}
+}
+@media (max-width: 1199px){
+	.concept_inner_page_section {
+		margin: 20px 0 0;
+	}
+	.until_voluntary_sale_inner_second.until_voluntary_sale_inner .until_voluntary_sale_inner_first_text p {
+		margin: 40px 116px 40px 40px;
+	}
+	.auction_inner_heading p {
+		margin: 40px 0;
+	}
+	.auction_inner_box_sec_inner .custom_row {
+		margin: 0 -30px;
+	}
+	.auction_inner_box_sec_inner .custom_col_6 {
+		padding: 0 30px;
+	}
+	.auction_inner_text {
+		padding: 41px 0 0px 17px;
+	}
+	.definitely_recommended_box_sec .definitely_recommended_box_images, .definitely_recommended_box_sec .definitely_recommended_box_text {
+		padding: 0 15px;
+	}
+	.definitely_recommended_box_sec .custom_row {
+		margin: 0 -15px;
+	}
+	.definitely_recommended_box_sec {
+		padding: 40px 15px 0;
+	}
+	.definitely_recommended_section {
+		padding: 60px 0 0 0;
+	}
+	.real_estate_sale_option_section_inner img {
+		margin: 50px 0 0 40px;
+	}
+	.real_estate_sale_option_section {
+		padding: 40px 30px;
+		margin-top: 75px;
+	}
+	.benefits_of_voluntary_sale_section .heading_text h2:before {
+		right: 315px;
+	}
+	.benefits_of_voluntary_sale_section .heading_text h2:after {
+		left: 315px;
+	}
+	.benefits_of_voluntary_sale_box_sec {
+		margin-top: 70px;
+	}
+	.benefits_of_voluntary_sale_box_sec .custom_col_4 {
+		padding: 0 15px;
+		margin-bottom: 150px;
+	}
+	.benefits_of_voluntary_sale_box_sec .custom_row {
+		margin: 0 -15px;
+	}
+	.cost_box_sec {
+		margin-top: 70px;
+	}
+	.disadvantages_to_voluntary_sales_section .heading_text h2:before {
+		right: 260px;
+	}
+	.disadvantages_to_voluntary_sales_section .heading_text h2:after {
+		left: 260px;
+	}
+	.consultation_destination_second_inner_first {
+		padding: 0 15px;
+	}
+	.consultation_destination_second_inner_second {
+		padding: 0;
+	}
+	.various_solutions_section {
+		padding: 60px 0;
+	}
+	.various_solutions_section .heading_text h2:before {
+		right: 562px;
+	}
+	.various_solutions_section .heading_text h2:after {
+		left: 562px;
+	}
+	.various_solutions_section .heading_text h2:before, .various_solutions_section .heading_text h2:after {
+		width: 90px;
+	}
+}
+@media (max-width: 900px){
+	.cost_box_text_box {
+		padding: 10px 17px 0;
+	}
+	.real_estate_sale_option_section_inner img {
+		margin: 50px 0 0 0;
+	}
+	.consultation_destination_box_text_first {
+		flex: 0 0 240px;
+		max-width: 240px;
+	}
+	.consultation_destination_box_text_second {
+		flex: 0 0 calc(100% - 240px);
+		max-width: calc(100% - 240px);
+	}
+	.various_solutions_image_box_sec {
+		margin-top: 30px;
+	}
+	.until_voluntary_sale_inner_first_box_sec .custom_col_3 {
+		flex: 0 0 50%;
+		max-width: 50%;
+		margin-bottom: 25px;
+	}
+	.definitely_recommended_box_sec .definitely_recommended_box_images,
+	.definitely_recommended_box_sec .definitely_recommended_box_text {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.definitely_recommended_box_images_inner {
+		padding-top: 45.6%;
+		max-width: 450px;
+		width: 100%;
+		margin: 0 auto 30px;
+	}
+	.benefits_of_voluntary_sale_box_sec .custom_col_4 {
+		margin-bottom: 40px;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.benefits_of_voluntary_sale_box_sec h2 {
+		top: 66.4%;
+	}
+	.various_solutions_section .heading_text h2:before, .various_solutions_section .heading_text h2:after {
+		width: 60px;
+	}
+	.various_solutions_text_box:before {
+		background-position: center right;
+	}
+	.various_solutions_text_box {
+		padding: 50px 25px;
+	}
+	.auction_inner_box_sec_inner .custom_row {
+		margin: 0 -15px;
+	}
+	.auction_inner_box_sec_inner .custom_col_6 {
+		padding: 0 15px;
+	}
+	.auction_inner_box_sec {
+		padding: 0;
+	}
+	.auction_inner_text {
+		padding: 20px 0 0px 17px;
+	}
+}
+@media (max-width: 767px){
+	.until_voluntary_sale_inner_first_text h4 img {
+		margin-right: 8px;
+		max-width: 44px;
+	}
+	.until_voluntary_sale_inner_first_text h4 {
+		font-size: 22px;
+	}
+	.until_voluntary_sale_inner_third.until_voluntary_sale_inner .until_voluntary_sale_inner_first_text p {
+		margin: 15px 0 0 50px;
+	}
+	.auction_inner_box_sec_inner .custom_col_6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 30px
+	}
+	.definitely_recommended_box_images_inner {
+		padding-top: 63.6%;
+	}
+	.cost_box_image_text_box {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.cost_box_image_text_image {
+		padding-top: 51.6%;
+		max-width: 270px;
+		margin: 0 auto 0px;
+	}
+	.cost_box_text_box {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.cost_box_text_box {
+		padding: 30px 15px 0;
+	}
+	.benefits_of_voluntary_sale_section .heading_text h2:after {
+		left: 245px;
+	}
+	.benefits_of_voluntary_sale_section .heading_text h2:before {
+		right: 245px;
+	}
+	.disadvantages_to_voluntary_sales_section .heading_text h2:before, .disadvantages_to_voluntary_sales_section .heading_text h2:after,
+	.benefits_of_voluntary_sale_section .heading_text h2:before, .benefits_of_voluntary_sale_section .heading_text h2:after {
+		width: 70px;
+	}
+	.disadvantages_to_voluntary_sales_box_sec .custom_col_6 {
+		display: flex;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+	.consultation_destination_box_text_first {
+		margin-bottom: 30px;
+	}
+	.consultation_destination_box_text_second,
+	.consultation_destination_box_text_first {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.consultation_destination_secton {
+		padding: 30px 25px;
+	}
+	.various_solutions_text_box_inner p span {
+		font-size: 24px;
+	}
+	.various_solutions_section .heading_text h2:before, .various_solutions_section .heading_text h2:after {
+		display: none;
+	}
+	.various_solutions_image_box_sec .custom_col_3 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.cost_box_sec {
+		margin-top: 40px;
+	}
+}
+@media (max-width: 575px){
+	.until_voluntary_sale_inner_first_box_sec .custom_col_3 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.until_voluntary_sale_inner_second.until_voluntary_sale_inner .until_voluntary_sale_inner_first_text p {
+		margin: 40px 0 20px;
+	}
+	.auction_inner_heading p {
+		margin: 25px 0;
+	}
+	.auction_inner_box_text p {
+		padding: 0 0 0 35px;
+	}
+	.auction_inner_box_text p:after {
+		left: 9px;
+	}
+	.auction_inner_box_image {
+		padding-top: 52.6%;
+	}
+	.auction_inner_text {
+		padding: 10px 0 0px;
+	}
+	.definitely_recommended_box_images_inner {
+		padding-top: 72.6%;
+	}
+	.benefits_of_voluntary_sale_box_sec h2,
+	.various_solutions_text_box_inner p span:after,
+	.disadvantages_to_voluntary_sales_section .heading_text h2:before, .disadvantages_to_voluntary_sales_section .heading_text h2:after, .benefits_of_voluntary_sale_section .heading_text h2:before, .benefits_of_voluntary_sale_section .heading_text h2:after {
+		display: none;
+	}
+	.benefits_of_voluntary_sale_box_sec .custom_col_4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.disadvantages_to_voluntary_sales_section:after {
+		top: -44px;
+		width: 380px;
+	}
+	.consultation_destination_second_inner_second,
+	.consultation_destination_second_inner_first {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0 0 30px;
+	}
+	.various_solutions_text_box:before {
+		background-position: center;
+	}
+	.various_solutions_text_box_inner p {
+		font-size: 18px;
+		color: #18555e;
+	}
+	.various_solutions_text_box_inner p span {
+		font-size: 22px;
+	}
+	.concept_image_fifth {
+		max-width: 100% !important;
+	}
+	.until_voluntary_sale_inner_second_image_inner {
+		padding: 0;
+	}
+	.until_voluntary_sale_inner_second_text_btn_inner p {
+	font-size: 18px;
+	line-height: 22px;
+}
+}

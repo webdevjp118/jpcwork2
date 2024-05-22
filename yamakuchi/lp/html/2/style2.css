@@ -1,0 +1,325 @@
+/*FAQ Page CSS*/
+.faq_section {
+	position: relative;
+	padding: 17px 0 476px;
+	margin: 96px 0 0;
+	/*z-index: -1;*/
+}
+.inner_page_heading_image:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 179px;
+	background-image: url(images/publication-shpage-image.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 0;
+	pointer-events: none;
+}
+.inner_page_heading_image .breadcrumb_sec {
+	padding: 0 0 11px;
+}
+.inner_page_heading_image .heading_text h2, .inner_page_heading_image .heading_text img {
+	z-index: 1;
+	position: relative;
+	display: block;
+	margin: auto;
+}
+.inner_page_heading_image .heading_text h2 {
+	display: inline-block;
+	margin: auto;
+}
+.inner_page_heading_image .heading_text h2:after {
+	content: '';
+	position: absolute;
+	left: -10px;
+	right: -10px;
+	bottom: 2px;
+	height: 8px;
+	background-color: #ffe9c3;
+	z-index: -1;
+	border-radius: 0;
+}
+.inner_page_heading_image .heading_text img {
+	margin: 0 auto 10px;
+}
+.faq_inner_boxs_sec {
+	margin: 235px 0 0;
+}
+.faq_inner_boxs_sec_inner {
+	position: relative;
+	border-top: 1px dashed #d5c197;
+	border-bottom: 1px dashed #d5c197;
+}
+.faq_inner_boxs_sec_inner .faq_girl_image {
+	position: absolute;
+	top: -158px;
+	left: -14px;
+	max-width: 275px;
+}
+.faq_inner_boxs_links {
+	text-align: center;
+	padding: 10px 0 12px;
+	position: relative;
+}
+.faq_inner_boxs_links_active:after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 16px;
+	height: 9px;
+	background-image: url(images/bottom-arrow-image.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 1;
+}
+.faq_inner_boxs_links_active:before {
+	content: '';
+	position: absolute;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 16px;
+	height: 9px;
+	background-color: #fff;
+	z-index: 1;
+}
+.faq_inner_boxs_links a {
+	width: 160px;
+	height: 118px;
+	position: relative;
+	border-radius: 10px;
+	background-color: #fff;
+	color: #5c4c2c !important;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+	padding: 12px 10px;
+}
+.faq_inner_boxs_links a:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	right: 50%;
+	height: 3px;
+	border-radius: 3px;
+	background-color: #5c4c2c;
+	transition: all 0.3s;
+}
+.faq_inner_boxs_links a:hover:before {
+	left: 0;
+	right: 0;
+}
+
+.faq_inner_boxs_links a.faq_active_btn:before {
+	display: none;
+}
+.faq_inner_boxs_links a.faq_active_btn {
+	background-color: #d2bd91;
+	color: #fff !important;
+}
+.faq_inner_boxs_links a.faq_active_btn:after {
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 9px solid #d2bd91;
+}
+.faq_inner_boxs_links a img {
+	display: block;
+	margin: 0 auto 8px;
+}
+.faq_inner_boxs_links a span {
+	line-height: 24px;
+	display: block;
+	font-family: 'ud_digi_kyokasho_n-bbold';
+}
+.about_voluntary_sale_dr_tab_sec {
+	margin: 78px 0 0;
+}
+.about_voluntary_sale_dr_tab_heading p {
+	font-size: 24px;
+}
+.about_voluntary_sale_dr_tab_heading p img {
+	margin-right: 19px;
+}
+.about_voluntary_sale_dr_tab {
+	margin-top: 36px;
+}
+.ui-accordion .ui-accordion-header {
+	margin: 33px 0 0;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header {
+	padding: 10px 55px 10px 10px !important;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active {
+	background-color: #f9a315;
+	border-radius: 7px 7px 0 0;
+	border: none;
+	color: #fff;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active .q_image_white{display: inline-block;}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active .q_image{display: none;}
+.q_image_white {display: none;}
+.ui-state-active {
+	margin-bottom: 0px !important;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header:after {
+	content: '+';
+	position: absolute;
+	top: 0 !important;
+	right: 42px;
+	bottom: 0 !important;
+	height: 26px;
+	margin: auto;
+	font-size: 20px;
+	color: #c5a06b;
+	transform: translateX(14px);
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active:after {
+	content: '+';
+	transform: rotate(45deg);
+	color: #fff;
+	right: 30px;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-content {
+	padding: 50px 35px 48px;
+	border-radius: 0 0 7px 7px;
+	background-color: #f9a315;
+	position: relative;
+}
+.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-content:after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.about_voluntary_sale_dr_tab .ui-accordion-content p {
+	color: #5c4c2c;
+	line-height: 30px;
+	position: relative;
+	z-index: 1;
+	letter-spacing: -0.2px;
+}
+.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_second {
+	margin: 122px 0 0;
+}
+.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_second .ui-accordion .ui-accordion-header {
+	margin: 30px 0 0;
+}
+.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_third {
+	margin: 122px 0 0;
+}
+.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_third .ui-accordion .ui-accordion-header {
+	margin: 30px 0 0;
+}
+@media(max-width: 1449px) {
+	.faq_section {
+		padding: 17px 0 330px;
+		margin: 50px 0 0;
+	}
+}
+@media(max-width: 1199px) {
+	.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_third,
+	.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_second {
+		margin: 80px 0 0;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-content {
+		padding: 36px 35px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header:after {
+		right: 27px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header {
+		padding: 10px 40px 10px 10px !important;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active:after {
+		right: 15px;
+	}
+}
+@media(max-width: 900px) {
+	.faq_inner_boxs_sec {
+		margin: 210px 0 0;
+	}
+	.faq_inner_boxs_sec_inner .faq_girl_image {
+		top: -143px;
+		left: 0px;
+		max-width: 245px;
+	}
+	.about_voluntary_sale_dr_tab_sec {
+		margin: 60px 0 0 !important;
+	}
+	.about_voluntary_sale_dr_tab_heading p img {
+		margin-right: 13px;
+		max-width: 22px;
+	}
+	.about_voluntary_sale_dr_tab_heading p {
+		font-size: 20px;
+	}
+	.about_voluntary_sale_dr_tab {
+		margin-top: 22px;
+	}
+	.about_voluntary_sale_dr_tab_sec.about_voluntary_sale_dr_tab_sec_second .ui-accordion .ui-accordion-header {
+		margin: 22px 0 0 !important;
+	}
+	.faq_section {
+		padding: 17px 0 230px;
+		margin: 20px 0 0;
+	}
+}
+@media(max-width: 767px) {
+	.ui-accordion .ui-accordion-header img {
+		max-width: 35px;
+	}
+	.ui-accordion .ui-accordion-header:after {
+		top: 16px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active:after {
+		top: 15px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-content {
+		padding: 20px 28px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-content:after {
+		top: 10px;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header {
+		margin: 20px 0 0;
+	}
+	.about_voluntary_sale_dr_tab_sec {
+		margin: 45px 0 0 !important;
+	}
+	.inner_page_heading_image .heading_text h2:after {
+		bottom: 5px;
+	}
+}
+@media(max-width: 575px) {
+	.faq_inner_boxs_sec_inner .custom_col_4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.about_voluntary_sale_dr_tab .ui-accordion .ui-accordion-header.ui-state-active:after {
+		top: 20px;
+	}
+	.faq_inner_boxs_links_active:after,
+	.faq_inner_boxs_links_active:before {display: none;}
+}

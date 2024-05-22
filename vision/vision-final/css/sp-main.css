@@ -1,0 +1,175 @@
+@media only screen and (max-width: 600px) {
+    header img {
+        width: 12vw;
+        height: 12vw;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .sp_root {
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .sp_footer {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .sp_page {
+        padding-left: 36px;
+        padding-right: 36px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+    .sp_page h2 {
+        font-size: 42px;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1.2em;
+        text-align: center;
+    }
+    .sp_page h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1.6em;
+        text-align: left;
+    }
+    .sp_page h4 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1.2em;
+        text-align: center;
+    }
+    .sp_page h5 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1.2em;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .sp_page p {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-right: -16px;
+    }
+    .page1 {
+        background-image: url(../img/sp_bg1.jpg);
+    }
+    .page2 {
+        background-image: url(../img/blur-bg2.jpg);
+        background-position: left;
+    }
+    .page3 {
+        background-image: url(../img/blur-bg3.jpg);
+        background-position: center;
+    }
+    .page4 {
+        background-image: url(../img/spbg_41.jpg);
+        background-position: center;
+    }
+    .page5 {
+        background-image: url(../img/spbg_42.jpg);
+        background-position: center;
+    }
+    .page6 {
+        background-image: url(../img/spbg_43.jpg);
+        background-position: center;
+    }
+    .page7 {
+        background-image: url(../img/blur-bg5.jpg);
+        background-position: center;
+    }
+    .p_ah2 {
+        content: '';
+        height:  24px;
+    }
+    .p_ah3 {
+        content: '';
+        height:  6px;
+    }
+    .section_no {
+        font-size: 28px;
+    }
+    .num_box {
+        height: 40px;
+    }
+    .page_padding_top {
+        content: "";
+        height: calc( 100vh * 0.093 );
+    }
+    .page_padding_bottom {
+        content: "";
+        height: calc( 100vh * 0.093 );
+        padding: 0;
+    }
+    .sp_page img {
+        width: 100%;
+    }
+    .spimg_1{
+        margin-top: 30px;
+    }
+    .spimg_2{
+        margin-top: 16px;
+    }
+    .spimg_3{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .spimg_4{
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+    .onlyh_150 {
+        content: '';
+        height: 150px;
+    }
+    .owl-carousel.sp_owl .owl-item img {
+        width: 120px;
+        margin: auto;
+    }
+    .owl-carousel.sp_owl .owl-item p {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .owl-theme.sp_owl .owl-nav {
+        position: absolute;
+        width: 110%;
+        top: 31%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        margin-left: -5%;
+        z-index: -1;
+    }
+    .owl-carousel.sphis_owl .owl-item p {
+        margin-right: 0;
+        text-align: left;
+    }
+    .owl-carousel.sphis_owl .owl-item img {
+        width: 80%;
+        margin: auto;
+        margin-top: 16px;
+    }
+    .owl-theme.sphis_owl .owl-nav {
+        position: absolute;
+        width: 300px;
+        bottom: -30px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+    .p_bfoot {
+        content: '';
+        height: 20px;
+    }
+}

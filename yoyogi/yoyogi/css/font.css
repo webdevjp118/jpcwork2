@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'UD Digi Kyokasho N-B';
+    src: url('../fonts/UDDigiKyokashoN-B.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoN-B.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoN-B.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoN-B.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoN-B.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoN-B.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-B';
+    src: url('../fonts/UDDigiKyokashoNK-B.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoNK-B.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoNK-B.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoNK-B.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoNK-B.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoNK-B.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NP-B';
+    src: url('../fonts/UDDigiKyokashoNP-B.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoNP-B.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoNP-B.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoNP-B.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoNP-B.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoNP-B.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: bold;
+}
+
+@font-face {
+    font-family: 'UD Digi Kyokasho N-R';
+    src: url('../fonts/UDDigiKyokashoN-R.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoN-R.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoN-R.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoN-R.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoN-R.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoN-R.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-R';
+    src: url('../fonts/UDDigiKyokashoNK-R.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoNK-R.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoNK-R.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoNK-R.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoNK-R.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoNK-R.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NP-R';
+    src: url('../fonts/UDDigiKyokashoNP-R.ttc'); /* IE9 Compat Modes */
+    src: url('../fonts/UDDigiKyokashoNP-R.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/UDDigiKyokashoNP-R.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/UDDigiKyokashoNP-R.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/UDDigiKyokashoNP-R.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/UDDigiKyokashoNP-R.svg#svgFontName') format('svg'); /* Legacy iOS */
+   font-weight: bold;
+}

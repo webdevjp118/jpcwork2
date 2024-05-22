@@ -1,0 +1,450 @@
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Light.eot');
+    src: url('../fonts/YuGothic-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Light.woff2') format('woff2'), url('../fonts/YuGothic-Light.woff') format('woff'), url('../fonts/YuGothic-Light.ttf') format('truetype'), url('../fonts/YuGothic-Light.svg#YuGothic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Medium.woff2') format('woff2'), url('../fonts/YuGothic-Medium.woff') format('woff'), url('../fonts/YuGothic-Medium.ttf') format('truetype'), url('../fonts/YuGothic-Medium.svg#YuGothic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Bold.woff2') format('woff2'), url('../fonts/YuGothic-Bold.woff') format('woff'), url('../fonts/YuGothic-Bold.ttf') format('truetype'), url('../fonts/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Yu Gothic';
+    color: #191919;
+}
+
+.kaccess_sec {
+    background-color: #f6f5f4;
+    padding: 140px 15px 180px;
+}
+.kaccess_title {
+    margin-bottom: 80px;
+}
+.kaccess_title h3{
+    font-size: 80px;
+    line-height: 1.5;
+    font-family: aglet-mono, mono;
+    text-align: center;
+    color: #8a7d97;
+}
+.kaccess_title p {
+    font-size: 26px;
+    text-align: center;
+    color: #8a7d97;;
+}
+.kaccess_inner {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.kaccess_item {
+    width: 46%;
+    position: relative;
+}
+.kaccess_item h4 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.kaccess_item.kleft h4 {
+    color: #55a98e;
+}
+.kaccess_item.kright h4 {
+    color: #6d9fc0;
+}
+.kaccess_item p {
+    margin: 16px 0;
+}
+.kaccess_item img {
+    margin: 40px 0;
+}
+.kaccess_pickup {
+    text-decoration: underline;
+    color: #0093d0 !important;
+}
+.kaccess_item_btn a {
+    position: absolute;
+    /* left: calc( 50% - 130px); */
+    left: 0;
+    bottom: -78px;
+    width: 270px;
+    height: 57px;
+    border-radius: 30px;
+    background-color: #8c6c47;
+    color: #191919 !important;
+    text-align: center;
+    font-weight: bold;
+    line-height: 56px;
+    transition: all 0.3s;
+}
+.kaccess_item.kleft .kaccess_item_btn a {
+    background-color: #b1e3d3;
+}
+.kaccess_item.kright .kaccess_item_btn a {
+    background-color: #a3daff;
+}
+.kaccess_item_btn a i {
+    margin-left: 12px;
+}
+.kmap_sec {
+    padding: 120px 15px;
+}
+.kmap_inner {
+    width: 1000px;
+    margin: auto;
+}
+.kmap_inner p {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.kopencampus_sec {
+    background-color: #e5e1f6;
+    padding: 120px 15px 90px;
+}
+.kopencampus_title h3 {
+    font-size: 80px;
+    line-height: 1.5;
+    font-weight: normal;
+    font-family: aglet-mono, mono;
+    text-align: center;
+    color: #8a7d97;
+}
+.kopencampus_title{
+    margin-bottom: 60px;
+}
+.kopencampus_title p {
+    color: #8a7d97;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+.kopencampus_content {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.kopencampus_desc{
+    width: 456px;
+    padding: 40px;
+}
+.kopencampus_desc a {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #191919;
+    text-align: center;
+    line-height: 39px;
+    border: 2px solid #fff;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+.kopencampus_desc a i {
+    margin-left: 12px;
+}
+.kopencampus_img img {
+    border-radius: 10px;
+}
+.kbanner_sec {
+
+}
+.kbanner_inner {
+    display: flex;
+    width: 1080px;
+    margin: auto;
+}
+.kbanner_wrap {
+    width: 50%;
+    padding: 40px;
+}
+.kbanner_item {
+    width: 100%;
+}
+.kbanner_a {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+.kbanner_a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.kbanner_a:hover img {
+    transform: scale(1.1);
+}
+.kbanner_a span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #fff;
+}
+.kcontact_sec {
+    background-color: #e6e6e6;
+    display: flex;
+    padding: 60px 15px;
+    justify-content: center;
+    align-items: center;
+}
+.kcontact_btn {
+    cursor: pointer;
+    background-color: #8f82bc;
+    padding: 8px;
+    transition: all .3s;
+}
+.kcontact_btn:hover {
+    opacity: 0.7;
+}
+.kcontact_inner {
+    border: solid 1px #fff;
+    width: 620px;
+    height: 80px;
+    font-size: 38px;
+    font-family: aglet-mono, mono;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+}
+.kfooter_college {
+    margin-right: calc(50% - 609px);
+    display: flex;
+    padding-top: 30px;
+}
+.kfooter_logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kfcollege_info {
+    padding-top: 40px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+}
+.kfcollege_info h3 {
+    font-size: 26px;
+}
+.kcopyright {
+    background-color: #b1e3d3;
+    padding: 16px 0;
+}
+.kcopyright p {
+    text-align: center;
+    font-size: 16px;
+}
+@media (max-width: 1199px){
+    .kaccess_inner {
+        width: 100%;
+    }
+    .kmap_inner {
+        width: 100%;
+    }
+    .kopencampus_content {
+        width: 100%;
+    }
+    .kbanner_inner {
+        width: 100%;
+    }
+    .kfooter_college {
+        margin-right: 0;
+    }
+    .kfcollege_info{
+        padding: 20px 10px;
+    }
+}
+@media (max-width: 991px){
+    .kfooter_college {
+        padding-top: 20px;
+    }
+    .kfooter_college {
+        display: block;
+        margin: 0;
+        padding: 15px;
+    }
+    .kfcollege_info{
+        padding-right: 0;
+    }
+    .kfcollege_info h3{
+        text-align: center;
+    }
+    .kfcollege_info p {
+        text-align: center;
+    }
+}
+@media (max-width: 575px){
+    .kaccess_sec {
+        padding: 60px 15px 120px;
+    }
+    .kaccess_title {
+        margin-bottom: 40px;
+    }
+    .kaccess_title h3 {
+        font-size: 30px;
+    }
+    .kaccess_title p {
+        font-size: 16px;
+    }
+    .kaccess_inner {
+        display: block;
+    }
+    .kaccess_item {
+        width: 100%;
+    }
+    .kaccess_item.kright {
+        margin-top: 120px;
+    }
+    .kaccess_item h4 {
+        font-size: 22px;
+    }
+    .kaccess_item p {
+        margin: 0;
+    }
+    .kaccess_item img {
+        margin: 20px 0;
+    }
+    .kaccess_item h4,
+    .kaccess_item p,
+    .kaccess_pickup {
+        text-align: center;
+    }
+    .kaccess_item_btn a {
+        left: calc( 50% - 130px);
+    }
+    .kmap_sec {
+        padding: 40px 15px;
+    }
+    .kmap_inner p {
+        font-size: 16px;
+        text-align: center;
+    }
+    .kopencampus_sec {
+        padding: 40px 15px 60px;
+    }
+    .kopencampus_title {
+        margin-bottom: 40px;
+    }
+    .kopencampus_title h3 {
+        font-size: 30px;
+    }
+    .kopencampus_title p{
+        font-size: 16px;
+    }
+    .kopencampus_content {
+        width: 100%;
+        display: block;
+    }
+    .kopencampus_desc {
+        width: 100%;
+        padding: 0;
+    }
+    .kopencampus_desc a {
+        height: 80px;
+        line-height: 80px;
+        border-radius: 20px;
+    }
+    .kopencampus_content img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .kbanner_inner {
+        display: block;
+        padding: 30px 0;
+    }
+    .kbanner_wrap {
+        width: 70%;
+        margin: auto;
+        padding: 16px;
+    }
+    .kbanner_a {
+        height: 90px;
+    }
+    .kbanner_a span{
+        font-size: 20px;
+    }
+    .kcontact_inner {
+        font-size: 26px;
+        width: 300px;
+        height: 48px;
+        color: #fff;
+        -webkit-text-stroke: unset;
+        -webkit-text-fill-color: #fff;
+    }
+}
+
+
+
+.cpc,
+.cpc6,
+.cpc9
+{
+	display: block !important;
+}
+.csp,
+.csp6,
+.csp9 {
+	display: none !important;
+}
+@media (max-width: 900px) {
+	.cpc {
+		display: none !important;
+	}
+	.csp {
+		display: block !important;
+	}
+	.cpc9 {
+		display: none !important;
+	}
+	.csp9 {
+		display: block !important;
+	}	
+}
+@media (max-width: 575px) {
+	.cpc6 {
+		display: none !important;
+	}
+	.csp6 {
+		display: block !important;
+	}
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:m="http://mayaa.seasar.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HANDA Watch World</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="stylesheet" href="./css/hww_style.css">
+	<link rel="stylesheet" href="./css/brand.css">
+	<script src="./js/ebisu_lib.js"></script>
+	<script src="./js/ebisu.js"></script>
+</head>
+<body>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml"></iframe>
+
+<main>
+	<div class="l-container">
+		<div class="c-breadcrumbs">
+			<a href="/" class="c-breadcrumbs-link">ホーム</a>
+			<span class="c-breadcrumbs-current" m:id='IF_CATEGORY' m:NOT="">検索結果</span>
+			<span m:id='common.IF_BREADCRUMBS'>
+				<span m:id='common.LOOP_BREADCRUMBS'>
+					<span m:id='common.IF_BREADCRUMBS_LAST' m:NOT="">
+						<a href="#" class="c-breadcrumbs-link" m:id='common.BREADCRUMBS_LINK_TAG'><span m:id='common.BREADCRUMBS_NAME_HERE'>カテゴリ</span></a>
+					</span>
+					<span class="c-breadcrumbs-current" m:id='common.IF_BREADCRUMBS_LAST'>
+						<span m:id='common.BREADCRUMBS_NAME_HERE'>カテゴリ</span>
+					</span>
+				</span>
+			</span>
+		</div>
+
+		<h2 class="c-pageTitle">
+			<span m:id='IF_CATEGORY' m:NOT="">検索結果</span>
+			<span m:id='IF_CATEGORY'><span m:id='CATEGORY_NAME_HERE'>カテゴリ名</span></span>
+        </h2>
+
+		<div class="itemList-lead">
+			<div m:id='IF_CATEGORY_IMAGE'>
+				<img src="#" m:id='CATEGORY_IMAGE_TAG' alt="カテゴリ画像" />
+			</div>
+			<p m:id='IF_CATEGORY_INFO'><span m:id='CATEGORY_INFO_HERE'>ここにカテゴリ説明文を表示します。</span></p>
+			<div m:id="IF_ITEM_CATEGORY_HTML">
+				<div m:id='ITEM_CATEGORY_HTML_HERE'>ここにカテゴリHTML表示をします。</div>
+			</div>
+		</div>
+
+		<nav class="itemList-categoryNav">
+			<ul class="itemList-categoryNav-list" m:id='common.IF_ITEM_CATEGORY_NEXT_LEVEL'>
+				<li class="itemList-categoryNav-item" m:id='common.LOOP_ITEM_CATEGORY'>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED'>
+						<a href="" class="is-current" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED' m:NOT="">
+						<a href="" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="itemList-categoryNav-list" m:id='common.IF_ITEM_CATEGORY_NEXT_LEVEL'>
+				<li class="itemList-categoryNav-item" m:id='common.LOOP_ITEM_CATEGORY'>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED'>
+						<a href="" class="is-current" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED' m:NOT="">
+						<a href="" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="itemList-categoryNav-list" m:id='common.IF_ITEM_CATEGORY_NEXT_LEVEL'>
+				<li class="itemList-categoryNav-item" m:id='common.LOOP_ITEM_CATEGORY'>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED'>
+						<a href="" class="is-current" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+					<span m:id='common.IF_ITEM_CATEGORY_SELECTED' m:NOT="">
+						<a href="" m:id='common.ITEM_CATEGORY_LINK_TAG'>
+							<span m:id='common.ITEM_CATEGORY_NAME_HERE'>カテゴリー名</span>
+						</a>
+					</span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="itemList-listMenu">
+			<div class="itemList-listMenu-column-01">
+				<div class="itemList-listMenu-result -laptop">
+					<p>検索結果 全<span class="itemList-listMenu-result-count"><span m:id='ITEM_COUNT_HERE'>20</span></span>件</p>
+				</div>
+			</div>
+			<div class="itemList-listMenu-column-02" m:id='IF_ITEM_EXIST'>
+				<div class="itemList-listMenu-column-02-01">
+					<div class="itemList-listMenu-sort">
+						<select name="rearrange" m:id='SORT_INPUT_HERE'>
+							<option selected="selected">新着順</option>
+							<option>金額の低い順</option>
+							<option>金額の高い順</option>
+							<option>名前順</option>
+						</select>
+					</div>
+					<div class="itemList-listMenu-limit">
+						<p><label for="row">表示件数</label></p>
+						<select name="row" id="row" m:id='PAGE_NAVIGATION_MAX_ROW_SELECT_HERE'>
+							<option value="">15</option>
+							<option value="">50</option>
+							<option value="">100</option>
+						</select>
+					</div>
+				</div>
+				<div class="itemList-listMenu-column-02-02">
+					<div class="itemList-listMenu-result -mobile">
+						<p>検索結果 全<span class="itemList-listMenu-result-count"><span m:id='ITEM_COUNT_HERE'>20</span></span>件</p>
+						<!-- m:id ITEM_COUNT_HERE -->
+					</div>
+					<div class="itemList-listMenu-pager c-pager">
+						<span m:id='IF_PREV_PAGE'>
+							<a href="/" class="c-pager-link -prev" m:id='PREV_PAGE_LINK_TAG'>&lt;</a>
+						</span>
+						<span m:id='LOOP_PAGE_LINK' m:max_link_count='5'>
+							<span m:id='IF_PAGE_LINK_CURRENT'><a href="#" class="c-pager-link -current" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+							<span m:id='IF_PAGE_LINK_CURRENT' m:NOT=''><a href="#" class="c-pager-link" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+						</span>
+						<span m:id='IF_NEXT_PAGE'>
+							<a href="/" class="c-pager-link -next" m:id='NEXT_PAGE_LINK_TAG'>&gt;</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="c-product-list u-mt50 u-mb80">
+			<article class="c-product-item" m:id='LOOP_ITEM_LIST'>
+				<a href="/" class="c-product-item-link" m:id='ITEM_DETAIL_LINK_TAG'>
+					<div class="c-product-item-icons">
+						<div class="c-product-item-icons-inner">
+							<span m:id="IF_FREE" m:free_item_no='3'>
+								<span class="c-product-icon -recommend">オススメ</span>
+							</span>
+							<span m:id="IF_FREE" m:free_item_no='4'>
+								<span class="c-product-icon -limited">限定品</span>
+							</span>
+							<span m:id="IF_FREE" m:free_item_no='5'>
+								<span class="c-product-icon -xxxx">自由項目5</span>
+							</span>
+							<span m:id="IF_FREE" m:free_item_no='6'>
+								<span class="c-product-icon -xxxx">自由項目6</span>
+							</span>
+							<span m:id="IF_FREE" m:free_item_no='7'>
+								<span class="c-product-icon -xxxx">自由項目7</span>
+							</span>
+							<span m:id='IF_SOLDOUT'>
+								<span class="c-product-icon -soldout">入荷待ち</span>
+							</span>
+						</div>
+					</div>
+					<div class="c-product-item-image">
+						<img src="/images/dummy/img_item_thumbnail_01.png" alt="" m:id='ITEM_IMAGE_TAG'>
+					</div>
+					<p class="c-product-item-number"><span m:id='ITEM_CODE_HERE'>ABC-123</span></p>
+					<h3 class="c-product-item-title"><span m:id='ITEM_NAME_HERE' m:max_size="60">商品名</span></h3>
+					<div class="c-product-item-price item_price_box" m:id="IF_FREE" m:free_item_no='1' m:NOT=''>
+						<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+            <div class="item_price item_teika">
+              <span m:id="common.IF_UCHIZEI"><span m:id='TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span>（税込）</span>
+              <span m:id='common.IF_SOTOZEI'><span class="tax_bold">税込 <span m:id='TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='TEIKA_PRICE_HERE' m:tax="hontai">21,000円</span>+税）</span>
+            </div>
+						<!--// 非ログインの場合 -->
+						<!-- ログイン中の場合 -->
+						<div m:id='common.IF_MEMBER'>
+							<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+							<span m:id='IF_ITEM_MEMBER_RANK_TEIKA' class="item_price">
+								<span m:id="common.IF_UCHIZEI">税込 <span m:id='ITEM_MEMBER_RANK_TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span></span>
+								<span m:id="common.IF_SOTOZEI"><span class="tax_bold">税込 <span m:id='ITEM_MEMBER_RANK_TEIKA_PRICE_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='ITEM_MEMBER_RANK_TEIKA_PRICE_HERE' m:tax="hontai">21,000円</span>+税）</span>
+							</span>
+
+							<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+							<span m:id='IF_ITEM_MEMBER_RANK_TEIKA' m:NOT=''>
+								<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+								<span m:id='IF_DISCOUNT' class="item_price">
+									<span m:id="common.IF_UCHIZEI">税込 <span m:id='DISCOUNT_PRICE_HERE' m:tax="zeikomi">21,000円</span></span>
+									<span m:id='common.IF_SOTOZEI'><span class="tax_bold">税込 <span m:id='DISCOUNT_PRICE_HERE' m:tax="zeikomi">21,000円</span></span><br>（<span m:id='DISCOUNT_PRICE_HERE' m:tax="hontai">21,000円</span>+税）</span>
+								</span>
+							</span>
+						</div>
+						<!--//ログイン中の場合-->
+					</div>
+				</a>
+			</article>
+		</div>
+
+		<div class="itemList-listMenu">
+			<div class="itemList-listMenu-column-01">
+				<div class="itemList-listMenu-result -laptop"></div>
+			</div>
+			<div class="itemList-listMenu-column-02" m:id='IF_ITEM_EXIST'>
+				<div class="itemList-listMenu-column-02-01">
+					<div class="itemList-listMenu-sort">
+						<select name="rearrange" m:id='SORT_INPUT_HERE'>
+							<option selected="selected">新着順</option>
+							<option>金額の低い順</option>
+							<option>金額の高い順</option>
+							<option>名前順</option>
+						</select>
+					</div>
+					<div class="itemList-listMenu-limit">
+						<p><label for="row">表示件数</label></p>
+						<select name="row" id="row" m:id='PAGE_NAVIGATION_MAX_ROW_SELECT_HERE'>
+							<option value="">15</option>
+							<option value="">50</option>
+							<option value="">100</option>
+						</select>
+					</div>
+				</div>
+				<div class="itemList-listMenu-column-02-02">
+					<div class="itemList-listMenu-result -mobile"></div>
+					<div class="itemList-listMenu-pager c-pager">
+						<span m:id='IF_PREV_PAGE'>
+							<a href="/" class="c-pager-link -prev" m:id='PREV_PAGE_LINK_TAG'>&lt;</a>
+						</span>
+						<span m:id='LOOP_PAGE_LINK' m:max_link_count='5'>
+							<span m:id='IF_PAGE_LINK_CURRENT'><a href="#" class="c-pager-link -current" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+							<span m:id='IF_PAGE_LINK_CURRENT' m:NOT=''><a href="#" class="c-pager-link" m:id='PAGE_LINK_TAG'><span m:id='PAGE_LINK_NO_HERE'>1</span></a></span>
+						</span>
+						<span m:id='IF_NEXT_PAGE'>
+							<a href="/" class="c-pager-link -next" m:id='NEXT_PAGE_LINK_TAG'>&gt;</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+<script src="js/item_price.js"></script>
+
+<span m:id="CRITEO_ITEM_LIST_TRACKER_HERE"></span>
+
+</body>
+</html>

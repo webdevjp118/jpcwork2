@@ -1,0 +1,6 @@
+.custom-modal-layer {
+    height: auto;
+}
+.custom-modal-layer .layer_closed {
+    height: 0;
+}

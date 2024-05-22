@@ -1,0 +1,69 @@
+/* FONTS */
+
+
+/*
+    => All Font-Family Here.
+
+    font-family: 'Allura', cursive;
+    (Regular-400)
+    font-family: 'Noto Serif JP', serif;
+    (Extra-Light-200, Light-300, Regular-400, Medium-500, Semibold-600, Bold-700, Black-900)
+    font-family: 'Yu Gothic';
+    (Light-300, Regular-400, Medium-500, Bold-700)
+
+
+
+*/
+
+
+/* NotoSerifJP  &   Allura */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothic-Bold.woff2') format('woff2'),
+        url('../fonts/YuGothic-Bold.woff') format('woff'),
+        url('../fonts/YuGothic-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Light.eot');
+    src: url('../fonts/YuGothic-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothic-Light.woff2') format('woff2'),
+        url('../fonts/YuGothic-Light.woff') format('woff'),
+        url('../fonts/YuGothic-Light.ttf') format('truetype'),
+        url('../fonts/YuGothic-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothic-Medium.woff2') format('woff2'),
+        url('../fonts/YuGothic-Medium.woff') format('woff'),
+        url('../fonts/YuGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothicUI-Regular.eot');
+    src: url('../fonts/YuGothicUI-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothicUI-Regular.woff2') format('woff2'),
+        url('../fonts/YuGothicUI-Regular.woff') format('woff'),
+        url('../fonts/YuGothicUI-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

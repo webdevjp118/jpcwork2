@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://mayaa.seasar.org" xmlns:aps="eb:AMAZON_PAYMENTS/view_amazon_payments.json" xmlns:social_plus="eb:SOCIAL_PLUS/view_common.json" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>標準テンプレート（PC）</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/hww_style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" charset="utf-8" src="js/ebisu_lib.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ebisu.js"></script>
+<script type="text/javascript" m:id='common.IF_APP_INSTALLED' m:app_cd='SOCIAL_PLUS'>
+//<![CDATA[
+eb$(document).ready(function(){
+	// ソーシャルPLUSアプリをインストールしている時だけ記述します
+	if(document.getElementById('social_plus_error') != null){
+		document.getElementById('social_plus_error').style.display = 'none';
+		social_plus_message_disp();
+	}
+});
+//]]>
+</script>
+<script type="text/javascript" charset="utf-8" src="js/1.7.1.jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.tile.js"></script>
+<script type="application/javascript">
+//<![CDATA[
+$(function(){
+	$('.box').tile(2);
+});
+//]]>
+</script>
+</head>
+<body>
+<!-- このテンプレートのURLは右記になります。 ドメイン/login.html -->
+<script type="text/javascript" charset="utf-8" src="js/iframe.js" m:id='DUMMY'></script>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<main>
+
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ ================================================== -->
+<!-- =============================================================================== -->
+  <div class="l-container">
+    <div class="c-breadcrumbs">
+        <a href="/" class="c-breadcrumbs-link">ホーム</a>
+        <span class="c-breadcrumbs-current">ログイン</span>
+    </div>
+
+<!-- login -->
+<div id="loginNew">
+	<h2 class="c-pageTitle">ログイン</h2>
+    <div class="login_commnet_area mB50">
+    	<p class="bold red mB20">＜ご注意＞</p>
+        <p class="mB10"><span class="red">2019年1月31日にサイトリニューアルいたしました。</span><br>
+        店舗配布のHANDA Watch World 会員カードをお持ちの方は、以下の入力を行うことで、<br>
+店舗とオンラインショップの「HANDA Watch World 会員ステイタス」の共通化ができます。</p>
+
+        <p class="mB10">【メールアドレス】の項目にはリニューアル前に登録された「PCメールアドレス」をご入力ください。<br>
+        【パスワード】の項目には、カード裏面の「PINコード」をご入力ください。</p>
+        
+        <p class="mB10">※「ログインのエラー」が表示され、ログイン出来ない方は、メールアドレスが登録されていない可能性があります。<br>
+恐れ入りますが会員登録ページから登録し、ページ下部の店舗とオンラインショップの「HANDA Watch World 会員ステイタス」の共通化のところでカード裏面のカード番号・PINコードをご入力ください。</p>
+    </div>
+	
+	<form m:id='FORM_TAG'>
+		<iframe m:id='common.IMPORT_HERE' src="common/messages.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+		<!-- amazon payments アプリがインストールされていた時の表示 -->
+		<div m:id='common.IF_APP_INSTALLED' m:app_cd='AMAZON_PAYMENTS'>
+			<p aps:if="apsIsAmazon" class="amazon_comment">※Amazonログインではありません。</p>
+		</div>
+		
+		<!-- social_plus アプリがインストールされていない時の表示 -->
+		<div m:id='common.IF_APP_INSTALLED' m:app_cd='SOCIAL_PLUS' m:NOT="">
+			<!-- / amazon payments アプリがインストールされていた時の表示 -->
+			<table summary="ログイン" class="table_form mB30">
+				<tr>
+					<th class="title">メールアドレス</th>
+					<td><input m:id='ID_INPUT_HERE' name="id" type="text" size="50" value="" /></td>
+				</tr>
+				<tr>
+					<th class="title">パスワード</th>
+					<td><input m:id='PASSWORD_INPUT_HERE' name="pw" size="50" value="" type="password" /></td>
+				</tr>
+			</table>
+			<p align="right"><a href="password_reminder.html">→パスワードを忘れた方</a></p>
+			<p align="right"><a href="member_regist_new.html">→会員登録をしていない方</a></p>
+	
+			<!-- amazon payments アプリがインストールされていない時の表示 -->
+			<div class="buttonarea" m:id='common.IF_APP_INSTALLED' m:app_cd='AMAZON_PAYMENTS' m:NOT="">
+				<input type="submit" value="ログイン" class="button positive medium" />
+			</div>
+			<!-- / amazon payments アプリがインストールされていない時の表示 -->
+	
+			<!-- amazon payments アプリがインストールされていた時の表示 -->
+			<div class="buttonarea" m:id='common.IF_APP_INSTALLED' m:app_cd='AMAZON_PAYMENTS'>
+				<input aps:if="apsIsAmazon" type="submit" value="サイトにログイン" class="button positive medium" />
+				<input aps:if="apsIsAmazon" m:NOT="" type="submit" value="ログイン" class="button positive medium" />
+			</div>
+			<!-- / amazon payments アプリがインストールされていた時の表示 -->
+		</div>
+		<!-- / social_plus アプリがインストールされていない時の表示 -->
+
+		<!-- social_plus アプリがインストールされていた時の表示 -->
+		<div m:id='common.IF_APP_INSTALLED' m:app_cd='SOCIAL_PLUS' class="social_provider">
+			<!-- / amazon payments アプリがインストールされていた時の表示 -->
+			<div class="box">
+				<h3 class="title_border">サイト会員IDでログイン</h3>
+				<table summary="ログイン" class="table_form mB30">
+					<tr>
+						<th class="title">メールアドレス</th>
+						<td><input m:id='ID_INPUT_HERE' name="id" type="text" size="50" value="" /></td>
+					</tr>
+					<tr>
+						<th class="title">パスワード</th>
+						<td><input m:id='PASSWORD_INPUT_HERE' name="pw" size="50" value="" type="password" /></td>
+					</tr>
+				</table>
+				<p align="right"><a href="password_reminder.html">→パスワードを忘れた方</a></p>
+				<p align="right"><a href="member_regist_new.html">→会員登録をしていない方</a></p>
+		
+				<!-- amazon payments アプリがインストールされていない時の表示 -->
+				<div class="buttonarea" m:id='common.IF_APP_INSTALLED' m:app_cd='AMAZON_PAYMENTS' m:NOT="">
+					<input type="submit" value="ログイン" class="button positive medium" />
+				</div>
+				<!-- / amazon payments アプリがインストールされていない時の表示 -->
+		
+				<!-- amazon payments アプリがインストールされていた時の表示 -->
+				<div class="buttonarea" m:id='common.IF_APP_INSTALLED' m:app_cd='AMAZON_PAYMENTS'>
+					<input aps:if="apsIsAmazon" type="submit" value="サイトにログイン" class="button positive medium" />
+					<input aps:if="apsIsAmazon" m:NOT="" type="submit" value="ログイン" class="button positive medium" />
+				</div>
+				<!-- / amazon payments アプリがインストールされていた時の表示 -->
+			</div>
+		
+			<div class="social_provider box">
+				<h3 class="title_border">他サイトのアカウントでログイン/新規会員登録</h3>
+				<!-- social plus error -->
+				<div id="social_plus_error" m:id='common.IF_APP_INSTALLED' m:app_cd='SOCIAL_PLUS'>
+					<div id="social_plus_error_tbl">
+						<table summary="メッセージ" class="table_form mB30">
+							<tr>
+								<td class="ico"><img src="images/icon_error.png" /></td>
+								<td class="content"><span id="social_plus_error_msg">ここにエラーメッセージが表示されます</span></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- / social plus error -->
+				<ul>
+					<li class="facebook"><a href="#" social_plus:attr="SOCIAL_PLUS_FACEBOOK_LOGIN_TAG"><span>facebook</span></a></li>
+					<li class="twitter"><a href="#" social_plus:attr="SOCIAL_PLUS_TWITTER_LOGIN_TAG"><span>twitter</span></a></li>
+					<li class="google"><a href="#" social_plus:attr="SOCIAL_PLUS_GPLUS_LOGIN_TAG"><span>google+</span></a></li>
+					<li class="yahoo"><a href="#" social_plus:attr="SOCIAL_PLUS_YAHOO_LOGIN_TAG"><span>yahoo!</span></a></li>
+					<li class="mixi"><a href="#" social_plus:attr="SOCIAL_PLUS_MIXI_LOGIN_TAG"><span>mixi</span></a></li>
+					<li class="rakuten"><a href="#" social_plus:attr="SOCIAL_PLUS_RAKUTEN_LOGIN_TAG"><span>楽天市場</span></a></li>
+					<li class="line"><a href="#" social_plus:attr="SOCIAL_PLUS_LINE_LOGIN_TAG"><span>LINE</span></a></li>
+					<li class="paypal"><a href="#" social_plus:attr="SOCIAL_PLUS_PAYPAL_LOGIN_TAG"><span>PayPal</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / social_plus アプリがインストールされていた時の表示 -->
+
+	</form>
+</div>
+<!-- / login -->
+
+</div>
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ END================================================== -->
+<!-- =============================================================================== -->
+
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+</body>
+</html>

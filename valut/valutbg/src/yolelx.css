@@ -1,0 +1,7 @@
+html,
+body {
+	margin: 0;
+	overflow: hidden;
+	// background-color: hsl(0, 0%, 8%);
+	background-color: #141414;
+}

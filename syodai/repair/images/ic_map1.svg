@@ -1,0 +1,19 @@
+<svg id="ic_map1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="base_svg" opacity="0">
+    <g id="Rectangle_13" data-name="Rectangle 13" fill="#62bfeb" stroke="#62bfeb" stroke-width="1">
+      <rect width="50" height="50" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" fill="none"/>
+    </g>
+    <g id="base" transform="translate(6 6)">
+      <g id="Ellipse_6" data-name="Ellipse 6" fill="rgba(255,255,255,0)" stroke="red" stroke-width="1">
+        <circle cx="19" cy="19" r="19" stroke="none"/>
+        <circle cx="19" cy="19" r="18.5" fill="none"/>
+      </g>
+      <line id="Line_3" data-name="Line 3" x2="12" transform="translate(13 19)" fill="none" stroke="red" stroke-width="1"/>
+      <line id="Line_4" data-name="Line 4" y2="12" transform="translate(19 13)" fill="none" stroke="red" stroke-width="1"/>
+    </g>
+  </g>
+  <g id="top_kesanku_rogo-02" transform="translate(11.887 6.877)">
+    <path id="Path_33" data-name="Path 33" d="M13.244.19h-.262C5.829.234-.625,7.809.045,15.487c.6,10.241,6,12,13.024,20.57h.087c7.022-8.581,12.427-10.343,13.024-20.57C26.85,7.809,20.4.234,13.244.19Zm-.131,19.172a5.915,5.915,0,0,1-5.725-6.089,5.915,5.915,0,0,1,5.725-6.089,5.915,5.915,0,0,1,5.725,6.089A5.915,5.915,0,0,1,13.113,19.362Z" transform="translate(0)" fill="#62bfeb"/>
+  </g>
+</svg>

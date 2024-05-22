@@ -1,0 +1,22 @@
+<svg id="ic_search2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="base_svg" opacity="0">
+    <g id="Rectangle_13" data-name="Rectangle 13" fill="rgba(0,85,255,0)" stroke="red" stroke-width="1">
+      <rect width="50" height="50" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(6 6)" fill="rgba(255,255,255,0)" stroke="red" stroke-width="1">
+      <circle cx="19" cy="19" r="19" stroke="none"/>
+      <circle cx="19" cy="19" r="18.5" fill="none"/>
+    </g>
+    <line id="Line_3" data-name="Line 3" x2="12" transform="translate(19 25)" fill="none" stroke="red" stroke-width="1"/>
+    <line id="Line_4" data-name="Line 4" y2="12" transform="translate(25 19)" fill="none" stroke="red" stroke-width="1"/>
+  </g>
+  <g id="top_kesanku_rogo-01" transform="translate(12.006 10.95)">
+    <g id="Group_101" data-name="Group 101">
+      <path id="Path_31" data-name="Path 31" d="M10.75,21.47A10.71,10.71,0,1,1,21.46,10.76,10.716,10.716,0,0,1,10.75,21.47Zm0-17.71a7,7,0,1,0,7,7A7.008,7.008,0,0,0,10.75,3.76Z" fill="#fff"/>
+    </g>
+    <g id="Group_102" data-name="Group 102">
+      <path id="Path_32" data-name="Path 32" d="M24.1,28.05a1.87,1.87,0,0,1-1.39-.62l-7.66-8.59a1.856,1.856,0,1,1,2.77-2.47l7.66,8.59a1.862,1.862,0,0,1-.15,2.62A1.807,1.807,0,0,1,24.1,28.05Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

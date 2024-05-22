@@ -1,0 +1,1473 @@
+@media(max-width:1280px) {}
+
+@media(max-width:1199px) {
+    .main-container header .logo-section {
+        padding: 0 15px;
+    }
+
+    .main-container .hero-banner-section {
+        margin-top: 83px;
+    }
+}
+
+/* @media(max-width:991px) { */
+@media(max-width:2048px) {
+    .hdr_menu {
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        background-color: #43a5d9;
+        overflow-y: auto;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        padding: 70px 25px 20px;
+        z-index: 99;
+    }
+
+    .hdr_menu ul {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .hdr_menu ul li {
+
+        width: 100%;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .hdr_menu li a {
+        display: block;
+        color: #fff;
+        padding: 0;
+    }
+
+    .hdr_menu li a::before {
+        display: none;
+    }
+
+    .menu_btn {
+        width: 28px;
+        display: block;
+    }
+
+    .menu_btn span {
+        height: 2px;
+        display: block;
+        background: #43a5d9;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .menu_btn span+span {
+        margin-top: 5px;
+    }
+
+    .menu_btn span:nth-child(2) {
+        /* width: 22px; */
+    }
+
+    .menu_trigger {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        z-index: 100;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .addPnnl .menu_trigger {
+        position: fixed;
+        right: 20px;
+        top: 25px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    .addPnnl .hdr_menu {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    .addPnnl .overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 30;
+    }
+
+    .addPnnl .menu_btn span {
+        background: #fff;
+    }
+
+    .addPnnl,
+    .overlay {
+        overflow: hidden;
+    }
+
+    .addPnnl .hddr_inr {
+        position: static;
+    }
+
+    .hdr_menu li {
+        margin-right: 0;
+        padding-right: 0;
+        border: 0;
+        margin-bottom: 15px;
+    }
+
+    .shrink .hdr_menu li a {
+
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .hdr_menu li.current-menu-item a,
+    .hdr_menu li a:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .addPnnl .menu_btn span:first-child {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .addPnnl .menu_btn span:last-child {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .addPnnl .menu_btn span:nth-child(2) {
+        display: none;
+    }
+
+    .addPnnl .menu_btn span+span {
+        margin-top: -2px;
+    }
+
+    .addPnnl .nav_holder {
+        position: static;
+    }
+
+    .addPnnl .shrink .nav_holder {
+        position: fixed;
+    }
+
+    .nav_inr {
+        position: relative;
+    }
+
+    .addPnnl .nav_inr {
+        position: static;
+    }
+
+    .header_outer {
+        padding-bottom: 10px;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu {
+        width: 100%;
+        display: block;
+        position: static;
+        background-color: transparent;
+        padding: 10px 0 0 10px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        -webkit-transition: initial !important;
+        -o-transition: initial !important;
+        transition: initial !important;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu a,
+    .hdr_menu li.menu-item-has-children .current-menu-item a {
+        color: #fff;
+        padding: 5px 0;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu a:hover,
+    .hdr_menu li.menu-item-has-children .current-menu-item a:hover {
+        color: #fff;
+    }
+
+
+
+    .mega_menu_open .sub_menu_opener {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@media(max-width:991px) {
+    .hdr_menu {
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        background-color: #43a5d9;
+        overflow-y: auto;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        padding: 70px 25px 20px;
+        z-index: 99;
+    }
+
+    .hdr_menu ul {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .hdr_menu ul li {
+
+        width: 100%;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .hdr_menu li a {
+        display: block;
+        color: #fff;
+        padding: 0;
+    }
+
+    .hdr_menu li a::before {
+        display: none;
+    }
+
+    .menu_btn {
+        width: 28px;
+        display: block;
+    }
+
+    .menu_btn span {
+        height: 2px;
+        display: block;
+        background: #43a5d9;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .menu_btn span+span {
+        margin-top: 5px;
+    }
+
+    .menu_btn span:nth-child(2) {
+        /* width: 22px; */
+    }
+
+    .menu_trigger {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        z-index: 100;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .addPnnl .menu_trigger {
+        position: fixed;
+        right: 20px;
+        top: 25px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    .addPnnl .hdr_menu {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    .addPnnl .overlay {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 30;
+    }
+
+    .addPnnl .menu_btn span {
+        background: #fff;
+    }
+
+    .addPnnl,
+    .overlay {
+        overflow: hidden;
+    }
+
+    .addPnnl .hddr_inr {
+        position: static;
+    }
+
+    .hdr_menu li {
+        margin-right: 0;
+        padding-right: 0;
+        border: 0;
+        margin-bottom: 15px;
+    }
+
+    .shrink .hdr_menu li a {
+
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .hdr_menu li.current-menu-item a,
+    .hdr_menu li a:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .addPnnl .menu_btn span:first-child {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .addPnnl .menu_btn span:last-child {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .addPnnl .menu_btn span:nth-child(2) {
+        display: none;
+    }
+
+    .addPnnl .menu_btn span+span {
+        margin-top: -2px;
+    }
+
+    .addPnnl .nav_holder {
+        position: static;
+    }
+
+    .addPnnl .shrink .nav_holder {
+        position: fixed;
+    }
+
+    .nav_inr {
+        position: relative;
+    }
+
+    .addPnnl .nav_inr {
+        position: static;
+    }
+
+    .header_outer {
+        padding-bottom: 10px;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu {
+        width: 100%;
+        display: block;
+        position: static;
+        background-color: transparent;
+        padding: 10px 0 0 10px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        -webkit-transition: initial !important;
+        -o-transition: initial !important;
+        transition: initial !important;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu a,
+    .hdr_menu li.menu-item-has-children .current-menu-item a {
+        color: #fff;
+        padding: 5px 0;
+    }
+
+    .hdr_menu li.menu-item-has-children .sub-menu a:hover,
+    .hdr_menu li.menu-item-has-children .current-menu-item a:hover {
+        color: #fff;
+    }
+
+
+
+    .mega_menu_open .sub_menu_opener {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .main-container .reservation-section .buttons-list {
+        padding: 0 10px;
+    }
+
+    .main-container .nmn-therapy-section {
+        text-align: center;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-45 {
+        margin: 0;
+        margin-bottom: 15px;
+        max-width: 100%;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-55 {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-45 span {
+        font-size: 38px;
+        width: 100%;
+        line-height: 50px;
+        margin-bottom: 5px;
+    }
+
+    .main-container .nmn-therapy-section h2 {
+        margin: 0 0 15px;
+        min-width: 100%;
+    }
+
+    .main-container .nmn-therapy-section .therapy-detail {
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    .main-container .patients-impression-section .reviews-section {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .main-container .patients-impression-section .reviews-section .single-review {
+        width: 50%;
+
+    }
+
+    .main-container .patients-impression-section .inner-container {
+        padding-bottom: 40px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data,
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data h3 {
+        margin: 0 0 60px;
+        line-height: 35px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .girl-img {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+        left: -80px;
+        top: 5px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail:before {
+        border-bottom: 360px solid #fff;
+        border-left: 308px solid #eeeeee;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data {
+        padding-top: 80px;
+    }
+
+    .main-container .nmn-effects-section .inner-container {
+        padding-left: 10px;
+    }
+
+    .main-container .about-section {
+        margin: 50px 0 75px;
+    }
+
+    .main-container .about-section .section-heading h2 {
+        font-size: 60px;
+        line-height: 70px;
+        padding-bottom: 20px;
+    }
+
+    .main-container .middle-section {
+        height: auto;
+        padding-bottom: 25px !important;
+    }
+
+
+
+    .main-container .middle-section .section-heading h2 {
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item p,
+    .main-container .vegitables-section .veg-grid-section .single-item span {
+        font-size: 20px;
+    }
+
+    .hdr_menu li.menu-item-has-children a>i {
+        display: none;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket span.bracket-bg {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket .right-bracket {
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket .left-bracket {
+    }
+
+    .bnr_btn {
+        margin-top: 25px;
+    }
+
+    .main-container .surprising-effect-section .inner-container .background-bar {
+        top: -25px;
+    }
+
+    .main-container .body-features-section .section-heading h2 {
+        margin-bottom: 50px;
+    }
+
+    .main-container .body-features-section .section-heading h2 br {
+        display: none;
+
+    }
+
+    .main-container .patients-impression-section .section-heading h2 {
+        margin-bottom: 50px;
+    }
+
+    .main-container .map-address-section .inner-container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .map-address-section .contact-info,
+    .main-container .map-address-section .map-box {
+        width: 100%;
+    }
+
+    .main-container .map-address-section .map-box iframe {
+        height: 350px !important;
+    }
+
+    .middle-section.map-address-section {
+        padding-bottom: 0 !important;
+    }
+
+    .main-container .map-address-section ul li img {
+        top: 3px;
+    }
+
+    .main-container .section-with-img.aging-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .section-with-img.aging-section {
+        margin: 0 0 60px;
+    }
+
+    .main-container .longevity-section .section-heading h2 {
+        margin-bottom: 50px;
+    }
+
+    .main-container .longevity-section .section-heading h2 br {
+        display: none;
+
+    }
+
+    .main-container .vegitables-section .data-text {
+        margin-top: 15px;
+    }
+
+    .shrink .nav_holder,
+    .nav_holder {
+        padding: 0;
+    }
+
+    .main-container .hero-banner-section {
+        margin-top: 108px;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket p {
+
+        font-size: 18px;
+    }
+
+    .single_item_nm {
+        padding: 10px 15px;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item p img,
+    .main-container .vegitables-section .veg-grid-section .single-item span img {
+        height: auto;
+        min-width: 35px;
+        width: 35px;
+    }
+
+    .main-container .surprising-effect-section .chart-data .detail-text {
+        font-size: 28px;
+        padding: 25px;
+        line-height: 50px;
+        height: auto;
+        margin: 0;
+    }
+
+    .main-container .team-section .members-section .single-member .img {
+        width: 45%;
+    }
+}
+
+@media(max-width:767px) {
+    .main-container .about-section .section-heading .title-underbar {
+        bottom: -5px;
+    }
+
+    .main-container .about-section .section-heading h2 {
+        font-size: 35px;
+        line-height: 45px;
+        padding-bottom: 5px;
+    }
+
+    .main-container .vegitables-section .data-text {
+        margin-top: 0;
+    }
+
+    .main-container .vegitables-section .section-heading h2 {
+        padding-bottom: 10px;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item p,
+    .main-container .vegitables-section .veg-grid-section .single-item span {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item p {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .main-container header .logo-section {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+   .main-container header .logo-section .logo {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    max-width: 180px;
+}
+
+    .main-container header .logo-section .header-buttons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+  .header-buttons a {
+    margin: 0 0 10px;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+}
+    .banner-content_inr {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .banner-content_inr .left-content,
+    .banner-content_inr .right-content {
+        width: 100%;
+    }
+
+    .main-container .hero-banner-section .banner-content .left-content p {
+        margin: 0;
+    }
+
+    .main-container .hero-banner-section .banner-content .left-content .big-text h3,
+    .main-container .hero-banner-section .banner-content .right-content h3 {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 0;
+    }
+
+    .main-container .vegitables-section .veg-grid-section {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item {
+        width: 240px;
+        margin-bottom: 15px;
+        padding-bottom: 0;
+        margin: auto;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item img {
+        width: 100%;
+    }
+
+    .main-container .surprising-effect-section .chart-data {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0px 0;
+    }
+
+    .main-container .surprising-effect-section .chart-data img {
+        width: 100%;
+    }
+
+    .main-container .surprising-effect-section .chart-data .detail-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    .main-container .middle-logo-section {
+        height: auto;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data,
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data {
+        width: 100%;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail ul li .img-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .main-container .body-features-section .section-heading h2 {
+        line-height: 40px;
+        font-size: 22px !important;
+        font-family: inherit;
+        letter-spacing: 0;
+    }
+
+    .main-container .body-features-section ul li p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .main-container .body-features-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .main-container .patients-impression-section .inner-container {
+        padding-bottom: 20px;
+    }
+
+    .main-container .patients-impression-section .reviews-section {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .main-container .patients-impression-section .reviews-section .single-review {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    div.main-container .patients-impression-section {
+        padding: 0 !important;
+        padding-bottom: 0 !important;
+        margin: 0;
+    }
+
+    .main-container .patients-impression-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .about-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .about-section {
+        margin-bottom: 0;
+    }
+
+    .main-container .nmn-therapy-section h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-45 {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-45 span {
+        font-size: 26px;
+        line-height: 32px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-45 h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box h3 {
+        margin: 0 0 5px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box {
+        padding: 10px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box p.price span {
+        font-size: 26px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box p.price {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .main-container .building-section .inner-container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .building-section img {
+        width: 100%;
+    }
+
+    .main-container .team-section .members-section .single-member {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .main-container .team-section .members-section .single-member .img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-container .team-section .members-section .single-member .text-content {
+        width: 100%;
+    }
+
+
+    .main-container .reservation-section {
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-container .reservation-section .inner-container {
+        padding: 20px;
+    }
+
+    .main-container .reservation-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container footer .inner-container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container footer img {
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto 15px;
+    }
+
+    .main-container footer p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-container .reservation-section .buttons-list {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-container .reservation-section .buttons-list a {
+        width: 100%;
+        margin: 0 0 10px;
+    }
+
+    .main-container .section-with-img .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .section-with-img {
+        margin: 0 0 30px;
+    }
+
+    .longevity-section {
+        margin-bottom: 20px !important;
+    }
+
+    .main-container .nmn-therapy-section .therapy-detail {
+        padding: 30px 20px;
+    }
+
+    .main-container .longevity-section p {
+        padding-top: 0;
+    }
+
+    .main-container .section-with-img.aging-section {
+        margin: 0 0 10px;
+    }
+
+    .main-container .nmn-therapy-section {
+        padding: 0;
+        margin: 0 0 10px;
+    }
+
+    .main-container .nmn-therapy-section .inner-container .background-bar,
+    .main-container .team-section .inner-container .background-bar,
+    .main-container .faq-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .patients-impression-section p {
+        padding-top: 0;
+    }
+
+    .main-container .faq-section {
+        margin-bottom: 10px;
+    }
+
+    .main-container .team-section {
+        padding: 0;
+        margin: 0 0 30px;
+    }
+
+    .main-container .middle-section p {
+        font-size: 14px !important;
+        line-height: 28px;
+    }
+
+    .main-container .faq-section {
+        margin: 10px 0 10px !important;
+    }
+
+    .main-container .patients-impression-section .reviews-section .single-review .img-icon span {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-data h3.have-white-bg {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .main-container .vegitables-section .inner-container {
+        padding: 20px;
+    }
+
+    .main-container .vegitables-section .data-text {
+        padding: 0;
+        padding-top: 0;
+    }
+
+    .main-container .vegitables-section .veg-text-content span {
+        width: 100%;
+        font-size: 23px;
+        line-height: 45px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data h3,
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data h3 {
+        margin: 0 0 10px;
+        font-size: 28px;
+        line-height: 36px;
+        padding-bottom: 20px;
+    }
+
+    .main-container .middle-section .section-heading h2,
+    .body-organ-sec .section-heading h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    h3.have-white-bg span.white-bar {
+        bottom: 25px;
+    }
+
+    .main-container .middle-section {
+        padding-bottom: 30px !important;
+    }
+
+    .inner-container .content-list-detail ul li p span {
+        font-size: 20px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail ul li p {
+        font-size: 18px;
+        line-height: 20px !important;
+    }
+
+    .scrollup {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket span.bracket-bg {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .main-container .nmn-effects-section .inner-container {
+        padding: 15px;
+    }
+
+    .main-container .body-features-section .section-heading h2 {
+        margin-bottom: 45px;
+    }
+
+    .main-container .middle-logo-section .clinic-title {
+        margin-bottom: 30px !important;
+    }
+
+    .main-container .team-section .members-section .single-member p span {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .main-container .map-address-section ul li img {
+        top: 3px;
+    }
+
+    .vegitables-section h2 br {
+        display: none;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket .left-bracket {
+        left: 30px;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket .right-bracket {
+        right: 30px;
+    }
+
+    .bnr_btn {
+        margin-top: 0;
+    }
+
+    .main-container .section-with-img.aging-section .section-heading {
+        margin: 0 0 30px;
+    }
+
+    .main-container .longevity-section .section-heading h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .main-container .middle-logo-section,
+    .middle-section.map-address-section {
+        padding-bottom: 0 !important;
+    }
+
+    .main-container .map-address-section .map-box iframe {
+        height: 250px !important;
+    }
+
+    .main-container .surprising-effect-section .inner-container .background-bar {
+        display: none;
+    }
+
+    .main-container .surprising-effect-section .section-heading {
+        margin: 0 0 50px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail ul li p span {
+        font-size: 16px;
+    }
+
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data {
+        padding-top: 0px;
+    }
+
+    .main-container .hero-banner-section .banner-content .left-content p {
+        text-align: center;
+    }
+
+    .bnr_btn a {
+        font-size: 25px;
+        height: 58px;
+        padding: 0 15px;
+    }
+
+    .main-container .vegitables-section .veg-text-content p {
+        margin: 6px 0 0 0;
+    }
+
+    .main-container .vegitables-section .veg-text-content {
+        min-height: auto;
+        padding-bottom: 0;
+    }
+
+    .main-container .map-address-section ul li:nth-child(2) {
+        font-size: 22px !important;
+    }
+
+    .main-container .surprising-effect-section .chart-text {
+        padding-bottom: 0;
+    }
+
+    .main-container .middle-section.surprising-effect-section {
+        padding-bottom: 0 !important;
+    }
+
+    .body-organ-sec .section-heading {
+        margin: 0 0 20px;
+    }
+
+    .body-organ-sec .section-heading h2 {
+        margin-bottom: 30px;
+    }
+
+    .sticky_logo {
+        width: 150px;
+    }
+
+    .chart_img {
+        width: 100%;
+    }
+
+    .chart-text.rspnsv {
+        display: block;
+        padding: 8px 0 !important;
+    }
+    .main-container .surprising-effect-section .chart-text p {
+        padding-top: 0px;
+        font-size: 12px !important;
+    }
+    .chart-text.dsktop {
+        display: none;
+    }
+
+    .chart-text.rspnsv p {
+        max-width: 100% !important;
+    }
+
+    .main-container .hero-banner-section {
+        margin-top: 108px;
+    }
+
+    .chart-text.rspnsv {
+        display: block;
+    }
+
+    .chart-text.dsktop {
+        display: none;
+    }
+
+    .main-container .surprising-effect-section .chart-text p {
+        font-size: 18px;
+    }
+
+
+
+    .main-container .hero-banner-section .banner-content .right-content p {
+        font-size: 18px;
+    }
+
+    .main-container header .logo-section .header-buttons {
+        margin-right: 0;
+    }
+.main-container header .logo-section .header-buttons {
+    margin-right: 0;
+    margin-left: 40px;
+}
+    .main-container .hero-banner-section .banner-content .right-content .price-set {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 0;
+    }
+
+    .price-after p {
+        text-align: left !important;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-val p {
+        font-size: 40px !important;
+        margin-top: -6px;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-after {
+        width: 50%;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-val {
+        width: auto;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-prev {
+        width: 50%;
+    }
+
+    .main-container .hero-banner-section .banner-content .right-content .price-set {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .main-container .middle-section .section-heading {
+        margin: -5px 0 30px;
+    }
+
+    .main-container .vegitables-section .section-heading h2 span,
+    .main-container .surprising-effect-section .section-heading h2 span,
+    .main-container .middle-section .section-heading h2 span,
+    .main-container .body-organ-sec .section-heading h2 span {
+        font-size: 24px;
+    }
+
+    .single_item_nm {
+        padding: 10px;
+    }
+
+    .main-container .vegitables-section .veg-grid-section .single-item p img,
+    .main-container .vegitables-section .veg-grid-section .single-item span img {
+        height: auto;
+        min-width: 22px;
+        width: 22px;
+    }
+
+    .main-container .surprising-effect-section .chart-text p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main-container .surprising-effect-section .chart-data .detail-text {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 15px;
+    }
+
+    .main-container .nmn-effects-section .inner-container {
+        margin-bottom: 0;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box.margin-55 p {
+        margin-bottom: 8px;
+    }
+
+    .main-container .nmn-therapy-section .t-white-box .price-val p {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .main-container .about-section {
+        margin-top: 30px;
+    }
+    .main-container header{
+        padding: 0;
+    }
+}
+
+@media(max-width:575px) {
+
+    .main-container .middle-section .section-heading h2,
+    .body-organ-sec .section-heading h2 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .menu_trigger {
+        right: 20px;
+        top: auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    .main-container .hero-banner-section {
+        margin-top: 78px;
+    }
+    .main-container header {
+        padding-bottom: 0px;
+    }
+    .main-container header .logo-section {
+        position: relative;
+    }
+    .main-container header .logo-section .header-buttons {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .main-container .section-with-img.aging-section {
+        margin: 0 0 0px;
+    }
+    .main-container .about-section {
+        margin-top: 0px;
+    }
+    .longevity-section {
+        margin-bottom: 0 !important;
+    }
+    .main-container .nmn-therapy-section {
+        margin: 0 0 0px;
+    }
+    .main-container .middle-section {
+        padding-bottom: 0px !important;
+    }
+    .main-container .middle-section .section-heading {
+        margin: -5px 0 20px;
+    }
+
+    .main-container .about-section .section-heading .title-underbar,
+    .main-container .vegitables-section .section-heading .title-underbar,
+    .main-container .have-border .section-heading .title-underbar,
+    .main-container .body-features-section .section-heading .title-underbar,
+    .main-container .patients-impression-section .section-heading .title-underbar
+    .main-container .aging-section .section-heading .title-underbar
+    {
+        bottom: -3px;
+    }
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data h3,
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data h3 {
+        margin: 0px 0 0px;
+    }
+    .main-container .nmn-effects-section .inner-container .content-list-detail .left-data,
+    .main-container .nmn-effects-section .inner-container .content-list-detail .right-data {
+        padding-bottom: 0;
+    }
+    .main-container .body-features-section .section-heading h2 {
+        margin-bottom: 0px;
+    }
+    .main-container .body-features-section ul li {
+        margin-bottom: 0px;
+    }
+    .main-container .body-features-section ul li p {
+        line-height: 28px;
+    }
+    .main-container .patients-impression-section .section-heading h2 {
+        margin-bottom: 0;
+    }
+    .main-container .patients-impression-section .reviews-section .single-review p {
+        padding: 4px 6px;
+    }
+    .main-container .section-with-img.aging-section .section-heading {
+        margin: 0px 0 20px;
+    }
+    .title-underbar {
+        bottom: -3px;
+    }
+    .main-container .longevity-section .section-heading h2 {
+        margin-bottom: 20px;
+    }
+    .main-container .nmn-therapy-section .t-white-box .other-price {
+        font-size: 10px !important;
+        line-height: 22px;
+    }
+    .main-container .nmn-therapy-section .t-white-box .price-val p {
+        font-size: 40px !important;
+        margin-top: -6px;
+    }
+    .main-container .nmn-therapy-section .t-white-box .price-after p {
+        font-size: 10px !important;
+    }
+    .main-container .nmn-therapy-section .t-white-box .price-after .unit-sign {
+        font-size: 14px !important;
+    }
+    .main-container .nmn-therapy-section .t-white-box h3 {
+        font-size: 18px;
+    }
+    .main-container .nmn-therapy-section .t-white-box .price-set {
+        margin-top: 14px;
+    }
+    .main-container .reservation-section .buttons-list a {
+        width: 78%;
+    }
+    .main-container .hero-banner-section .banner-content .right-content .have-bracket {
+        width: 304px;
+    }
+    .main-container .faq-section .all-questions-section .single-question p {
+        font-size: 12px !important;
+    }
+}
+
+
+@media(max-width: 480px) {}
+
+
+@media(max-width:420px) {
+     .main-container .hero-banner-section {
+        margin-top: 78px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META TAG -->
+        <meta charset="UTF-8">
+        <meta name="description" content="HANDA WATCH WORLD">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Rao Info. Tech.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- TITLE -->
+        <title>HANDA WATCH WORLD</title>
+        <link rel="icon" type="image/svg" href="img/logo.svg" />
+
+        <!-- JAVA-SCRIPT -->
+        <!-- <script src="https://use.fontawesome.com/e96692a37e.js"></script> -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    </head>
+    <body>
+        <!-- MAIN -->
+        <main id="main">
+
+            <!-- HEADER -->
+            <header id="header">
+                <div class="top-header">
+                    <div class="custom_container">
+                        <div class="custom_row header-row">
+                            <div class="custom_col top-header-lft-text">
+                                <p>腕時計・正規輸入時計の専門店</p>
+                            </div>
+                            <div class="custom_col top-header-menu">
+                                <ul>
+                                    <li><a href="#">会員登録</a></li>
+                                    <li><a href="#">利用ガイド</a></li>
+                                    <li><a href="#">会社案内</a></li>
+                                    <li><a href="#">サポート</a></li>
+                                </ul>
+                                <ul class="iconic-menu">
+                                    <li><a href="#"><img src="img/user-icon.png" class="user-img"></a></li>
+                                    <li><a href="#"><img src="img/cart-icon.png" class="cart-img"> <span class="msg">1</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btm-header">
+                    <div class="custom_container">
+                        <div class="custom_row header-row">
+                            <div class="header-logo col">
+                                <a href="index.html">
+                                    <img src="img/logo.svg" alt="ロゴ" class="img" />
+                                </a>
+                            </div>
+                            <div class="header-btm-rgt-flex col">
+                                <div class="header-menu">
+                                    <div class="header-form csp">
+                                        <form>
+                                            <label>
+                                                <input type="text" class="text-filled" />
+                                                <button class="icon-btn">
+                                                    <i class="fa fa-search icon" aria-hidden="true"></i>
+                                                </button>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <ul>
+                                        <li><a href="index.html">人気ランキング</a></li>
+                                        <li><a href="#">新着商品</a></li>
+                                        <li><a href="#">おすすめ商品</a></li>
+                                        <li><a href="#">ブランド</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-form col">
+                                    <form>
+                                        <a href="javascript:void(0);" class="custom_btn" id="filter-btn">Filter</a>
+                                        <label class="cpc">
+                                            <input type="text" class="text-filled" />
+                                            <button class="icon-btn">
+                                                <i class="fa fa-search icon" aria-hidden="true"></i>
+                                            </button>
+                                        </label>
+                                    </form>
+                                </div>
+                                <div class="toggle-btn-col">
+                                    <button id="toggleNavButton">
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="filter-modal" class="filter-modal custom-modal">
+                <div class="modal-content">
+                    <span class="modal-close-btn">&times;</span>
+                    <form class="modal-form">
+                        <div class="custom-modal-layer">
+                            <div class="head">
+                                <h2>おすすめ商品</h2>
+                            </div>
+                            <div class="cont">
+                                <div class="input-group-row checkbox">
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text inline">
+                                                <p class="eng">Men</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            <span></span>
+                                            <div class="text inline">
+                                                <p class="eng">Women</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-modal-layer">
+                            <div class="head">
+                                <h2>おすすめ商品</h2>
+                            </div>
+                            <div class="cont">
+                                <div class="input-group-row checkbox">
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">HYSEK</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">Roberto Cavalli by FRANCK MULLER</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">MADISON NEWYORK</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">UNION HORLOGERSE SA</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">O.J.PERRIN</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">Just Cavalli</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">JAERMANN & STUBI</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">ROCHAS</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">ESPRIT</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">CATOREX</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            <div class="text">
+                                                <p class="eng">DICI</p>
+                                                <p class="jap">ブランド</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-modal-layer">
+                            <div class="head">
+                                <h2>おすすめ商品</h2>
+                            </div>
+                            <div class="cont">
+                                <div class="input-group input-group-row select align-center">
+                                    <div class="input-group-col mr-0">
+                                        <label>
+                                            <select>
+                                                <option>ブランド</option>
+                                                <option>ブランド</option>
+                                                <option>ブランド</option>
+                                                <option>ブランド</option>
+                                                <option>ブランド</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-modal-layer submit">
+                            <input type="submit" value="Search" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- HEADER -->
+            <section class="main-content-section" id="main-content-section">
+                <!-- BANNER -->
+                <section class="banner-sec">
+                    <div class="banner-slide">
+                        <div class="banner-slide-itm">
+                            <div class="img">
+                                <img src="img/slide01.jpg" />
+                            </div>
+                        </div>
+                        <div class="banner-slide-itm">
+                            <div class="img">
+                                <img src="img/slide02.jpg" />
+                            </div>
+                        </div>
+                        <div class="banner-slide-itm">
+                            <div class="img">
+                                <img src="img/slide01.jpg" />
+                            </div>
+                        </div>
+                        <div class="banner-slide-itm">
+                            <div class="img">
+                                <img src="img/slide04.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ranking-sec custom-grid-sec">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>Ranking</h2>
+                            <p>人気ランキング</p>
+                        </div>
+                        <div class="custom_row custom-grid-row slide">
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon01.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon02.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon03.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon04.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon01.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon02.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon03.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="icon-flex">
+                                        <div class="icon">
+                                            <img src="img/product-icon04.png" />
+                                        </div>
+                                        <h3>1位</h3>
+                                    </div>
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pickup_grid_section custom-grid-sec black">
+
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>Pick up</h2>
+                            <p>ピックアップ</p>
+                        </div>
+                        <div class="custom_row">
+                            <div class="divider_6of10">
+                                <div class="divider_2of3">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider_1of3">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider_1of3">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider_2of3">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image h_1of2">
+                                            <img src="img/pickup-half.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider_4of10">
+                                <div class="divider_1of2">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider_1of2">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider_1">
+                                    <div class="pickup_inner">
+                                        <a href="#" class="pickup_grid_image">
+                                            <img src="img/pickup-img01.jpg" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="new-item-sec custom-grid-sec">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>new item</h2>
+                            <p>新着商品</p>
+                        </div>
+                        <div class="custom_row custom-grid-row custom-justify-center">
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="brand-sec custom-grid-sec light">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>brands</h2>
+                            <p>ブランド一覧</p>
+                        </div>
+                        <div class="custom_row custom-grid-row">
+                            <div class="custom_col custom-grid-col brand-pic-col">
+                                <a href="#" class="custom-grid-bx bg-white">
+                                    <div class="img">
+                                        <img src="img/brand-pic01.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-pic-col">
+                                <a href="#" class="custom-grid-bx bg-white">
+                                    <div class="img">
+                                        <img src="img/brand-pic02.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-pic-col">
+                                <a href="#" class="custom-grid-bx bg-white">
+                                    <div class="img">
+                                        <img src="img/brand-pic03.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-pic-col">
+                                <a href="#" class="custom-grid-bx bg-white">
+                                    <div class="img">
+                                        <img src="img/brand-pic04.jpg" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="custom_row custom-grid-row custom_align-center custom-justify-center">
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand01.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand02.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand03.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand04.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand05.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand06.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand07.png" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col brand-icon-col">
+                                <a href="#" class="custom-grid-bx bg-trans">
+                                    <div class="img">
+                                        <img src="img/brand08.png" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="topic-sec custom-grid-sec">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>Topics</h2>
+                            <p>お知らせ</p>
+                        </div>
+                        <div class="topic_inner">
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                            <div class="topic_item">
+                                <span>2021.01.01</span>
+                                <a href="#">
+                                    入荷情報この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="recommended-sec custom-grid-sec light">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>Recommended Items</h2>
+                            <p>おすすめ商品</p>
+                        </div>
+                        <div class="custom_row custom-grid-row slide">
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="recent-sec custom-grid-sec">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>Recently Viewed Items</h2>
+                            <p>最近チェックした商品</p>
+                        </div>
+                        <div class="custom_row custom-grid-row slide">
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <a href="#" class="custom-grid-bx">
+                                    <div class="img product-img">
+                                        <img src="img/product04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <p>パネライ</p>
+                                        <h3>ルミノール マリーナ スペッチ…</h3>
+                                        <p>¥1,078,000 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="user-guide-sec custom-grid-sec theme-light">
+                    <div class="custom_container">
+                        <div class="custom-grid-head">
+                            <h2>User Guide</h2>
+                            <p>ご利用案内</p>
+                        </div>
+                        <div class="custom_row custom-grid-row">
+                            <div class="custom_col custom-grid-col">
+                                <div class="custom-grid-bx user-guide-bx">
+                                    <div class="img">
+                                        <img src="img/user-guide01.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <h3>送料・お届け日数について</h3>
+                                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <div class="custom-grid-bx user-guide-bx">
+                                    <div class="img">
+                                        <img src="img/user-guide02.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <h3>お支払い方法について</h3>
+                                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <div class="custom-grid-bx user-guide-bx">
+                                    <div class="img">
+                                        <img src="img/user-guide03.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <h3>キャンセル・返品・交換について</h3>
+                                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom_col custom-grid-col">
+                                <div class="custom-grid-bx user-guide-bx">
+                                    <div class="img">
+                                        <img src="img/user-guide04.png" />
+                                    </div>
+                                    <div class="cont">
+                                        <h3>ベルト調整について</h3>
+                                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- FOOTER -->
+            <footer id="footer">
+                <div class="custom_container">
+                    <button class="scroll-top-btn" id="scroll-top-btn">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        <h4>top</h4>
+                    </button>
+                    <div class="custom_row footer-row">
+                        <div class="custom_col footer-logo">
+                            <img src="img/logo.svg" alt="ロゴ" class="img" />
+                        </div>
+                        <div class="custom_col footer-menu">
+                            <ul>
+                                <li><a href="#">人気ランキング</a></li>
+                                <li><a href="#">新着商品</a></li>
+                                <li><a href="#">おすすめ商品</a></li>
+                                <li><a href="#">ブランド</a></li>
+                            </ul>
+                        </div>
+                        <div class="custom_col footer-cpy-rgt">
+                            <p>&copy; 2021 MISUZU Co., Ltd. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+    </body>
+</html>

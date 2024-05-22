@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:m="http://mayaa.seasar.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HANDA Watch World</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+	<link rel="stylesheet" href="./css/hww_style.css">
+        <link rel="stylesheet" type="text/css" href="css/fawesome/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font.css" />
+        <link rel="stylesheet" type="text/css" href="css/kmcustom.css" />
+        <link rel="stylesheet" type="text/css" href="css/kmresponsive.css" />
+	<script src="./js/ebisu_lib.js"></script>
+	<script src="./js/ebisu.js"></script>
+</head>
+<body>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml"></iframe>
+
+<main class="code_active"><!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+<section class="main-content-section" id="main-content-section">
+
+<!-- BANNER -->
+<section class="banner-sec" m:id='common.IF_INFORMATION' m:info_category_cd='BANNER_SLIDE'>
+    <div class="banner-slide pc_banner">
+        <div class="banner-slide-itm" m:id='common.LOOP_INFORMATION'>
+            <a class="img" m:id='common.INFORMATION_LINK_TAG' >
+                <img src="./images/slide01.jpg" m:id='common.INFORMATION_TITLE_IMAGE_HERE' />
+            </a>
+        </div>
+    </div>
+</section>
+<!-- BANNER SP-->
+<section class="banner-sec-sp" m:id='common.IF_INFORMATION' m:info_category_cd='BANNER_SLIDE_SP'>
+    <div class="banner-slide sp_banner">
+        <div class="banner-slide-itm" m:id='common.LOOP_INFORMATION'>
+            <a class="img" m:id='common.INFORMATION_LINK_TAG' >
+                <img src="./images/slide01.jpg" m:id='common.INFORMATION_TITLE_IMAGE_HERE' />
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="scroll_pos" id="id_ranking"></div>
+<div m:id='IF_SMARTPHONE_TERMINAL'>
+<section class="ranking-sec custom-grid-sec" m:id='common.IF_RANKING' >
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Ranking</h2>
+            <p>人気ランキング</p>
+        </div>
+        <div class="custom_row custom-grid-row js_add_slider">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_RANKING' m:ranking_no="1,2,3,4,5">
+                <a href="./" class="custom-grid-bx" m:id='common.RANKING_LINK_TAG'>
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img class="code_rankno_img" src="./images/rank-icon01.png" />
+                        </div>
+                        <h3 class="code_rankno_h3">1位</h3>
+                    </div>
+                    <div class="c-product-item-image">
+                        <img src="./images/testproduct.png" m:id='common.RANKING_IMAGE_TAG'/>
+                    </div>
+                    <div class="cont">
+                        <h3 class="c-product-item-title"><span m:id='common.RANKING_ITEM_NAME_HERE' max_size="60">ランキング1位の商品名</span></h3>
+                        <div class="c-product-item-price item_price_box" m:id="common.IF_RANKING_FREE" m:free_item_no='1' m:NOT=''>
+                            <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                            <div m:id='common.IF_MEMBER' m:NOT=''>
+                                <p class="item_price item_teika">
+                                    <b><span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+                                </p>
+                            </div>
+                            <!--// 非ログインの場合 -->
+                            <!-- ログイン中の場合 -->
+                            <div m:id='common.IF_MEMBER'>
+                                <p class="item_price item_teika">
+                                    <s>通常価格&nbsp;<b><span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されている場合 -->
+                                <p m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+                                    会員価格&nbsp;<b><span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+                                </p>
+
+                                <!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+                                <div m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                    <!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+                                    <div m:id='common.IF_RANKING_DISCOUNT'>
+                                        <p class="item_price">
+                                            会員価格&nbsp;<b><span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//ログイン中の場合-->
+                        </div>
+                        
+                    </div>
+                    <div class="c-product-item-icons">
+                        <div class="c-product-item-icons-inner">
+                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='3'>
+                              <span class="c-product-icon -recommend">オススメ</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='4'>
+                              <span class="c-product-icon -limited">限定品</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='5'>
+                              <span class="c-product-icon -xxxx">自由項目5</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='6'>
+                              <span class="c-product-icon -xxxx">自由項目6</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='7'>
+                              <span class="c-product-icon -xxxx">自由項目7</span>
+                          </span>
+                                  <span m:id='common.IF_RANKING_ITEM_SOLDOUT'>
+                              <span class="c-product-icon -soldout">入荷待ち</span>
+                          </span>
+                        </div>
+                    </div>                    
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<div m:id='IF_SMARTPHONE_TERMINAL' m:NOT=''>
+<section class="ranking-sec custom-grid-sec" m:id='common.IF_RANKING'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Ranking</h2>
+            <p>人気ランキング</p>
+        </div>
+        <div class="custom_row custom-grid-row js_add_slider">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_RANKING'>
+                <a href="./" class="custom-grid-bx" m:id='common.RANKING_LINK_TAG'>
+                    <div class="icon-flex">
+                        <div class="icon">
+                            <img class="code_rankno_img" src="./images/rank-icon01.png" />
+                        </div>
+                        <h3 class="code_rankno_h3">1位</h3>
+                    </div>
+                    <div class="c-product-item-image">
+                        <img src="./images/testproduct.png" m:id='common.RANKING_IMAGE_TAG'/>
+                    </div>
+                    <div class="cont">
+                        <h3 class="c-product-item-title"><span m:id='common.RANKING_ITEM_NAME_HERE' max_size="60">ランキング1位の商品名</span></h3>
+                        <div class="c-product-item-price item_price_box" m:id="common.IF_RANKING_FREE" m:free_item_no='1' m:NOT=''>
+                            <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                            <div m:id='common.IF_MEMBER' m:NOT=''>
+                                <p class="item_price item_teika">
+                                    <b><span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+                                </p>
+                            </div>
+                            <!--// 非ログインの場合 -->
+                            <!-- ログイン中の場合 -->
+                            <div m:id='common.IF_MEMBER'>
+                                <p class="item_price item_teika">
+                                    <s>通常価格&nbsp;<b><span m:id='common.RANKING_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されている場合 -->
+                                <p m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+                                    会員価格&nbsp;<b><span m:id='common.RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+                                </p>
+
+                                <!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+                                <div m:id='common.IF_RANKING_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                    <!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+                                    <div m:id='common.IF_RANKING_DISCOUNT'>
+                                        <p class="item_price">
+                                            会員価格&nbsp;<b><span m:id='common.RANKING_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//ログイン中の場合-->
+                        </div>
+                        
+                    </div>
+                    <div class="c-product-item-icons">
+                        <div class="c-product-item-icons-inner">
+                          <span m:id="common.IF_RANKING_FREE" m:free_item_no='3'>
+                              <span class="c-product-icon -recommend">オススメ</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='4'>
+                              <span class="c-product-icon -limited">限定品</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='5'>
+                              <span class="c-product-icon -xxxx">自由項目5</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='6'>
+                              <span class="c-product-icon -xxxx">自由項目6</span>
+                          </span>
+                                  <span m:id="common.IF_RANKING_FREE" m:free_item_no='7'>
+                              <span class="c-product-icon -xxxx">自由項目7</span>
+                          </span>
+                                  <span m:id='common.IF_RANKING_ITEM_SOLDOUT'>
+                              <span class="c-product-icon -soldout">入荷待ち</span>
+                          </span>
+                        </div>
+                    </div>                    
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<div class="code_remove" m:id='common.IF_INFORMATION' m:info_category_cd='PICKUP'><!-- Code Support -->
+    <div class="code_pickup" m:id='common.LOOP_INFORMATION'>
+        <a class="code_pickup_link" href="#" m:id='common.INFORMATION_LINK_TAG'></a>
+        <img class="code_pickup_img" m:id='common.INFORMATION_TITLE_IMAGE_HERE'>
+    </div>
+</div>
+
+<section class="pickup_grid_section custom-grid-sec black" m:id='common.IF_INFORMATION' m:info_category_cd='PICKUP'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Pick up</h2>
+            <p>ピックアップ</p>
+        </div>
+        <div class="custom_row">
+            <div class="divider_6of10">
+                <div class="divider_2of3">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_1" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+                <div class="divider_1of3">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_2" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_2" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_3" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_3" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+                <div class="divider_1of3">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_4" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_4" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="divider_2of3">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_5" href="#" class="pickup_grid_image h_1of2">
+                            <img id="code_id_pickup_img_5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider_4of10">
+                <div class="divider_1of2">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_6" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_6" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+                <div class="divider_1of2">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_7" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_7" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+                <div class="divider_1">
+                    <div class="pickup_inner">
+                        <a id="code_id_pickup_link_8" href="#" class="pickup_grid_image">
+                            <img id="code_id_pickup_img_8" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="scroll_pos" id="id_newitem"></div>
+<div m:id='IF_SMARTPHONE_TERMINAL'>
+<section class="new-item-sec custom-grid-sec" m:id='common.IF_SINTYAKU'>
+	<div class="custom_container">
+		<div class="custom-grid-head">
+			<h2>new item</h2>
+			<p>新着商品</p>
+		</div>
+		<div id="id_news_slide" class="custom_row custom-grid-row custom-justify-center">
+			<div class="custom_col custom-grid-col" m:id='common.LOOP_SINTYAKU' m:sintyaku_no="1,2,3,4,5">
+				<a href="#" class="custom-grid-bx" m:id='common.SINTYAKU_LINK_TAG'>
+					<div class="c-product-item-image">
+						<img src="./images/testproduct.png" m:id='common.SINTYAKU_IMAGE_TAG'/>
+					</div>
+					<div class="cont">
+						<h3 class="c-product-item-title"><span m:id='common.SINTYAKU_ITEM_NAME_HERE' max_size="60">商品名がここに入ります。商品名がここに入ります。</span></h3>
+						<div class="c-product-item-price item_price_box" m:id="common.IF_SINTYAKU_FREE" m:free_item_no='1' m:NOT=''>
+							<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+							<div m:id='common.IF_MEMBER' m:NOT=''>
+								<p class="item_price item_teika">
+									<b><span m:id='common.SINTYAKU_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+								</p>
+							</div>
+							<!--// 非ログインの場合 -->
+							<!-- ログイン中の場合 -->
+							<div m:id='common.IF_MEMBER'>
+								<p class="item_price item_teika">
+									<s>通常価格&nbsp;<b><span m:id='common.SINTYAKU_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+								</p>
+								<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+								<p m:id='common.IF_SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+									会員価格&nbsp;<b><span m:id='common.SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+								</p>
+
+								<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+								<div m:id='common.IF_SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+									<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+									<div m:id='common.IF_SINTYAKU_DISCOUNT'>
+										<p class="item_price">
+											会員価格&nbsp;<b><span m:id='common.SINTYAKU_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!--//ログイン中の場合-->
+						</div>
+						
+					</div>
+					<div class="c-product-item-icons">
+						<div class="c-product-item-icons-inner">
+							<span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='3'>
+								<span class="c-product-icon -recommend">オススメ</span>
+							</span>
+									<span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='4'>
+								<span class="c-product-icon -limited">限定品</span>
+							</span>
+									<span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='5'>
+								<span class="c-product-icon -xxxx">自由項目5</span>
+							</span>
+									<span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='6'>
+								<span class="c-product-icon -xxxx">自由項目6</span>
+							</span>
+									<span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='7'>
+								<span class="c-product-icon -xxxx">自由項目7</span>
+							</span>
+									<span m:id='common.IF_SINTYAKU_ITEM_SOLDOUT'>
+								<span class="c-product-icon -soldout">入荷待ち</span>
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<div m:id='IF_SMARTPHONE_TERMINAL' m:NOT=''>
+<section class="new-item-sec custom-grid-sec" m:id='common.IF_SINTYAKU'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>new item</h2>
+            <p>新着商品</p>
+        </div>
+        <div id="id_news_slide" class="custom_row custom-grid-row custom-justify-center">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_SINTYAKU'>
+                <a href="#" class="custom-grid-bx" m:id='common.SINTYAKU_LINK_TAG'>
+                    <div class="c-product-item-image">
+                        <img src="./images/testproduct.png" m:id='common.SINTYAKU_IMAGE_TAG'/>
+                    </div>
+                    <div class="cont">
+                        <h3 class="c-product-item-title"><span m:id='common.SINTYAKU_ITEM_NAME_HERE' max_size="60">商品名がここに入ります。商品名がここに入ります。</span></h3>
+                        <div class="c-product-item-price item_price_box" m:id="common.IF_SINTYAKU_FREE" m:free_item_no='1' m:NOT=''>
+                            <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                            <div m:id='common.IF_MEMBER' m:NOT=''>
+                                <p class="item_price item_teika">
+                                    <b><span m:id='common.SINTYAKU_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+                                </p>
+                            </div>
+                            <!--// 非ログインの場合 -->
+                            <!-- ログイン中の場合 -->
+                            <div m:id='common.IF_MEMBER'>
+                                <p class="item_price item_teika">
+                                    <s>通常価格&nbsp;<b><span m:id='common.SINTYAKU_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されている場合 -->
+                                <p m:id='common.IF_SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+                                    会員価格&nbsp;<b><span m:id='common.SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+                                </p>
+
+                                <!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+                                <div m:id='common.IF_SINTYAKU_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                    <!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+                                    <div m:id='common.IF_SINTYAKU_DISCOUNT'>
+                                        <p class="item_price">
+                                            会員価格&nbsp;<b><span m:id='common.SINTYAKU_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//ログイン中の場合-->
+                        </div>
+                        
+                    </div>
+                    <div class="c-product-item-icons">
+                        <div class="c-product-item-icons-inner">
+                          <span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='3'>
+                              <span class="c-product-icon -recommend">オススメ</span>
+                          </span>
+                                  <span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='4'>
+                              <span class="c-product-icon -limited">限定品</span>
+                          </span>
+                                  <span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='5'>
+                              <span class="c-product-icon -xxxx">自由項目5</span>
+                          </span>
+                                  <span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='6'>
+                              <span class="c-product-icon -xxxx">自由項目6</span>
+                          </span>
+                                  <span m:id="common.IF_SINTYAKU_FREE" m:free_item_no='7'>
+                              <span class="c-product-icon -xxxx">自由項目7</span>
+                          </span>
+                                  <span m:id='common.IF_SINTYAKU_ITEM_SOLDOUT'>
+                              <span class="c-product-icon -soldout">入荷待ち</span>
+                          </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<div class="scroll_pos" id="id_brand"></div>
+<section class="brand-sec custom-grid-sec light code_top_brand_list_sec brand_selected">
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>brands</h2>
+            <p>ブランド一覧</p>
+        </div>
+        <div class="c-tab pg_top">
+            <div class="c-tab-list">
+                <a href="javascript:top_select_bigcd('BRAND')" id="code_pg_top_brand_tab" class="c-tab-item c-tab-item-selected">腕時計</a>
+                <a href="javascript:top_select_bigcd('ACCESSORY')" id="code_pg_top_accessory_tab" class="c-tab-item">アクセサリー</a>
+            </div>
+        </div>
+        <div class="code_small_brand_set_class">
+            <div class="custom_row custom-grid-row"  m:id='common.IF_INFORMATION' m:info_category_cd='BRAND_TOP'>
+                <div class="custom_col custom-grid-col brand-pic-col sp-twocol" m:id='common.LOOP_INFORMATION' m:max_count='4'>
+                    <a class="code_big_brand_link custom-grid-bx" href="#" class="custom-grid-bx bg-white" m:id='common.INFORMATION_LINK_TAG'>
+                        <div class="img">
+                            <img src="./images/testbrand-pic.jpg" m:id='common.INFORMATION_TITLE_IMAGE_HERE'/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="custom_row custom-grid-row custom_align-center small_brand_slider" id="code_small_brand_set">
+            </div>
+        </div>
+        <div class="code_small_accessory_set_class">
+            <div class="custom_row custom-grid-row custom_align-center" id="code_small_accessory_set">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="topic-sec custom-grid-sec" m:id='common.IF_INFORMATION' m:info_category_cd='NEWS'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Topics</h2>
+            <p>お知らせ</p>
+        </div>
+        <div class="topic_inner">
+            <div class="topic_item" m:id='common.LOOP_INFORMATION' m:max_count='5'>
+                <span class="date"><span m:id='common.INFORMATION_DATE_HERE'>2025/03/02</span></span>
+                <a href="./" m:id='common.INFORMATION_LINK_TAG'>
+                    <span m:id='common.INFORMATION_TITLE_HERE' m:max_size='88'>ここにトピックスのタイトルが入ります。</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="scroll_pos" id="id_recommend"></div>
+<div m:id='IF_SMARTPHONE_TERMINAL'>
+<section class="recommended-sec custom-grid-sec light" m:id='common.IF_RECOMMEND'>
+	<div class="custom_container">
+		<div class="custom-grid-head">
+			<h2>Recommended Items</h2>
+			<p>おすすめ商品</p>
+		</div>
+		<div class="custom_row custom-grid-row js_add_slider">
+			<div class="custom_col custom-grid-col" m:id='common.LOOP_RECOMMEND' m:max_count="5">
+				<a href="#" class="custom-grid-bx" m:id='common.RECOMMEND_LINK_TAG'>
+					<div class="c-product-item-image">
+						<img src="./images/testproduct.png" m:id='common.RECOMMEND_IMAGE_TAG'/>
+					</div>
+					<div class="cont">
+						<h3><span m:id='common.RECOMMEND_ITEM_NAME_HERE' max_size="60">商品名</span></h3>
+						<div class="c-product-item-price item_price_box" m:id="common.IF_RECOMMEND_FREE" m:free_item_no='1' m:NOT=''>
+							<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+							<div m:id='common.IF_MEMBER' m:NOT=''>
+								<p class="item_price item_teika">
+									<b><span m:id='common.RECOMMEND_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+								</p>
+							</div>
+							<!--// 非ログインの場合 -->
+							<!-- ログイン中の場合 -->
+							<div m:id='common.IF_MEMBER'>
+								<p class="item_price item_teika">
+									<s>通常価格&nbsp;<b><span m:id='common.RECOMMEND_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+								</p>
+								<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+								<p m:id='common.IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+									会員価格&nbsp;<b><span m:id='common.RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+								</p>
+								<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+								<div m:id='common.IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+									<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+									<div m:id='common.IF_RECOMMEND_DISCOUNT'>
+										<p class="item_price">
+											会員価格&nbsp;<b><span m:id='common.RECOMMEND_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!--//ログイン中の場合-->
+						</div>
+						
+					</div>
+					<div class="c-product-item-icons">
+						<div class="c-product-item-icons-inner">
+							<span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='3'>
+								<span class="c-product-icon -recommend">オススメ</span>
+							</span>
+									<span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='4'>
+								<span class="c-product-icon -limited">限定品</span>
+							</span>
+									<span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='5'>
+								<span class="c-product-icon -xxxx">自由項目5</span>
+							</span>
+									<span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='6'>
+								<span class="c-product-icon -xxxx">自由項目6</span>
+							</span>
+									<span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='7'>
+								<span class="c-product-icon -xxxx">自由項目7</span>
+							</span>
+									<span m:id='common.IF_RECOMMEND_ITEM_SOLDOUT'>
+								<span class="c-product-icon -soldout">入荷待ち</span>
+							</span>
+						</div>
+					</div>                    
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<div m:id='IF_SMARTPHONE_TERMINAL' m:NOT=''>
+<section class="recommended-sec custom-grid-sec light" m:id='common.IF_RECOMMEND'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Recommended Items</h2>
+            <p>おすすめ商品</p>
+        </div>
+        <div class="custom_row custom-grid-row js_add_slider">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_RECOMMEND'>
+                <a href="#" class="custom-grid-bx" m:id='common.RECOMMEND_LINK_TAG'>
+                    <div class="c-product-item-image">
+                        <img src="./images/testproduct.png" m:id='common.RECOMMEND_IMAGE_TAG'/>
+                    </div>
+                    <div class="cont">
+                        <h3><span m:id='common.RECOMMEND_ITEM_NAME_HERE' max_size="60">商品名</span></h3>
+                        <div class="c-product-item-price item_price_box" m:id="common.IF_RECOMMEND_FREE" m:free_item_no='1' m:NOT=''>
+                            <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                            <div m:id='common.IF_MEMBER' m:NOT=''>
+                                <p class="item_price item_teika">
+                                    <b><span m:id='common.RECOMMEND_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+                                </p>
+                            </div>
+                            <!--// 非ログインの場合 -->
+                            <!-- ログイン中の場合 -->
+                            <div m:id='common.IF_MEMBER'>
+                                <p class="item_price item_teika">
+                                    <s>通常価格&nbsp;<b><span m:id='common.RECOMMEND_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されている場合 -->
+                                <p m:id='common.IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+                                    会員価格&nbsp;<b><span m:id='common.RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+                                <div m:id='common.IF_RECOMMEND_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                    <!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+                                    <div m:id='common.IF_RECOMMEND_DISCOUNT'>
+                                        <p class="item_price">
+                                            会員価格&nbsp;<b><span m:id='common.RECOMMEND_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//ログイン中の場合-->
+                        </div>
+                        
+                    </div>
+                    <div class="c-product-item-icons">
+                        <div class="c-product-item-icons-inner">
+                          <span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='3'>
+                              <span class="c-product-icon -recommend">オススメ</span>
+                          </span>
+                                  <span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='4'>
+                              <span class="c-product-icon -limited">限定品</span>
+                          </span>
+                                  <span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='5'>
+                              <span class="c-product-icon -xxxx">自由項目5</span>
+                          </span>
+                                  <span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='6'>
+                              <span class="c-product-icon -xxxx">自由項目6</span>
+                          </span>
+                                  <span m:id="common.IF_RECOMMEND_FREE" m:free_item_no='7'>
+                              <span class="c-product-icon -xxxx">自由項目7</span>
+                          </span>
+                                  <span m:id='common.IF_RECOMMEND_ITEM_SOLDOUT'>
+                              <span class="c-product-icon -soldout">入荷待ち</span>
+                          </span>
+                        </div>
+                    </div>                    
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<div m:id='IF_SMARTPHONE_TERMINAL'>
+<section class="recent-sec custom-grid-sec" m:id='common.IF_ITEMACCESSLOG'>
+    <div class="custom_container">
+        <div class="custom-grid-head">
+            <h2>Recently Viewed Items</h2>
+            <p>最近チェックした商品</p>
+        </div>
+        <div class="custom_row custom-grid-row js_add_slider">
+            <div class="custom_col custom-grid-col" m:id='common.LOOP_ITEMACCESSLOG' m:max_count="5">
+                <a href="#" class="custom-grid-bx" m:id='common.ITEMACCESSLOG_LINK_TAG'>
+                    <div class="c-product-item-image">
+                        <img src="./images/testproduct.png" m:id='common.ITEMACCESSLOG_IMAGE_TAG'/>
+                    </div>
+                    <div class="cont">
+                        <h3><span m:id='common.ITEMACCESSLOG_ITEM_NAME_HERE' max_size="60">商品名</span></h3>
+                        <div class="c-product-item-price item_price_box" m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='1' m:NOT=''>
+                            <!-- 非ログイン・ログイン中の場合、定価を出力する -->
+                            <div m:id='common.IF_MEMBER' m:NOT=''>
+                                <p class="item_price item_teika">
+                                    <b><span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+                                </p>
+                            </div>
+                            <!--// 非ログインの場合 -->
+                            <!-- ログイン中の場合 -->
+                            <div m:id='common.IF_MEMBER'>
+                                <p class="item_price item_teika">
+                                    <s>通常価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+                                </p>
+                                <!-- 商品に会員ランク別商品価格が設定されている場合 -->
+                                <p m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+                                    会員価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+                                </p>
+
+                                <!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+                                <div m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+                                    <!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+                                    <div m:id='common.IF_ITEMACCESSLOG_DISCOUNT'>
+                                        <p class="item_price">
+                                            会員価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//ログイン中の場合-->
+                        </div>
+                        
+                    </div>
+                    <div class="c-product-item-icons">
+                        <div class="c-product-item-icons-inner">
+                          <span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='3'>
+                              <span class="c-product-icon -recommend">オススメ</span>
+                          </span>
+                                  <span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='4'>
+                              <span class="c-product-icon -limited">限定品</span>
+                          </span>
+                                  <span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='5'>
+                              <span class="c-product-icon -xxxx">自由項目5</span>
+                          </span>
+                                  <span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='6'>
+                              <span class="c-product-icon -xxxx">自由項目6</span>
+                          </span>
+                                  <span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='7'>
+                              <span class="c-product-icon -xxxx">自由項目7</span>
+                          </span>
+                                  <span m:id='common.IF_ITEMACCESSLOG_ITEM_SOLDOUT'>
+                              <span class="c-product-icon -soldout">入荷待ち</span>
+                          </span>
+                        </div>
+                    </div>                    
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<div m:id='IF_SMARTPHONE_TERMINAL' m:NOT=''>
+<section class="recent-sec custom-grid-sec" m:id='common.IF_ITEMACCESSLOG'>
+	<div class="custom_container">
+		<div class="custom-grid-head">
+			<h2>Recently Viewed Items</h2>
+			<p>最近チェックした商品</p>
+		</div>
+		<div class="custom_row custom-grid-row js_add_slider">
+			<div class="custom_col custom-grid-col" m:id='common.LOOP_ITEMACCESSLOG'>
+				<a href="#" class="custom-grid-bx" m:id='common.ITEMACCESSLOG_LINK_TAG'>
+					<div class="c-product-item-image">
+						<img src="./images/testproduct.png" m:id='common.ITEMACCESSLOG_IMAGE_TAG'/>
+					</div>
+					<div class="cont">
+						<h3><span m:id='common.ITEMACCESSLOG_ITEM_NAME_HERE' max_size="60">商品名</span></h3>
+						<div class="c-product-item-price item_price_box" m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='1' m:NOT=''>
+							<!-- 非ログイン・ログイン中の場合、定価を出力する -->
+							<div m:id='common.IF_MEMBER' m:NOT=''>
+								<p class="item_price item_teika">
+									<b><span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span></b>
+								</p>
+							</div>
+							<!--// 非ログインの場合 -->
+							<!-- ログイン中の場合 -->
+							<div m:id='common.IF_MEMBER'>
+								<p class="item_price item_teika">
+									<s>通常価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_TEIKA_ZEIKOMI_HERE'>21,000円</span></b></s>
+								</p>
+								<!-- 商品に会員ランク別商品価格が設定されている場合 -->
+								<p m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' class="item_price">
+									会員価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA_HERE' m:tax="zeikomi">21,000円</span></b>
+								</p>
+
+								<!-- 商品に会員ランク別商品価格が設定されていない場合 -->
+								<div m:id='common.IF_ITEMACCESSLOG_LOGIN_MEMBER_RANK_ITEM_TEIKA' m:NOT=''>
+									<!-- ログインユーザーが属する会員ランクに割引率が設定されている場合、会員割引価格を出力する -->
+									<div m:id='common.IF_ITEMACCESSLOG_DISCOUNT'>
+										<p class="item_price">
+											会員価格&nbsp;<b><span m:id='common.ITEMACCESSLOG_DISCOUNT_KAKAKU_ZEIKOMI_HERE'>21,000円</span></b>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!--//ログイン中の場合-->
+						</div>
+						
+					</div>
+					<div class="c-product-item-icons">
+						<div class="c-product-item-icons-inner">
+							<span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='3'>
+								<span class="c-product-icon -recommend">オススメ</span>
+							</span>
+									<span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='4'>
+								<span class="c-product-icon -limited">限定品</span>
+							</span>
+									<span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='5'>
+								<span class="c-product-icon -xxxx">自由項目5</span>
+							</span>
+									<span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='6'>
+								<span class="c-product-icon -xxxx">自由項目6</span>
+							</span>
+									<span m:id="common.IF_ITEMACCESSLOG_FREE" m:free_item_no='7'>
+								<span class="c-product-icon -xxxx">自由項目7</span>
+							</span>
+									<span m:id='common.IF_ITEMACCESSLOG_ITEM_SOLDOUT'>
+								<span class="c-product-icon -soldout">入荷待ち</span>
+							</span>
+						</div>
+					</div>                    
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+
+</section>
+</main><!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+<script src="js/item_price.js"></script>
+
+<span m:id='common.CRITEO_TOP_PAGE_TRACKER_HERE'></span>
+
+</body>
+</html>

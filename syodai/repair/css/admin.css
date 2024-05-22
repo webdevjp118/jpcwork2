@@ -1,0 +1,21 @@
+.am_table {
+    width: 100%;
+}
+.am_table tbody {
+    width: 100%;
+}
+.am_table th {
+    width: 140px;
+}
+.am_table input[type="text"] {
+    width: 100%;
+    max-width: 480px;
+}
+.am_table textarea {
+    width: 100%;
+    max-width: 480px;
+}
+.am_table .checkbox_wrap {
+    display: inline-block;
+    margin-right: 20px;
+}

@@ -1,0 +1,1277 @@
+@charset 'utf-8';
+
+/* ------------------------------------------------------------ 下層ページ ------------------------------------------------------------ */
+
+/*--------------------------------
+	共通レイアウト
+--------------------------------*/
+
+/* メイン */
+
+.contents main {
+	margin: 80px auto 0;
+}
+
+/* タイトル */
+
+.contents_ttl {
+	position: relative;
+	width:100%;
+	padding: 50px 0 100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contents_ttl h2 {
+	margin: 0 auto;
+	letter-spacing: 0.1em;
+}
+
+.contents_ttl h2 em {
+	position: relative;
+	display: block;
+	margin: 0 auto 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+	letter-spacing: 0.03em;
+	font-size: 1.5rem;
+	color: #3eaee6;
+}
+
+.contents_ttl p {
+	font-size: 2rem;
+	letter-spacing: 0.1em;
+	font-family: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.contents_ttl p:before {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 1px;
+	background-color: #ccc;
+	margin: 20px auto;
+}
+
+/* ぱんくず */
+
+.pankuzu {
+	position: relative;
+	width: 100%;
+	padding: 10px 0;
+	text-align: left;
+	font-size: 1.2rem;
+	color: #777777;
+	background-color: rgba(62, 174, 230, 0.2);
+}
+.pankuzu a:link,
+.pankuzu a:visited { color: #777777; }
+.pankuzu a:hover,
+.pankuzu a:active { color: #3eaee6; }
+
+
+/* コンテンツエリア */
+
+.contents_area {
+	position: relative;
+	width:100%;
+	max-width:1280px;
+	min-width: 990px;
+	padding:0 5%;
+	margin:0 auto 80px;
+	min-height:1px;
+	zoom:1;
+}
+
+.contents_area:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	font-size:0px;
+}
+
+/*--------------------------------
+	セカンドページ
+--------------------------------*/
+
+.box_txt {
+	float: left;
+	width: 47.5%;
+}
+
+.box_img {
+	float: right;
+	width: 47.5%;
+	text-align: center;
+}
+
+/* 導入 */
+
+.contents_intro {
+	margin: 0 auto 100px;
+	clear: both;
+	min-height:1px;
+	zoom:1;
+}
+
+.contents_intro:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	font-size:0px;
+}
+
+.contents_intro strong {
+	display:block;
+	margin: 0 auto 40px;
+	font-size: 2.4rem;
+	font-family: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	letter-spacing: 0.05em;
+}
+
+/* 目次 */
+
+.contents_index {
+	margin: 0 auto 50px;
+}
+
+.contents_index .box_wrap {
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 100px auto 0;
+}
+
+.contents_index .box_wrap div {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 31.333%;
+	margin: 0 3% 50px 0;
+	text-align: center;
+}
+
+.contents_index .box_wrap div:nth-of-type(3n) {
+	margin: 0 0 50px;
+}
+
+.contents_index .box_wrap div a {
+	display: block;
+	position: relative;
+	margin: 0 auto 10px;
+	overflow: hidden;
+}
+
+.contents_index .box_wrap div a img {
+	-webkit-transition: .8s ease-out;
+	transition: .8s ease-out;
+}
+
+.contents_index .box_wrap div a:hover img {
+	transform: scale(1.1);
+}
+
+.contents_index .box_wrap div a strong {
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+}
+
+.contents_index .box_wrap div a strong span {
+	width: 240px;
+	display: inline-block;
+	padding: 10px 0;
+	background-color: #fff;
+	font-size: 1.8rem;
+	font-family: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	letter-spacing: 0.1em;
+	line-height: 1.3;
+}
+
+.contents_index .box_wrap div p {
+	font-size: 1.4rem;
+	text-align: left;
+}
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+
+	/*--------------------------------
+		共通レイアウト
+	--------------------------------*/
+	
+	/* メイン */
+
+	.contents main {
+		margin: 60px auto 0;
+	}
+
+	/* タイトル */
+
+	.contents_ttl {
+		padding: 30px 0;
+	}
+	
+	.contents_ttl h2 em {
+		margin: 0 auto 10px;
+		font-size: 1.3rem;
+	}
+	
+	.contents_ttl p {
+		font-size: 1.8rem;
+		letter-spacing: 0.05em;
+	}
+	
+	.contents_ttl p:before {
+		margin: 10px auto;
+	}
+	
+	/* ぱんくず */
+	
+	.pankuzu {
+		font-size: 1.1rem;
+	}
+	.pankuzu a:link,
+	.pankuzu a:visited { color: #777777; }
+	.pankuzu a:hover,
+	.pankuzu a:active { color: #777777; }
+	
+	
+	/* コンテンツエリア */
+	
+	.contents_area {
+		max-width:none;
+		min-width: auto;
+		margin: 50px auto;
+	}
+		
+	/*--------------------------------
+		セカンドページ
+	--------------------------------*/
+
+	.box_txt {
+		float: none;
+		width: 100%;
+		margin: 0 auto 30px;
+	}
+	
+	.box_img {
+		float: none;
+		width: 100%;
+	}
+
+	/* 導入 */
+	
+	.contents_intro {
+		margin: 0 auto;
+	}
+	
+	.contents_intro strong {
+		margin: 0 auto 30px;
+		font-size: 1.8rem;
+	}
+	
+	/* 目次 */
+	
+	.contents_index {
+		margin: 0 auto 30px;
+	}
+
+	.contents_index .box_wrap {
+		margin: 50px auto 0;
+	}
+	
+	.contents_index .box_wrap div {
+		display: block;
+		width: 100%;
+		margin: 0 0 30px 0;
+	}
+	
+	.contents_index .box_wrap div:nth-of-type(3n) {
+		margin: 0 0 30px;
+	}
+	
+	.contents_index .box_wrap div a {
+		height: 40vw;
+	}
+	
+	.contents_index .box_wrap div a:hover img {
+		transform: scale(1);
+	}
+
+	.contents_index .box_wrap div a strong span {
+		width: 200px;
+		padding: 10px 0;
+		font-size: 1.6rem;
+	}
+	
+	.contents_index .box_wrap div p {
+		font-size: 1.3rem;
+	}
+}
+
+/* ------------------------------------------------------------ 詳細ページ共通（.contents_area） ------------------------------------------------------------ */
+
+.contents_area .confirmBtn {
+    display: block;
+    width: 80%;
+    height: 70px;
+	line-height: 70px;
+    margin: 0 auto 80px;
+}
+
+.contents_area .confirmBtn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.8rem;
+	text-align: center;
+	background-color: rgba(62, 174, 230, 1);
+	color: #fff;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.contents_area .confirmBtn a:hover {
+	background-color: #999;
+}
+
+.contents_area .stepBox {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+	position: relative;
+	padding: 15px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	color: #555;
+	font-size: 16px;
+	background: #FFF;
+	border: solid 1px #3eaee6;
+	box-sizing: border-box;
+}
+
+.contents_area .stepBox p {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 180%;
+	color: #000;
+}
+
+.contents_area .stepBox:before {
+	content: "";
+	position: absolute;
+	bottom: -24px;
+	left: 50%;
+	margin-left: -15px;
+	border: 12px solid transparent;
+	border-top: 12px solid #FFF;
+	z-index: 2;
+}
+
+.contents_area .stepBox:after {
+	content: "";
+	position: absolute;
+	bottom: -26px;
+	left: 50%;
+	margin-left: -16px;
+	border: 13px solid transparent;
+	border-top: 13px solid #3eaee6;
+	z-index: 1;
+}
+
+.contents_area .stepBox b {
+	display: block;
+    color: #3eaee6;
+	margin: 0 auto 10px;
+}
+
+.contents_area .stepBox b:after {
+	content: "\A";
+	white-space: pre;
+}
+
+.contents_area ul.risk li {
+	list-style: circle;
+	margin-left: 30px;
+	padding-left: 10px;
+}
+
+.contents_area .screening_cate {
+	text-align: center;
+	font-size: 90%;
+	font-weight: bold;
+	margin-top: -20px;
+	margin-bottom: 50px;
+}
+
+.contents_area .screening_cate span {
+	display: inline-block;
+	color: #3eaee6;
+	border: solid #3EAEE6 1px;
+	padding: 5px;
+	margin-right: 5px;
+	border-radius: 2px;
+	line-height: 100%;
+}
+
+.contents_area .space_50 {
+	margin-bottom: 50px;
+}
+
+.contents_area .column {
+	position: relative;
+	border: solid rgba(62, 174, 230, 0.8) 1px;
+	padding: 30px;
+	border-radius: 5px;
+	margin: 40px auto;
+	min-height:1px;
+	zoom:1;
+}
+
+.contents_area .column:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	font-size:0px;
+}
+
+.contents_area .column h5 {
+	margin-top: 0px;
+}
+
+.contents_area h5:first-child {
+	margin-top: 0px;
+}
+
+.contents_area small {
+	font-size: 85%;
+}
+.effects ol li {
+	list-style: decimal;
+	margin-left: 30px;
+	margin-bottom: 15px;
+}
+.effects ol {
+	margin-top: 15px;
+}
+.effects p {
+	margin-bottom: 15px;
+}
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+
+	.contents_area .confirmBtn {
+	    width: 100%;
+	    height: 60px;
+		line-height: 60px;
+	    margin: 0 auto 40px;
+	}
+	
+	.contents_area .confirmBtn a {
+		font-size: 1.6rem;
+	}
+	
+	.contents_area .confirmBtn a:hover {
+		background-color: rgba(62, 174, 230, 1);
+	}
+
+	.contents_area .stepBox {
+	    width: 100%;
+	}
+
+	.contents_area .stepBox p {
+		line-height: 1.4;
+	    font-size: 1.6rem;
+	}
+
+	.contents_area .screening_cate {
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+	
+	.contents_area .screening_cate span {
+		padding: 5px;
+		margin:0 5px 5px 0;
+		border-radius: 2px;
+	}
+
+	.contents_area .column {
+		padding: 20px;
+		border-radius: 5px;
+		margin: 20px auto;
+	}
+
+}
+
+/* ==========================================================================
+
+	ご予約
+
+   ========================================================================== */
+
+/*--------------------------------
+	共通レイアウト
+--------------------------------*/
+
+h3 {
+	margin: 0 auto 30px;
+	font-size: 1.6rem;
+}
+
+/*--------------------------------
+	予約フォームフロー
+--------------------------------*/
+
+.form_flow {
+	margin: 0 auto 50px;
+	text-align: center;
+	font-size: 0;
+}
+
+.form_flow p {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 1.5rem;
+	border: 1px solid rgba(62, 174, 230, 1);
+}
+
+.form_flow p.active {
+	background: rgba(62, 174, 230, 1);
+	color: #fff;
+}
+
+.form_flow p:nth-of-type(n+2) {
+	margin: 0 0 0 30px;
+}
+
+.form_flow p:nth-of-type(n+2):before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	margin: -3px 0 0;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid rgba(62, 174, 230, 1);
+    border-right: 2px solid rgba(62, 174, 230, 1);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+	/*--------------------------------
+		共通レイアウト
+	--------------------------------*/
+	
+	h3 {
+		margin: 0 auto 20px;
+		font-size: 1.5rem;
+	}
+	
+	/*--------------------------------
+		予約フォームフロー
+	--------------------------------*/
+	
+	.form_flow {
+		margin: 0 auto 30px;
+	}
+	
+	.form_flow p {
+		position: relative;
+		display: inline-block;
+		width: 80px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 1.3rem;
+	}
+	
+	.form_flow p:nth-of-type(n+2) {
+		margin: 0 0 0 20px;
+	}
+	
+	.form_flow p:nth-of-type(n+2):before {
+		left: -15px;
+	}
+}
+
+/* ------------------------------------------------------------ フォーム ------------------------------------------------------------ */
+
+/*--------------------------------
+	フォーム基本レイアウト
+--------------------------------*/
+
+.contact .contactCotainer {
+	width: 100%;
+	max-width: 990px;
+	margin: 0 auto 100px;
+}
+
+.contact .contactCotainer form .excuse {
+	margin: 0 0 0 5px;
+	font-size:1.0rem;
+	color:#646464;
+}
+
+.contact .contactCotainer form p.excuse {
+	margin: 10px auto 0;
+	font-size:1.3rem;
+}
+
+.contact .contactCotainer form .form_area {
+	margin: 0 auto 50px;
+	padding: 30px;
+	background-color: rgba(62, 174, 230, 0.08);
+}
+
+.contact .contactCotainer form .form_area dl {
+	border-bottom: 1px solid rgba(62, 174, 230, 0.2);
+	clear: both;
+	min-height:1px;
+	zoom:1;
+}
+
+.contact .contactCotainer form .form_area dl:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	font-size:0px;
+}
+
+.contact .contactCotainer form dt {
+	width:230px;
+	float:left;
+	clear:both;
+	padding: 15px 5px;
+	border-top: 1px solid rgba(62, 174, 230, 0.2);
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.contact .contactCotainer form dt span {
+	display: block;
+	width: 60px;
+	margin: 5px auto 0;
+	background-color: #ff9e49;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+.contact .contactCotainer form dd {
+	float:right;
+	width: calc(100% - 230px);
+	padding: 15px 0;
+	border-top: 1px solid rgba(62, 174, 230, 0.2);
+}
+
+.contact .contactCotainer form input[type="text"] {
+	width: 75%;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form dd.short input[type="text"] {
+	width: 200px;
+}
+
+.contact .contactCotainer form input[type="text"].zip {
+	width:4em;
+}
+
+.contact .contactCotainer form textarea {
+	width:100%;
+	height:200px;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="radio"],
+.contact .contactCotainer form input[type="checkbox"] {
+	border: none;
+	vertical-align:middle;
+	position:relative;
+	top:-3px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.contact .contactCotainer form input[type="email"] {
+	width: 75%;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="tel"] {
+	width:4em;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="number"] {
+	width:4em;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+	margin: 0 10px 0 0;
+}
+
+.contact .contactCotainer form input[type="date"] {
+	width:200px;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form label {
+	display: block;
+	cursor: pointer;
+}
+
+.contact .contactCotainer form label:last-of-type {
+	margin:0 0 0 0;
+}
+
+.contact .contactCotainer form select {
+	max-width: 100%;
+	height: 2.5em;
+	font-size: 1.5rem;
+	border: solid 1px #ccc;
+	margin: 0 0 0 10px;
+	vertical-align: middle;
+	background: #fff;
+}
+
+.contact .contactCotainer form dd em {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.contact .contactCotainer form dd em + input {
+	margin: 0 20px 0 0;
+}
+
+.contact .contactCotainer form dd strong {
+	display: block;
+	/* font-weight: bold; */
+	margin: 0 auto 10px;
+}
+
+.contact .contactCotainer form dd strong:nth-of-type(n+2) {
+	margin: 20px auto 10px;
+}
+
+/* placeholder色変更 */
+
+.contact .contactCotainer form input::placeholder				{ color: #ccc; }
+.contact .contactCotainer form input::-webkit-input-placeholder	{ color: #ccc; } /* webkit */
+.contact .contactCotainer form input:-ms-input-placeholder		{ color: #ccc; } /* IE */
+.contact .contactCotainer form input::-ms-input-placeholder		{ color: #ccc; } /* Egde */
+
+.contact .contactCotainer form textarea::placeholder				{ color: #ccc; }
+.contact .contactCotainer form textarea::-webkit-input-placeholder	{ color: #ccc; } /* webkit */
+.contact .contactCotainer form textarea:-ms-input-placeholder		{ color: #ccc; } /* IE */
+.contact .contactCotainer form textarea::-ms-input-placeholder		{ color: #ccc; } /* Egde */
+/* safariハック */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.contact .contactCotainer form input.file {
+		border: none;
+	}
+}
+
+/*--------------------------------
+	内容確認ボタン
+--------------------------------*/
+
+.contact .contactCotainer form .confirmBtn {
+	display: block;
+	width:80%;
+	height:60px;
+	margin: 0 auto;
+}
+
+.contact .contactCotainer form .confirmBtn input {
+	display:block;
+	width: 100%;
+	height: 100%;
+	font-size:1.8rem;
+	text-align: center;
+	border: none;
+	background-color: rgba(62, 174, 230, 1);
+	color:#fff;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.contact .contactCotainer form .confirmBtn input:hover {
+	background-color: #999;
+}
+
+.contact .contactCotainer form .confirmBtn .disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+/*--------------------------------
+	戻るボタン
+--------------------------------*/
+
+.contact .contactCotainer form .backBtn {
+	display:inline-block;
+	vertical-align: top;
+	width:150px;
+	height:60px;
+	line-height:60px;
+	margin: 0 5px 0 0;
+}
+
+.contact .contactCotainer form .backBtn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size:1.6rem;
+	text-align: center;
+}
+
+.contact .contactCotainer form .backBtn a:link,
+.contact .contactCotainer form .backBtn a:visited { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }
+.contact .contactCotainer form .backBtn a:hover,
+.contact .contactCotainer form .backBtn a:active { color:#fff; text-decoration:none; background-color: #999; }	
+
+/*--------------------------------
+	送信ボタン
+--------------------------------*/
+
+.contact .contactCotainer form .submitBtn {
+	display:inline-block;
+	vertical-align: top;
+	width:300px;
+	height:60px;
+	line-height:60px;
+}
+
+.contact .contactCotainer form .submitBtn input {
+	display:block;
+	width: 100%;
+	height: 100%;
+	font-size:1.8rem;
+	text-align: center;
+	border: none;
+	background-color: rgba(62, 174, 230, 1);
+	color:#fff;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.contact .contactCotainer form .submitBtn input:hover {
+	background-color: #999;
+}
+
+/*--------------------------------
+	トップに戻るボタン
+--------------------------------*/
+
+.contact .contactCotainer .topBtn {
+	text-align: center;
+}
+
+.contact .contactCotainer .topBtn a {
+	font-size:1.6rem;
+}
+
+/*--------------------------------
+	確認ページボタン
+--------------------------------*/
+
+.contact .contactCotainer .btn_wrap {
+	text-align: center;
+}
+
+/*--------------------------------
+	エラー
+--------------------------------*/
+
+.contact .contactCotainer form dd.error input,
+.contact .contactCotainer form dd.error textarea,
+.contact .contactCotainer form dd.error label,
+.contact .contactCotainer form dd.error select {
+	background-color:#ffe1c6;
+}
+
+.contact .contactCotainer form dd b.error {
+	display: block;
+	color:#ff9e49;
+	font-size:1.4rem;
+	font-weight: normal;
+	margin-top:0.3em;
+}
+
+/*--------------------------------
+	メッセージ
+--------------------------------*/
+
+.contact .contactCotainer .message {
+	margin: 0 0 60px;
+	text-align: center;
+}
+
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+
+	/*--------------------------------
+		フォーム基本レイアウト
+	--------------------------------*/
+	
+	.contact .contactCotainer {
+		width: 100%;
+		margin: 0 auto 50px;
+	}
+	
+	.contact .contactCotainer form .excuse {
+		display: block;
+		font-size:1.1rem;
+		margin: 3px 0 0 0;
+	}
+	
+	.contact .contactCotainer form .form_area {
+		margin: 0 auto 30px;
+		padding: 10px 3%;
+	}
+	
+	.contact .contactCotainer form dt {
+		float:none;
+		width:100%;
+		min-height: 0;
+		padding: 10px 0 0;
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	.contact .contactCotainer form dt span {
+		display: inline-block;
+		width: auto;
+		margin: 0 0 0 10px;
+		padding: 0 5px;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	
+	.contact .contactCotainer form dd {
+		float:none;
+		width:100%;
+		min-height: 0;
+		margin: 0;
+		padding: 10px 0;
+		border-top: none;
+	}
+
+	.contact .contactCotainer form input[type="text"],
+	.contact .contactCotainer form dd.short input[type="text"] {
+		width: 100%;
+		padding: 6px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form textarea {
+		width: 100%;
+		padding: 6px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="radio"],
+	.contact .contactCotainer form input[type="checkbox"] {
+		border: solid 1px #ccc;
+	}
+
+	.contact .contactCotainer form input[type="radio"]:checked,
+	.contact .contactCotainer form input[type="checkbox"]:checked {
+		background-color: #666 !important; /* スマホのみ色変え エラー時に上書きされないように */
+	}
+
+	.contact .contactCotainer form input[type="email"] {
+		width: 100%;
+		padding: 6px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+
+	.contact .contactCotainer form input[type="tel"] {
+		padding: 6px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="number"] {
+		padding: 6px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	.contact .contactCotainer form input[type="date"] {
+		width:auto;
+		padding: 6px 1%;
+	}
+	
+	.contact .contactCotainer form select {
+		height: 2em;
+		margin: 5px 0 0;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		transform: scale(0.9);
+		transform-origin: top left;
+		/* デフォルトスタイルリセット */
+		/* -webkit-appearance: none; */
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="submit"] {
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	
+	/*--------------------------------
+		内容確認ボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .confirmBtn {
+		width: 100%;
+	}
+	
+	.contact .contactCotainer form .confirmBtn input:hover {
+		background-color: rgba(62, 174, 230, 1);
+	}
+
+
+	/*--------------------------------
+		戻るボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .backBtn {
+		display:block;
+		width:30%;
+		margin: 0 0 10px 0;
+	}
+	
+	.contact .contactCotainer form .backBtn a:link,
+	.contact .contactCotainer form .backBtn a:visited { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }
+	.contact .contactCotainer form .backBtn a:hover,
+	.contact .contactCotainer form .backBtn a:active { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }	
+
+	/*--------------------------------
+		送信ボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .submitBtn {
+		width: 100%;
+	}
+	
+	.contact .contactCotainer form .submitBtn input:hover {
+		background-color: rgba(62, 174, 230, 1);
+	}
+
+	/*--------------------------------
+		トップに戻るボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer .topBtn a {
+		font-size:1.5rem;
+	}
+
+	/*--------------------------------
+		エラー
+	--------------------------------*/
+
+	.contact .contactCotainer form dd b.error {
+		font-size:1.3rem;
+		margin-top:0.2em;
+	}
+
+	/*--------------------------------
+		メッセージ
+	--------------------------------*/
+
+	.contact .contactCotainer .message {
+		margin: 0 0 20px;
+		text-align: left;
+	}
+
+}
+
+
+/* ------------------------------------------------------------ フォーム以外 ------------------------------------------------------------ */
+
+/*--------------------------------
+	注意事項
+--------------------------------*/
+
+.attention em {
+	display: block;
+	margin: 0 auto 5px;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.attention p {
+	margin: 0 auto 20px;
+	font-size: 1.4rem;
+}
+
+/*--------------------------------
+	プライバシーポリシー
+--------------------------------*/
+
+.privacypolicy {
+	margin: 50px auto;
+}
+
+.privacypolicy .scroll {
+	width: 100%;
+	height: 300px;
+	padding: 20px;
+	overflow-y: scroll;
+	border: 1px solid #ccc;
+	font-size: 1.3rem;
+}
+
+.privacypolicy .scroll em {
+	display: block;
+	margin: 0 auto 10px;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.privacypolicy .scroll p {
+	margin: 0 auto 30px;
+}
+
+.privacypolicy .scroll p span {
+	display: block;
+	margin: 15px auto 0;
+}
+
+.privacypolicy .privacypolicy_agree {
+	margin: 60px auto 0;
+	text-align: center;
+}
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+	
+	/*--------------------------------
+		注意事項
+	--------------------------------*/
+	
+	.attention em {
+		margin: 0 auto 5px;
+		font-size: 1.3rem;
+	}
+	
+	.attention p {
+		margin: 0 auto 15px;
+		font-size: 1.2rem;
+	}
+	
+	/*--------------------------------
+		プライバシーポリシー
+	--------------------------------*/
+	
+	.privacypolicy {
+		margin: 30px auto;
+	}
+	
+	.privacypolicy .scroll {
+		height: 200px;
+		padding: 10px 3%;
+		font-size: 1.2rem;
+	}
+	
+	.privacypolicy .scroll em {
+		margin: 0 auto 5px;
+	}
+	
+	.privacypolicy .scroll p {
+		margin: 0 auto 15px;
+	}
+	
+	.privacypolicy .scroll p span {
+		margin: 10px auto 0;
+	}
+	
+	.privacypolicy .privacypolicy_agree {
+		margin: 20px auto 0;
+	}
+}
+

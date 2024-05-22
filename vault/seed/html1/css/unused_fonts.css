@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Yu Mincho Regular';
+    src: url('../fonts/YuMincho-Regular.eot');
+    src: url('../fonts/YuMincho-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuMincho-Regular.woff2') format('woff2'),
+        url('../fonts/YuMincho-Regular.woff') format('woff'),
+        url('../fonts/YuMincho-Regular.ttf') format('truetype'),
+        url('../fonts/YuMincho-Regular.svg#YuMincho-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Mincho Demibold';
+    src: url('../fonts/YuMincho-Demibold.eot');
+    src: url('../fonts/YuMincho-Demibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuMincho-Demibold.woff2') format('woff2'),
+        url('../fonts/YuMincho-Demibold.woff') format('woff'),
+        url('../fonts/YuMincho-Demibold.ttf') format('truetype'),
+        url('../fonts/YuMincho-Demibold.svg#YuMincho-Demibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Didot LT Std';
+    src: url('../fonts/DidotLTStd-Roman.eot');
+    src: url('../fonts/DidotLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DidotLTStd-Roman.woff2') format('woff2'),
+        url('../fonts/DidotLTStd-Roman.woff') format('woff'),
+        url('../fonts/DidotLTStd-Roman.ttf') format('truetype'),
+        url('../fonts/DidotLTStd-Roman.svg#DidotLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Light.eot');
+    src: url('../fonts/YuGothic-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Light.woff2') format('woff2'), url('../fonts/YuGothic-Light.woff') format('woff'), url('../fonts/YuGothic-Light.ttf') format('truetype'), url('../fonts/YuGothic-Light.svg#YuGothic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Medium.woff2') format('woff2'), url('../fonts/YuGothic-Medium.woff') format('woff'), url('../fonts/YuGothic-Medium.ttf') format('truetype'), url('../fonts/YuGothic-Medium.svg#YuGothic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/YuGothic-Bold.woff2') format('woff2'), url('../fonts/YuGothic-Bold.woff') format('woff'), url('../fonts/YuGothic-Bold.ttf') format('truetype'), url('../fonts/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

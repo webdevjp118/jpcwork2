@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://mayaa.seasar.org" xml:lang="ja" lang="ja" xmlns:social_plus="eb:SOCIAL_PLUS/view_member_input.json">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>標準テンプレート（PC）</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/hww_style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" charset="utf-8" src="js/ebisu_lib.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ebisu.js"></script>
+</head>
+<body>
+<!-- このテンプレートのURLは下記になります。
+　新規会員登録時 ドメイン/member_regist_new.html
+　ログイン時 ドメイン/member_regist.html?request=edit -->
+<script type="text/javascript" charset="utf-8" src="js/iframe.js" m:id='DUMMY'></script>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<main>
+
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ ================================================== -->
+<!-- =============================================================================== -->
+  <div class="l-container">
+    <div class="c-breadcrumbs">
+        <a href="/" class="c-breadcrumbs-link">ホーム</a>]
+		<span m:id='common.IF_MEMBER' m:NOT="" class="c-breadcrumbs-current">HANDA Watch World 会員登録</span>
+		<span m:id='common.IF_MEMBER' class="c-breadcrumbs-current">HANDA Watch World 会員情報変更</span>
+    </div>
+
+<!-- member_input -->
+<article class="l_inner">
+	<h2 class="c-pageTitle">
+		<span m:id='common.IF_MEMBER' m:NOT="">HANDA Watch World 会員登録</span>
+		<span m:id='common.IF_MEMBER'>HANDA Watch World 会員情報変更</span>
+	</h2>
+	<p class="mB30">
+		<span m:id='common.IF_MEMBER' m:NOT="">HANDA Watch World 会員登録ご希望の方は、</span>
+		<span m:id='common.IF_MEMBER'>HANDA Watch World 会員情報を変更したい方は、</span>
+		下記のフォームに必要事項を入力し「入力内容を確認する」ボタンを押してください。<br />
+		<span m:id='common.IF_MEMBER' m:NOT="">（株）ミスズが総輸入元を務めるブランドを会員特別価格で購入できます。<br>
+ログインすると、商品ごとに会員特別価格が表示されます。（但し、当社らが指定する一部商品又はサービスについては、特典を受けることができないものがあります。）</span>
+        
+		<span m:id='common.IF_USE_MEMBER_TAIKAI'>
+			<span m:id='common.IF_MEMBER'><br /><a href="member_taikai.html">→退会をしたい方はこちら</a></span>
+		</span>
+	</p>
+	<form m:id='FORM_TAG'>
+		<!-- social_plus -->
+		<div m:id='common.IF_APP_INSTALLED' m:app_cd='SOCIAL_PLUS'>
+			<input type="hidden" social_plus:attr="SOCIAL_PLUS_ID_HIDDEN_TAG"></input>
+            <input type="hidden" social_plus:attr="SOCIAL_PLUS_PROVIDER_HIDDEN_TAG"></input>
+		</div>
+		<!-- / social_plus -->
+		
+		<iframe m:id='common.IMPORT_HERE' src="common/messages.xhtml"  frameborder="0" scrolling="no" width="100%"	onload="resize_iframe(this)"></iframe>
+	
+		<table summary="HANDA Watch World 会員登録情報" class="table_form mB50">
+			<tr>
+                <th class="title">氏名（漢字） <span class="hissu">[必須]</span></th>
+                <td class="necessary">
+                    <div class="input_name01">姓 <input m:id='LAST_NAME_INPUT_HERE' name="lastname" type="text" size="20" value="" /></div>
+                    <div class="input_name01">名 <input m:id='FIRST_NAME_INPUT_HERE' name="firstname" type="text" size="20" value="" /></div>
+                    <span class="form_attention">例：山田 太郎</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="title">氏名（カナ） <span class="hissu">[必須]</span></th>
+                <td>
+                    <div class="input_name02">セイ <input m:id='LAST_KANA_INPUT_HERE' name="lastname_kana" type="text" size="20" value="" /></div>
+                    <div class="input_name02">メイ <input m:id='FIRST_KANA_INPUT_HERE' name="firstname_kana" type="text" size="20" value="" /></div>
+                    <span class="form_attention">例：ヤマダ タロウ （全角カナ）</span>
+                </td>
+            </tr>
+			<tr>
+                <th class="title">
+                    メールアドレス 
+                    <span m:id='IF_MAIL_VALIDATED' m:NOT="">
+                        <span class="hissu">PCメールアドレスは[必須]です。</span>
+                    </span>
+                </th>
+                <td>
+                    <!--PCメールアドレス<br />-->
+                    <span m:id='IF_MAIL_VALIDATED'><span m:id='PC_MAIL_HERE'>sample@example.jp</span></span>
+                    <span m:id='IF_MAIL_VALIDATED' m:NOT="">
+                    	<span>PCメールアドレス[必須]</span><br>
+                        <input m:id='PC_MAIL_INPUT_HERE' name="PC_MAIL" type="text" size="50" value="" />
+                        <span class="form_attention">例：sample@example.jp （半角英数字）<br />
+※「PCメールアドレス」ではお持ちの携帯のアドレスの入力でもご利用いただけます。<br />
+※メールマガジンを「購読する」を選択した場合は、「PCメールアドレス」は必須で入力をお願いします。<br />
+                            ※確認のためメールアドレスを再入力してください。<br /></span>
+                        <input m:id='PC_MAIL_CONFIRM1_INPUT_HERE' name="PC_MAIL_CONFIRM1" type="text" size="25" value="" class="short" /> @
+                        <input m:id='PC_MAIL_CONFIRM2_INPUT_HERE' name="PC_MAIL_CONFIRM2" type="text" size="25" value="" class="short" />
+                    </span><br><br>
+                    <span>携帯メールアドレス</span><br />
+                    <input m:id='MOBILE_MAIL_INPUT_HERE' name="MOBILE_MAIL" type="text" size="50" value="" />
+					<span class="form_attention">例：sample@example.jp （半角英数字）<br />
+                    ※確認のためメールアドレスを再入力してください。<br /></span>
+					<input m:id='MOBILE_MAIL_CONFIRM1_INPUT_HERE' name="MOBILE_MAIL_CONFIRM1" type="text" size="25" value="" class="short" />@
+					<input m:id='MOBILE_MAIL_CONFIRM2_INPUT_HERE' name="MOBILE_MAIL_CONFIRM2" type="text" size="25" value="" class="short" />
+                </td>
+            </tr>  
+			<tr>
+				<th class="title">パスワード <span class="hissu">[必須]</span></th>
+				<td>
+					<input m:id='PASSWORD_INPUT_HERE' name="loginpw" type="text" size="20" value="" />
+					 <span class="form_attention">※半角英数字・20文字以内で入力してください。</span>
+					 <input m:id='PASSWORD_CONFIRM_INPUT_HERE' name="loginpw_confirm" type="text" size="20" value="" />
+					 <span class="form_attention">※確認のためパスワードを再入力してください。</span>
+				</td>
+			</tr>
+			<tr>
+				<th class="title">性別 <img src="images/icon_hissu.gif" width="25" height="15" alt="必須" m:id='IF_SEX_HISSU' /></th>
+				<td>
+					<input type="radio" m:id='SEX_MAN_INPUT_TAG' id="MEMBER_INPUT_SEX_MAN_INPUT" />
+					<label for="MEMBER_INPUT_SEX_MAN_INPUT">男性 </label>　
+					<input type="radio" m:id='SEX_WOMAN_INPUT_TAG' id="MEMBER_INPUT_SEX_FEMALE_INPUT" />
+					<label for="MEMBER_INPUT_SEX_FEMALE_INPUT">女性</label><br />
+				</td>
+			</tr>
+			<tr>
+				<th class="title">生年月日 <img src="images/icon_hissu.gif" width="25" height="15" alt="必須" m:id='IF_BIRTH_HISSU' /></th>
+				<td>
+					<input m:id='BIRTH_YEAR_INPUT_HERE' name="year" type="text" size="5" value="" /> 年 
+					<input m:id='BIRTH_MONTH_INPUT_HERE' name="month" type="text" size="5" value="" /> 月 
+					<input m:id='BIRTH_DAY_INPUT_HERE' name="day" type="text" size="5" value="" /> 日<br>
+					<span class="form_attention">例：1986年3月3日 （半角英数字で入力してください。）</span>
+				</td>
+			</tr>
+			<tr style="display: none">
+				<th class="title">PCメール形式</th>
+				<td>
+					<input type="radio" m:id='PC_MAILTYPE_TEXT_INPUT_HERE' id="MEMBER_MAIL_TYPE_PC_TEXT" checked />
+					<label for="MEMBER_MAIL_TYPE_PC_TEXT">テキスト</label>　
+					<input type="radio" m:id='PC_MAILTYPE_HTML_INPUT_HERE' id="MEMBER_MAIL_TYPE_PC_HTML" />
+					<label for="MEMBER_MAIL_TYPE_PC_HTML">HTML</label>
+				</td>
+			</tr>
+			<!--<tr>
+				<th class="title">携帯メールアドレス</th>
+				<td>
+					<input name="MOBILE_MAIL" type="text" size="50" value="" m:id='MOBILE_MAIL_INPUT_HERE' /><br />
+					<span class="hissu">PCメールアドレスか携帯メールアドレスのどちらかが必須です。</span><br />
+					例：sample@example.jp （半角英数字で入力してください。）<br />
+					※確認のためメールアドレスを再入力してください。<br />
+					<input name="MOBILE_MAIL_CONFIRM1" type="text" size="23" value="" m:id='MOBILE_MAIL_CONFIRM1_INPUT_HERE' />@
+					<input name="MOBILE_MAIL_CONFIRM2" type="text" size="25" value="" m:id='MOBILE_MAIL_CONFIRM2_INPUT_HERE' />
+				</td>
+			</tr>-->
+			<!--<tr>
+				<th class="title">携帯メール形式</th>
+				<td>
+					<input type="radio" m:id='MOBILE_MAILTYPE_TEXT_INPUT_HERE' id="MEMBER_MAIL_TYPE_MOBILE_TEXT" />
+					<label for="MEMBER_MAIL_TYPE_MOBILE_TEXt">テキスト</label>　
+					<input type="radio" m:id='MOBILE_MAILTYPE_HTML_INPUT_HERE' id="MEMBER_MAIL_TYPE_MOBILE_HTML" />
+					<label for="MEMBER_MAIL_TYPE_MOBILE_HTML">HTML</label>
+				</td>
+			</tr>-->
+			<tr>
+				<th class="title">郵便番号 <span class="hissu" m:id='IF_ZIP_HISSU'>[必須]</span></th>
+				<td>
+					<div class="zip"><input m:id='ZIP_INPUT_HERE' name="zipcode_first" type="text" size="15" value="" /> <input m:id='GET_ZIP_ADDRESS_BUTTON_TAG' type="button" value="〒反映" class="button small negative" />
+					</div>
+                    <span class="form_attention">例：1234567 （半角英数字で入力してください。）</span>
+					<span m:id='ZIP_ADDRESS_MESSAGE_TAG' class="minfo"></span>
+					
+				</td>
+			</tr>
+			<tr>
+				<th class="title">都道府県 <span class="hissu" m:id='IF_ADDRESS1_HISSU'>[必須]</span></th>
+				<td>
+					<select m:id='ADDRESS1_INPUT_HERE' name="prefecture">
+						<option selected="selected">-- 選択してください --</option>
+						<option value="北海道">北海道</option>
+						<option value="青森県">青森県</option>
+						<option value="岩手県">岩手県</option>
+						<option value="宮城県">宮城県</option>
+						<option value="秋田県">秋田県</option>
+						<option value="山形県">山形県</option>
+						<option value="福島県">福島県</option>
+						<option value="茨城県">茨城県</option>
+						<option value="栃木県">栃木県</option>
+						<option value="群馬県">群馬県</option>
+						<option value="埼玉県">埼玉県</option>
+						<option value="千葉県">千葉県</option>
+						<option value="東京都">東京都</option>
+						<option value="神奈川県">神奈川県</option>
+						<option value="新潟県">新潟県</option>
+						<option value="富山県">富山県</option>
+						<option value="石川県">石川県</option>
+						<option value="福井県">福井県</option>
+						<option value="山梨県">山梨県</option>
+						<option value="長野県">長野県</option>
+						<option value="岐阜県">岐阜県</option>
+						<option value="静岡県">静岡県</option>
+						<option value="愛知県">愛知県</option>
+						<option value="三重県">三重県</option>
+						<option value="滋賀県">滋賀県</option>
+						<option value="京都府">京都府</option>
+						<option value="大阪府">大阪府</option>
+						<option value="兵庫県">兵庫県</option>
+						<option value="奈良県">奈良県</option>
+						<option value="和歌山県">和歌山県</option>
+						<option value="鳥取県">鳥取県</option>
+						<option value="島根県">島根県</option>
+						<option value="岡山県">岡山県</option>
+						<option value="広島県">広島県</option>
+						<option value="山口県">山口県</option>
+						<option value="徳島県">徳島県</option>
+						<option value="香川県">香川県</option>
+						<option value="愛媛県">愛媛県</option>
+						<option value="高知県">高知県</option>
+						<option value="福岡県">福岡県</option>
+						<option value="佐賀県">佐賀県</option>
+						<option value="長崎県">長崎県</option>
+						<option value="熊本県">熊本県</option>
+						<option value="大分県">大分県</option>
+						<option value="宮崎県">宮崎県</option>
+						<option value="鹿児島県">鹿児島県</option>
+						<option value="沖縄県">沖縄県</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th class="title">市区町村・番地 <span class="hissu" m:id='IF_ADDRESS2_HISSU'>[必須]</span></th>
+				<td>
+					<input m:id='ADDRESS2_INPUT_HERE' name="city" type="text" size="50" value="" />
+					<span class="form_attention">例：○○市○○町1-2-3</span>
+				</td>
+			</tr>
+			<tr>
+				<th class="title">ビル・マンション名 <span class="hissu" m:id='IF_ADDRESS3_HISSU'>[必須]</span></th>
+				<td>
+					<input m:id='ADDRESS3_INPUT_HERE' name="building" type="text" size="50" value="" />
+					<span class="form_attention">例：○○ビル101</span>
+				</td>
+			</tr>
+			<tr>
+				<th class="title">電話番号 <span class="hissu" m:id='IF_TEL_HISSU'>[必須]</span></th>
+				<td>
+					<input m:id='TEL_INPUT_HERE' name="tel" type="text" size="50" value="" />
+					<span class="form_attention">例：03-1234-5678 （半角英数字で入力してください。）</span>
+				</td>
+			</tr>
+			<tr>
+				<th class="title">メールマガジン <span class="hissu" m:id='IF_TEL_HISSU'>[必須]</span></th>
+				<td>
+				<input type="radio" m:id='MAILMAG_REGIST_PC_INPUT_TAG' id="MEMBER_INPUT_MAILMAG_INPUT_ON_PC" checked />
+				<label for="MEMBER_INPUT_MAILMAG_INPUT_ON_PC">購読する</label>　
+				<input type="radio" m:id='MAILMAG_NO_REGIST_INPUT_TAG' id="MEMBER_INPUT_MAILMAG_INPUT_OFF" />
+				<label for="MEMBER_INPUT_MAILMAG_INPUT_OFF">購読しない</label>
+				</td>
+			</tr>
+            <!--
+			<tr>
+				<th class="title">標準利用支払い方法 <img src="images/icon_hissu.gif" width="25" height="15" alt="必須" m:id='IF_MEMBER_DEFAULT_KESSAI_ID_HISSU' /></th>
+				<td colspan="2">
+					<div m:id='LOOP_KESSAI'>
+						<span m:id='KESSAI_ID_INPUT_RADIO_HERE'><input type="radio" name="kessaiId" id="kessaiId1" /><label for="kessaiId1"> 銀行振込</label></span><br />
+						<span m:id='KESSAI_COMMENT_HERE'>ここに決済方法の説明文が入ります。ここに決済方法の説明文が入ります。</span>
+					</div>
+					<div m:id='DUMMY'>
+						<input type="radio" name="kessaiId" id="kessaiId2" /><label for="kessaiId2"> クレジットカード</label><br />
+						ここに決済方法の説明文が入ります。ここに決済方法の説明文が入ります。
+					</div>
+					<br />
+					<div m:id='IF_CREDIT'>
+						クレジットカードご利用の方のみご記入ください。
+						<div m:id='IF_CREDIT_KAISU'>
+							お支払い回数
+							<select m:id='CREDIT_KAISU_INPUT_HERE'
+							name="card_count">
+							<option value="" selected="selected">-- 回数を指定 --</option>
+							<option value="01">1回</option>
+							<option value="02">2回</option>
+							<option value="03">3回</option>
+							</select>
+						</div>
+						<div m:id='IF_SAVED_CARD'>
+							<div m:id='LOOP_SAVED_CARD'>
+								<input name="saved_card" type="radio" m:id='SAVED_CARD_SELECT_RADIO_TAG' /> ****-****-****-<span m:id='SAVED_CARD_CREDIT_NUMBER4_HERE'>4003</span><br />
+								カード名義 : <span m:id='SAVED_CARD_CREDIT_NAME_HERE'>TEST TARO</span><br />
+								有効期限 : <span m:id='SAVED_CARD_CREDIT_EXPIRE_MONTH_HERE'>04</span>/<span m:id='SAVED_CARD_CREDIT_EXPIRE_YEAR_HERE'>2016</span>
+							</div>
+							<div m:id='DUMMY'>
+								<input name="saved_card" type="radio" /> ****-****-****-3012
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+            -->
+			<tr m:id='common.IF_USE_TWO_STEP_LOGIN'>
+				<th class="title">2段階ログイン設定</th>
+				<td>
+					<input type="radio" m:id="TWO_STEP_LOGIN_NOT_USE_RADIO_TAG" id="TWO_STEP_LOGIN_NOT_USE_INPUT" /> 
+					<label for="TWO_STEP_LOGIN_NOT_USE_INPUT">利用しない</label>　
+					<input type="radio" m:id="TWO_STEP_LOGIN_PC_MAIL_RADIO_TAG" id="TWO_STEP_LOGIN_PC_MAIL_INPUT" />
+					<label for="TWO_STEP_LOGIN_PC_MAIL_INPUT"> メールアドレスを使用する</label>　
+					<!--<input type="radio" m:id="TWO_STEP_LOGIN_MOBILE_MAIL_RADIO_TAG" id="TWO_STEP_LOGIN_MOBILE_MAIL_INPUT"/> 
+					<label for="TWO_STEP_LOGIN_MOBILE_MAIL_INPUT">携帯メールアドレスを使用する</label>-->
+				</td>
+			</tr>
+            <!--
+			<tr m:id='IF_FREE' m:free_item_no='1'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='1'>自由項目１</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='1'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='2'>自由項目２</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='2'>自由項目コメント２</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='2'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='2'>自由項目２</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='2'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='2'>自由項目２</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='2'>自由項目コメント２</span>
+				</td>
+			</tr>
+             -->
+			<tr m:id='IF_FREE' m:free_item_no='3'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='3'>自由項目３</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='3'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='3'>自由項目３</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='3'>自由項目コメント３</span>
+				</td>
+			</tr>
+            <!--
+			<tr m:id='IF_FREE' m:free_item_no='4'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='4'>自由項目４</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='4'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='4'>自由項目４</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='4'>自由項目コメント４</span>
+				</td>
+			</tr>
+             -->
+			<tr m:id='IF_FREE' m:free_item_no='6'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='6'>自由項目６</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='6'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='6'>自由項目６</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='6'>自由項目コメント６</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='7'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='7'>自由項目７</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='7'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='7'>自由項目７</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='7'>自由項目コメント７</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='8'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='8'>自由項目８</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='8'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='8'>自由項目８</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='8'>自由項目コメント８</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='9'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='9'>自由項目９</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='9'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='9'>自由項目９</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='9'>自由項目コメント９</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='10'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='10'>自由項目１０</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='10'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='10'>自由項目１０</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='10'>自由項目コメント１０</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='11'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='11'>自由項目１１</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='11'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='11'>自由項目１１</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='11'>自由項目コメント１１</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='12'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='12'>自由項目１２</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='12'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='12'>自由項目１２</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='12'>自由項目コメント１２</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='13'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='13'>自由項目１３</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='13'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='13'>自由項目１３</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='13'>自由項目コメント１３</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='14'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='14'>自由項目１４</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='14'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='14'>自由項目１４</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='14'>自由項目コメント１４</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='15'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='15'>自由項目１５</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='15'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='15'>自由項目１５</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='15'>自由項目コメント１５</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='16'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='16'>自由項目１６</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='16'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='16'>自由項目１６</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='16'>自由項目コメント１６</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='17'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='17'>自由項目１７</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='17'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='17'>自由項目１７</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='17'>自由項目コメント１７</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='18'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='18'>自由項目１８</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='18'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='18'>自由項目１８</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='18'>自由項目コメント１８</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='19'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='19'>自由項目１９</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='19'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='19'>自由項目１９</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='19'>自由項目コメント１９</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='20'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='20'>自由項目２０</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='20'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='20'>自由項目２０</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='20'>自由項目コメント２０</span>
+				</td>
+			</tr>
+		</table>
+        
+        <div m:id='IF_FREE' m:free_item_no='5' class="member_input_agreement">
+        	<div class="member_input_agreement_box">
+            	<h3 class="c-pageTitle">HANDA Watch World 会員規約</h3>
+                <dl>
+                	<dt>第１条　会員規約 </dt>
+                    <dd>会員規約（以下「本規約」という）は、株式会社ミスズ（以下｢当社｣という）の運営する会員サービス「HANDA Watch World 会員」（以下、会員）の利用について、当社と会員が遵守する事項を相互に承認する為に定めるものとします。なお、本規約につき、ご承諾いただけない会員におかれては、第7条に従い速やかに退会手続をとるものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第２条　会員の定義 </dt>
+                    <dd>会員とは、当社に対してHWW会員の入会を申し込み、当社所定の手続きを完了した個人（未成年者は親権者の同意を得たものに限る）をいいます。</dd>
+                </dl>
+                <dl>
+                	<dt>第３条　会員サービスの入会・会員登録・会員証の発行 </dt>
+                    <dd>入会時にはカード型会員証もしくはモバイル型会員証を発行します。発行時点では仮会員となり、会員にはインターネット上に、各会員専用のマイページサイト（以下「マイページ」という）が用意され、会員情報のうち当社が許可する部分について会員自身が変更を加えることができます。マイページに表示されるバーコードをモバイル型会員証として利用することができます。カード型会員証とモバイル型会員証（以下、併せて「会員証」といいます。）は併用することができます。 <br>
+                    会員証及び会員ID、パスワードは会員本人が自己の責任で管理し、会員本人のみが利用できるものとし、会員本人以外に譲渡・貸与することはできません。<br>
+                    会員は原則として、会員証その他会員資格を複数保有することはできません。<br>
+                    当社は、会員登録に関する専用サイトの内容を予告なく変更できるものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第４条　会員サービスの利用・特典 </dt>
+                    <dd>会員は、当社および提携する団体（以下、当社ら）が展開する店舗、催事・イベント会場等で特典を受けることができます。会員は、会員証を提示することにより、商品の購入金額に応じた割引、又はその他の特典を受けることができます。（但し、当社らが指定する一部商品又はサービスについては、特典を受けることができないものがあります。）<br>
+                    会員は、１年間での購入金額（返品等を除く）によって別紙に定められたランクが設定され、ランクによって商品の購入金額に応じた割引、又はその他の特典の内容が変わります。ランクアップは4月1日を起点に別紙に定める購入金額に到達した翌日より変更され、ランクダウンは4月1日から一年間の購入金額によって3月31日に査定して翌日から変更されます。<br>
+                    会員は、メール配信等の各種情報サービスを受けることができます。なお、会員は、選択に関わらず全ての会員向けに配信されるメールがあること、及び、メール受信・サイト閲覧等に要する通信費用等は全て利用者の負担となることを予め了承します。<br>
+                    会員は、当社所定の会員証の提示等が確認できない場合、特典を受けることができない場合があることを予め了承します。<br>
+                    会員は、特典及びその権利を第三者に譲渡又は換金することはできません。<br>
+                    当社は、特典の全部又は一部を予告なく変更・改定又は廃止する場合があります。</dd>
+                </dl>
+                <dl>
+                	<dt>第５条　登録内容の変更・会員証の紛失等 </dt>
+                    <dd>会員は、入会時に登録した内容に変更が生じた場合、専用サイトで速やかに変更手続きを行うものとします。<br>
+                    会員は、会員証の紛失・盗難等が発生した場合、株式会社ミスズに直ちに連絡するものとします。なお、会員から会員証の紛失・盗難の申告があった会員ランクの設定は、原則として失効するものとします。<br>
+                    また当社は、会員証の紛失、盗難、会員ID・パスワードの漏洩に起因する損害を一切負担しないものとします。<br>
+                    カード型会員証を再発行する場合は、当社所定の手数料を申し受ける場合があります。</dd>
+                </dl>
+                <dl>
+                	<dt>第６条　返品時の義務 </dt>
+                    <dd>会員は、商品を返品する場合、レシートと会員証を提示するものとします。<br>
+                    会員は、返品受付対象商品ではない場合、店舗でレシートと会員証の提示ができない場合、当社が返品に応じることができない場合があることを予め了承するものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第７条　退会手続 </dt>
+                    <dd>会員は、当会員サービスを随時退会することができます。なお、退会した場合、退会時に保持していたランク算定用の累積購入額や特典サービス等は無効となります。<br>
+                    退会は、会員は退会申請時にカード型会員証を店舗もしくは株式会社ミスズ宛に返却し、退会の意思表示又は自らマイページで退会申請の手続を行うことで、退会するものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第８条　会員資格・会員特典の喪失 </dt>
+                    <dd>会員が以下の各号に掲げる事由のいずれかに該当する場合、当社は予告なく会員の利用停止又は会員資格の喪失を行うことができるものとします。なお、会員資格が喪失する場合は、会員が保持しているランク算定用の累積購入額や特典サービス等も喪失するものとします。<br>
+                    (1) 会員登録内容に虚偽記載がある場合<br>
+                    (2)所定の変更手続等がないために、当社の業務に支障が生じた場合<br>
+                    (3) 本会員規約に違反した場合<br>
+                    (4) 特典サービス等の不正利用があった場合<br>
+                    (5)当社や関係者への誹謗中傷、営業妨害その他、社会通念上不適切と思われる行為や言動が行われた場合<br>
+                    (6) その他、当社が会員として不適切であると判断した場合</dd>
+                </dl>
+                <dl>
+                	<dt>第９条　個人情報の取り扱い</dt>
+                    <dd>当社は、（1）会員特典や各種サービスの提供を行うこと、（2）イベントやキャンペーン、商品の情報提供を行うこと、（3）ご利用に関する統計資料作成等、マーケティングに利用すること、（4）お問い合わせに対して回答を行うこと及び（5）サービスやシステムに関する必要な情報をお知らせすることを目的として、会員から個人情報を取得・利用するものとします。<br>
+                    当社は、会員の個人情報を第三者に提供・開示しないものとします。ただし、以下の（１）～（７）の場合にはこの限りではありません。<br>
+                    （1）情報提供について本人の同意がある場合、（2）本条1項に定める取得・利用目的の範囲内において当社が業務委託先に委託する場合（この場合、適切な業務委託先を選定するとともに、業務委託先に対して必要かつ適切な管理及び監督をおこないます。）、（3）本条1項に定める取得・利用目的の範囲内において当社グループおよび提携先企業で利用する場合、（4）国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき、（5）法令に基づく場合、（6）会員や第三者の生命・身体・財産を損なうおそれがあり、本人の同意を得ることが困難である場合及び（7）公衆衛生の向上又は児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき<br>
+                    なお、当社が管理する会員の個人情報について、会員が個人情報の利用目的の通知、開示、訂正等、利用停止等又は第三者への提供手の停止等を希望する場合には、当社所定の手続に基づき会員本人であることを確認したうえで、法令に基づき、合理的かつ必要な範囲内において速やかに対応するものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第１０条　会員規約の変更・終了 </dt>
+                    <dd>本会員規約及び運用内容は、会員に予告なく変更できるものとします。<br>
+                    当社は前項の場合、本会員規約及び運用内容の変更に係る内容を当社専用サイトの会員規約ページに掲載することで、会員への通知とします。</dd>
+                </dl>
+                <dl>
+                	<dt>第１１条 その他免責事項 </dt>
+                    <dd>当社は、本サービスを提供するためのコンピュータ機器や通信機器等の故障およびトラブルならびに通信回線の障害等により、会員のデータが消失もしくは判読不可能になった場合、当社は通知を要せず無条件で直ちに会員登録の取消又は本サービスの停止をすることができるものとします。<br>
+                    会員が、本サービスを利用したことにより、他の会員又は第三者に対して損害等を与えた場合、会員は自己の責任と費用において解決し、当社に対して何等の迷惑または損害等を与えないものとします。<br>
+                    当社は、会員データが喪失したこと、又は会員が本サービスを利用できないことにより発生した一切の損害について、いかなる責任も負わないものとします。</dd>
+                </dl>
+                <dl>
+                	<dt>第１２条　裁判管轄 </dt>
+                    <dd>本会員規約に関して会員と当社との間で紛争が発生した場合、東京簡易裁判所又は東京地方裁判所をもって第一審の専属的合意管轄裁判所とします。</dd>
+                </dl>
+                <p class="txt_right mB10"> [2018年１月25日現在]</p>
+                <p class="txt_right">会員規約に関するお問い合わせ先<br>
+                株式会社ミスズ<br>
+                〒167-0053<br>
+                東京都杉並区西荻南2-17-8<br>
+                TEL.03-3247-5585</p>
+            </div>
+            <div class="agreement_area">
+            	<span m:id='FREE_TITLE_HERE' m:free_item_no='5'>自由項目５</span> <span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='5'>[必須]</span>　
+                <span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='5'>自由項目５</span>
+                <span m:id='FREE_COMMENT_HERE' m:free_item_no='5'>自由項目コメント５</span>
+            </div>
+        </div>
+        
+        
+        <h2 class="c-pageTitle">店舗配布のHANDA Watch World 会員カードをお持ちの方</h2>
+        
+        <div class="member_card_area sp_no_columns">
+        	<!--<div class="member_card_img"><img src="images/dummy/card.jpg"></div>-->
+        	<div class="member_card_txt">
+            	<h3 class="title_bold">店舗とオンラインショップの「HANDA Watch World 会員ステイタス」の共通化ができます</h3>
+                <p>店頭で配布しているHANDA Watch World 会員カードをお持ちの方は、実店舗とオンラインショップの「HANDA Watch World 会員ステイタス」の共通化ができます。</p>
+                <p>
+ご登録いただくことで、店舗とオンラインショップの１年間での購入金額（返品等を除く）によって、以下のHANDA Watch World 会員ステイタスが設定され、商品の購入金額に応じた会員特典を受けることができます。<br>（但し、当社らが指定する一部商品又はサービスについては、特典を受けることができないものがあります。）                
+</p>
+
+
+                
+                
+                
+                
+            </div>
+        </div>
+        <p>カード裏面のカード番号・PINコードをご入力ください。</p>
+		<table summary="HANDA Watch World 会員登録情報" class="table_form mB50">
+			<tr m:id='IF_FREE' m:free_item_no='1'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='1'>自由項目1</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='1'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='1'>自由項目1</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='1'>自由項目コメント1</span>
+				</td>
+			</tr>
+			<tr m:id='IF_FREE' m:free_item_no='2'>
+				<th class="title">
+					<span m:id='FREE_TITLE_HERE' m:free_item_no='2'>自由項目2</span> 
+					<span class="hissu" m:id='IF_FREE_HISSU' m:free_item_no='2'>[必須]</span>
+				</th>
+				<td>
+					<span m:id='FREE_VALUE_INPUT_HERE' m:free_item_no='2'>自由項目2</span><br />
+					<span m:id='FREE_COMMENT_HERE' m:free_item_no='2'>自由項目コメント2</span>
+				</td>
+			</tr>
+		</table>
+        
+        
+		<div class="buttonarea">
+			<a m:id='common.IF_MEMBER' href="javascript:void(0);" onClick="window.history.back();" class="button negative medium">戻る</a>
+			<input type="submit" value="入力内容を確認する" class="button positive medium" />
+		</div>
+	
+	</form>
+
+
+<!-- / member_input -->
+
+</div>
+<!-- =============================================================================== -->
+<!-- ==================メインコンテンツ END================================================== -->
+<!-- =============================================================================== -->
+
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,755 @@
+@charset 'utf-8';
+
+/* ==========================================================================
+
+	ご予約
+
+   ========================================================================== */
+
+/*--------------------------------
+	共通レイアウト
+--------------------------------*/
+
+h3 {
+	margin: 0 auto 30px;
+	font-size: 1.6rem;
+}
+
+/*--------------------------------
+	予約フォームフロー
+--------------------------------*/
+
+.form_flow {
+	margin: 0 auto 50px;
+	text-align: center;
+	font-size: 0;
+}
+
+.form_flow p {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 1.5rem;
+	border: 1px solid rgba(62, 174, 230, 1);
+}
+
+.form_flow p.active {
+	background: rgba(62, 174, 230, 1);
+	color: #fff;
+}
+
+.form_flow p:nth-of-type(n+2) {
+	margin: 0 0 0 30px;
+}
+
+.form_flow p:nth-of-type(n+2):before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	margin: -3px 0 0;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid rgba(62, 174, 230, 1);
+    border-right: 2px solid rgba(62, 174, 230, 1);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+	/*--------------------------------
+		共通レイアウト
+	--------------------------------*/
+	
+	h3 {
+		margin: 0 auto 20px;
+		font-size: 1.5rem;
+	}
+	
+	/*--------------------------------
+		予約フォームフロー
+	--------------------------------*/
+	
+	.form_flow {
+		margin: 0 auto 30px;
+	}
+	
+	.form_flow p {
+		position: relative;
+		display: inline-block;
+		width: 80px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 1.3rem;
+	}
+	
+	.form_flow p:nth-of-type(n+2) {
+		margin: 0 0 0 20px;
+	}
+	
+	.form_flow p:nth-of-type(n+2):before {
+		left: -15px;
+	}
+}
+
+/* ------------------------------------------------------------ フォーム ------------------------------------------------------------ */
+
+/*--------------------------------
+	フォーム基本レイアウト
+--------------------------------*/
+
+.contact .contactCotainer {
+	width: 100%;
+	max-width: 990px;
+	margin: 0 auto 100px;
+}
+
+.contact .contactCotainer form .excuse {
+	margin: 0 0 0 5px;
+	font-size:1.0rem;
+	color:#646464;
+}
+
+.contact .contactCotainer form p.excuse {
+	margin: 10px auto 0;
+	font-size:1.3rem;
+}
+
+.contact .contactCotainer form .form_area {
+	margin: 0 auto 50px;
+	padding: 30px;
+	background-color: rgba(62, 174, 230, 0.08);
+}
+
+.contact .contactCotainer form .form_area dl {
+	border-bottom: 1px solid rgba(62, 174, 230, 0.2);
+	clear: both;
+	min-height:1px;
+	zoom:1;
+}
+
+.contact .contactCotainer form .form_area dl:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	font-size:0px;
+}
+
+.contact .contactCotainer form dt {
+	width:230px;
+	float:left;
+	clear:both;
+	padding: 15px 5px;
+	border-top: 1px solid rgba(62, 174, 230, 0.2);
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.contact .contactCotainer form dt span {
+	display: block;
+	width: 60px;
+	margin: 5px auto 0;
+	background-color: #ff9e49;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+.contact .contactCotainer form dd {
+	float:left;
+	width: calc(100% - 230px);
+	padding: 15px 0;
+	border-top: 1px solid rgba(62, 174, 230, 0.2);
+}
+
+.contact .contactCotainer form input[type="text"] {
+	width: 200px;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="text"].zip {
+	width:4em;
+}
+
+.contact .contactCotainer form textarea {
+	width:100%;
+	height:200px;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="radio"],
+.contact .contactCotainer form input[type="checkbox"] {
+	border: none;
+	vertical-align:middle;
+	position:relative;
+	top:-3px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.contact .contactCotainer form input[type="email"] {
+	width: 75%;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="tel"] {
+	width:4em;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form input[type="number"] {
+	width:4em;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+	margin: 0 10px 0 0;
+}
+
+.contact .contactCotainer form input[type="date"] {
+	width:200px;
+	display: inline-block;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	padding: 8px 6px;
+}
+
+.contact .contactCotainer form label {
+	display: block;
+	cursor: pointer;
+}
+
+.contact .contactCotainer form label:last-of-type {
+	margin:0 0 0 0;
+}
+
+.contact .contactCotainer form select {
+	max-width: 100%;
+	height: 2.5em;
+	font-size: 1.5rem;
+	border: solid 1px #ccc;
+	margin: 0 0 0 10px;
+	vertical-align: middle;
+	background: #fff;
+}
+
+.contact .contactCotainer form dd em {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.contact .contactCotainer form dd em + input {
+	margin: 0 20px 0 0;
+}
+
+.contact .contactCotainer form dd strong {
+	display: block;
+	font-weight: bold;
+	margin: 0 auto 10px;
+}
+
+.contact .contactCotainer form dd strong:nth-of-type(n+2) {
+	margin: 20px auto 10px;
+}
+
+/* placeholder色変更 */
+
+.contact .contactCotainer form input::placeholder				{ color: #ccc; }
+.contact .contactCotainer form input::-webkit-input-placeholder	{ color: #ccc; } /* webkit */
+.contact .contactCotainer form input:-ms-input-placeholder		{ color: #ccc; } /* IE */
+.contact .contactCotainer form input::-ms-input-placeholder		{ color: #ccc; } /* Egde */
+
+.contact .contactCotainer form textarea::placeholder				{ color: #ccc; }
+.contact .contactCotainer form textarea::-webkit-input-placeholder	{ color: #ccc; } /* webkit */
+.contact .contactCotainer form textarea:-ms-input-placeholder		{ color: #ccc; } /* IE */
+.contact .contactCotainer form textarea::-ms-input-placeholder		{ color: #ccc; } /* Egde */
+/* safariハック */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.contact .contactCotainer form input.file {
+		border: none;
+	}
+}
+
+/*--------------------------------
+	内容確認ボタン
+--------------------------------*/
+
+.contact .contactCotainer form .confirmBtn {
+	display: block;
+	width:80%;
+	height:60px;
+	margin: 0 auto;
+}
+
+.contact .contactCotainer form .confirmBtn input {
+	display:block;
+	width: 100%;
+	height: 100%;
+	font-size:1.8rem;
+	text-align: center;
+	border: none;
+	background-color: rgba(62, 174, 230, 1);
+	color:#fff;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.contact .contactCotainer form .confirmBtn input:hover {
+	background-color: #999;
+}
+
+.contact .contactCotainer form .confirmBtn .disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+/*--------------------------------
+	戻るボタン
+--------------------------------*/
+
+.contact .contactCotainer form .backBtn {
+	display:inline-block;
+	vertical-align: top;
+	width:150px;
+	height:60px;
+	line-height:60px;
+	margin: 0 5px 0 0;
+}
+
+.contact .contactCotainer form .backBtn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size:1.6rem;
+	text-align: center;
+}
+
+.contact .contactCotainer form .backBtn a:link,
+.contact .contactCotainer form .backBtn a:visited { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }
+.contact .contactCotainer form .backBtn a:hover,
+.contact .contactCotainer form .backBtn a:active { color:#fff; text-decoration:none; background-color: #999; }	
+
+/*--------------------------------
+	送信ボタン
+--------------------------------*/
+
+.contact .contactCotainer form .submitBtn {
+	display:inline-block;
+	vertical-align: top;
+	width:300px;
+	height:60px;
+	line-height:60px;
+}
+
+.contact .contactCotainer form .submitBtn input {
+	display:block;
+	width: 100%;
+	height: 100%;
+	font-size:1.8rem;
+	text-align: center;
+	border: none;
+	background-color: rgba(62, 174, 230, 1);
+	color:#fff;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.contact .contactCotainer form .submitBtn input:hover {
+	background-color: #999;
+}
+
+/*--------------------------------
+	トップに戻るボタン
+--------------------------------*/
+
+.contact .contactCotainer .topBtn {
+	text-align: center;
+}
+
+.contact .contactCotainer .topBtn a {
+	font-size:1.6rem;
+}
+
+/*--------------------------------
+	確認ページボタン
+--------------------------------*/
+
+.contact .contactCotainer .btn_wrap {
+	text-align: center;
+}
+
+/*--------------------------------
+	エラー
+--------------------------------*/
+
+.contact .contactCotainer form dd.error input,
+.contact .contactCotainer form dd.error textarea,
+.contact .contactCotainer form dd.error label,
+.contact .contactCotainer form dd.error select {
+	background-color:#ffe7e7;
+}
+
+.contact .contactCotainer form dd b.error {
+	display: block;
+	color:#f00;
+	font-size:1.4rem;
+	font-weight: normal;
+	margin-top:0.3em;
+}
+
+/*--------------------------------
+	メッセージ
+--------------------------------*/
+
+.contact .contactCotainer .message {
+	margin: 0 0 60px;
+	text-align: center;
+}
+
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+
+	/*--------------------------------
+		フォーム基本レイアウト
+	--------------------------------*/
+	
+	.contact .contactCotainer {
+		width: 100%;
+		margin: 0 auto 50px;
+	}
+	
+	.contact .contactCotainer form .excuse {
+		display: block;
+		font-size:1.1rem;
+		margin: 3px 0 0 0;
+	}
+	
+	.contact .contactCotainer form .form_area {
+		margin: 0 auto 30px;
+		padding: 10px 3%;
+	}
+	
+	.contact .contactCotainer form dt {
+		float:none;
+		width:100%;
+		min-height: 0;
+		padding: 10px 0 0;
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	.contact .contactCotainer form dt span {
+		display: inline-block;
+		width: auto;
+		margin: 0 0 0 10px;
+		padding: 0 5px;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	
+	.contact .contactCotainer form dd {
+		float:none;
+		width:100%;
+		min-height: 0;
+		margin: 0;
+		padding: 10px 0;
+		border-top: none;
+	}
+	
+	.contact .contactCotainer form input[type="text"] {
+		width: 100%;
+		padding: 2px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form textarea {
+		width: 100%;
+		padding: 2px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="radio"],
+	.contact .contactCotainer form input[type="checkbox"] {
+		border: solid 1px #ccc;
+	}
+
+	.contact .contactCotainer form input[type="radio"]:checked,
+	.contact .contactCotainer form input[type="checkbox"]:checked {
+		background-color: #666 !important; /* スマホのみ色変え エラー時に上書きされないように */
+	}
+
+	.contact .contactCotainer form input[type="email"] {
+		width: 100%;
+		padding: 2px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
+
+	.contact .contactCotainer form input[type="tel"] {
+		padding: 2px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="number"] {
+		padding: 2px 1%;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	.contact .contactCotainer form input[type="date"] {
+		width:auto;
+		padding: 2px 1%;
+	}
+	
+	.contact .contactCotainer form select {
+		height: 2em;
+		margin: 5px 0 0;
+		/* iOSの拡大阻止 */
+		font-size: 1.6rem;
+		transform: scale(0.9);
+		transform-origin: top left;
+		/* デフォルトスタイルリセット */
+		/* -webkit-appearance: none; */
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+	
+	.contact .contactCotainer form input[type="submit"] {
+		/* デフォルトスタイルリセット */
+		-webkit-appearance: none; 
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	
+	/*--------------------------------
+		内容確認ボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .confirmBtn {
+		width: 100%;
+	}
+	
+	.contact .contactCotainer form .confirmBtn input:hover {
+		background-color: rgba(62, 174, 230, 1);
+	}
+
+
+	/*--------------------------------
+		戻るボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .backBtn {
+		display:block;
+		width:30%;
+		margin: 0 0 10px 0;
+	}
+	
+	.contact .contactCotainer form .backBtn a:link,
+	.contact .contactCotainer form .backBtn a:visited { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }
+	.contact .contactCotainer form .backBtn a:hover,
+	.contact .contactCotainer form .backBtn a:active { color:#fff; text-decoration:none; background-color: rgba(62, 174, 230, 1); }	
+
+	/*--------------------------------
+		送信ボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer form .submitBtn {
+		width: 100%;
+	}
+	
+	.contact .contactCotainer form .submitBtn input:hover {
+		background-color: rgba(62, 174, 230, 1);
+	}
+
+	/*--------------------------------
+		トップに戻るボタン
+	--------------------------------*/
+	
+	.contact .contactCotainer .topBtn a {
+		font-size:1.5rem;
+	}
+
+	/*--------------------------------
+		エラー
+	--------------------------------*/
+
+	.contact .contactCotainer form dd b.error {
+		font-size:1.3rem;
+		margin-top:0.2em;
+	}
+
+	/*--------------------------------
+		メッセージ
+	--------------------------------*/
+
+	.contact .contactCotainer .message {
+		margin: 0 0 20px;
+		text-align: left;
+	}
+
+}
+
+
+/* ------------------------------------------------------------ フォーム以外 ------------------------------------------------------------ */
+
+/*--------------------------------
+	注意事項
+--------------------------------*/
+
+.attention em {
+	display: block;
+	margin: 0 auto 5px;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.attention p {
+	margin: 0 auto 20px;
+	font-size: 1.4rem;
+}
+
+/*--------------------------------
+	プライバシーポリシー
+--------------------------------*/
+
+.privacypolicy {
+	margin: 50px auto;
+}
+
+.privacypolicy .scroll {
+	width: 100%;
+	height: 300px;
+	padding: 20px;
+	overflow-y: scroll;
+	border: 1px solid #ccc;
+	font-size: 1.3rem;
+}
+
+.privacypolicy .scroll em {
+	display: block;
+	margin: 0 auto 10px;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.privacypolicy .scroll p {
+	margin: 0 auto 30px;
+}
+
+.privacypolicy .scroll p span {
+	display: block;
+	margin: 15px auto 0;
+}
+
+.privacypolicy .privacypolicy_agree {
+	margin: 60px auto 0;
+	text-align: center;
+}
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+	
+	/*--------------------------------
+		注意事項
+	--------------------------------*/
+	
+	.attention em {
+		margin: 0 auto 5px;
+		font-size: 1.3rem;
+	}
+	
+	.attention p {
+		margin: 0 auto 15px;
+		font-size: 1.2rem;
+	}
+	
+	/*--------------------------------
+		プライバシーポリシー
+	--------------------------------*/
+	
+	.privacypolicy {
+		margin: 30px auto;
+	}
+	
+	.privacypolicy .scroll {
+		height: 200px;
+		padding: 10px 3%;
+		font-size: 1.2rem;
+	}
+	
+	.privacypolicy .scroll em {
+		margin: 0 auto 5px;
+	}
+	
+	.privacypolicy .scroll p {
+		margin: 0 auto 15px;
+	}
+	
+	.privacypolicy .scroll p span {
+		margin: 10px auto 0;
+	}
+	
+	.privacypolicy .privacypolicy_agree {
+		margin: 20px auto 0;
+	}
+}
+

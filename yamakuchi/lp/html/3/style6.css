@@ -1,0 +1,167 @@
+/*Howto Page CSS*/
+.howto_section {
+	margin: 98px 0 0;
+	position: relative;
+	padding: 18px 0 377px;
+}
+.howto_box_section {
+	margin-top: 150px;
+}
+.howto_box_image {
+	flex: 0 0 45.6%;
+	max-width: 45.6%;
+}
+.howto_box_image_inner {
+	position: relative;
+	overflow: hidden;
+	padding-top: 60.2%;
+	border-radius: 10px;
+	margin: auto;
+}
+.howto_box_image_inner img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+.howto_box_text {
+	flex: 0 0 54.4%;
+	max-width: 54.4%;
+	display: flex;
+}
+.howto_box_text_inner {
+	position: relative;
+	padding: 15px 40px 0 31px;
+}
+.howto_box_text_inner:after {
+	content: '';
+	position: absolute;
+	top: -21px;
+	left: -61px;
+	right: 0;
+	bottom: -21px;
+	background: #fdf6ed;
+	z-index: -1;
+	border-radius: 10px;
+}
+.howto_box_text_inner h4 {
+	font-size: 24px;
+	color: #5c4c2c;
+	display: flex;
+	align-items: center;
+	margin: 0 0 20px;
+}
+.howto_box_text_inner h4 img {
+	margin-right: 22px;
+}
+.howto_box_text_detail {
+	display: flex;
+	align-items: center;
+	min-height: calc(100% - 75px);
+}
+.howto_box_text_inner p {
+	font-size: 18px;
+	color: #5c4c2c;
+	line-height: 30px;
+}
+.howto_box_sec_inner {
+	margin-bottom: 191px;
+}
+.howto_box_sec_row_reverse .custom_row {
+	flex-direction: row-reverse;
+}
+
+.howto_box_sec_inner:last-child {margin-bottom: 0px;}
+.howto_box_sec_row_reverse .howto_box_text_inner:after {
+	right: -61px;
+	left: 0;
+}
+.howto_box_sec_row_reverse .howto_box_text_inner {
+	padding: 15px 40px 0 40px;
+}
+
+
+/*Responsive*/
+@media (max-width: 1449px){
+	.howto_section {
+		margin: 70px 0 0;
+		padding: 18px 0 300px;
+	}
+}
+@media (max-width: 1199px){
+	.howto_section {
+		margin: 50px 0 0;
+	}
+	.howto_box_section {
+		margin-top: 120px;
+		padding: 0 10px;
+	}
+	.howto_box_image {display: flex;}
+	.howto_box_image_inner {width: 100%;}
+	.howto_box_text_inner {
+		padding: 15px 20px 0 !important;
+	}
+	.howto_box_text_inner h4 img {
+		margin-right: 15px;
+	}
+	.howto_box_sec_inner {
+		margin-bottom: 150px !important;
+	}
+}
+@media (max-width: 900px){
+	.howto_box_text,
+	.howto_box_image {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.howto_box_image_inner {
+		max-width: 600px;
+		margin: auto;
+		padding-top: 41%;
+	}
+	.howto_box_text_inner {
+		padding: 25px 15px 15px !important;
+	}
+	.howto_box_text_inner:after {
+		top: -24px;
+		left: 0 !important;
+		right: 0 !important;
+		bottom: 0;
+		border-radius: 10px;
+		z-index: -1;
+	}
+	.howto_box_text_inner h4 img {
+		margin-right: 5px;
+	}
+}
+@media (max-width: 767px){
+	.howto_box_sec_inner {
+		margin-bottom: 50px !important;
+	}
+	.howto_box_image {
+		padding: 0 10px;
+	}
+	.howto_box_image_inner {
+		padding-top: 50%;
+	}
+	.howto_section {
+		padding: 18px 0 250px; ;
+	}	
+	.howto_box_section {
+		margin-top: 80px;
+	}
+}
+@media (max-width: 575px){
+	.howto_box_sec_inner {
+		margin-bottom: 60px !important;
+	}
+	.howto_box_image_inner {
+		padding-top: 60%;
+	}
+}

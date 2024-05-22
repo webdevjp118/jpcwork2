@@ -1,0 +1,115 @@
+
+.footer_gotop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.footer_gotop a {
+    color: #4776e1;
+    border-radius: 35px;
+    min-width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: solid 2px #4776e1;
+    background-color: #fff;
+}
+.confirm_next span {
+    position: absolute;
+    right: 20px;
+}
+@media(max-width: 675px) {
+    .footer_gotop a {
+        font-size: 18px;
+        height: 50px;
+        border-radius: 25px;
+        min-width: 70%;
+    }
+}
+
+.process_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.process_cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #8c96aa;
+    width: 100%;
+    max-width: 700px;
+}
+.process_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    font-size: 22px;
+    color: #8c96aa;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.process_result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    font-size: 22px;
+    color: #8c96aa;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+
+.process_confirm {
+    flex: 1;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #8c96aa;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.process_confirm:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+.process_confirm:before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid #fff;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+.process_confirm.register_active {
+    background: #62bfeb;
+    color: #fff;
+}
+.process_confirm.register_active:before {
+    border-left: 30px solid #62bfeb;
+}

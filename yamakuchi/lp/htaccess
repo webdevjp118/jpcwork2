@@ -1,0 +1,17 @@
+#index.htmlÇ/Ç…ìùàÍ
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://ninibaikyaku-dr.com/$1 [NE,R=301,L]
+#
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /webkanri/kanri/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /webkanri/kanri/index.php [L]
+# END WordPress
+#
+#Added on '20190625_121025' by ControlPanel
+Action application/x-httpd-php /global-bin/php-7.2.cgi

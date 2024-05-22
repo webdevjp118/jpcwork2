@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="715.999" height="81.001" viewBox="0 0 715.999 81.001">
+  <g id="blue_tile3" transform="translate(2.5 0.001)">
+    <path id="路径_1" data-name="路径 1" d="M713,80.5H453V.5H713Z" fill="#4776e1" stroke="#4776e1" stroke-width="1" fill-rule="evenodd"/>
+    <path id="路径_2" data-name="路径 2" d="M226,.5H455l31,39.485L455,80.5H226Z" fill="#fff" stroke="#8695ad" stroke-width="1" fill-rule="evenodd"/>
+    <path id="路径_3" data-name="路径 3" d="M0,.5H229l31,39.485L229,80.5H0Z" transform="translate(-2)" fill="#fff" stroke="#8695ad" stroke-width="1" fill-rule="evenodd"/>
+  </g>
+</svg>

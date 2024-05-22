@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://mayaa.seasar.org" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>標準テンプレート（PC）</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/hww_style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" charset="utf-8" src="js/ebisu_lib.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ebisu.js"></script>
+</head>
+<body>
+<!-- このテンプレートのURLは右記になります。 ドメイン/item_nyuka_notice.html?item_cd=xxx&request=new -->
+
+<script type="text/javascript" charset="utf-8" src="js/iframe.js" m:id='DUMMY'></script>
+
+<iframe m:id='common.IMPORT_HERE' src="common/header.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+<main>
+
+  <div class="l-container">
+    <div class="c-breadcrumbs">
+        <a href="/" class="c-breadcrumbs-link">ホーム</a>
+        <span class="c-breadcrumbs-current">入荷お知らせ登録</span>
+    </div>
+
+	<div id="content">
+		<h2 class="c-pageTitle">入荷お知らせ登録</h2>
+		<p class="content_box">商品が入荷した場合、ご登録されているとメールアドレスに連絡が届きます。</p>
+
+		<table class="table_normal mB50">
+			<tr>
+				<th class="headline">商品コード</th>
+				<td><span m:id="ITEM_CODE_HERE">999999</span></td>
+			</tr>
+			<tr>
+				<th class="headline">商品名</th>
+				<td><span m:id="ITEM_NAME_HERE">商品名</span></td>
+			</tr>
+		</table>
+
+		<iframe m:id='common.IMPORT_HERE' src="common/messages.xhtml" frameborder="0" scrolling="no" width="100%" onload="resize_iframe(this)"></iframe>
+
+		<form m:id='FORM_TAG'>
+		
+		<div class="box" m:id="common.IF_MEMBER_LOGIN">
+			<h3 class="title_bold">会員の方</h3>
+			<p class="content_box">「送信」ボタンを押すと登録が完了します。</p>
+			<div class="buttonarea mB50">
+				<input m:id='MEMBER_REGIST_BUTTON_TAG' type="submit" value="送信する" class="button positive medium" />
+			</div>
+		</div>
+		
+
+		<div m:id="common.IF_MEMBER_LOGIN" m:NOT="">
+			<div class="box">
+				<h3 class="title_bold">会員の方</h3>
+				<p class="content_box">会員の方は、下のフォームにメールアドレス・パスワードを入力して「送信」ボタンを押してください。</p>
+				<table summary="ログイン" class="table_form mB50">
+					<tr>
+						<th class="title">メールアドレス</th>
+						<td><input m:id='ID_INPUT_HERE' name="id" type="text" size="50" value="" /></td>
+					</tr>
+					<tr>
+						<th class="title">パスワード</th>
+						<td><input m:id='PASSWORD_INPUT_HERE' name="pw" size="50" value="" type="password" /></td>
+					</tr>
+				</table>
+				<p align="right"><a href="password_reminder.html">→パスワードを忘れた方</a></p>
+				<div class="buttonarea mB50">
+					<input m:id='LOGIN_BUTTON_TAG' type="submit" value="送信する" class="button positive medium" />
+				</div>
+			</div>
+			<div class="box">
+				<h3 class="title_bold">非会員の方</h3>
+				<p class="content_box">会員の方は、下のフォームにメールアドレスを入力して「送信」ボタンを押してください。</p>
+				<table class="table_form mB50">
+					<th class="title">メールアドレス</th>
+					<td><input m:id='MAIL_INPUT_HERE'  type="text" size="50" value="" /></td>
+				</table>
+				<div class="buttonarea">
+					<input m:id='NOT_MEMBER_REGIST_BUTTON_TAG' type="submit" value="送信する" class="button positive medium" />
+				</div>
+			</div>
+		</div>
+		</form>
+
+	</div>
+  </div>
+
+</main>
+
+<iframe m:id='common.IMPORT_HERE' src="common/footer.xhtml" frameborder="0" scrolling="no" width="100%"	onload="resize_iframe(this)"></iframe>
+
+<iframe m:id='common.IMPORT_HERE' src="common/scripts.xhtml"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg id="ic_cicle_close4" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="base_svg" opacity="0">
+    <g id="Rectangle_13" data-name="Rectangle 13" fill="rgba(0,85,255,0)" stroke="red" stroke-width="1">
+      <rect width="50" height="50" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(6 6)" fill="rgba(255,255,255,0)" stroke="red" stroke-width="1">
+      <circle cx="19" cy="19" r="19" stroke="none"/>
+      <circle cx="19" cy="19" r="18.5" fill="none"/>
+    </g>
+    <line id="Line_3" data-name="Line 3" x2="12" transform="translate(19 25)" fill="none" stroke="red" stroke-width="1"/>
+    <line id="Line_4" data-name="Line 4" y2="12" transform="translate(25 19)" fill="none" stroke="red" stroke-width="1"/>
+  </g>
+  <g id="circle_close" transform="translate(10 10.03)">
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="14.85" cy="14.85" r="14.85" transform="translate(0.15 0.12)" fill="#fd0511"/>
+    <g id="Group_103" data-name="Group 103">
+      <path id="Path_36" data-name="Path 36" d="M9.5,21.84l-1.4-1.4,5.49-5.47L8.07,9.47l1.4-1.43,5.54,5.53,5.52-5.53,1.4,1.43-5.52,5.5,5.52,5.53-1.4,1.4-5.52-5.53Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

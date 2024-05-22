@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/*----------------------------
+ * store
+ *----------------------------*/
+
+.storeArea{
+    width:100%;
+    margin:0 0 120px;
+}
+
+.storeArea h3{
+    font-size:22px;
+    font-weight:normal;
+    border-bottom:1px dotted #ccc;
+    margin:0 0 30px;
+    padding:0 10px;
+}
+
+.new-store01{
+    color:#D80000;
+}
+
+.store-info{
+    display:table-cell;
+    font-size:16px;
+    vertical-align: top;
+    /*float:left;*/
+    width:30%;
+}
+
+.store-map{
+    display:table-cell;
+    text-align: right;
+    width:55%;
+}
+
+.store-map iframe{
+    padding-left:20px;
+}
+
+
+@media screen and (max-width:768px) {
+    .storeArea{
+        margin:0 0 30px;   
+    }
+    
+    .storeArea h3{
+        font-size:18px;
+        margin:0 0 15px;
+        line-height:1.4;
+    }
+    
+    .store-info{
+        display:block;
+        font-size:14px;
+        vertical-align: top;
+        /*float:left;*/
+        width:100%;
+    }
+    
+    .store-info img{
+        width:100%;
+    }
+
+    .store-map{
+        display:block;
+        text-align:center;
+        width:100%;
+        margin:10px 0 0;
+    }
+
+    .store-map iframe{
+        padding-left:0;
+    }   
+}
+
+
+

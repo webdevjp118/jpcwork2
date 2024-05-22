@@ -1,0 +1,4820 @@
+/*!
+Theme Name: Yoyogi
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: yoyogi
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Yoyogi is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/******************************************************Custom CSS Start*************************************************************/
+/***********************************************************************************************************************************/
+/***********************************************************************************************************************************/
+/* box-sizing */
+
+* {
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width:100%;
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+
+	/* font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; */
+	/* font-family: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif; */
+}
+
+
+/* ページ遷移のトランジション [ローディングあり] */
+
+body #loader-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	pointer-events: none;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transition: opacity .8s ease;
+	transition: opacity .8s ease;
+	will-change: opacity;
+}
+
+body.transition #loader-wrapper {
+	opacity: 1;
+}
+
+body.evacuation #loader-wrapper { /* for IE10 */
+	z-index: -1;
+}
+
+body #loader-wrapper #loader {
+	position: absolute;
+	top:calc(50% - 22px);
+	left:calc(50% - 22px);
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	border-top: 3px solid rgba(62, 174, 230, 0.2);
+	border-right: 3px solid rgba(62, 174, 230, 0.2);
+	border-bottom: 3px solid rgba(62, 174, 230, 0.2);
+	border-left: 3px solid rgba(62, 174, 230, 0.8);
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: loader 1.1s infinite linear;
+	animation: loader 1.1s infinite linear;
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* ------------------------------------------------------------ スクロールアニメーション ------------------------------------------------------------ */
+
+/*--------------------------------
+	基本
+--------------------------------*/
+
+.io {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+
+	/* GPU acceleration */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	/* -webkit-transform: translate3d(0, 0, 0); */
+	/* transform: translate3d(0, 0, 0); */
+	will-change: opacity, transform;
+}
+
+.io.move {
+	opacity: 1 !important;
+	-webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0deg) !important;
+	transform: translate3d(0, 0, 0) scale(1) rotate(0deg) !important;
+}
+
+
+/*--------------------------------
+	汎用
+--------------------------------*/
+
+.io.fade {
+	opacity: 0;
+}
+
+.io.lr {
+	-webkit-transform: translate3d(-80px, 0, 0);
+	transform: translate3d(-80px, 0, 0);
+}
+
+.io.rl {
+	-webkit-transform: translate3d(80px, 0, 0);
+	transform: translate3d(80px, 0, 0); 
+}
+
+.io.upL {
+	-webkit-transform: translate3d(0, 80px, 0);
+	transform: translate3d(0, 80px, 0);
+}
+
+.io.upS {
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
+}
+
+.io.downL {
+	-webkit-transform: translate3d(0, -80px, 0);
+	transform: translate3d(0, -80px, 0);
+}
+
+.io.downS {
+	-webkit-transform: translate3d(0, -20px, 0);
+	transform: translate3d(0, -20px, 0);
+}
+
+.io.scaleUp {
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.io.scaleDown {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.io.rotateL {
+ 	-webkit-transform: rotate(30deg);
+ 	transform: rotate(30deg);
+}
+
+.io.rotateR {
+	-webkit-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+/* 出現をずらす */
+
+.io.delay.delay1 {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+}
+.io.delay.delay2 {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.23s, -webkit-transform 1.0s ease 0.23s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.23s, transform 1.0s ease 0.23s;
+}
+.io.delay.delay3 {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.46s, -webkit-transform 1.0s ease 0.46s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.46s, transform 1.0s ease 0.46s;
+}
+.io.delay.delay4 {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.69s, -webkit-transform 1.0s ease 0.69s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.69s, transform 1.0s ease 0.69s;
+}
+
+
+/* 子要素の出現をずらす */
+
+.io.delay a {
+	-webkit-transition: none;
+	transition: none;
+}
+
+.io.delay .delay_child {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	/* GPU acceleration */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: opacity, transform;
+	opacity: 0;
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
+}
+
+.io.delay.delay1 .delay_child {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+}
+.io.delay.delay2 .delay_child {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.73s, -webkit-transform 1.0s ease 0.73s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.73s, transform 1.0s ease 0.73s;
+}
+.io.delay.delay3 .delay_child {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.96s, -webkit-transform 1.0s ease 0.96s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.96s, transform 1.0s ease 0.96s;
+}
+.io.delay.delay4 .delay_child {
+	-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 1.19s, -webkit-transform 1.0s ease 1.19s;
+	transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 1.19s, transform 1.0s ease 1.19s;
+}
+
+.io.delay.move .delay_child {
+	opacity: 1 !important;
+	-webkit-transform: translate3d(0, 0, 0) !important;
+	transform: translate3d(0, 0, 0) !important;
+}
+
+
+/* ============================== SP ============================== */
+
+@media only screen and (max-width: 812px) {
+
+	/* 出現をずらす */
+	
+	.io.delay.delay1 {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+	}
+	.io.delay.delay2 {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+	}
+	.io.delay.delay3 {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+	}
+	.io.delay.delay4 {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, -webkit-transform 1.0s ease 0s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0s, transform 1.0s ease 0s;
+	}
+	
+	
+	/* 子要素の出現をずらす */
+	
+	.io.delay .delay_child {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	}
+	
+	.io.delay.delay1 .delay_child {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	}
+	.io.delay.delay2 .delay_child {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	}
+	.io.delay.delay3 .delay_child {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	}
+	.io.delay.delay4 .delay_child {
+		-webkit-transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, -webkit-transform 1.0s ease 0.5s;
+		transition: color 0.4s ease 0s, background-color 0.4s ease 0s, opacity 1.0s ease 0.5s, transform 1.0s ease 0.5s;
+	}
+
+}
+
+/**********************************Main CSS Start******************************************************************/
+/******************************************************************************************************************/
+
+@font-face {
+    font-family: 'UD Digi Kyokasho NP-B';
+    src: url('fonts/UDDigiKyokashoN-B.ttc') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-B';
+    src: url('fonts/UDDigiKyokashoN-B.ttc') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'UD Digi Kyokasho NK-R';
+    src: url('fonts/UDDigiKyokashoN-R.ttc') format('truetype');
+    font-weight: bold;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,h1,h2,h3,h4,h5,h6,ul,li,p,a,span{
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    max-width: 100%;
+}
+a,a:hover,a:focus,button,button:hover,button:focus,input,input:hover,input:focus,textarea,textarea:hover,textarea:focus{
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1232px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 16px;
+}
+.row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+body{
+    background-color: #FFFDF1;
+}
+
+
+.cpc,
+.cpc6,
+.cpc9 {
+	display: block;
+}
+.csp,
+.csp6,
+.csp9 {
+	display: none;
+}
+
+
+main{
+    width: 100%;
+    overflow: hidden;
+}
+main.pos-fix{
+    position: fixed;
+}
+
+/* HEADER */
+header#header{
+    width: 100%;
+    position: relative;
+    z-index: 999;
+}
+.header-addr-logo-school{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 38px;
+}
+.header-addr{
+    padding-top: 50px;
+    width: 541px;
+}
+.header-addr p{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 1.7;
+}
+.header-contact{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    width: 541px;
+}
+.header-logo{
+    padding-top: 17px;
+}
+.header-logo img{
+    width: 134px;
+}
+.header-nav .header-logo img{
+    width: 173px;
+}
+.header-contact-btn{
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #FF909D;
+    border-radius: 5px;
+    padding: 16px 33.5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    margin-right: 34.5px;
+    border: 2px solid #FF909D;
+    transition: 0.4s all;
+}
+.header-contact-btn:hover, 
+.header-contact-btn:focus{
+    background-color: #FFFDF1;
+    color: #FF909D;
+}
+
+.header-contact-btn > .fa{
+    margin-right: 11px;
+}
+
+.header-contact ul{
+    display: inline-block;
+    align-self: flex-start;
+}
+.header-contact ul li, .header-contact ul li a{
+    color: #5F4B3E;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: bold;
+    line-height: 1.5;
+}
+.header-contact ul li a:hover, 
+.header-contact ul li a:focus{
+    color: #000;
+}
+.header-contact ul li span{
+    font-weight: normal;
+    min-width: 95px;
+    display: inline-block;
+}
+
+nav.header-nav {
+    width: 100%;
+    text-align: center;
+    padding-top: 7px;
+}
+ul.header-menu > li{
+    display: inline-block;
+    margin-right: 45px;
+}
+ul.header-menu > li:last-child, ul.header-menu > li.last-child{
+    margin-right: 0px;
+}
+ul.header-menu > li > a{
+    display: inline-block;
+    color: #5F4B3E;
+    font-size: 16px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+}
+ul.header-menu > li > a:hover, 
+ul.header-menu > li > a:focus{
+    color: #000;
+}
+ul.header-menu > li img{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+button.menu-toggle-btn{
+    display: none;
+}
+.header-nav .header-logo, .header-nav .header-contact-btn, .header-nav .header-contact{
+    display: none;
+}
+
+/* BANNER-SEC */
+section.banner-slider-sec{
+    position: relative;
+    margin-top: -41px;
+}
+section.banner-slider-sec ~ *{
+	position: relative;
+	z-index: 9;
+}
+section.banner-slider-sec:before {
+    content: '';
+    background: #fefdf1;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 200%;
+    height: 205%;
+    z-index: 9;
+    border-radius: 50%;
+    transform: translate(-25%, -92%);
+}
+section.banner-slider-sec:after {
+    content: '';
+    background: #fefdf1;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 200%;
+    height: 205%;
+    z-index: 9;
+    border-radius: 50%;
+    transform: translate(-25%, 92%);
+}
+section.banner-slider-sec:before, section.banner-slider-sec:after{
+    width: 200%;
+    height: 205%;
+}
+section.banner-slider-sec button.slick-arrow {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background-color: #EBBAB6;
+    color: #fff;
+    border: 8px solid #fefdf1;
+    cursor: pointer;
+}
+section.banner-slider-sec button.slick-prev{
+    left: calc(36.5vw - (75px / 2));
+}
+section.banner-slider-sec button.slick-next {
+    right: calc(36.5vw - (75px / 2));
+}
+.banner-slider-itm{
+    padding: 0px 10px;
+}
+.banner-slider-itm .img{
+	position: relative;
+    overflow: hidden;
+	width: 100%;
+    height: 557px;
+}
+.banner-slider-itm .img img{
+	width: 100%;
+	height: 100%;
+    object-fit: cover;
+    object-position: center center;
+	display: none;
+}
+.banner-slider-itm .img span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+
+/* FUTURE-SEC */
+.future-sec{
+    width: 100%;
+    position: relative;
+	z-index: 10 !important;
+}
+.future-sec:before{
+    content: '';
+    position: absolute;
+    background: url('images/future-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.future-bx{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 883px;
+    margin: 0px auto;
+    border: 9px solid rgba(247, 162, 93, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.future-bx .img{
+    height: 579px;
+    overflow: hidden;
+}
+.future-bx .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.future-bx .icon{
+    width: 100%;
+    padding: 29px 0px 14px;
+    text-align: center;
+}
+
+.future-bx .cont{
+    padding-bottom: 10px;
+	text-align: center;
+}
+.future-bx .cont > h3{
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 30px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #5F4B3E;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+	display: inline-block;
+}
+.future-bx .cont > h3 span{
+    color: #B0BF1E;
+}
+.future-bx .cont > h3:before{
+    content: '';
+    position: absolute;
+    background: url('images/guide-head-bg.png');
+    width: 100%;
+    height: 17px;
+    z-index: -1;
+    bottom: -5px;
+    left: 0;
+}
+.future-bx .cont > p{
+    color: #5F4B3E;
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    line-height: 1.6;
+    margin: 0px auto;
+    text-align: center;
+}
+.future-bx .cont-flex{
+    width: 100%;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.future-bx .cont ul{
+    padding-bottom: 30px;
+}
+.future-bx .cont ul li{
+    color: #5F4B3E;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2;
+}
+
+/* INTRODUCE-SEC */
+.introduce-sec{
+    width: 100%;
+    padding: 84px 0px 58px;
+    position: relative;
+}
+.intro-background-clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.intro-background-clip .img{
+    position: absolute;
+}
+.intro-background-clip .img1, 
+.intro-background-clip .img3, 
+.intro-background-clip .img5{
+    width: 640px;
+}
+.intro-background-clip .img1{
+    top: -5%;
+    left: -5%;
+}
+.intro-background-clip .img2{
+    width: 310px;
+    top: 0;
+    right: 12%;
+}
+.intro-background-clip .img3{
+    top: 15%;
+    right: -15%;
+}
+.intro-background-clip .img4{
+    width: 310px;
+    top: 50%;
+    left: 5%;
+}
+.intro-background-clip .img5{
+    bottom: 18%;
+    right: -5%;
+}
+.intro-background-clip .img6{
+    width: 356px;
+    bottom: 15%;
+    left: 7%;
+}
+
+
+
+.intro-head{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 27px;
+}
+.intro-head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto 18px;
+    color: #DB1F1F;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    z-index: 1;
+	display: inline-block;
+}
+.intro-head h2:before{
+    content: '';
+    position: absolute;
+    background: url('images/intro-head-bg.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 17px;
+    bottom: -5px;
+    left: 0;
+    z-index: -1;
+}
+.intro-head p{
+    color: #862424;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.target-bx{
+    width: 100%;
+    max-width: 695px;
+    background: #B0BF1E;
+    border-radius: 20px;
+    margin: 0px auto;
+}
+.target-bx.one{
+    padding: 20px 35px 16px;
+}
+.target-bx.two{
+    padding-top: 44px;
+}
+.target-bx.one ul{
+    width: 100%;
+    max-width: 515px;
+    margin: 0px auto;
+}
+.target-bx.one ul li{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2.7;
+}
+.target-bx.one ul li span{
+    color: #FFF82D;
+}
+.target-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+.target-flex > .col-6{
+    width: 50%;
+    padding: 5px;
+}
+.target-inner-bx{
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 0px 24px 15px;
+}
+.target-inner-bx table{
+    width: 100%;
+}
+.target-inner-bx th{
+    text-align: center;
+    color: #B0BF1E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2;
+    border-bottom: 1px dotted #B0BF1E;
+    padding: 10px 0px 10px;
+}
+.target-inner-bx td{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2;
+    text-align: right;
+    padding: 0px 10px;
+}
+.target-inner-bx td span, .target-inner-bx td.price{
+    color: #FF6746;
+}
+.att-pin{
+    width: 100%;
+    max-width: 695px;
+    margin: auto;
+    position: relative;
+    height: 56px;
+}
+.att-pin .line{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 2px;
+    height: 106px;
+    background: #859114;
+}
+.att-pin .line.one{
+    left: 15px;
+}
+.att-pin .line.two{
+    right: 15px;
+}
+.att-pin .line:before, .att-pin .line:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    border-radius: 50%;
+}
+.att-pin .line:before{
+    top: 0;
+}
+.att-pin .line:after{
+    bottom: 0;
+}
+
+.intro-list{
+    width: 100%;
+    max-width: 695px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 32px 0px 50px 30px;
+}
+.intro-list ul li{
+    position: relative;
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.7;
+    /* display: list-item;
+    list-style: '※'; */
+    padding-left: 30px;
+}
+.intro-list ul li:before{
+    content: '※';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.intro-business{
+    position: relative;
+    width: 100%;
+    max-width: 909px;
+    margin: 0px auto;
+    border-radius: 20px;
+    background: #fff;
+}
+.intro-business:before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: 0;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+}
+.intro-business:after{
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -45px;
+    background: url('images/intro-business-after.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 114px;
+    height: 78px;
+}
+.intro-business .img{
+    width: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.intro-business .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.intro-business .cont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 28px;
+    padding-bottom: 8px;
+}
+.intro-business .cont h2{
+    background: url('images/intro-business-shape.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 8px 25px 9px 34px;
+    margin-left: -17px;
+    margin-right: 74px;
+}
+.intro-business .cont ul li{
+    color: #C36418;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.7;
+    position: relative;
+}
+.intro-business .cont ul li:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(0, -50%);
+    width: 9px;
+    height: 9px;
+    background: #F7A25D;
+}
+
+.intro-time{
+    width: 100%;
+    padding-top: 122px;
+    padding-bottom: 100px;
+}
+.intro-time-flex{
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.intro-time-individual{
+    width: 100%;
+    max-width: 533px;
+}
+.intro-time-individual .head{
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+.intro-time-individual .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    background: #6ABF59;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2;
+    padding: 0px 20px 0px 20px;
+    border-radius: 0px 5px 5px 0px;
+	display: inline-block;
+}
+.intro-time-individual .head h2 span{
+    position: absolute;
+    left: 0;
+    top: -15px;
+    display: block;
+    width: 2px;
+    height: 85px;
+    background: #6ABF59;
+}
+.intro-time-individual .head h2 span:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #6ABF59;
+}
+.intro-time-individual .cont{
+    position: relative;
+    border: 4px solid #6ABF59;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    padding-left: 43px;
+}
+.intro-time-individual .cont:before{
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: 14px;
+    background: url('images/intro-time-boy.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    width: 154px;
+    height: 317px;
+}
+.intro-time-individual .cont ul{
+    width: 100%;
+    padding-bottom: 90px;
+    position: relative;
+    z-index: 1;
+}
+.intro-time-individual .cont ul li{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0px 37px;
+}
+.intro-time-individual .cont ul li:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    max-width: 283px;
+    border: 1px dashed #3DAC2F;
+}
+.intro-time-individual .cont .stamp{
+    margin-right: 14px;
+}
+.intro-time-individual .cont .stamp h3{
+    width: max-content;
+    max-width: 100%;
+    position: relative;
+    background: url('images/intro-time-shape.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 161px;
+    height: 47px;
+}
+.intro-time-individual .cont .text{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.7;
+}
+.intro-time-individual .cont .text span{
+    color: #3DAC2F;
+}
+
+.intro-time-service{
+    width: 100%;
+    max-width: 604px;
+}
+.intro-time-service .head{
+    width: 100%;
+    padding: 0px 15px;
+    margin-bottom: 18px;
+}
+.intro-time-service .head h2{
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    padding: 16px 0px 15px;
+    line-height: 100%;
+    text-align: center;
+    background: url('images/intro-service-shape.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.intro-time-service .head h2:before, .intro-time-service .head h2:after{
+    content: '';
+    position: absolute;
+    top: 90%;
+    width: 4px;
+    height: 30px;
+    background: #F1A828;
+}
+.intro-time-service .head h2:before{
+    left: 20px;
+}
+.intro-time-service .head h2:after{
+    right: 20px;
+}
+.intro-service-bx{
+    position: relative;
+    border: 4px solid #F1A828;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+}
+.intro-service-bx .img img{
+    height: 208px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+.intro-service-bx .cont{
+    padding: 19px 0px;
+    width: 100%;
+    max-width: 390px;
+    margin: 0px auto;
+}
+.intro-service-bx .cont li{
+    color: #E6621A;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.5;
+}
+.intro-service-bx .cont li span{
+    color: #F8931F;
+}
+.intro-service-bx .cont p{
+    color: #4A1A1A;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.intro-classroom{
+    width: 100%;
+}
+.intro-classroom .head{
+    margin-bottom: 36px;
+	text-align: center;
+}
+.intro-classroom .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    color: #B15320;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    margin: 0px auto;
+    z-index: 1;
+	display: inline-block;
+}
+.intro-classroom .head h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 17px;
+    background: url('images/classroom-head-bg.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.intro-classroom-wrap{
+    width: 100%;
+    max-width: 1254px;
+    padding: 0px 27px;
+    margin: 0px auto;
+}
+.classroom-row{
+    width: auto;
+    margin: 0px -27px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.classroom-row > .col{
+    width: 33.33%;
+    padding: 0px 27px;
+    position: relative;
+    z-index: 1;
+}
+.classroom-bx{
+    width: 100%;
+    position: relative;
+    border: 4px solid;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.classroom-bx.one{
+    border-color: #F7A25D;
+}
+.classroom-bx.two{
+    border-color: #6abf59;
+}
+.classroom-bx.three{
+    border-color: #2a9dcc;
+}
+.classroom-bx .cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px 43px;
+    
+}
+.classroom-bx .cont::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -166px;
+    width: 145%;
+    height: 185%;
+    background-color: #fff;
+    box-shadow: 0px 2px 20px rgb(0 0 0 / 18%);
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+}
+.classroom-bx .cont > *{
+    position: relative;
+    z-index: 1;
+}
+.classroom-bx .cont h3{
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.6;
+}
+.classroom-bx.one .cont h3{
+    color: #EA643A;
+}
+.classroom-bx.two .cont h3{
+    color: #48B232;
+}
+.classroom-bx.three .cont h3{
+    color: #2A9DCC;
+}
+.classroom-bx .cont p{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 1.7;
+}
+.classroom-bx .contact-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.classroom-bx .contact-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 7px;
+}
+.classroom-bx.one .contact-icon{
+    background: #EB7C59;
+}
+.classroom-bx.two .contact-icon{
+    background: #6ABF59;
+}
+.classroom-bx.three .contact-icon{
+    background: #42B4E3;
+}
+.classroom-bx .contact-text{
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 2px;
+}
+.classroom-bx.one .contact-text{
+    color: #EA643A;
+}
+.classroom-bx.two .contact-text{
+    color: #47B332;
+}
+.classroom-bx.three .contact-text{
+    color: #2A9DCC;
+}
+.classroom-bx .map, .classroom-bx .map iframe{
+    height: 389px;
+}
+
+/* ADMIN-SEC */
+section.admin-sec{
+    width: 100%;
+    position: relative;
+    padding: 54px 0px 63px;
+	z-index: 8;
+}
+section.admin-sec .before-after-img{
+    position: absolute;
+    top: 0;
+    transform: translate(0, -60%);
+}
+section.admin-sec .before-img{
+    left: 50px;
+}
+section.admin-sec .after-img{
+    right: 50px;
+}
+section.admin-sec:before{
+    content: '';
+    position: absolute;
+    background: url(images/admin-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.admin-bx{
+    position: relative;
+    z-index: 1;
+    margin: 126px 0px 109px;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+}
+.admin-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin-profile{
+    width: 336px;
+    text-align: center;
+    position: relative;
+    padding: 57px 0px 0px;
+}
+.admin-profile:before{
+    content: '';
+    position: absolute;
+    width: 159%;
+    height: 224%;
+    background: #FFEFD7;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+}
+.admin-profile .img{
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+    margin: 0px auto 12px;
+    background: #fff;
+}
+.admin-profile .img img{
+    width: 100%;
+}
+.admin-profile .cont{
+    position: relative;
+}
+.admin-profile .cont h4{
+    color: #5F4B3E;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 2;
+}
+.admin-profile .cont p{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.7;
+}
+.admin-dtl{
+    width: calc(100% - 336px);
+    padding: 35px 25px 42px 30px;
+}
+.admin-dtl h3{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px 0px;
+    color: #320606;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+	display: inline-block;
+}
+.admin-dtl h3:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 17px;
+    background: url('images/admin-head-bg.png');
+    left: 0;
+    bottom: -5px;
+    z-index: -1;
+}
+.admin-dtl h4{
+    color: #862424;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.admin-dtl p{
+    color: #320606;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 2;
+}
+
+
+/* AFTER-SCHOOL SERVICE */
+.after-school-sec{
+    width: 100%;
+}
+.aft-scl-service{
+    position: relative;
+    width: 100%;
+    max-width: 970px;
+    margin: 0px auto;
+    background: #fff;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+}
+.aft-scl-service:before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    bottom: 20px;
+    background: url('images/aft-scl-service-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    width: 50%;
+    max-width: 367px;
+    height: 50%;
+    max-height: 274px;
+}
+.aft-scl-service .head .head-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -70px;
+}
+.aft-scl-service .head .img{
+    width: 129px;
+    height: 129px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #F7A25D;
+    background: #fff;
+}
+.aft-scl-service .head img{
+    width: 100%;
+}
+.aft-scl-service .head h3{
+    width: max-content;
+    max-width: 100%;
+    background: url(images/intro-business-shape.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+    padding: 18px 34px 19px 20px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+.aft-scl-service .cont{
+    position: relative;
+    width: 100%;
+    padding: 0px 57px 90px;
+    z-index: 1;
+}
+.aft-scl-service .cont p{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.aft-scl-contact{
+    width: 100%;
+    padding: 103px 0px 60px;
+}
+.aft-scl-contact-wrap{
+    width: 100%;
+    max-width: 1254px;
+    padding: 0px 27px;
+    margin: 0px auto;
+}
+.aft-scl-contact-row{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -27px;
+    justify-content: center;
+}
+.aft-scl-contact-row > .col{
+    width: 33.33%;
+    padding: 0px 27px;
+}
+.aft-scl-contact-bx{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border: 4px solid;
+    border-radius: 20px;
+    padding: 50px 0px 44px;
+    background: url('images/aft-scl-contact-bg.png') #fff;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 100% 100%;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+.aft-scl-contact-bx.one, .aft-scl-contact-bx.three{
+    width: calc(100% - 12px);
+}
+.aft-scl-contact-bx.one{
+    margin-right: auto;
+}
+.aft-scl-contact-bx.three{
+    margin-left: auto;
+}
+.aft-scl-contact-bx:before{
+    content: '';
+    position: absolute;
+    border: 4px solid;
+    border-radius: 20px;
+    background: transparent;
+    z-index: -1;
+    border-top: none;
+}
+.aft-scl-contact-bx.one, .aft-scl-contact-bx.one:before{
+    border-color: #F7A25D;
+}
+.aft-scl-contact-bx.two, .aft-scl-contact-bx.two:before{
+    border-color: #6ABF59;
+}
+.aft-scl-contact-bx.three, .aft-scl-contact-bx.three:before{
+    border-color: #2A9DCC;
+}
+.aft-scl-contact-bx.one:before{
+    right: -12px;
+    bottom: -12px;
+    left: 0px;
+    top: 0px;
+    border-left-width: 0px;
+}
+.aft-scl-contact-bx.two:before{
+    left: -4px;
+    right: -4px;
+    top: -4px;
+    bottom: -12px;
+}
+.aft-scl-contact-bx.three:before{
+    left: -12px;
+    bottom: -12px;
+    top: 0;
+    right: 0;
+    border-right-width: 0px;
+}
+.aft-scl-contact-bx h4{
+    position: relative;
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+    margin-bottom: 35px;
+    z-index: 1;
+}
+.aft-scl-contact-bx.one h4{
+    color: #EA643A;
+}
+.aft-scl-contact-bx.two h4{
+    color: #48B232;
+}
+.aft-scl-contact-bx.three h4{
+    color: #2A9DCC;
+}
+.aft-scl-contact-bx p{
+    position: relative;
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 100%;
+    margin-bottom: 22px;
+    z-index: 1;
+}
+.aft-scl-contact-bx .contact-flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.aft-scl-contact-bx .contact-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 7px;
+}
+.aft-scl-contact-bx.one .contact-icon{
+    background: #EB7C59;
+}
+.aft-scl-contact-bx.two .contact-icon{
+    background: #6ABF59;
+}
+.aft-scl-contact-bx.three .contact-icon{
+    background: #42B4E3;
+}
+.aft-scl-contact-bx .contact-text{
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 2px;
+}
+.aft-scl-contact-bx.one .contact-text{
+    color: #EA643A;
+}
+.aft-scl-contact-bx.two .contact-text{
+    color: #47B332;
+}
+.aft-scl-contact-bx.three .contact-text{
+    color: #2A9DCC;
+}
+
+
+/* FOOTER */
+footer#footer > .container {
+    background: #FFFDF1;
+}
+.footer-top-img img{
+    width: 100%;
+}
+.ftr-pd-30{
+    padding-bottom: 30px;
+}
+.footer-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.footer-logo{
+    width: 205px;
+    padding: 0px 15px;
+    text-align: center;
+    align-self: center;
+}
+.footer-logo img{
+    width: 134px;
+}
+.footer-dtl{
+    width: calc(100% - 205px);
+    padding: 0px 0px 0px 15px;
+}
+.footer-menu{
+    width: 100%;
+    padding: 37px 0px 85px;
+}
+.footer-menu ul{
+    width: 100%;
+    text-align: center;
+}
+.footer-menu ul li{
+    display: inline-block;
+    margin-right: 45px;
+}
+.footer-menu ul li:last-child{
+    margin-right: 0px;
+}
+.footer-menu ul li a{
+    color: #5F4B3E;
+    font-size: 16px;
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    line-height: 1.3;
+    display: inline-block;
+}
+.footer-menu ul li a:hover, 
+.footer-menu ul li a:focus{
+    color: #000;
+}
+.footer-addr{
+    align-self: flex-start;
+    position: relative;
+    display: inline-block;
+}
+.footer-addr ul li, .footer-addr ul li a{
+    display: block;
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 2;
+}
+.footer-addr ul li span{
+    display: inline-block;
+}
+.footer-addr ul li span:first-child{
+    min-width: 80px;
+}
+.footer-addr ul li span:nth-child(2){
+    min-width: 190px;
+}
+.footer-addr ul li a{
+    font-family: 'UD Digi Kyokasho NK-B';
+    font-weight: bold;
+    display: inline-block;
+}
+.footer-addr ul li a:hover, 
+.footer-addr ul li a:focus{
+    color: #000;
+}
+.footer-contact-cpyrgt{
+    align-self: flex-end;
+    text-align: right;
+    width: 100%;
+    margin-top: -70px;
+}
+.footer-contact{
+    margin-bottom: 20px;
+}
+.footer-contact .header-contact-btn{
+    margin-right: 0px;
+}
+.footer-cpyrgt p{
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+
+
+/*********************** USING-PAGE ***********************/
+section.guide-sec{
+    width: 100%;
+    padding: 78px 0px 227px;
+    position: relative;
+}
+.guide-background-clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.guide-background-clip .img{
+    position: absolute;
+}
+.guide-background-clip .img1{
+    width: 256px;
+    top: 8%;
+    left: 8%;
+}
+.guide-background-clip .img2{
+    width: 640px;
+    top: 25%;
+    right: -20%;
+}
+.guide-background-clip .img3{
+    width: 640px;
+    bottom: 0%;
+    left: 0%;
+	top: 0%;
+}
+.guide-step{
+	text-align: center;
+}
+.guide-step .head{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 45px;
+	text-align: center;
+}
+.guide-step .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px;
+    color: #DB1F1F;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+	display: inline-block;
+}
+.guide-step .head h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 100%;
+    height: 17px;
+    background: url(images/guide-head-bg.png);
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.guide-step .head p{
+    color: #862424;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    padding-left: 3px;
+    letter-spacing: 2px;
+}
+.guide-step ul{
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+	text-align: center;
+}
+.guide-step li{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    min-width: 300px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 37px 0px 37px;
+	display: inline-block;
+	text-align: center;
+}
+.guide-step li:nth-child(3) {
+    padding: 31px 0px 46px;
+}
+.guide-step li:nth-child(3) .cont h3{
+    margin-bottom: 12px;
+}
+.guide-step li:nth-child(3) .cont p{
+    padding-left: 10px;
+}
+.guide-step li:last-child .cont p{
+    padding-left: 6px;
+}
+.guide-step li .img{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.guide-step li:nth-child(odd) .img{
+    left: -102%;
+}
+.guide-step li:nth-child(even) .img{
+    right: -100%;
+}
+.guide-step li .img span{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #FC5383;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+}
+.guide-step li:nth-child(odd) .img span{
+    right: calc(0% - 15px);
+    transform: translate(0, -34%);
+}
+.guide-step li:nth-child(even) .img span{
+    left: calc(0% - 15px);
+    transform: translate(0, -29%);
+}
+.guide-step li:last-child .img span {
+    right: calc(0% - 27px);
+    transform: translate(0, -73%);
+}
+.guide-step li .cont{
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto;
+	display: inline-block;
+}
+.guide-step li .cont h3{
+    text-align: center;
+    color: #D73131;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+.guide-step li .cont p{
+    text-align: left;
+    color: #603813;
+    font-size: 20px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-left: 22px;
+}
+.guide-step li .cont p:last-child{
+    margin-bottom: 0px;
+}
+
+/* LEARNING-EXERCISE */
+.learn-exercise-sec{
+    position: relative;
+    width: 100%;
+    padding: 97px 0px 64px;
+}
+.learn-exercise-sec .before-img{
+    position: absolute;
+    top: 0;
+    right: 15%;
+    transform: translate(0, -90%);
+}
+.learn-exercise-sec:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/learn-ex-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.learn-exercise-flex{
+    width: 100%;
+	text-align: center;
+}
+.learn-exercise-bx{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 891px;
+    margin: 0px auto 78px;
+    background: #fff;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.learn-exercise-bx:nth-child(even){
+    flex-direction: row-reverse;
+}
+.learn-exercise-bx:last-child{
+    margin-bottom: 0px;
+}
+.learn-exercise-bx .img{
+    position: relative;
+    width: 430px;
+    overflow: hidden;
+}
+.learn-exercise-bx:nth-child(odd) .img{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.learn-exercise-bx:nth-child(even) .img{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 410px;
+}
+.learn-exercise-bx .img img{
+    max-width: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(-35%, -17%);
+	display: none;
+}
+.learn-exercise-bx .img span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 140%;
+    height: 140%;
+    background-size: cover;
+}
+.learn-exercise-bx:nth-child(odd) .img span {
+    right: 0;
+}
+.learn-exercise-bx:nth-child(even) .img span {
+    left: 0;
+}
+.learn-exercise-bx:nth-child(even) .img img{
+    max-width: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(0%, -17%);
+}
+.learn-exercise-bx .cont{
+    position: relative;
+    width: calc(100% - 430px);
+    padding: 68px 30px 68px;
+    text-align: left;
+}
+.learn-exercise-bx:nth-child(even) .cont{
+    padding: 72px 30px 65px;
+	text-align: right;
+}
+.learn-exercise-bx .cont:nth-child(even) p{
+    margin-bottom: 15px;
+	text-align: left;
+}
+.learn-exercise-bx .cont h2{
+    position: absolute;
+    top: 0;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    max-width: 100%;
+    padding: 12px 28px;
+	display: inline-block;
+}
+.learn-exercise-bx:nth-child(even) .cont h2{
+    padding: 12px 38px;
+    left: 46%;
+}
+.learn-exercise-bx .cont h2:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 24px);
+    height: 0;
+    z-index: -1;
+}
+.learn-exercise-bx .cont h2:before{
+    border: 30px solid;
+    border-top: 28px solid #EA661D;
+    border-bottom: 28px solid #EA661D;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+.learn-exercise-bx .cont p{
+    position: relative;
+    color: #7D2705;
+    font-size: 20px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 43px;
+    z-index: 1;
+}
+.learn-exercise-bx .cont p:last-child{
+    margin-bottom: 0px;
+}
+.learn-exercise-bx .cont p.dgs-2{
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+	display: inline-block;
+}
+.learn-exercise-bx .cont img{
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+}
+.learn-exercise-bx:nth-child(even) .cont img{
+    right: auto;
+    bottom: 30px;
+    left: 0px;
+}
+
+/* ROUTINE-SEC */
+section.routine-sec{
+    width: 100%;
+    padding: 63px 0px 120px;
+    position: relative;
+}
+.routine-background-clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.routine-background-clip .img{
+    position: absolute;
+}
+.routine-background-clip .img1{
+    width: 256px;
+    top: 8%;
+    left: -1%;
+}
+.routine-background-clip .img2{
+    width: 640px;
+    top: 50%;
+    left: -25%;
+}
+.routine-background-clip .img3{
+    width: 300px;
+    bottom: 23%;
+    right: 0%;
+}
+.routine-step {
+    width: 100%;
+    max-width: 1321px;
+    margin: 0px auto;
+    padding: 0px 16px;
+    position: relative;
+    z-index: 1;
+}
+.routine-step .head{
+    width: 100%;
+    margin-bottom: 36px;
+	text-align: center;
+}
+.routine-step .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px;
+    color: #7FA60A;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+	display: inline-block;
+}
+.routine-step .head h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 100%;
+    height: 17px;
+    background: url('images/routine-head-bg.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.routine-step .head p{
+    color: #862424;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.routine-step-list{
+    width: 100%;
+    margin-bottom: 41px;
+}
+.routine-step-list ul p{
+    text-align: center;
+    color: #603813;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NK-R';
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 102px;
+}
+.routine-step-list ul{
+    width: 100%;
+}
+.routine-step-list ul li{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 181px;
+}
+.routine-step-list ul li:nth-child(even){
+    margin-right: auto;
+    background: linear-gradient(90deg, transparent, #E9EDBD);
+    border-right: 1px dashed #b3bd3b;
+}
+.routine-step-list ul li:nth-child(odd){
+    margin-left: auto;
+    background: linear-gradient(-90deg, transparent, #E9EDBD);
+    border-left: 1px dashed #b3bd3b;
+}
+.routine-step-list ul li .clock-img{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.routine-step-list ul li:nth-child(even) .clock-img{
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.routine-step-list ul li:nth-child(odd) .clock-img{
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.routine-step-list ul li .cont-img{
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.routine-step-list ul li .cont{
+    position: absolute;
+    top: -12px;
+}
+.routine-step-list ul li .cont h4{
+    color: #7FA60A;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+.routine-step-list ul li .cont p{
+    color: #603813;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0px;
+}
+.routine-step-list ul li:nth-child(even) .cont{
+    text-align: right;
+    right: 66px;
+}
+.routine-step-list ul li:nth-child(odd) .cont{
+    text-align: left;
+    left: 66px;
+}
+.routine-btm-cont{
+    width: 100%;
+	text-align: center;
+}
+.routine-btm-cont ul{
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto;
+	display: inline-block;
+}
+.routine-btm-cont li{
+    position: relative;
+    color: #603813;
+    font-size: 24px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    padding-left: 20px;
+	text-align: left;
+}
+.routine-btm-cont li:before{
+    content: '*';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* GALLERY-SEC */
+.gallery-sec{
+    width: 100%;
+    padding: 74px 0px 20px;
+    position: relative;
+}
+.gallery-sec:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/admin-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.gallery-sec .before-img{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    transform: translate(0, 66%);
+}
+.gallery-wrapper{
+    width: 100%;
+    max-width: 1020px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 1;
+}
+.gallery-wrapper:after{
+    content: '';
+    position: absolute;
+    width: 262px;
+    height: 232px;
+    background: url('images/gallery-sec-after.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: -24px;
+    bottom: 73px;
+    transform: translate(100%, 0);
+}
+.gallery-flex{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.gallery-flex > .col{
+    width: 25%;
+    padding: 0px 20px;
+}
+.gallery-bx{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+.gallery-bx.pos-top{
+    top: -40px;
+}
+.gallery-bx.pos-btm{
+    bottom: -40px;
+}
+.gallery-bx .img {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.gallery-bx .cont p{
+    text-align: center;
+    color: #603813;
+    font-size: 16px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+}
+.after-school-sec.using-page{
+    padding-top: 143px;
+}
+
+
+/******************** EVENT-PAGE ********************/
+.after-school-sec.event-page{
+    padding-top: 22px;
+}
+.after-school-sec.event-page .aft-scl-contact{
+    padding-bottom: 0px;
+}
+section.activities-sec{
+    width: 100%;
+    padding: 47px 0px 0px;
+    position: relative;
+}
+.activities-sec .head{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 29px;
+	text-align: center;
+}
+.activities-sec .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px;
+    color: #603813;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center;
+    z-index: 1;
+	display: inline-block;
+}
+.activities-sec .head h2:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 17px;
+    background: url('images/activities-head-bg.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.activities-sec .head p{
+    text-align: center;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.activities-sec .cont{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.activities-sec .cont p{
+    text-align: center;
+    color: #603813;
+    font-size: 20px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: bold;
+    line-height: 1.5;
+}
+.activities-wrapper {
+    width: 100%;
+    max-width: 1038px;
+    margin: 0px auto;
+    padding: 0px 26px;
+}
+.activities-flex {
+    width: auto;
+    margin-left: -26px;
+    margin-right: -26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.activities-flex > .col{
+    width: 33.33%;
+    padding: 0px 26px;
+}
+.activities-bx{
+    width: 100%;
+    margin-bottom: 90px;
+}
+.activities-bx .img {
+    width: 100%;
+    padding-top: 64.7%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.activities-bx .img img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+.activities-bx .cont{
+    width: 100%;
+    padding: 20px 0px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.activities-bx .cont-flex{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12.5px;
+}
+.activities-bx .cont span{
+    display: inline-block;
+    color: #603813;
+    font-size: 14px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 100%;
+}
+.activities-bx .cont a{
+    display: inline-block;
+    background: #6D5231;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 100%;
+    padding: 5.5px 25.5px;
+    border-radius: 12.5px;
+    display: none;
+}
+.activities-bx .cont p{
+    text-align: left;
+    width: 100%;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+
+/********************** CONTACT-PAGE **********************/
+.after-school-sec.contact-page{
+    padding-top: 113px;
+}
+.after-school-sec.contact-page .aft-scl-contact{
+    padding-bottom: 0px;
+}
+section.contact-content{
+    width: 100%;
+    padding: 124px 0px 0px;
+    position: relative;
+}
+.contact-wrapper{
+    width: 100%;
+    max-width: 970px;
+    margin: 0px auto;
+}
+.contact-bx{
+    width: 100%;
+    background: #fff;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+    padding: 84px 0px 96px;
+}
+.contact-bx form{
+    padding: 0px 16px;
+}
+.contact-bx .head{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;  
+}
+.contact-bx .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px;
+    color: #603813;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    z-index: 1;
+	display: inline-block;
+}
+.contact-bx .head h2:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    z-index: -1;
+    width: 100%;
+    height: 17px;
+    background: url('images/contact-head-bg.png');
+    background-size: 100% 100%;
+}
+.contact-bx .head p{
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.contact-tabs ul{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 65px;
+}
+.contact-tabs ul li{
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+}
+.contact-tabs ul li:last-child{
+    margin-right: 0px;
+}
+.contact-tabs ul li a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 114px;
+    height: 41px;
+    border: 2px solid #CB9D72;
+    border-radius: 5px;
+    background: #fff;
+    color: #5F4B3E;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho N-B';
+    font-weight: bold;
+    line-height: 100%;
+    cursor: pointer;
+}
+.contact-tabs ul li a:before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #603813;
+    top: calc(100% + 2px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+.contact-tabs ul li:hover a, .contact-tabs > ul li:focus a{
+    border-color: #603813;
+    background: #603813;
+    color: #fff;
+}
+.contact-tabs ul li input{
+    width: 114px;
+    height: 41px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.contact-tabs ul li input:hover ~ a, 
+.contact-tabs ul li input:focus ~ a,
+.contact-tabs ul li input:checked ~ a{
+    border-color: #603813;
+    background: #603813;
+    color: #fff;
+}
+.contact-tabs ul li input:checked ~ a:before{
+    display: block;
+}
+.contact-form{
+    width: 100%;
+}
+.contact-form{
+    width: 100%;
+    max-width: 690px;
+    margin: 0px auto;
+	text-align: center;
+}
+.contact-form .input-group{
+    width: 100%;
+    margin-bottom: 14px;
+	text-align: left;
+}
+.contact-form .input-group label{
+    width: 100%;
+    text-align: left;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.contact-form .input-group label span{
+    display: inline-block;
+    margin-left: 5px;
+    background: #FF909D;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 4.5px;
+}
+.contact-form .input-group input, .contact-form .input-group textarea{
+    width: 100%;
+    border: 1px solid #C8A87A;
+    border-radius: 5px;
+    background: #fff;
+    color: #603813;
+    font-size: 18px;
+    padding: 7px 15px;
+}
+.contact-form .input-group input:hover, 
+.contact-form .input-group input:focus, 
+.contact-form .input-group textarea:hover, 
+.contact-form .input-group textarea:focus{
+    border-color: #603813;
+}
+.contact-form .input-group textarea{
+    height: 224px;
+    resize: none;
+	overflow: none;
+}
+.contact-form p{
+    text-align: left;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 19px;
+}
+.contact-form .reminder{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto 30px;
+	display: inline-flex;
+}
+.contact-form .reminder input{
+    position: relative;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+.contact-form .reminder span{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 15px;
+    border: 1px solid #603813;
+    background: #fff;
+}
+.contact-form .reminder span:after{
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2.5px;
+    border-left: 2px solid #F8931F;
+    border-bottom: 2px solid #F8931F;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 2px;
+    display: none;
+}
+.contact-form .reminder input:hover ~ span, 
+.contact-form .reminder input:focus ~ span{
+    border-color: #000;
+}
+.contact-form .reminder input:checked ~ span:after{
+    display: block;
+}
+.contact-form .reminder p, .contact-form .reminder label{
+    margin-bottom: 0px;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+}
+.contact-form .submit{
+    width: 100%;
+    text-align: center;
+}
+.contact-form .submit input{
+    background: #F8931F;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 211px;
+    height: 43px;
+    margin: 0px auto;
+    border: 2px solid #F8931F;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 100%;
+    cursor: pointer;
+}
+.contact-form .submit input:hover, 
+.contact-form .submit input:focus{
+    background: #FFF;
+    color: #F8931F;
+}
+
+
+
+/****************** TABLE-PAGE ******************/
+.after-school-sec.table-page{
+    padding-top: 136px;
+}
+section.table-content-sec{
+    width: 100%;
+    padding: 192px 0px 0px;
+    position: relative;
+}
+.table-background-clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.table-background-clip .img{
+    position: absolute;
+}
+.table-background-clip .img1{
+    top: 8%;
+    left: 8%;
+}
+.table-background-clip .img2{
+    top: 0;
+    right: 0%;
+}
+.table-background-clip .img3{
+    bottom: -18%;
+    left: 0;
+}
+.guide-background-clip .img3 .table-background-clip .img3{
+    width: 640px;
+    bottom: -15%;
+    left: 0;
+}
+
+.table-cont-wrapper{
+    width: 100%;
+    max-width: 972px;
+    margin: 0px auto;
+}
+.table-cont-bx{
+    width: 100%;
+    border: 8px solid #F7A25D;
+    border-radius: 20px;
+    background: #fff;
+    padding: 98px 15px 143px;
+}
+.table-pdf-layer{
+    margin-bottom: 78px;
+}
+.table-pdf-layer:nth-child(2) {
+    margin-bottom: 86px;
+}
+.table-pdf-layer:nth-child(3) {
+    margin-bottom: 62px;
+}
+.table-pdf-layer:last-child{
+    margin-bottom: 0px;
+}
+.table-cont-bx .head{
+    width: 100%;
+    margin-bottom: 94px;
+    text-align: center;
+}
+.table-cont-bx .head h2{
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0px auto 18px;
+    color: #603813;
+    font-size: 36px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 100%;
+    z-index: 1;
+	display: inline-block;
+}
+.table-cont-bx .head h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 17px;
+    background: url('images/table-head-bg.png');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.table-cont-bx .head p{
+    text-align: center;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.table-pdf-cont{
+    width: 100%;
+    overflow: hidden;
+}
+.table-pdf-cont h3, .table-pdf-cont ul{
+    width: 450px;
+}
+.table-pdf-cont h3{
+    position: relative;
+    margin: 0px auto 29px;
+    text-align: center;
+    color: #603813;
+    font-size: 30px;
+    font-family: 'UD Digi Kyokasho NP-B';
+    font-weight: bold;
+    line-height: 1.2;
+    background: #fff;
+    z-index: 1;
+}
+.table-pdf-cont h3:before, 
+.table-pdf-cont h3:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 152px;
+    height: 2px;
+    background: #CFB6A0;
+    z-index: 1;
+}
+.table-pdf-cont h3:before{
+    right: calc(100% + 30px);
+}
+.table-pdf-cont h3:after{
+    left: calc(100% + 30px);
+}
+.table-pdf-cont ul{
+    position: relative;
+    margin: 0px auto;
+}
+.table-pdf-cont ul li{
+    position: relative;
+    padding-left: 34px;
+    display: block;
+}
+.table-pdf-cont ul li a:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 26px;
+    height: 32px;
+    background: url(images/pdf-icon.png);
+}
+.table-pdf-cont ul li a{
+    display: block;
+    color: #603813;
+    font-size: 18px;
+    font-family: 'UD Digi Kyokasho N-R';
+    font-weight: normal;
+    line-height: 3;
+}
+
+
+
+
+
+@media screen and (max-width: 1600px){
+    .header-addr-logo-school{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 1366px){
+    .header-addr{
+        width: 100%;
+        display: none;
+    }
+    .header-logo{
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 1280px){
+    section.banner-slider-sec button.slick-arrow{
+        border-width: 4px;
+        width: 50px;
+        height: 50px;
+    }
+    section.banner-slider-sec button.slick-prev{
+        left: calc(34vw - (50px / 2));
+    }
+    section.banner-slider-sec button.slick-next {
+        right: calc(34vw - (50px / 2));
+    }
+    .banner-slider-itm .img{
+        height: 400px;
+    }
+    .intro-classroom-wrap{
+        padding: 0px 16px;
+        max-width: 1232px;
+    }
+    .classroom-row{
+        margin: 0px -16px;
+    }
+    .classroom-row > .col{
+        padding: 0px 16px;
+    }
+    .aft-scl-contact-wrap{
+        padding: 0px 16px;
+        max-width: 1232px;
+    }
+    .aft-scl-contact-row{
+        margin: 0px -16px;
+    }
+    .aft-scl-contact-row > .col{
+        padding: 0px 16px;
+    }
+    .gallery-wrapper{
+        padding: 0px 16px;
+        max-width: 1232px;
+    }
+    .gallery-flex{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .gallery-flex > .col{
+        padding: 0px 16px;
+    }
+    .activities-wrapper{
+        max-width: 1232px;
+        padding: 0px 16px;
+    }
+    .activities-flex{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .activities-flex > .col{
+        padding: 0px 16px;
+    }
+    .routine-step-list ul li:nth-child(even), .routine-step-list ul li:nth-child(odd){
+        margin: 0px auto 50px;
+    }
+    .routine-step-list ul li:last-child{
+        margin-bottom: 0px;
+    }
+    .routine-step-list ul li .cont-img{
+        top: 50%;
+        height: 100%;
+    }
+
+
+}
+@media screen and (max-width: 1199px){
+    section.banner-slider-sec{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .intro-background-clip .img1, 
+    .intro-background-clip .img3, 
+    .intro-background-clip .img5{
+        width: 400px;
+    }
+    .intro-background-clip .img2, 
+    .intro-background-clip .img4{
+        width: 200px;
+    }
+    .intro-background-clip .img6{
+        width: 250px;
+    }
+    .intro-time-flex{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .intro-time-individual{
+        margin: 0px auto 30px;
+    }
+    .intro-time-service{
+        margin: 0px auto 30px;
+    }
+    .aft-scl-service{
+        max-width: 870px;
+    }
+    section.admin-sec .before-after-img{
+        transform: translate(0, -60%);
+    }
+    section.admin-sec .before-img{
+        left: 10px;
+    }
+    section.admin-sec .after-img{
+        right: 10px;
+    }
+    .admin-profile .img{
+        margin: 0px auto 15px;
+    }
+    .footer-menu{
+        padding: 30px 0px 30px;
+    }
+    .footer-addr{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-addr ul{
+        width: max-content;
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    .footer-contact-cpyrgt{
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+    .footer-contact{
+        margin-bottom: 0px;
+    }
+    .guide-background-clip .img1{
+        width: 200px;
+        left: 5%;
+    }
+    .guide-background-clip .img2{
+        width: 350px;
+        top: 34%;
+    }
+    .guide-background-clip .img3{
+        width: 350px;
+    }
+    section.guide-sec{
+        padding-bottom: 300px;
+    }
+    .learn-exercise-sec:before{
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    .routine-background-clip .img1{
+        width: 200px;
+    }
+    .routine-background-clip .img2{
+        width: 400px;
+        left: -15%;
+    }
+    .routine-background-clip .img3{
+        width: 200px;
+    }
+    section.table-content-sec{
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .classroom-row{
+        justify-content: center;
+    }
+    .classroom-row > .col{
+        width: 36%;
+    }
+    .routine-step-list ul li .cont-img{
+        transform: translate(0, -50%);
+    }
+    .routine-step-list ul li:nth-child(even) .cont-img{
+        left: 0;
+    }
+    .routine-step-list ul li:nth-child(odd) .cont-img{
+        right: 0;
+        left: auto;
+    }
+    .future-bx .cont > h3:before, 
+    .intro-head h2:before, 
+    .intro-classroom .head h2:before, 
+    .admin-dtl h3:before, 
+    .guide-step .head h2:before, 
+    .routine-step .head h2:before, 
+    .activities-sec .head h2:before, 
+    .table-cont-bx .head h2:before, 
+    .contact-bx .head h2:before{
+        height: 12px;
+        bottom: -3px;
+    }
+}
+@media screen and (max-width: 991px){
+    .cpc {
+		display: none;
+	}
+	.csp {
+		display: block;
+	}
+	.cpc9 {
+		display: none;
+	}
+	.csp9 {
+		display: block;
+	}
+    header#header.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #FFFDF1;
+        box-shadow: 0px 10px 20px rgb(0, 0, 0, 10%);
+    }
+    .header-addr{
+        width: calc(100% - 150px);
+    }
+    .header-contact{
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    button.menu-toggle-btn{
+        display: block;
+        width: 50px;
+        height: 45px;
+        position: relative;
+        z-index: 999;
+        background: transparent;
+        border: none;
+    }
+    button.menu-toggle-btn span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 3px;
+        background: #5F4B3E;
+        transition: 0.3s ease;
+    }
+    button.menu-toggle-btn span:before, button.menu-toggle-btn span:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #5F4B3E;
+        left: 0;
+        transition: 0.3s ease;
+    }
+    button.menu-toggle-btn span:before{
+        bottom: 12px;
+    }
+    button.menu-toggle-btn span:after{
+        bottom: -12px;
+    }
+    .header-nav .header-logo{
+        padding-top: 0px;
+        display: block;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav.header-nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 16px;
+    }
+    .header-cont-rgt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header-nav .header-contact-btn{
+        display: block;
+    }
+    nav.header-nav ul.header-menu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 253, 241, 0.9);
+        display: block;
+        padding-top: 200px;
+        transition: 0.3s ease;
+    }
+    ul.header-menu > li{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 100%;
+        max-width: 350px;
+    }
+    ul.header-menu > li:last-child, ul.header-menu > li.last-child{
+        margin-right: auto;
+    }
+    ul.header-menu > li > a{
+        display: inline-flex;
+        align-items: flex-start;
+        font-size: 28px;
+        line-height: 1.7;
+    }
+    ul.header-menu > li img{
+        width: 30px;
+        margin-top: 9px;
+        margin-bottom: 0px;
+        margin-right: 15px;
+    }
+    nav.header-nav.menu-active ul.header-menu{
+        display: block;
+        left: 0;
+    }
+    nav.header-nav.menu-active .menu-toggle-btn span{
+        background: transparent;
+    }
+    nav.header-nav.menu-active .menu-toggle-btn span:before{
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+    nav.header-nav.menu-active .menu-toggle-btn span:after{
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .header-nav .header-contact{
+        display: block;
+    }
+    .header-contact ul {
+        width: 100%;
+        max-width: 360px;
+        text-align: left;
+        margin: 0px auto;
+    }
+    .header-contact ul li, .header-contact ul li a{
+        font-size: 28px;
+    }
+
+    section.banner-slider-sec:before, section.banner-slider-sec:after{
+        width: 200%;
+        height: 100%;
+    }
+    section.banner-slider-sec:before{
+        transform: translate(-25%, -82%);
+    }
+    section.banner-slider-sec:after{
+        transform: translate(-25%, 82%);
+    }
+    section.banner-slider-sec{
+        margin-top: -40px;
+    }
+    .banner-slider-itm .img{
+        height: 350px;
+    }
+    .future-bx .cont-flex{
+        padding: 0px 30px;
+        text-align: right;
+        justify-content: flex-end;
+    }
+    .future-bx .cont ul{
+        width: 100%;
+        text-align: left;
+    }
+    .intro-background-clip .img1{
+        top: 0;
+        left: -15%;
+    }
+    .intro-background-clip .img2{
+        top: 0;
+        right: 5%;
+    }
+    .intro-background-clip .img3 {
+        top: 18%;
+        right: -25%;
+    }
+    .intro-background-clip .img4{
+        top: 68%;
+    }
+    .intro-background-clip .img5 {
+        bottom: 22%;
+        right: -25%;
+    }
+    .intro-background-clip .img6 {
+        bottom: 5%;
+        left: 5%;
+    }
+    .intro-business{
+        max-width: 680px;
+    }
+    .classroom-row > .col{
+        width: 45%;
+    }
+    section.admin-sec:before {
+        top: 10%;
+        height: 80%;
+    }
+    section.admin-sec .before-after-img{
+        transform: translate(0, -10%);
+    }
+    section.admin-sec .before-img{
+        width: 150px;
+    }
+    section.admin-sec .after-img{
+        width: 200px;
+    }
+    .aft-scl-service .head .head-flex{
+        margin: 30px 50px;
+    }
+    .aft-scl-service .cont{
+        padding-bottom: 170px;
+    }
+    .aft-scl-contact-row{
+        justify-content: center;
+    }
+    .aft-scl-contact-row > .col{
+        width: 45%;
+    }
+    .aft-scl-contact-bx{
+        margin-bottom: 30px;
+    }
+    .footer-logo{
+        width: 165px;
+    }
+    .footer-dtl{
+        width: calc(100% - 165px);
+    }
+    .footer-addr ul{
+        margin-left: 0px;
+    }
+    .footer-menu ul li{
+        margin-right: 13px;
+    }
+    .footer-contact-cpyrgt{
+        flex-wrap: wrap;
+    }
+    .footer-contact{
+        width: 100%;
+    }
+    .footer-cpyrgt{
+        width: 100%;
+    }
+    .admin-dtl p{
+        letter-spacing: 0px;
+    }
+    .guide-background-clip .img2 {
+        width: 250px;
+        top: 40%;
+    }
+    .guide-background-clip .img3{
+        width: 250px;
+    }
+    .guide-step li{
+        width: 100%;
+    }
+    .guide-step li .img, .guide-step li .img img{
+        width: 180px;
+    }
+    .guide-step li:nth-child(odd) .img{
+        left: 0;
+		transform: translate(-105%, -50%);
+    }
+    .guide-step li:nth-child(even) .img{
+        right: 0;
+		transform: translate(105%, -50%);
+    }
+    .learn-exercise-bx .img{
+        width: 100%;
+        padding: 30px 30px 0px;
+    }
+	.learn-exercise-bx .img, .learn-exercise-bx:nth-child(odd) .img, .learn-exercise-bx:nth-child(even) .img{
+		width: 100%;
+	}
+	.learn-exercise-bx .img img{
+		display: block;
+	}
+	.learn-exercise-bx .img span{
+		display: none;
+	}
+    .learn-exercise-bx .img img, .learn-exercise-bx:nth-child(even) .img img{
+        position: relative;
+        transform: translate(0, 0);
+        width: 100%;
+    }
+    .learn-exercise-bx .cont{
+        width: 550px;
+		max-width: 100%;
+		margin: auto;
+    }
+    .learn-exercise-sec .before-img{
+        transform: translate(0, -70%);
+    }
+    .routine-background-clip .img1{
+        width: 150px;
+        top: 10%;
+    }
+    .routine-background-clip .img2{
+        width: 250px;
+    }
+    .routine-background-clip .img3 {
+        width: 150px;
+        bottom: 18%;
+    }
+    .routine-step-list ul li{
+        width: 65%;
+    }
+    .gallery-bx.pos-top{
+        top: 0;
+    }
+    .gallery-bx.pos-btm{
+        bottom: 0;
+    }
+    .gallery-flex > .col{
+        width: 33.33%;
+    }
+    .gallery-sec:before{
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    .activities-wrapper{
+        padding: 0px 16px;
+    }
+    .activities-flex {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .activities-flex > .col{
+        padding: 0px 16px;
+    }
+    .activities-bx{
+        margin-bottom: 30px;
+    }
+    section.contact-content{
+        padding-top: 0px;
+    }
+    .contact-bx{
+        border-width: 4px;
+    }
+    .table-cont-bx .head h2{
+        font-size: 30px;
+    }
+    .table-cont-bx .head h2:before{
+        bottom: 0;
+    }
+    .table-pdf-cont h3, .table-pdf-cont ul{
+        width: 380px;
+    }
+    .table-pdf-cont h3{
+        font-size: 24px;
+    }
+    .table-pdf-cont h3:before, .table-pdf-cont h3:after{
+        width: 130px;
+    }
+    .table-pdf-cont h3:before{
+        right: calc(100% + 15px);
+    }
+    .table-pdf-cont h3:after{
+        left: calc(100% + 15px);
+    }
+    .table-pdf-cont ul li a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 991px) and (min-width: 768px){
+    /* HEADER */
+    header#header.sticky nav.header-nav{
+        padding: 15px 16px;
+    }
+    /* FOOTER */
+    .footer-logo{
+        align-self: center;
+    }
+    .footer-addr ul{
+        margin-left: auto;
+    }
+    .footer-contact{
+        text-align: center;
+    }
+    .footer-cpyrgt{
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 767px){
+    .cpc6 {
+		display: none;
+	}
+	.csp6 {
+		display: block;
+	}
+    /* HOME => HEADER */
+    nav.header-nav{
+        padding: 15px 16px;
+    }
+    .header-contact ul li, .header-contact ul li a{
+        letter-spacing: 0;
+    }
+    .header-contact-btn > .fa{
+        font-size: 14px;
+        margin-right: 0;
+    }
+    .header-contact-btn {
+        padding: 15px;
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+    /* HOME => BANNER */
+    section.banner-slider-sec{
+        margin-top: 0px;
+    }
+    section.banner-slider-sec button.slick-arrow{
+        display: none !important;
+    }
+    section.banner-slider-sec:before, 
+    section.banner-slider-sec:after{
+        height: 2%;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    section.banner-slider-sec:after{
+        display: none;
+    } 
+    .banner-slider-itm{
+        padding: 0px;
+    }
+    .banner-slider-itm .img{
+        height: calc(100vh - 107px);
+    }
+
+    /* HOME => FUTURE-SEC */
+    .future-sec{
+        padding-top: 107px;
+    }
+    .future-bx .img{
+        height: 579px;
+    }
+    .future-bx .cont-flex{
+        justify-content: flex-end;
+        text-align: right;
+    }
+    .future-bx .cont > h3{
+        font-size: 40px;
+        margin-bottom: 56px;
+    }
+    .future-bx .cont > p{
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .future-bx .cont ul{
+        padding-bottom: 0px;
+    }
+    .future-bx .cont ul li{
+        font-size: 28px;
+        text-align: left;
+    }
+    .future-bx .cont ul li br{
+        display: none;
+    }
+
+    /* HOME => TARGET-SEC */
+    .target-bx.one ul li{
+        font-size: 28px;
+        line-height: 2;
+    }
+    .target-bx.two{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .target-flex > .col-6{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .target-inner-bx{
+        padding-bottom: 30px;
+    }
+    .target-inner-bx.one{
+        margin-bottom: 45px;
+    }
+    .target-inner-bx th{
+        padding: 18px 0px;
+    }
+    .target-inner-bx th, .target-inner-bx td{
+        font-size: 27px;
+    }
+    .target-inner-bx tbody tr:first-child td{
+        padding-top: 10px;
+    }
+
+    /* HOME => INTRO-SEC */
+    .intro-background-clip .img1, 
+    .intro-background-clip .img3, 
+    .intro-background-clip .img5{
+        width: 250px;
+    }
+    .intro-background-clip .img1{
+        left: -25%;
+    }
+    .intro-background-clip .img3 {
+        top: 25%;
+    }
+    .intro-background-clip .img2, 
+    .intro-background-clip .img4{
+        width: 100px;
+    }
+    .intro-background-clip .img4 {
+        top: 57%;
+    }
+    .intro-background-clip .img5{
+        bottom: 37%;
+    }
+    .intro-background-clip .img6{
+        width: 200px;
+        bottom: 0;
+    }
+    .introduce-sec{
+        padding-top: 56px;
+    }
+    .intro-head{
+        margin-bottom: 48px;
+    }
+    .intro-head h2{
+        font-size: 48px;
+    }
+    .intro-head p{
+        font-size: 28px;
+    }
+    .intro-list{
+        padding: 20px 0px 50px 0px;
+        margin-bottom: 44px;
+    }
+    .intro-list ul li{
+        font-size: 24px;
+    }
+    .intro-business{
+        max-width: 100%;
+    }
+    .intro-business .cont{
+        padding-top: 8px;
+        padding-bottom: 0px;
+    }
+    .intro-business .cont h2{
+        font-size: 30px;
+        padding-right: 28px;
+        margin-left: -10px;
+        margin-right: 35px;
+    }
+    .intro-business .cont ul li{
+        font-size: 24px;
+    }
+    .intro-business .img{
+        height: 200px;
+    }
+    .intro-time{
+        padding-top: 55px;
+    }
+    .intro-time-individual{
+        margin: 0px 0px 70px;
+        max-width: 100%;
+    }
+    .intro-time-individual .head h2{
+        font-size: 26px;
+    }
+    .intro-time-individual .cont:before{
+        width: 164px;
+        height: 338px;
+    }
+    .intro-time-individual .cont ul li{
+        padding: 35px 0px 50px;
+    }
+    .intro-time-individual .cont ul li:last-child{
+        padding-bottom: 30px;
+    }
+    .intro-time-individual .cont .stamp h3, 
+    .intro-time-individual .cont .text{
+        font-size: 26px;
+    }
+    .intro-time-individual .cont .stamp h3{
+        font-size: 26px;
+        width: 173px;
+        height: 50px;
+    }
+    .intro-time-individual .cont .text{
+        padding-top: 10px;
+    }
+    .intro-service-bx .img img{
+        height: 198px;
+    }
+    .intro-time-service .head h2{
+        font-size: 28px;
+    }
+    .intro-service-bx .cont{
+        padding: 0px 0px 15px;
+        max-width: 450px;
+    }
+    .intro-service-bx .cont li, .intro-service-bx .cont p{
+        font-size: 28px;
+    }
+
+    /* HOME => CLASSROOM-SEC */
+    .intro-classroom{
+        padding-top: 90px;
+        padding-bottom: 0px;
+    }
+    .intro-classroom .head{
+        margin-bottom: 92px;
+    }
+    .intro-classroom .head h2{
+        font-size: 48px;
+    }
+    .classroom-row{
+        width: 100%;
+        margin: 0px;
+    }
+    .classroom-row > .col{
+        width: 100%;
+        padding: 0px;
+    }
+    .classroom-bx{
+        border-width: 8px;
+    }
+    .classroom-bx .cont::before{
+        width: 120%;
+        height: 180%;
+    }
+    .classroom-bx .cont h3{
+        font-size: 47px;
+    }
+    .classroom-bx .cont p{
+        font-size: 28px;
+    }
+    .classroom-bx .contact-icon{
+        width: 55px;
+        height: 55px;
+        font-size: 36px;
+    }
+    .classroom-bx .contact-text{
+        font-size: 36px;
+    }
+    .classroom-bx .map, .classroom-bx .map iframe{
+        height: 614px;
+    }
+
+    /* HOME => ADMIN-SEC */
+    section.admin-sec{
+        padding-top: 80px;
+    }
+    section.admin-sec .before-img, section.admin-sec .after-img{
+        display: none;
+    }
+    .admin-bx{
+        margin-top: 0px;
+    }
+    .admin-profile{
+        width: 100%;
+        padding: 42px 0;
+    }
+    .admin-profile:before{
+        width: 150%;
+        height: 115%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .admin-profile .img{
+        max-width: 227px;
+    }
+    .admin-profile .cont h4{
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .admin-profile .cont p{
+        font-size: 28px;
+    }
+    .admin-dtl{
+        width: 100%;
+        padding: 80px 15px 90px;
+    }
+    .admin-dtl h3{
+        font-size: 48px;
+        margin: 0px auto 20px;
+    }
+    .admin-dtl h4{
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .admin-dtl p{
+        font-size: 24px;
+    }
+
+    /* HOME => AFTER-SCHOOL-SEC */
+    .after-school-sec{
+        padding-top: 62px;
+    }
+    .aft-scl-service:before{
+        right: 100px;
+        bottom: 45px;
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+    }
+    .aft-scl-service .head{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-10px, -58%);
+    }
+    .aft-scl-service .head .head-flex{
+        margin: 0px;
+    }
+    .aft-scl-service .cont{
+        padding: 92px 15px 290px;
+    }
+    .aft-scl-service .cont p{
+        font-size: 27px;
+        margin-bottom: 45px;
+    }
+    .aft-scl-contact{
+        padding-top: 170px;
+    }
+    .aft-scl-contact-row{
+        width: 100%;
+        margin: 0px;
+    }
+    .aft-scl-contact-row > .col{
+        width: 100%;
+        padding: 0px;
+    }
+    .aft-scl-contact-bx{
+        padding: 74px 0px 72px;
+        margin-bottom: 76px;
+    }
+    .aft-scl-contact-bx.one, 
+    .aft-scl-contact-bx.three{
+        width: calc(100% - 12px);
+    }
+    .aft-scl-contact-bx.one{
+        margin-right: auto;
+    }
+    .aft-scl-contact-bx.three{
+        margin-left: auto;
+    }
+    .aft-scl-contact-bx.one:before{
+        right: -12px;
+        bottom: -12px;
+    }
+    .aft-scl-contact-bx.two:before{
+        bottom: -12px;
+    }
+    .aft-scl-contact-bx.three:before{
+        left: -12px;
+        bottom: -12px;
+    }
+    .aft-scl-contact-bx h4{
+        font-size: 46px;
+        margin-bottom: 55px;
+    }
+    .aft-scl-contact-bx p{
+        font-size: 28px;
+        margin-bottom: 42px;
+    }
+    .aft-scl-contact-bx .contact-icon{
+        width: 54px;
+        height: 54px;
+        font-size: 36px;
+        margin-right: 14px;
+    }
+    .aft-scl-contact-bx .contact-text{
+        font-size: 37px;
+    }
+
+    /* FOOTER */
+    .footer-logo{
+        width: 100%;
+        padding: 30px 0px;
+    }
+    .footer-logo img{
+        width: 173px;
+    }
+    .footer-dtl{
+        width: 100%;
+        padding: 0px;
+    }
+    .footer-flex{
+        padding-bottom: 0px;
+    }
+    .footer-addr {
+        max-width: 80%;
+        margin: auto;
+    }
+    .footer-addr .footer-contact a.header-contact-btn {
+        font-size: 24px;
+        padding: 7% 4%;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .footer-addr .footer-contact a.header-contact-btn .fa {
+        font-size: 24px;
+    }
+    .footer-addr ul {
+        padding: 0px 15px;
+        width: 100%;
+    }
+    .footer-addr ul li {
+        margin-bottom: 20px;
+    }
+    .footer-addr ul li span, .footer-addr ul li a {
+        display: block;
+        font-size: 24px;
+        line-height: 1.7;
+    }
+    .footer-contact-cpyrgt{
+        padding: 30px 0px;
+    }
+    .footer-contact{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .footer-cpyrgt{
+        text-align: center;
+    }
+    .footer-cpyrgt p{
+        font-size: 21px;
+    }
+    .guide-background-clip .img1{
+        width: 120px;
+    }
+    .guide-background-clip .img2, .guide-background-clip .img3{
+        width: 200px;
+    }
+    .guide-step li{
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .guide-step li .img{
+        position: relative;
+        transform: translate(0, 0);
+        left: 0;
+        right: 0;
+        margin-right: 50px;
+    }
+	.guide-step li:nth-child(odd) .img, .guide-step li:nth-child(even) .img{
+		transform: translate(0,0);
+	}
+    .guide-step li .cont{
+        width: 300px;
+        margin: 0px;
+    }
+    .guide-step li:nth-child(even) .img span{
+        left: auto;
+        right: calc(0% - 15px);
+    }
+    .learn-exercise-bx{
+        border-width: 4px;
+    }
+    .learn-exercise-bx .img{
+        padding: 0px 15px;
+    }
+    .learn-exercise-bx .cont h2, .learn-exercise-bx:nth-child(even) .cont h2{
+        left: 50%;
+    }
+    .routine-background-clip .img2{
+        left: -25%;
+    }
+    .routine-step-list ul li{
+        width: 88%;
+    }
+    .routine-step-list ul p{
+        font-size: 18px;
+    }
+    .routine-btm-cont li{
+        font-size: 18px;
+    }
+    .routine-btm-cont li p{
+        font-size: 18px;
+    }
+    .gallery-flex > .col{
+        width: 50%;
+    }
+    .activities-flex > .col{
+        width: 50%;
+    }
+    section.contact-content{
+        padding-top: 50px;
+    }
+    .contact-form .input-group label{
+        font-size: 16px;
+    }
+    .contact-form .input-group input, .contact-form .input-group textarea{
+        font-size: 16px;
+    }
+    .contact-form p{
+        font-size: 16px;
+    }
+    .contact-form p br{
+        display: none;
+    }
+    .contact-tabs > ul li a, .contact-tabs > ul li input {
+        width: 85px;
+        height: 35px;
+        font-size: 16px;
+    }
+    section.table-content-sec{
+        padding-top: 50px;
+    }
+    .table-cont-bx{
+        border-width: 4px;
+    }
+    .table-cont-bx .head h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .table-cont-bx .head{
+        margin-bottom: 50px;
+    }
+    .table-pdf-cont h3{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 575px){
+    /* HEADER */
+    nav.header-nav {
+        padding: 15px 10px;
+    }
+    .header-addr-logo-school{
+        padding: 0px 15px;
+    }
+    .header-addr{
+        width: calc(100% - 100px);
+        padding-top: 0;
+        align-self: center;
+        text-align: right;
+    }
+    .header-addr p{
+        font-size: 14px;
+    }
+    .header-contact-btn {
+        font-size: 12px;
+    }
+    .future-bx{
+        border-width: 4px;
+        border-radius: 10px;
+    }
+    .future-bx .cont > h3{
+        font-size: 28px;
+    }
+    .future-bx .cont-flex{
+        padding: 0px 15px;
+    }
+    .future-bx .cont ul{
+        padding-bottom: 0px;
+    }
+    .future-bx .cont img{
+        margin-left: auto;
+    }
+    .target-bx.one ul li {
+        font-size: 24px;
+    }
+    .target-inner-bx th, .target-inner-bx td {
+        font-size: 24px;
+    }
+    .intro-head h2{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .intro-head p{
+        font-size: 24px;
+    }
+    .intro-list ul li{
+        font-size: 18px;
+    }
+    .intro-business{
+        max-width: 85%;
+        border-width: 4px;
+        border-radius: 10px;
+    }
+    .intro-business:before{
+        border-width: 4px;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+    }
+    .intro-business .cont h2{
+        font-size: 18px;
+        margin-left: -15px;
+    }
+    .intro-business .cont ul{
+        margin-bottom: 15px;
+        padding-left: 30px;
+    }
+    .intro-business .cont ul li{
+        font-size: 18px;
+    }
+    .intro-time{
+        padding-bottom: 0px;
+    }
+    .intro-time-service{
+        margin-bottom: 0px;
+    }
+    .intro-time-individual .cont{
+        padding-left: 15px;
+    }
+    .intro-time-individual .cont .stamp{
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0px;
+    }
+    .intro-time-individual .cont ul{
+        padding-bottom: 150px;
+    }
+    .intro-time-individual .cont ul li{
+        padding: 30px 15px;
+    }
+    .intro-time-individual .cont ul li:after{
+        display: none;
+    }
+    .intro-time-service .head h2{
+        background-size: auto;
+        background-position: center center;
+    }
+    .intro-service-bx .cont{
+        padding: 15px;
+    }
+    .intro-time-individual .head h2, .intro-time-service .head h2{
+        font-size: 18px;
+    }
+    .intro-time-individual .cont .stamp h3{
+        font-size: 24px;
+        padding-top: 12px;
+    }
+    .intro-time-individual .cont .text{
+        font-size: 24px;
+    }
+    .intro-service-bx .cont li, .intro-service-bx .cont p{
+        font-size: 24px;
+    }
+    .intro-classroom .head h2{
+        font-size: 36px;
+    }
+    .classroom-bx .cont::before{
+        width: 130%;
+        height: 190%;
+    }
+    .classroom-bx .cont h3, .classroom-bx .contact-text{
+        font-size: 30px;
+    }
+    .classroom-bx .cont p{
+        font-size: 24px;
+    }
+    .classroom-bx .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    .admin-bx{
+        margin: 0px;
+        border-width: 4px;
+        border-radius: 10px;
+    }
+    .admin-profile:before{
+        width: 200%;
+    }
+    .admin-profile .cont h4, 
+    .admin-profile .cont p{
+        font-size: 24px;
+    }
+    .admin-dtl h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .admin-dtl{
+        padding-bottom: 50px;
+    }
+    .admin-dtl h4{
+        font-size: 24px;
+    }
+    .admin-dtl p{
+        font-size: 16px;
+    }
+    .aft-scl-service{
+        max-width: 96%;
+        border-width: 4px;
+        border-radius: 10px;
+    }
+    .aft-scl-service:before{
+        right: 50%;
+        width: 320px;
+        height: 240px;
+        transform: translate(50%, 0);
+    }
+    .aft-scl-service .head .img {
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+    }
+    .aft-scl-service .head h3 {
+        font-size: 18px;
+        margin-left: -15px;
+        padding-right: 30px;
+    }
+    .aft-scl-service .cont{
+        padding: 60px 15px 200px;
+    }
+    .aft-scl-service .cont p{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .footer-logo img{
+        width: 120px;
+    }
+    .footer-addr .footer-contact a.header-contact-btn,
+    .footer-addr .footer-contact a.header-contact-btn .fa{
+        font-size: 20px;
+    }
+    .footer-addr ul li span, .footer-addr ul li a {
+        font-size: 18px;
+    }
+    .footer-contact-cpyrgt {
+        padding: 20px 0px;
+    }
+    .footer-cpyrgt p{
+        font-size: 18px;
+    }
+    .footer-menu ul li{
+        font-size: 14px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .guide-step .head h2{
+        padding-left: 0px;
+        font-size: 30px;
+    }
+    .guide-step li .img{
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .guide-step li .cont{
+        width: 100%;
+    }
+    .guide-step li .cont p{
+        width: max-content;
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    .learn-exercise-sec:before{
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    .learn-exercise-bx .cont h2{
+        font-size: 18px;
+    }
+    .learn-exercise-bx .cont p{
+        font-size: 16px;
+    }
+    .learn-exercise-bx .cont h2:before{
+        border-top-width: 21px;
+        border-bottom-width: 21px;
+    }
+    .routine-step-list ul li .cont h4{
+        margin-bottom: 10px;
+    }
+    .routine-step-list ul li .cont-img{
+        height: 80%;
+    }
+    .routine-step-list ul li{
+        width: calc(100% - 72px);
+    }
+    .gallery-bx .img{
+        max-width: 150px;
+        margin: auto;
+    }
+    .contact-bx{
+        border-width: 2px;
+    }
+    .table-cont-bx .head h2{
+        font-size: 18px;
+    }
+    .table-cont-bx .head h2:before{
+        height: 12px;
+    }
+    .table-pdf-cont h3{
+        width: 100%;
+    }
+    .table-pdf-cont h3{
+        font-size: 16px;
+    }
+    .table-pdf-cont h3:before, .table-pdf-cont h3:after{
+        display: none;
+    }
+    .future-bx .cont > h3:before, 
+    .intro-head h2:before, 
+    .intro-classroom .head h2:before, 
+    .admin-dtl h3:before, 
+    .guide-step .head h2:before, 
+    .routine-step .head h2:before, 
+    .activities-sec .head h2:before, 
+    .table-cont-bx .head h2:before, 
+    .contact-bx .head h2:before{
+        height: 8px;
+    }
+}
+@media screen and (max-width: 480px){
+    /* HEADER */
+    .header-nav .header-logo img{
+        width: 120px;
+    }
+    .header-contact-btn {
+        margin-right: 10px;
+    }
+    nav.header-nav ul.header-menu{
+        padding-top: 100px;
+    }
+    ul.header-menu > li{
+        max-width: 230px;
+    }
+    ul.header-menu > li > a{
+        font-size: 18px;
+    }
+    ul.header-menu > li img{
+        width: 24px;
+        margin-top: 0px;
+    }
+    .header-contact{
+        padding-top: 30px;
+    }
+    button.menu-toggle-btn{
+        margin-left: auto;
+    }
+    .header-contact ul{
+        max-width: 260px;
+    }
+    .header-contact ul li, .header-contact ul li a{
+        font-size: 24px;
+    }
+    
+    /* BANNER */
+    .banner-slider-itm .img{
+        height: calc(100vh - 84px);
+    }
+
+    /* HOME => FUTURE-SEC */
+    .future-bx .img{
+        height: 320px;
+    }
+    .future-bx .cont > h3{
+        font-size: 22px;
+    }
+    .future-bx .cont > p{
+        font-size: 20px;
+    }
+    .future-bx .cont ul li{
+        font-size: 18px;
+    }
+    .target-bx.one{
+        padding: 15px;
+    }
+    .target-bx.one ul li{
+        font-size: 18px;
+    }
+    .target-flex{
+        padding: 0px;
+    }
+    .target-flex > .col-6{
+        padding: 0px 15px;
+    }
+    .target-inner-bx th, .target-inner-bx td{
+        font-size: 16px;
+    }
+    .intro-time-individual .cont ul li{
+        padding: 30px 0px;
+    }
+    .intro-service-bx .cont li, .intro-service-bx .cont p{
+        font-size: 16px;
+    }
+    .classroom-bx{
+        border-width: 4px;
+    }
+    .classroom-bx .cont::before {
+        width: 150%;
+        height: 200%;
+    }
+    .classroom-bx .cont h3, .classroom-bx .contact-text{
+        font-size: 24px;
+    }
+    .classroom-bx .cont p{
+        font-size: 18px;
+    }
+    .classroom-bx .map, .classroom-bx .map iframe{
+        height: 450px;
+    }
+    .classroom-bx .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    .aft-scl-service:before{
+        width: 250px;
+        height: 180px;
+    }
+    .aft-scl-service .head .head-flex{
+        flex-wrap: nowrap;
+    }
+    .aft-scl-service .head .img {
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+        border-width: 4px;
+    }
+    .aft-scl-service .head h3 {
+        font-size: 16px;
+        margin-left: -20px;
+        padding: 15px 30px;
+        margin-top: 8px;
+    }
+    .aft-scl-contact-bx{
+        padding: 50px 0px 50px;
+    }
+    .aft-scl-contact-bx h4 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .aft-scl-contact-bx p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .aft-scl-contact-bx .contact-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    .aft-scl-contact-bx .contact-text {
+        font-size: 24px;
+    }
+    .footer-addr {
+        max-width: 90%;
+    }
+    .learn-exercise-bx .cont{
+        padding-bottom: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .learn-exercise-bx .cont img{
+        position: relative;
+        margin-top: 30px;
+        display: block;
+        margin-left: auto;
+    }
+    .learn-exercise-bx:nth-child(even) .cont img{
+        margin-right: auto;
+        margin-left: 0px;
+    }
+    .routine-step-list ul p{
+        font-size: 14px;
+    }
+    .routine-step-list ul p br{
+        display: none;
+    }
+    .routine-step-list ul li:nth-child(odd){
+        text-align: right;
+    }
+    .routine-step-list ul li .cont h4, .routine-step-list ul li .cont p{
+        font-size: 16px;
+    }
+    .routine-step-list ul li:nth-child(even), .routine-step-list ul li:nth-child(odd){
+        margin-bottom: 100px;
+    }
+    .routine-step-list ul li .cont h4{
+        margin-bottom: 0px;
+    }
+    .routine-step-list ul li:nth-child(even) .cont-img, .routine-step-list ul li:nth-child(odd) .cont-img{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 0);
+        margin-top: 80px;
+    }
+    .routine-step-list ul li:nth-child(even) .cont-img{
+        margin-right: auto;
+        text-align: left;
+    }
+    .routine-step-list ul li:nth-child(odd) .cont-img{
+        margin-left: auto;
+        text-align: right;
+    }
+    .routine-btm-cont li{
+        font-size: 12px;
+    }
+    .gallery-bx .cont p{
+        font-size: 14px;
+    }
+    .activities-flex > .col{
+        width: 100%;
+    }
+    .activities-sec .head h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .activities-sec .cont p{
+        font-size: 16px;
+    }
+    .contact-tabs ul li {
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .contact-tabs ul li input, 
+    .contact-tabs ul li a{
+        width: 96px;
+        height: 40px;
+       
+    }
+    .contact-tabs ul li a{
+        font-size: 16px;
+    }
+    .contact-form p{
+        font-size: 14px;
+    }
+    .contact-form .reminder p, .contact-form .reminder label{
+        font-size: 16px;
+    }
+    .table-cont-bx .head h2{
+        font-size: 14px;
+    }
+    .table-cont-bx .head h2:before{
+        height: 6px;
+        bottom: -2px;
+    }
+    .table-pdf-cont h3{
+        margin-bottom: 30px;
+    }
+    .table-pdf-cont ul{
+        width: 100%;
+    }
+    .table-pdf-cont ul li{
+        margin-bottom: 15px;
+    }
+    .table-pdf-cont ul li a{
+        line-height: 1.5;
+    }
+    .table-pdf-cont ul li a:before{
+        top: 10px;
+        width: 20px;
+        height: 25px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .table-pdf-cont ul li:before{
+        background-size: contain;
+        width: 20px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .table-cont-bx{
+        padding-left: 10px;
+        padding-right: 10px;
+        border-width: 2px;
+    }
+}
+
+@media screen and (max-width: 374px){
+    .header-nav .header-logo img{
+        width: 100px;
+    }
+    .aft-scl-service .head h3{
+        font-size: 14px;
+    }
+    .contact-tabs ul li{
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .banner-slider-itm .img {
+        height: calc(100vh - 76px);
+    }
+}
+
+
+
+
+
+
+
+
+/***************************************************************/
+.breadcrumb_sec {
+}
+.breadcrumb_sec li {
+	display: inline-block;
+	position: relative;
+	padding: 0 10px 0 0;
+}
+.breadcrumb_sec li:after {
+	content: "\f054";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 43px;
+	color: #603813;
+	transition: all 0.3s;
+	padding: 0 0 0 10px;
+}
+.breadcrumb_sec li:last-child:after {content: none;}
+.breadcrumb_sec li a {
+	font-size: 16px;
+	font-family: 'UD Digi Kyokasho NK-B';
+	color: #603813 !important;
+}
+.breadcrumb_sec li:first-child a:hover {
+	color: #000 !important;
+	transition: all .3s !important;
+}
+.js_button {
+	cursor: pointer;
+	transition: all .3s;
+}
+.js_button:hover {
+	opacity: 0.7;
+}

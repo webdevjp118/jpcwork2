@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/*----------------------------
+ * store
+ *----------------------------*/
+
+.brandHead{
+    width:100%;
+    margin:0;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+.headBox01{
+	width:50%;
+	float:left;
+	padding:0 20px 0 0;
+}
+
+.headBox01 p{
+	line-height:1.8;
+}
+
+.headBox01 ul{
+	margin:15px 0 0;
+	padding:0;
+	text-align:center;
+	list-style:none;
+}
+
+.headBox02{
+	width:50%;
+	float:right;
+}
+
+
+@media screen and (max-width:768px) {
+	.headBox01{
+		width:100%;
+		float:none;
+		padding:0;
+	}
+
+	.headBox02{
+		width:100%;
+		float:none;
+		padding:0;
+	}
+}
+
+
+

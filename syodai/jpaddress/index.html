@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prefecture and city selection</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  </head>
+  <body class="hold-transition skin-blue layout-top-nav">
+    <div class="wrapper">
+      <header class="main-header"></header>
+      <div class="content-wrapper">
+        <div class="container">
+          <section class="content-header">
+            <h1>
+              都道府県連動の市区町村セレクトボックス
+            </h1>
+          </section>
+          <section class="content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="box box-info">
+                  <div class="box-header with-border"></div>
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label>都道府県</label>
+                      <select name="select_prefecture" id="select_prefecture" class="form-control">
+                        <option value="">都道府県を選択</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>市区町村</label>
+                      <select name="select_city" id="select_city" class="form-control">
+                        <option value="">市区町村を選択</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./prefectureCity.js"></script>
+    <script>
+      $(function() {
+        let initPrefVal = '13';
+        let initCityVal = '113';
+        let valType = 'code';
+
+        // Create a prefecture select-box.
+        getPrefectureSelection('#select_prefecture', '#select_city', './prefectureCityCode.json', valType, initPrefVal, initCityVal);
+
+        // Create a city select-box.
+        $('#select_prefecture').on('change', function() {
+          getCitySelection('#select_prefecture', '#select_city', './prefectureCityCode.json', valType);
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<svg id="ic_blog_toc1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="base_svg">
+    <g id="Rectangle_13" data-name="Rectangle 13" fill="#62bfeb" stroke="#62bfeb" stroke-width="1">
+      <rect width="50" height="50" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" fill="none"/>
+    </g>
+    <g id="base" transform="translate(6 6)" opacity="0">
+      <g id="Ellipse_6" data-name="Ellipse 6" fill="rgba(255,255,255,0)" stroke="red" stroke-width="1">
+        <circle cx="19" cy="19" r="19" stroke="none"/>
+        <circle cx="19" cy="19" r="18.5" fill="none"/>
+      </g>
+      <line id="Line_3" data-name="Line 3" x2="12" transform="translate(13 19)" fill="none" stroke="red" stroke-width="1"/>
+      <line id="Line_4" data-name="Line 4" y2="12" transform="translate(19 13)" fill="none" stroke="red" stroke-width="1"/>
+    </g>
+  </g>
+  <g id="arrow" transform="translate(41.848 41.241) rotate(180)">
+    <path id="Path_30" data-name="Path 30" d="M28.423,28.348v5.234L0,16.182,28.423-.931V3.834L7.929,16.182Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>

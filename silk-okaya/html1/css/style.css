@@ -1,0 +1,2085 @@
+/*common css start*/
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap');
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/YuGothic-Medium.woff2') format('woff2'),
+    url('../fonts/YuGothic-Medium.woff') format('woff'),
+    url('../fonts/YuGothic-Medium.ttf') format('truetype'),
+    url('../fonts/YuGothic-Medium.svg#YuGothic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Yu Gothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/YuGothic-Bold.woff2') format('woff2'),
+    url('../fonts/YuGothic-Bold.woff') format('woff'),
+    url('../fonts/YuGothic-Bold.ttf') format('truetype'),
+    url('../fonts/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body, h1, h2, h3, h4, h5, h6, ul, li, p, a, span{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Shippori Mincho', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+}
+body.no_scroll {
+    overflow: hidden;
+}
+a, button, input[type=submit], select{
+    cursor: pointer;
+}
+a, a:hover, a:focus, 
+button, button:hover, button:focus,
+input, input:hover, input:focus, 
+textarea, textarea:hover, textarea:focus,
+select, select:hover, select:focus{
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.cpc, .cpc-1200{
+    display: block !important;
+}
+.csp, .csp-1200{
+    display: none !important;
+}
+@media (max-width: 1200px){
+    .cpc-1200{
+        display: none !important;
+    }
+    .csp-1200{
+        display: block !important;
+    }
+}
+@media (max-width: 900px){
+    .cpc{
+        display: none !important;
+    }
+    .csp{
+        display: block !important;
+    }
+}
+.colored_bg {
+    background-color: #F5F0E6;
+}
+.home_container {
+    width: 100%;
+    max-width: 1150px;
+    padding: 0px 25px;
+    margin: auto;
+}
+.home_row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -25px;
+}
+.home_row_reverse {
+    flex-direction: row-reverse;
+}
+.home_col_5 {
+    flex: 0 0 550px;
+    max-width: 550px;
+    padding: 0px 25px;
+}
+.home_col_7 {
+    flex: 0 0 calc(100% - 550px);
+    max-width: calc(100% - 550px);
+    padding: 0px 25px;
+}
+.align_content_flex_center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.button_blue {
+    background-color: #78C3DE;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 15px 45px 15px 25px;
+    transition: all 0.4s;
+    position: relative;
+}
+.button_blue.button_icon_only {
+    padding: 0px;
+    height: 54px;
+    width: 54px;
+}
+.button_blue img {
+    display: inline-block;
+    min-width: 8px;
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    right: 25px;
+    margin: auto;
+}
+.button_blue.button_icon_only img {
+    left: 0px;
+    right: 0px;
+    width: 8px;
+    top: 0px;
+}
+.button_blue:hover {
+    background-color: #2D4664;
+}
+.common_section_title {
+    position: relative;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    color: #78C3DE;
+    line-height: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.common_section_title:after {
+    content: "";
+    background-color: #78C3DE;
+    height: 1px;
+    width: 82px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.common_section_sub_title {
+    text-align: center;
+    font-size: 20px;
+    color: #222222;
+    line-height: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.common_section_description {
+    font-size: 20px;
+    color: #222222;
+    line-height: 40px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.custom_container {
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 25px;
+    margin: auto;
+}
+.custom_row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -25px;
+}
+.custom_col_4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0px 25px;
+}
+.custom_col_5 {
+    flex: 0 0 calc(100% - 440px);
+    max-width: calc(100% - 440px);
+    padding: 0px 25px;
+}
+.custom_col_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0px 25px;
+}
+.custom_col_7 {
+    flex: 0 0 440px;
+    max-width: 440px;
+    padding: 0px 25px;
+}
+.custom_col_12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0px 25px;
+}
+.custom_form_row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -19px;
+}
+.custom_form_row .custom_col_4 {
+    padding: 0px 19px;
+}
+.custom_form_row .custom_col_5 {
+    padding: 0px 19px;
+}
+.custom_form_row .custom_col_6 {
+    padding: 0px 19px;
+}
+.custom_form_row .custom_col_7 {
+    padding: 0px 19px;
+}
+.custom_form_row .custom_col_12 {
+    padding: 0px 19px;
+}
+/*common css end*/
+/*page pre-loader css start*/
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    pointer-events: none;
+    background-color: #fff;
+}
+.loader-wrapper .loader {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid rgba(62, 174, 230, 0.2);
+    border-right: 3px solid rgba(62, 174, 230, 0.2);
+    border-bottom: 3px solid rgba(62, 174, 230, 0.2);
+    border-left: 3px solid rgba(62, 174, 230, 0.8);
+    -webkit-animation: loaderSpin 1.5s infinite linear;
+    animation: loaderSpin 1.5s infinite linear;
+}
+@-webkit-keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*page pre-loader css end*/
+/*header section css start*/
+header {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+header.home_page_header {
+    position: absolute;
+}
+header nav.navbar_custom {
+    padding: 15px 50px;
+    text-align: center;
+}
+header.home_page_header nav.navbar_custom {
+    padding: 30px 50px;
+}
+header nav.navbar_custom ul {
+    display: inline-block;
+}
+header nav.navbar_custom ul.main_menu {
+    margin-right: 65px;
+}
+header nav.navbar_custom ul li {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 28px;
+}
+header nav.navbar_custom ul li a {
+    display: inline-block;
+    float: left;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    font-size: 16px;
+}
+header nav.navbar_custom ul.main_menu li {
+    display: inline-block;
+    margin: 0px 20px;
+}
+header nav.navbar_custom ul.social_menu li {
+    margin: 0px 3px;
+}
+header nav.navbar_custom ul.social_menu li a svg {
+    float: left;
+    width: 23px;
+    height: 23px;
+}
+header nav.navbar_custom ul.main_menu li a {
+    color: #707070;
+    position: relative;
+}
+header nav.navbar_custom ul.main_menu li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 0px;
+    background-color: #2D4664;
+    transition: all 0.4s;
+}
+header nav.navbar_custom ul.main_menu li a:hover {
+    color: #2D4664;
+    transition: all 0.4s;
+}
+header nav.navbar_custom ul.main_menu li a:hover:after {
+    width: 100%;
+}
+header nav.navbar_custom ul.social_menu li a svg {
+    fill: #B2B0B0;
+}
+header nav.navbar_custom ul.social_menu li a:hover svg {
+    fill: #2D4664;
+    transition: all 0.4s;
+}
+header.home_page_header nav.navbar_custom ul.main_menu li a {
+    color: #fff;
+}
+header.home_page_header nav.navbar_custom ul.main_menu li a:after {
+    background-color: #fff;
+}
+header.home_page_header nav.navbar_custom ul.social_menu li a svg {
+    fill: #fff;
+}
+
+
+
+header nav.toggle_navbar_custom {
+    background-color: #78c3de;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 40px 20px;
+    text-align: left;
+    transition: all 0.4s;
+    z-index: 11;
+}
+header nav.toggle_navbar_custom.navbar_animate {
+    left: 0;
+}
+header nav.toggle_navbar_custom ul {
+    display: block;
+    max-width: 550px;
+    margin: auto !important;
+}
+header nav.toggle_navbar_custom ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+header nav.toggle_navbar_custom ul.main_menu li {
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+    padding-bottom: 35px;
+}
+header nav.toggle_navbar_custom ul.social_menu li {
+    margin: 0px 15px 0px 0px;
+}
+
+header nav.toggle_navbar_custom ul li a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    float: left;
+    transition: all 0.4s;
+}
+header nav.toggle_navbar_custom ul.main_menu li a:hover {
+    color: #2D4664;
+}
+header nav.toggle_navbar_custom ul.main_menu li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 0px;
+    background-color: #2D4664;
+    transition: all 0.4s;
+}
+header nav.toggle_navbar_custom ul.main_menu li a:hover:after {
+    width: 100%;
+}
+header nav.toggle_navbar_custom ul.social_menu li a svg {
+    float: left;
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+    transition: all 0.4s;
+}
+header nav.toggle_navbar_custom ul.social_menu li a:hover svg {
+    fill: #2D4664;
+}
+
+
+
+
+.navbar_toggler {
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border: none;
+    position: fixed;
+    outline: none !important;
+    background-color: #78C3DE;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+.navbar_toggler .navbar_toggler_inner,
+.navbar_toggler .navbar_toggler_inner:after,
+.navbar_toggler .navbar_toggler_inner:before {
+    width: 35px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.navbar_toggler .navbar_toggler_inner{
+    transition: top 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+    top: -15px;
+    bottom: 0;
+    margin: auto;
+}
+.navbar_toggler .navbar_toggler_inner:after,
+.navbar_toggler .navbar_toggler_inner:before {
+    display: block;
+    content: "";
+}
+.navbar_toggler .navbar_toggler_inner:before {
+    transition: top 75ms ease 0.12s,opacity 75ms ease;
+    top: -15px;
+    opacity: 0;
+}
+.navbar_toggler .navbar_toggler_inner:after {
+    transition: bottom 75ms ease 0.12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+    bottom: -15px;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner {
+    transition: top 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
+    transform: rotate(30deg);
+    top: 0;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner:before {
+    top: 0;
+    transition: top 75ms ease,opacity 75ms ease 0.12s;
+    opacity: 0;
+}
+.navbar_toggler.open_menu .navbar_toggler_inner:after {
+    bottom: 0;
+    transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
+    transform: rotate(-60deg);
+}
+/*header section css end*/
+/*banner section css start*/
+.banner_slider_section {
+    position: relative;
+}
+.banner_slider .single_banner_slide {
+    position: relative;
+    padding-top: 680px;
+    float: left;
+}
+.banner_slider .single_banner_slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: left center;
+}
+.banner_slider ul.slick-dots {
+    display: flex;
+    padding-left: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+.banner_slider ul.slick-dots li {
+    list-style-type: none;
+    margin: 3px 0px;
+}
+.banner_slider ul.slick-dots li button {
+    font-size: 0px;
+    line-height: normal;
+    height: 26px;
+    width: 2px;
+    border: none;
+    background-color: #fff;
+    outline: none;
+}
+.banner_slider ul.slick-dots li.slick-active button {
+    background-color: #78C3DE;
+}
+.banner_slider_section p.scroll_note {
+    position: absolute;
+    bottom: 0;
+}
+.banner_slider_section span.scroll_text {
+    position: absolute;
+    bottom: 40px;
+    transform: rotate(90deg);
+    left: 24px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 14px;
+}
+.banner_slider_section span.scroll_line {
+    height: 80px;
+    width: 2px;
+    display: inline-block;
+    background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: 0 -80px;
+    background-size: 100% 200%;
+    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+}
+@keyframes scrolldown {
+    0% {
+        background-position: 0 -80px;
+    }
+    75% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 80px;
+    }
+}
+.banner_logo_with_text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+.banner_logo_with_text h4 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 30px;
+}
+/*banner section css end*/
+/*city of threads section css start*/
+.city_of_threads_section {
+    background: rgb(245,240,230);
+    background: -moz-linear-gradient(90deg, rgba(245,240,230,1) 0%, rgba(228,243,248,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(245,240,230,1) 0%, rgba(228,243,248,1) 100%);
+    background: linear-gradient(90deg, rgba(245,240,230,1) 0%, rgba(228,243,248,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5f0e6",endColorstr="#e4f3f8",GradientType=1);
+}
+.image_with_text {
+    position: relative;
+    top: 60px;
+}
+.image_with_text .text_description {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% - 150px);
+    margin: auto;
+    max-width: 658px;
+    padding: 38px 35px;
+    text-align: center;
+}
+.image_with_text .text_description h3 {
+    font-size: 40px;
+    position: relative;
+    font-weight: normal;
+    color: #222222;
+    padding-bottom: 26px;
+    margin-bottom: 20px;
+}
+.image_with_text .text_description h3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #707070;
+    height: 1px;
+    width: 30px;
+    margin: auto;
+}
+.image_with_text .text_description span.cpc {
+    display: inline-block !important;
+}
+.image_with_text .text_description p {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #222222;
+}
+/*city of threads section css end*/
+/*news section css start*/
+.news_section {
+    padding: 320px 0px 170px;
+}
+.news_section .news_section_table {
+    max-width: 636px;
+    margin: auto;
+    padding: 0px 18px;
+    text-align: center;
+}
+.news_section .news_section_table h3 {
+    font-size: 46px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+}
+.news_section .news_section_table ul.news_table {
+    text-align: left;
+}
+.news_section .news_section_table ul.news_table li {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #222222;
+    list-style-type: none;
+}
+.news_section .news_section_table ul.news_table li p.date {
+    flex: 0 0 100px;
+    color: #78C3DE;
+    font-size: 14px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 16px 0px 12px;
+}
+.news_section .news_section_table ul.news_table li a {
+    flex: 0 0 calc(100% - 100px);
+    color: #646464;
+    font-size: 14px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 16px 0px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news_section .news_section_table a.button_blue {
+    font-family: 'Shippori Mincho', serif;
+}
+/*news section css end*/
+/*silk okaya section start*/
+.silk_okaya_section:not(.colored_bg) {
+    padding: 62px 0px 135px;
+}
+.silk_okaya_section.extra_padding:not(.colored_bg) {
+    padding: 62px 0px 300px;
+}
+ul.image_list.top_out {
+    position: relative;
+    top: -54px;
+}
+ul.image_list li {
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+ul.image_list li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.silk_okaya_section .text_description > img {
+    max-width: 180px;
+}
+.silk_okaya_section .text_description h3 {
+    font-size: 44px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.silk_okaya_section .text_description p {
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 500;
+}
+.silk_okaya_section .text_description .button_blue {
+    margin-top: 20px;
+}
+/*silk okaya section end*/
+/*news and blog section css start*/
+.new_and_blog_section {
+    background-image: url(../images/news_and_blog_bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -70px;
+}
+.new_and_blog_section:before {
+    content: "";
+    background-color: #F5F0E6;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.new_and_blog_section ul.news_and_blog_list li {
+    margin-bottom: 4px;
+}
+.new_and_blog_section ul.news_and_blog_list li:last-child {
+    margin-bottom: 0px;
+}
+.new_and_blog_section ul.news_and_blog_list li a {
+    position: relative;
+    padding-top: calc((100% * 300) / 1100);
+    display: table;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.new_and_blog_section ul.news_and_blog_list {
+    position: relative;
+    top: -165px;
+}
+.new_and_blog_section ul.news_and_blog_list li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.4;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+}
+.new_and_blog_section ul.news_and_blog_list li a > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.4s;
+}
+.new_and_blog_section ul.news_and_blog_list li a:hover > img {
+    transform: scale(1.2);
+}
+.new_and_blog_section ul.news_and_blog_list li a h4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 100px;
+    color: #fff;
+    font-size: 37px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+.new_and_blog_section ul.news_and_blog_list li .button_blue.button_icon_only {
+    height: 54px;
+    width: 54px;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.new_and_blog_section ul.news_and_blog_list li a:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*news and blog section css end*/
+
+
+/*footer section css start*/
+.footer_section {
+    padding: 34px 0px;
+    position: relative;
+    z-index: 888;
+}
+.footer_container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 25px;
+    margin: auto;
+}
+.footer_row {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -19px;
+}
+.logo_col {
+    flex: 0 0 218px;
+    max-width: 218px;
+    padding: 0px 19px;
+}
+.footer_text_col {
+    flex: 0 0 calc(100% - 218px);
+    max-width: calc(100% - 218px);
+    padding: 0px 19px;
+}
+.footer_content {
+    width: 100%;
+}
+.footer_content ul.main_menu {
+    padding-bottom: 15px;
+}
+.footer_content ul.main_menu li {
+    display: inline-block;
+    margin: 0px 60px 0px 0px;
+}
+.footer_content ul.main_menu li:last-child {
+    margin: 0px;
+}
+.footer_content ul.main_menu li a {
+    color: #646464;
+    position: relative;
+    display: inline-block;
+    float: left;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    font-size: 16px;
+}
+.footer_content ul.main_menu li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 0px;
+    background-color: #646464;
+    transition: all 0.4s;
+}
+.footer_content ul.main_menu li a:hover:after {
+    width: 100%;
+}
+.footer_content h4 {
+    color: #646464;
+    font-size: 16px;
+    font-family: 'Yu Gothic';
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+.footer_content p,
+.footer_content p a {
+    color: #646464;
+    font-size: 16px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+}
+.footer_content .copyright_and_social_links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 15px;
+}
+.footer_content .copyright_and_social_links p {
+    color: #646464;
+    font-size: 12px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+}
+.footer_content .copyright_and_social_links ul.social_menu {
+    display: inline-block;
+    margin-left: auto;
+}
+.footer_content .copyright_and_social_links ul.social_menu li {
+    margin: 0px 0px 0px 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer_content .copyright_and_social_links ul.social_menu li a {
+    display: inline-block;
+    float: left;
+}
+.footer_content .copyright_and_social_links ul.social_menu li a svg {
+    width: 40px;
+    height: 40px;
+    fill: #646464;
+    float: left;
+}
+/*footer section css end*/
+/*page breadcrumb section css start*/
+.custom_breadcrumb_section {
+    text-align: center;
+    padding: 30px;
+}
+.custom_breadcrumb_section h1 {
+    font-size: 42px;
+    font-weight: 500;
+    color: #222222;
+}
+.custom_breadcrumb_section img {
+    display: inline-block;
+    max-width: 130px;
+}
+/*page breadcrumb section css end*/
+/*inner page banner section css start*/
+.inner_page_banner_section .banner_image_box img {
+    width: 100%;
+}
+/*inner page banner section css end*/
+/*about okaya city section css start*/
+.about_okaya_city_section {
+    padding: 70px 0px 80px;
+}
+.about_okaya_city_single_block {
+    margin-bottom: 60px;
+    display: inline-block;
+}
+.about_okaya_city_single_block .city_image_box img {
+    width: 100%;
+}
+.about_okaya_city_single_block .city_text_description h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 25px 0px;
+    color: #222222;
+}
+.about_okaya_city_single_block .city_text_description p {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.about_okaya_city_single_block .city_button_container {
+    display: inline-block;
+    float: right;
+}
+.about_okaya_city_single_block a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.about_okaya_city_single_block a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+    padding: 0px;
+}
+.about_okaya_city_single_block a.blue_text_link:hover {
+    color: #2D4664;
+}
+.about_okaya_city_single_block a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+.about_okaya_city_section .button_blue {
+    width: 100%;
+    text-align: center;
+    max-width: 340px;
+    margin: 0px auto;
+    display: block;
+    padding: 15px 45px;
+    font-family: 'Shippori Mincho', serif;
+}
+/*about okaya city section css end*/
+/*sidebar css start*/
+.main_body_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+.left_side_bar {
+    flex: 0 0 300px;
+    max-width: 300px;
+    width: 300px;
+    position: relative;
+    box-shadow: 3px 0px 6px rgb(0 0 0 / 3%);
+}
+.left_side_bar_inner{
+    background-color: #fff;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 111;
+    padding: 36px 44px 250px;
+}
+.left_side_bar .left_side_bar_inner img {
+    margin: auto auto 70px;
+}
+.left_side_bar_bottom {
+    padding-bottom: 30px;
+}
+.left_side_bar_bottom ul {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 3px 0px 6px rgb(0 0 0 / 3%);
+}
+.left_side_bar .left_side_bar_inner ul li,
+.left_side_bar_bottom ul li {
+    border-bottom: 1px solid #B2B0B0;
+}
+.left_side_bar .left_side_bar_inner ul li a,
+.left_side_bar_bottom ul li a {
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    line-height: 24px;
+    transition: all 0.4s;
+}
+.left_side_bar .left_side_bar_inner ul li a:hover, .left_side_bar_bottom ul li a:hover {
+    color: #78C3DE;
+}
+.right_side_contet {
+    flex: 0 0 calc(100% - 300px);
+    max-width: calc(100% - 300px);
+    background-color: #FCFCFA;
+    border-top: 4px solid #78C3DE;
+}
+/*sidebar css end*/
+/*about okaya industry section css start*/
+.about_okaya_industry_section {
+    padding: 60px 0px 70px;
+}
+.about_okaya_industry_single_block {
+    margin-bottom: 60px;
+    display: inline-block;
+}
+.about_okaya_industry_single_block .industry_image_box img {
+    width: 100%;
+}
+.about_okaya_industry_single_block .industry_text_description h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 25px 0px;
+    color: #222222;
+}
+.about_okaya_industry_single_block .industry_text_description p {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.about_okaya_industry_single_block .industry_button_container {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.about_okaya_industry_single_block a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.about_okaya_industry_single_block a.blue_text_link + a.blue_text_link {
+    margin-left: 15px;
+}
+.about_okaya_industry_single_block a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+    padding: 0px;
+}
+.about_okaya_industry_single_block a.blue_text_link:hover {
+    color: #2D4664;
+}
+.about_okaya_industry_single_block a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*about okaya industry section css end*/
+/*beautiful manufacturing section css start*/
+.beautiful_manufacturing_section {
+    padding: 60px 0px 70px;
+}
+.beautiful_manufacturing_single_block {
+    margin-bottom: 60px;
+    display: inline-block;
+}
+.beautiful_manufacturing_single_block .beautiful_manufacturing_image_box img {
+    width: 100%;
+}
+.beautiful_manufacturing_single_block .beautiful_manufacturing_text_description h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 25px 0px;
+    color: #222222;
+}
+.beautiful_manufacturing_single_block .beautiful_manufacturing_text_description p {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.beautiful_manufacturing_single_block .beautiful_manufacturing_button_container {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.beautiful_manufacturing_single_block a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.beautiful_manufacturing_single_block a.blue_text_link + a.blue_text_link {
+    margin-left: 15px;
+}
+.beautiful_manufacturing_single_block a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+    padding: 0px;
+}
+.beautiful_manufacturing_single_block a.blue_text_link:hover {
+    color: #2D4664;
+}
+.beautiful_manufacturing_single_block a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*beautiful manufacturing section css end*/
+/*education program section css start*/
+.education_program_section {
+    padding: 60px 0px 20px;
+}
+.education_program_single_block {
+    margin-bottom: 60px;
+    display: inline-block;
+}
+.education_program_single_block .education_program_image_box img {
+    width: 100%;
+}
+.education_program_single_block .education_program_text_description h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 25px 0px;
+    color: #222222;
+}
+.education_program_single_block .education_program_text_description p {
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.education_program_single_block .education_program_button_container {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.education_program_single_block a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.education_program_single_block span.text_before_link {
+    color: #707070;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+.education_program_single_block span.text_before_link + a.blue_text_link {
+    margin-left: 15px;
+}
+.education_program_single_block a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+    padding: 0px;
+}
+.education_program_single_block a.blue_text_link:hover {
+    color: #2D4664;
+}
+.education_program_single_block a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*education program section css end*/
+/*artist in residence section css start*/
+.artist_in_residence {
+    padding: 60px 0px 30px;
+}
+.education_program_single_block .artist_in_residence_text h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.education_program_single_block .artist_in_residence_text p {
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.education_program_single_block .artist_in_residence_image img {
+    width: 100%;
+}
+/*artist in residence section css end*/
+/*experience and sightseeing section css start*/
+.experience_and_sightseeing_section {
+    display: inline-block;
+    width: 100%;
+    padding: 0px 0px 70px;
+}
+.experience_and_sightseeing_single_block {
+    padding: 0px 0px 30px;
+}
+.experience_and_sightseeing_single_block .experience_and_sightseeing_text h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.experience_and_sightseeing_single_block .experience_and_sightseeing_text p {
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    padding: 0px 0px 20px;
+    color: #222222;
+}
+.experience_and_sightseeing_single_block .experience_and_sightseeing_text p:last-child {
+    padding-bottom: 0;
+}
+.experience_and_sightseeing_single_block .experience_and_sightseeing_image img {
+    width: 100%;
+}
+.experience_and_sightseeing_section .experience_and_sightseeing_button_container {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.experience_and_sightseeing_section a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.experience_and_sightseeing_section span.text_before_link {
+    color: #707070;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+.experience_and_sightseeing_section span.text_before_link + a.blue_text_link {
+    margin-left: 15px;
+}
+.experience_and_sightseeing_section a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+    padding: 0px;
+}
+.experience_and_sightseeing_section a.blue_text_link:hover {
+    color: #2D4664;
+}
+.experience_and_sightseeing_section a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*experience and sightseeing section css end*/
+/*related facilities section css start*/
+.related_facilities_section {
+    display: inline-block;
+    width: 100%;
+    padding: 0px 0px 70px;
+}
+.related_facilities_section h3 {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #222222;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #707070;
+}
+.single_facility_box {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+.single_facility_box .facility_image_box {
+    position: relative;
+    width: 100%;
+    padding-top: calc((100% * 18) / 25);
+    overflow: hidden;
+}
+.single_facility_box .facility_image_box > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.4s;
+}
+.single_facility_box:hover .facility_image_box > img {
+    transform: scale(1.2);
+}
+.single_facility_box .facility_image_box .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    padding: 0px;
+}
+.single_facility_box:hover .facility_image_box .button_blue {
+    background-color: #2D4664;
+}
+.single_facility_box p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    color: #222222;
+    margin-top: 15px;
+}
+/*related facilities section css end*/
+
+/*main initiatives section css start*/
+.main_initiatives_section {
+    padding: 25px 0px 40px;
+}
+.main_initiatives_section h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #222222;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #707070;
+}
+.main_initiatives_section ul li {
+    padding: 0px 0px 20px;
+    display: inline-block;
+    width: 100%;
+}
+.main_initiatives_section ul li:last-child {
+    padding-bottom: 0px;
+}
+.main_initiatives_section ul li p{
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    color: #222222;
+}
+.main_initiatives_section ul li p span {
+    height: 6px;
+    width: 6px;
+    background-color: #222222;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+.main_initiatives_section ul li .main_initiatives_list_button_container {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.main_initiatives_section ul li a.blue_text_link {
+    color: #78C3DE;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.main_initiatives_section ul li a.blue_text_link + a.blue_text_link {
+    margin-left: 15px;
+}
+.main_initiatives_section ul li a.blue_text_link .button_blue.button_icon_only {
+    height: 25px;
+    width: 25px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    float: right;
+}
+.main_initiatives_section ul li a.blue_text_link:hover {
+    color: #2D4664;
+}
+.main_initiatives_section ul li a.blue_text_link:hover .button_blue.button_icon_only {
+    background-color: #2D4664;
+}
+/*main initiatives section css end*/
+/*members and contact section css start*/
+.members_and_contact_section {
+    padding: 40px 0px 100px;
+}
+.members_and_contact_section h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #222222;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #707070;
+}
+.members_and_contact_section p, .members_and_contact_section span, .members_and_contact_section a {
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    color: #222222;
+}
+.members_and_contact_section p {
+    padding: 0px 0px 20px;
+}
+.members_and_contact_section p:last-child {
+    padding: 0px;
+}
+.members_and_contact_section span {
+    display: inline-block;
+    width: 65px;
+}
+.members_and_contact_section a:hover {
+    color: #78C3DE;
+}
+/*members and contact section css end*/
+
+/*silk okaya brand concept section css start*/
+.silk_okaya_brand_concept_section {
+    padding: 70px 0px 0px;
+}
+.silk_okaya_brand_concept_image_text {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.silk_okaya_brand_concept_image_text .text_image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px 45px 15px;
+}
+.silk_okaya_brand_concept_image_text .text_image img {
+    margin: auto;
+}
+.silk_okaya_brand_concept_image_text > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    margin: auto;
+}
+.concept_text_description {
+    display: table;
+    margin: auto;
+}
+.concept_text_description h4 {
+    font-size: 22px;
+    font-family: 'Yu Gothic';
+    font-weight: 700;
+    color: #222222;
+    padding: 10px 0px 20px;
+}
+.concept_text_description p {
+    font-size: 14px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    color: #222222;
+    padding-left: 40px;
+}
+.about_logo_design {
+    text-align: center;
+    max-width: 704px;
+    margin: auto;
+    padding: 40px 0px 0px;
+}
+.about_logo_design > img {
+    margin: 0px auto 40px;
+    max-width: 300px;
+}
+.about_logo_design p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Yu Gothic';
+    font-weight: 500;
+    color: #222222;
+}
+.about_logo_design_button_container {
+    display: inline-block;
+    width: 100%;
+}
+.about_logo_design_button_container a.button_blue {
+    padding: 15px 25px;
+    float: left;
+    margin-top: 30px;
+    width: calc(50% - (25px / 2));
+    font-family: 'Shippori Mincho', serif;
+}
+.about_logo_design_button_container a.button_blue:first-child {
+    margin-right: 25px;
+}
+.about_logo_design_button_container a.button_blue img {
+    position: relative;
+    right: auto;
+    margin-left: 10px;
+    margin-bottom: -2px;
+    top: auto;
+}
+/*silk okaya brand concept section css end*/
+
+/*barnd council section css start*/
+.brand_council_section {
+    padding: 70px 0px 0px;
+}
+/*barnd council section css end*/
+
+/*responsive css start*/
+@media(max-width: 1366px) {
+    header nav.navbar_custom, header.home_page_header nav.navbar_custom {
+        padding: 15px 50px;
+    }
+    header nav.navbar_custom ul.main_menu {
+        margin-right: 25px;
+    }
+    header nav.navbar_custom ul.main_menu li {
+        margin: 0px 12px;
+    }
+    header nav.navbar_custom ul li a {
+        font-size: 14px;
+    }
+}
+@media(max-width: 1200px) {
+    .home_container {
+        max-width: 850px;
+    }
+    .home_col_5 {
+        flex: 0 0 460px;
+        max-width: 460px;
+    }
+    .home_col_7 {
+        flex: 0 0 calc(100% - 460px);
+        max-width: calc(100% - 460px);
+    }
+    .custom_col_4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .custom_col_5,
+    .custom_col_7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .image_with_text {
+        top: 40px;
+    }
+    .image_with_text .text_description {
+        top: calc(100% - 100px);
+    }
+    .news_section {
+        padding: 350px 0px 130px;
+    }
+    .silk_okaya_section:not(.colored_bg) {
+        padding: 62px 0px 85px;
+    }
+    .silk_okaya_section.extra_padding:not(.colored_bg) {
+        padding: 62px 0px 170px;
+    }
+    ul.image_list.top_out {
+        top: -30px;
+    }
+    .silk_okaya_section .text_description > img {
+        max-width: 120px;
+    }
+    .silk_okaya_section .text_description h3 {
+        font-size: 32px;
+    }
+    .silk_okaya_section .text_description p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 500;
+    }
+    .silk_okaya_section .text_description .button_blue {
+        margin-top: 10px;
+    }
+    .new_and_blog_section {
+        margin-bottom: -35px;
+    }
+    .new_and_blog_section ul.news_and_blog_list {
+        top: -85px;
+    }
+    .footer_container {
+        max-width: 900px;
+    }
+    .footer_content ul.main_menu li {
+        margin: 0px 20px 0px 0px;
+    }
+    .footer_content ul.main_menu li a {
+        font-size: 14px;
+    }
+    .education_program_single_block .artist_in_residence_text h3,
+    .experience_and_sightseeing_single_block .experience_and_sightseeing_text h3 {
+        padding: 20px 0px;
+    }
+    .single_facility_box p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media(max-width: 900px) {
+    .home_container {
+        max-width: 100%;
+    }
+    .home_col_5,
+    .home_col_7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .custom_container {
+        padding: 0px 18px;
+    }
+    .custom_row {
+        margin: 0px -18px;
+    }
+    .custom_col_6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .custom_col_4,
+    .custom_col_5,
+    .custom_col_6,
+    .custom_col_7,
+    .custom_col_12,
+    .custom_form_row .custom_col_4,
+    .custom_form_row .custom_col_5,
+    .custom_form_row .custom_col_6,
+    .custom_form_row .custom_col_7,
+    .custom_form_row .custom_col_12 {
+        padding: 0px 18px;
+    }
+    .common_section_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .common_section_sub_title {
+        text-align: left;
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .banner_slider .single_banner_slide {
+        padding-top: 0px;
+        min-height: 100vh;
+    }
+    .banner_slider .single_banner_slide img {
+        min-height: 102%;
+        min-width: 102%;
+        max-height: 102%;
+        max-width: 102%;
+    }
+    .banner_slider ul.slick-dots {
+        display: none !important;
+    }
+    .banner_logo_with_text {
+        font-size: 24px;
+        padding: 30px;
+    }
+    .banner_logo_with_text img {
+        max-width: 225px;
+    }
+    .image_with_text {
+        top: 0px;
+        margin: 0px -25px;
+    }
+    .image_with_text .text_description {
+        position: relative;
+        margin-top: 30px;
+        width: calc(100% - 50px);
+        max-width: 600px;
+        padding: 24px 10px;
+    }
+    .image_with_text .text_description h3 {
+        font-size: 36px;
+    }
+    .image_with_text .text_description span.cpc {
+        display: none !important;
+    }
+    .image_with_text .text_description p {
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .news_section {
+        padding: 40px 0px 100px;
+    }
+    .silk_okaya_section.colored_bg {
+        padding-bottom: 30px;
+    }
+    .silk_okaya_section:not(.colored_bg) {
+        padding: 40px 0px 105px;
+    }
+    .silk_okaya_section.extra_padding:not(.colored_bg) {
+        padding: 40px 0px 120px;
+    }
+    ul.image_list.top_out {
+        top: -62px;
+        margin-bottom: -62px;
+    }
+    .silk_okaya_section .text_description > img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    .silk_okaya_section .text_description h3 {
+        font-size: 44px;
+    }
+    .silk_okaya_section .text_description p {
+        line-height: 32px;
+    }
+    .new_and_blog_section {
+        margin-bottom: -38px;
+    }
+    .new_and_blog_section ul.news_and_blog_list {
+        top: -78px;
+    }
+    .new_and_blog_section ul.news_and_blog_list li a h4{
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+    .footer_text_col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .right_side_contet {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .custom_breadcrumb_section {
+        padding: 46px 15px 15px;
+    }
+    .custom_breadcrumb_section h1 {
+        font-size: 30px;
+    }
+    .custom_breadcrumb_section img {
+        max-width: 100px;
+    }
+    .about_okaya_city_section {
+        padding: 45px 0px 30px;
+    }
+    .about_okaya_city_single_block {
+        margin-bottom: 30px;
+    }
+    .about_okaya_city_single_block a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .about_okaya_city_single_block a.blue_text_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .about_okaya_city_section .button_blue {
+        max-width: 100%;
+    }
+    .about_okaya_industry_section {
+        padding: 45px 0px 30px;
+    }
+    .about_okaya_industry_single_block {
+        margin-bottom: 30px;
+    }
+    .about_okaya_industry_single_block a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .about_okaya_industry_single_block a.blue_text_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .beautiful_manufacturing_section {
+        padding: 45px 0px 30px;
+    }
+    .beautiful_manufacturing_single_block {
+        margin-bottom: 30px;
+    }
+    .beautiful_manufacturing_single_block a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .beautiful_manufacturing_single_block a.blue_text_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .education_program_section {
+        padding: 45px 0px 15px;
+    }
+    .education_program_single_block {
+        margin-bottom: 30px;
+    }
+    .education_program_single_block span.text_before_link {
+        font-size: 14px;
+    }
+    .education_program_single_block span.text_before_link,
+    .education_program_single_block a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .education_program_single_block span.text_before_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .artist_in_residence {
+        padding: 25px 0px;
+    }
+    .experience_and_sightseeing_section {
+        display: inline-block;
+        width: 100%;
+        padding: 0px 0px 40px;
+    }
+    .experience_and_sightseeing_section span.text_before_link {
+        font-size: 14px;
+    }
+    .experience_and_sightseeing_section span.text_before_link,
+    .experience_and_sightseeing_section a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .experience_and_sightseeing_section span.text_before_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .single_facility_box {
+        margin-top: 20px;
+    }
+    .single_facility_box p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 8px;
+    }
+    .silk_okaya_brand_concept_section {
+        padding: 45px 0px 0px;
+    }
+    .common_section_description {
+        font-size: 18px;
+        line-height: 34px;
+        margin-bottom: 0px;
+    }
+    .silk_okaya_brand_concept_image_text .text_image {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 10px 15px 15px;
+    }
+    .silk_okaya_brand_concept_image_text .text_image:first-child img {
+        margin-left: 0;
+    }
+    .silk_okaya_brand_concept_image_text .text_image:last-child img {
+        margin-right: 0;
+    }
+    .silk_okaya_brand_concept_image_text > img {
+        bottom: 10px;
+        max-width: 40px;
+    }
+    .concept_text_description {
+        width: 100%;
+    }
+    .concept_text_description h4 {
+        padding: 10px 0px 0px;
+    }
+    .concept_text_description p {
+        padding: 0px 0px 20px;
+    }
+    .about_logo_design {
+        padding: 20px 0px 0px;
+    }
+    .about_logo_design > img {
+        max-width: 230px;
+    }
+    .about_logo_design_button_container a.button_blue {
+        padding: 15px 45px;
+        float: left;
+        margin: 30px 0px 0px !important;
+        width: 100%;
+    }
+    .about_logo_design_button_container a.button_blue img {
+        position: absolute;
+        right: 25px;
+        margin-left: auto;
+        margin-bottom: auto;
+        top: -1px;
+    }
+    .brand_council_section {
+        padding: 45px 0px 0px;
+    }
+    .main_initiatives_section {
+        padding: 25px 0px 0px;
+    }
+    .members_and_contact_section {
+        padding: 20px 0px 50px;
+    }
+    .members_and_contact_section h3 {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .main_initiatives_section ul li a.blue_text_link {
+        display: table;
+        margin-left: auto;
+        float: none;
+    }
+    .main_initiatives_section ul li a.blue_text_link + a.blue_text_link {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 767px) {
+    .footer_content .copyright_and_social_links {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .footer_content ul.main_menu {
+        padding-bottom: 25px;
+    }
+    .footer_content ul.main_menu li {
+        width: 100%;
+        margin: 0px;
+    }
+    .footer_content ul.main_menu li a {
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .footer_content .copyright_and_social_links ul.social_menu {
+        margin-left: 0px;
+        padding-top: 20px;
+    }
+    .footer_content .copyright_and_social_links ul.social_menu li {
+        margin: 0px 15px 0px 0px;
+    }
+    .related_facilities_section .custom_row {
+        margin: 0px -10px;
+    }
+    .related_facilities_section .custom_col_4 {
+        padding: 0px 10px;
+    }
+}
+/*responsive css end*/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:m="http://mayaa.seasar.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+</head>
+<body m:id='CONTENT'>
+
+<!-- ==================フッター ================================================== -->
+<script type="text/javascript" src="../js/footerFixed.js"></script>
+<div id="footer">
+	<p class="topBtn" id="topBtn">
+		<a href="#"><img src="../images/scroll_top.png" alt="ページトップへ戻る" width="54" height="54" /></a>
+	</p>
+	<p class="copyright"><span m:id='common.COPYRIGHT_HERE'>ここにコピーライトを表示します。管理画面で設定してください。</span></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+eb$(document).ready(function(){
+    eb$("#topBtn").hide();
+    eb$(window).on("scroll", function() {
+        if (eb$(this).scrollTop() > 100) {
+            eb$("#topBtn").fadeIn("fast");
+        } else {
+            eb$("#topBtn").fadeOut("fast");
+        }
+        scrollHeight = eb$(document).height(); //ドキュメントの高さ 
+        scrollPosition = eb$(window).height() + eb$(window).scrollTop(); //現在地 
+        footHeight = eb$("#footer").innerHeight(); //footerの高さ（＝止めたい位置）
+        if ( scrollHeight - scrollPosition  <= footHeight ) { //ドキュメントの高さと現在地の差がfooterの高さ以下になったら
+            eb$("#topBtn").css({
+                "position":"absolute", //pisitionをabsolute（親：wrapperからの絶対値）に変更
+                "bottom": footHeight + 20 //下からfooterの高さ + 20px上げた位置に配置
+            });
+        } else { //それ以外の場合は
+            eb$("#topBtn").css({
+                "position":"fixed", //固定表示
+                "bottom": "20px" //下から20px上げた位置に
+            });
+        }
+    });
+    eb$('#topBtn').click(function () {
+        eb$('body,html').animate({
+        scrollTop: 0
+        }, 400);
+        return false;
+    });
+});
+//]]>
+</script>
+
+<!-- ==================フッター END================================================== -->
+</body>
+</html>

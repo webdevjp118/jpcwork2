@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'source_han_sans_jpregular';
+    src: url('../fonts/sourcehansansjp-regular-webfont.eot');
+    src: url('../fonts/sourcehansansjp-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcehansansjp-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sourcehansansjp-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcehansansjp-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcehansansjp-regular-webfont.svg#source_han_sans_jpregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_han_sans_jpbold';
+    src: url('../fonts/sourcehansansjp-bold-webfont.eot');
+    src: url('../fonts/sourcehansansjp-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcehansansjp-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sourcehansansjp-bold-webfont.woff') format('woff'),
+         url('../fonts/sourcehansansjp-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcehansansjp-bold-webfont.svg#source_han_sans_jpbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_han_serif_jpbold';
+    src: url('../fonts/sourcehanserifjp-bold-webfont.eot');
+    src: url('../fonts/sourcehanserifjp-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcehanserifjp-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sourcehanserifjp-bold-webfont.woff') format('woff'),
+         url('../fonts/sourcehanserifjp-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcehanserifjp-bold-webfont.svg#source_han_serif_jpbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Times Italic';
+    src: url('../fonts/Times-Italic.eot');
+    src: local('Times Italic'), local('Times-Italic'),
+        url('../fonts/Times-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Times-Italic.woff2') format('woff2'),
+        url('../fonts/Times-Italic.woff') format('woff'),
+        url('../fonts/Times-Italic.ttf') format('truetype'),
+        url('../fonts/Times-Italic.svg#Times-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
